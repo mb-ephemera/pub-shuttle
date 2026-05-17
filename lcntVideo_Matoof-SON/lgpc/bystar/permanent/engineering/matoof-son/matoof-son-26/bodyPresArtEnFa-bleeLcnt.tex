@@ -1,0 +1,4240 @@
+%%% -*- Mode: LaTeX; -*-
+
+%%%#+BEGIN: bx:dblock:global:this-file :disabledP "false" :mode "auto"
+\begin{whenOrg}
+*  #This File: /lcnt/lgpc/bystar/permanent/engineering/matoof-son-26/bodyPresArtEnFa-bleeLcnt.tex
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:inputed-title :disabledP "false" :mode "auto"
+\begin{whenOrg}
+* [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:bx:dblock:lcnt:latex:inputed-title)][dbf]]
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   /*PLPC-180070 -- LCNT Panel -- lcntProc.sh, presProc.sh and Mailings*/
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   *soncli.mcs and the MaTOOF Web-UI csPlayer*
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   http://www.by-star.net/PLPC/180070
+*  [[elisp:(beginning-of-buffer)][Top]] ################  [[elisp:(delete-other-windows)][(1)]]   [[elisp:(find-file "presentationEnFa.ttytex")][Visit ./presentationEnFa.ttytex]] || [[elisp:(find-file "articleEnFa.ttytex")][Visit ./articleEnFa.ttytex]] || [[elisp:(find-file "presArtEnFa.ttytex")][Visit ./presArtEnFa.ttytex]] ||
+
+* [[elisp:(org-shifttab)][<)]] [[elisp:(describe-function 'org-dblock-write:bx:dblock:lcnt:latex:inputed-title)][dbFunc)]]  E|
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:global:org-controls :disabledP "false" :mode "auto"
+\begin{whenOrg}
+* [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:bx:dblock:global:org-controls)][dbf]]
+*  /Controls/ ::  [[elisp:(org-cycle)][| ]]  [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][|O]]  [[elisp:(progn (org-shifttab) (org-content))][|C]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][|N]] | [[elisp:(delete-other-windows)][|1]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
+*  /Maintain/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-This]] [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-This]] | [[elisp:(bx:org:agenda:these-files-otherWin)][Agenda-These]] [[elisp:(bx:org:todo:these-files-otherWin)][ToDo-These]]
+
+* [[elisp:(org-shifttab)][<)]] [[elisp:(describe-function 'org-dblock-write:bx:dblock:global:org-controls)][dbFunc)]]  E|
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:commands :disabledP "false" :class "art+pres" :langs "en+fa"
+\begin{whenOrg}
+* [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:bx:dblock:lcnt:latex:commands)][dbf]]
+\begin{whenOrg}
+*      IIM Parameters    ::  [[elisp:(bx:iimBash:resultsShow:cmndLineElems)][Show Cmnd Line Elems]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build+view")][-p extent=build+view]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build")][-p extent=build]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=view")][-p extent=view]]
+*      Related           ::  [[elisp:(find-file "./Panel.org")][Visit ./Panel.org]] | [[elisp:(find-file "./mailing/content.mail")][Visit ./mailing/content.mail]]| [[elisp:(find-file "./mailing/Panel.org")][Visit ./mailing/Panel.org]]
+*      Build+Release     ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildResultsRelease" :iifArgs "")][lcntProc.sh -i buildResultsRelease]] || [[elisp:(lsip-local-run-command-here "lcntProc.sh -i fullClean")][lcntProc.sh -i fullClean]] || [[elisp:(cvs-update "." t)][Version Control]]
+*      Build & Preview   ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildPdfPreview" :iifArgs "bodyPresArtEnFa-bleeLcnt.tex")][lcntProc.sh -i buildPdfPreview bodyPresArtEnFa-bleeLcnt.tex]] || [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildHtmlPreview" :iifArgs "bodyPresArtEnFa-bleeLcnt.tex")][lcntProc.sh -i buildHtmlPreview bodyPresArtEnFa-bleeLcnt.tex]]
+
+* [[elisp:(org-shifttab)][<)]] [[elisp:(describe-function 'org-dblock-write:bx:dblock:lcnt:latex:commands)][dbFunc)]]  E|
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGINNOT: bx:dblock:global:org-contents-list :disabledP "false" :mode "auto"
+\begin{comment}
+*      ################ CONTENTS-LIST  ([[elisp:(reftex-toc)][RefTOC)]]    ###############
+*  [[elisp:(org-cycle)][| ]]  *Document Status, TODOs and Notes*          ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+%%%#+END:
+
+\begin{comment}
+** TODO Prophetic
+** TODO Add Chapter and verse.
+** TODO Stallman and rest are dead wrong. This has never been about Freedom.
+** TODO Mention Debian vs Ubuntu is silly.
+\end{comment}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Introduction"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Introduction/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Introduction}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame:begin/blank  :label "thisIsMohsen" :comment "body=video"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /Frame:begin-blank/ [[elisp:(outline-show-subtree+toggle)][||]] *Label=thisIsMohsen* UnSpecified -- body=video
+\end{whenOrg}
+
+\begin{frame}[fragile,plain,label=thisIsMohsen]
+    \frametitle{}
+%%BxPy: impressiveFrameParSet('thisIsMohsen', 'always', 'True')
+%%BxPy: impressiveFrameParSet('thisIsMohsen', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame:body:mm/video :videoPath "./video/mbIntro.mp4" :comment "thisIsMohsen"
+\begin{whenOrg}
+******  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  FrmCntnt-Video [[elisp:(outline-show-subtree+toggle)][||]] Label=UnSpecified UnSpecified
+\end{whenOrg}
+\begin{presentationMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+<video preload="auto" data-audio-controls src="./video/mbIntro.mp4"></video>
+  \end{rawhtml}
+\end{htmlonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+      <!-- data-autoplay  controls -->
+    <p>
+    <video  controls   preload="auto"  src="./video/mbIntro.mp4"  height="50%%" width="50%%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{articleMode}
+
+\begin{presentationMode}
+\begin{latexonly}
+    \begin{center}
+      Video File: ./video/mbIntro.mp4
+    \end{center}
+\end{latexonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{latexonly}
+    \begin{center}
+      Video File: ./video/mbIntro.mp4
+    \end{center}
+\end{latexonly}
+\end{articleMode}
+%%%#+END:
+
+\pnote{
+  
+Greetings. Salaam.
+
+This is Mohsen Banan.
+
+I am a software and internet engineer.
+
+The title of this presentation is
+``Blee-LCNT: An Emacs Centered Content Production
+and Self-Publication Framework''.
+
+Blee stands for ByStar Libre-Halaal Emacs Environment.
+In last year's EmacsConf, I introduced Blee,
+BISOS and ByStar as concepts and as foundations.
+
+This year I want to focus on one concrete capability.
+Content Production and Self-Publication is
+a foundational Blee and BISOS Capability Bundle.
+
+Both this presentation and the Nature of Polyexistentials
+book were developed with Blee-LCNT.
+
+In this presentation I want to look at Emacs as a
+central ingredient for a usage
+environment that we can use to orchestrate production
+of quite fancy multi-media presentations.
+
+}
+
+\end{frame}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Scope: A Complete Multi-Media Content Authorship, Generation, Publication and Distribution Framework" :label ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Scope: A Complete Multi-Media Content Authorship, Generation, Publication and Distribution Framework/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Scope: A Complete Multi-Media Content Authorship, Generation, Publication and Distribution Framework}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Scope:\\\\ A Complete Multi-Media Content Processing Framework" :subtitle "Content Authorship, Generation, Publication and Distribution" :reveal "plain" :beamer "plain" :label "ScopeOfBleeLcnt"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=ScopeOfBleeLcnt Scope:\\ A Complete Multi-Media Content Processing Framework
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=ScopeOfBleeLcnt]
+    \frameaudio{"audio/ScopeOfBleeLcnt.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/ScopeOfBleeLcnt/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=ScopeOfBleeLcnt]
+    \frameaudio{"audio/ScopeOfBleeLcnt.mp3"}
+    \frametitle{Scope:\\ A Complete Multi-Media Content Processing Framework}
+    \framesubtitle{Content Authorship, Generation, Publication and Distribution}
+%%BxPy: impressiveFrameParSet('ScopeOfBleeLcnt', 'always', 'True')
+%%BxPy: impressiveFrameParSet('ScopeOfBleeLcnt', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{multicols}{3}
+
+    Content Types
+
+      \begin{itemize}
+        \item \color{violet} \textbf{Videos}
+        \item \color{violet} \textbf{Presentations}
+        \item \color{black} Articles/Papers
+        \item Books, eBooks
+        \item Web Pages
+        \item Bus Cards
+        \item Name Tags
+        \item Posters, Flyers
+        \item etc.
+      \end{itemize}
+
+      \columnbreak
+
+      Content Production
+
+      \begin{itemize}
+      \item \color{violet} \textbf{Authorship}
+      \item \color{violet} \textbf{Generation}
+      \item \color{violet} \textbf{Disposition}
+      \item \color{black} Categorization
+      \item Metadata
+      \end{itemize}
+
+      \columnbreak
+
+      Content Exposition
+
+      \begin{itemize}
+      \item Autonomous Publication
+      \item \color{violet} \textbf{Federated Re-Publication}
+      \item \color{black} Distribution
+      \item Mailings
+      \item Engagement
+      \item Archival
+      \end{itemize}
+
+
+    \end{multicols}
+
+
+\pnote{
+
+  Let's consider two different scopes.
+
+  First, the scope of Blee-LCNT Capabilities Bundle, which is that of a
+complete multi-media content authorship, generation, publication and distribution framework.
+That complete scope is presented in this slide and it spans both black ink and violet ink.
+Second, the scope of this presentation, which is more limited.
+In this presentation I confine myself to the bullets is violet ink.
+Here, I focus on presentation and video as content types and their
+authorship and generation and their federated re-publication.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Prior Art, Similar Art and Some Examples"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Prior Art, Similar Art and Some Examples/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Prior Art, Similar Art and Some Examples}
+%%%#+END:
+
+%%% Not derivedVideo
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Prior Art and Similar Art" :subtitle "" :label "priorArt" :beamer "plain" :comment "body=odg-image" :transition "default"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=priorArt Prior Art and Similar Art body=odg-image
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=priorArt]
+    \transition{default}
+    \frameaudio{"audio/priorArt.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/priorArt/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=priorArt]
+    \transition{default}
+    \frameaudio{"audio/priorArt.mp3"}
+    \frametitle{Prior Art and Similar Art}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('priorArt', 'always', 'True')
+%%BxPy: impressiveFrameParSet('priorArt', 'transition', 'default')
+%%%#+END:
+
+
+
+\begin{tabular}{|p{2.5in}|p{0.75in}|p{0.3in}|p{1.5in}|}
+  \hline
+  \textbf{Title} & \textbf{Author} & \textbf{Year} & \textbf{URL} \\
+  \hline
+  \small LaTeX export in org-mode: the overhaul  & \small P. Gutiérrez & \small 2025 & \tiny\url{emacsconf.org/2025/talks/latex} \\
+  \hline
+  \small Emacs Writing Studio & \small Peter Prevos & \small 2024 & \tiny\url{emacsconf.org/2024/talks/writing} \\
+  \hline
+  \small Authoring \& presenting university courses & \small James & \small 2023 & \tiny\url{emacsconf.org/2023/talks/uni} \\
+  \small with Emacs and a full libre software stack & \small Howell &  &  \\  
+  \hline
+  \small Teaching computer and data science with literate programming tools & \small Marcus Birkenkrahe & \small 2023 & \tiny\url{emacsconf.org/2023/talks/teaching} \\
+  \hline
+  \small {\color{violet} How we use Org Mode and TRAMP to}  & \small Sacha & \small 2023 & \tiny\url{emacsconf.org/2023/talks/emacsconf} \\
+  \small {\color{violet} organize and run a multi-track conference} & \small Chua &  & \tiny {\color{violet} \textbf{Reveal.js Example}}\\
+  \hline
+  \small {\color{teal} emacs-gc-stats: Does garbage collection}  & \small Ihor  & \small 2023 & \tiny\url{emacsconf.org/2023/talks/gc} \\
+  \small {\color{teal} actually slow down Emacs?} & \small Radchenko &  & \tiny {\color{teal} \textbf{Beamer Warsaw LaTeX Example}} \\
+  \hline
+  \small Moving from Jekyll to OrgMode, & \small Adolfo  & \small 2020 & \tiny\url{emacsconf.org/2020/talks/15} \\
+  \small an experience report & \small Villafiorita &  & \\
+  \hline
+\end{tabular}
+
+\pnote{
+
+  This is a common topic. It makes good sense for us to start with a review of prior art and similar art.
+  I went through the past EmacsConf talks and found a good number of them that also deal
+  with the topic of content generation.
+  A few of these are included in black ink in this slide.
+  Many of these have chosen the Babel, in other words Org-Mode+LaTeX as primary input.
+  I prefer the inverse of that.
+
+  I also looked for past talks which have used Reveal.js and LaTeX-Beamer.
+  For example, Sacha's use of Reveal.js is shown in violet inK.
+  And Ihor's use of Beamer is in teal ink.
+
+  This presentation is about a combination of Reveal.js and LaTeX-Beamer.
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "LaTeX-Beamer + Reveal.js With Blee and BISOS"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /LaTeX-Beamer + Reveal.js With Blee and BISOS/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{LaTeX-Beamer + Reveal.js With Blee and BISOS}
+%%%#+END:
+
+%%% Not derivedVideo
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "LaTeX-Beamer + Reveal.js With Blee and BISOS" :subtitle "" :label "beamerPlusReveal" :beamer "plain" :comment "body=odg-image" :transition "default"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=beamerPlusReveal LaTeX-Beamer + Reveal.js With Blee and BISOS body=odg-image
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=beamerPlusReveal]
+    \transition{default}
+    \frameaudio{"audio/beamerPlusReveal.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/beamerPlusReveal/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=beamerPlusReveal]
+    \transition{default}
+    \frameaudio{"audio/beamerPlusReveal.mp3"}
+    \frametitle{LaTeX-Beamer + Reveal.js With Blee and BISOS}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('beamerPlusReveal', 'always', 'True')
+%%BxPy: impressiveFrameParSet('beamerPlusReveal', 'transition', 'default')
+%%%#+END:
+
+
+    \begin{block}{About LaTeX Beamer:}
+      Beamer is a document class for the LaTeX typesetting system that is used to create presentations.
+      It is in very common use within academic communities.
+    \end{block}
+
+    \begin{block}{About Reveal.js:}
+          reveal.js is an HTML presentation framework that allows you to create interactive and visually appealing slide decks.
+    \end{block}
+
+    \begin{exampleblock}{Blee-LCNT Presentations as LaTeX-Beamer + Reveal.js:}
+          A single LaTeX+org-mode source is used to generate LaTeX images and HTML which are injected into Reveal.js and
+          then augmented by voice-overs and videos.
+    \end{exampleblock}
+
+    \begin{center}
+      \colorbox{blue!30}{\color{black}
+       \textbf{All of this comes integrated as a BISOS-Capability-Bundle (BCB)}}
+      \colorbox{blue!30}{\color{black}
+       \textbf{Ready for use (when you buy into ByStar/BISOS/Blee)}}
+    \end{center}
+
+\pnote{
+
+  For those who may not be familiar with Beamer and Reveal, here is a quick intro.
+
+  Among academics, LaTeX-Beamer is the go to tool for producing presentations.
+
+  Reveal.js is recognized as the best of breed for dispensing HTML slide decks.
+
+  For many, Reveal and Beamer live in different universes.
+
+  Beamer is pdf oriented and  Reveal is html oriented.
+
+  Combining two powerful tools makes for an even more powerful tool.
+
+  This Blee-LCNT Presentations combines the best of LaTeX-Beamer with Reveal.js.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Blee-LCNT Novel Concepts"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Blee-LCNT Novel Concepts/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Blee-LCNT Novel Concepts}
+%%%#+END:
+
+%%% Not derivedVideo
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Blee-LCNT Novel Concepts" :subtitle "" :label "novelConcepts" :beamer "plain" :comment "body=odg-image" :transition "default"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=novelConcepts Blee-LCNT Novel Concepts body=odg-image
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=novelConcepts]
+    \transition{default}
+    \frameaudio{"audio/novelConcepts.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/novelConcepts/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=novelConcepts]
+    \transition{default}
+    \frameaudio{"audio/novelConcepts.mp3"}
+    \frametitle{Blee-LCNT Novel Concepts}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('novelConcepts', 'always', 'True')
+%%BxPy: impressiveFrameParSet('novelConcepts', 'transition', 'default')
+%%%#+END:
+
+   \begin{multicols}{2}
+
+     \color{magenta} \textbf{Common Prior Art Key Concepts}
+
+      \begin{itemize}
+        \item \color{black} \textbf{Linux and Emacs}
+        \item \color{violet} \textbf{Org-Mode + LaTeX}
+        \item \color{violet} \textbf{Org-Babel \& Literate}
+        \item \color{violet}  \textbf{Reveal.js By Itself}
+        \item \color{violet}  \textbf{LaTeX Beamer By Itself}
+        \item \color{violet}  \textbf{DIY with more Packages}
+        \item \color{violet}  \textbf{All-In-One Result Videos}
+        % \item \color{violet}  \textbf{Video As Primary Output}
+
+      \end{itemize}
+
+      \columnbreak
+
+      \color{blue} \textbf{Key Novel Concepts}
+
+      \begin{itemize}
+        \item \color{black} \textbf{Linux and Emacs}
+        \item \color{teal} \textbf{LaTeX + Org-Mode}
+        \item \color{teal} \textbf{COMEEGA \& Surrounded}
+        \item \color{teal}  \textbf{LaTeX Beamer + Reveal.js}
+        \item \color{teal}  \textbf{A BISOS Capability Bundle}
+        \item \color{teal}  \textbf{Modular Results}
+        % \item \color{teal}  \textbf{Series of Output}
+      \end{itemize}
+
+    \end{multicols}
+
+    \small LaTeX Beamer pdf result is disected into frame images and inserted in Reveal.js.
+
+    \small LaTeX Beamer frames can also be translated into html with HeVeA and inserted in Reveal.js. Voice-overs for Beamer frames are correlated to frame names and applied to image or html frames in Reveal.js.
+
+
+\pnote{
+
+  Beamer primarily functions as producer and Reveal functions as dispenser and multi-media enhancer.
+
+  Here is how the combination works.
+
+  LaTeX Beamer pdf result is disected into named frame images which can then be inserted in Reveal.js.
+  
+  LaTeX Beamer frames can also be translated into html with HeVeA which can also be
+  inserted in Reveal.js.
+
+  Voice-overs for Beamer frames can be correlated to frame names
+  and applied to image or html frames. Screen captures and image narrations as videos can
+  be directly dispensed through Reveal.
+
+  There are various additional novel concepts with regard to the way that we have
+  integrated all of this together. Instead of Org-Mode+LaTeX, we do LaTeX+Org-Mode.
+  Instead of Babel, we do COMEEGA, instead of the Literate model we introduce the
+  Surrounded model.
+
+  You shall see various examples of these shortly.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Part of a Bigger Picture -- Part of a Series" :label ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Part of a Bigger Picture -- Part of a Series/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Part of a Bigger Picture -- Part of a Series}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Part of a Bigger Picture -- Part of a Series" :subtitle "ByStar, BISOS, Blee" :reveal "plain" :beamer "plain" :label "PartOfByStar"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=PartOfByStar Part of a Bigger Picture -- Part of a Series
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=PartOfByStar]
+    \frameaudio{"audio/PartOfByStar.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/PartOfByStar/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=PartOfByStar]
+    \frameaudio{"audio/PartOfByStar.mp3"}
+    \frametitle{Part of a Bigger Picture -- Part of a Series}
+    \framesubtitle{ByStar, BISOS, Blee}
+%%BxPy: impressiveFrameParSet('PartOfByStar', 'always', 'True')
+%%BxPy: impressiveFrameParSet('PartOfByStar', 'transition', 'UnSpecified')
+%%%#+END:
+
+\begin{itemize}
+    \item EmacsConf 2024 -- About Blee: enveloping our own autonomy directed digital ecosystem with Emacs -- \url{https://emacsconf.org/2024/talks/blee}
+    \begin{itemize}
+      \item introduced Blee, the ByStar Libre-Halaal Emacs Environment
+      \item introduced BISOS, the ByStar Internet Services Operating System
+      \item introduced ByStar, the Libre-Halaal ByStar Digital Ecosystem
+    \end{itemize}
+    \item EmacsConf 2022 -- Revisiting the anatomy of Emacs mail user agents -- \url{https://emacsconf.org/2022/talks/mail}
+    \begin{itemize}
+      \item introduced a context for the ByStar Inter-Personal Communications Capability
+    \end{itemize}
+    \item EmacsConf 2021 -- Perso-Arabic Input Methods And Making More Emacs Apps BIDI Aware -- \url{https://emacsconf.org/2021/talks/perso-arabic}
+    \begin{itemize}
+      \item introduced a needed component for multi-lingual content authorship and generation
+    \end{itemize}
+\end{itemize}
+
+\end{frame}
+\end{verblatex}
+
+\pnote{
+
+  All of this is part of a bigger picture. A much bigger picture.
+  My talks at EmacsConf 2021, 2022 and 2024 are related. This 2025 talk builds on those.
+
+  Last year's talk ``About Blee: enveloping our own autonomy directed digital ecosystem
+  with Emacs'' in particular, lays the foundations for this talk. If you have not seen
+  that, it would make good send to review it.
+
+  In my previous talks I have been criticized of having a ``prophetic'' style.
+  The scope of ByStar is lofty and immense. In many ways it is unbelievable.
+  And EmacsConf talks are meant to be short. So, as a result, sometimes I end up being cryptic.
+}
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "The ``Nature of Polyexistentials'' Book"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _The ``Nature of Polyexistentials'' Book_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{The ``Nature of Polyexistentials'' Book}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Introducing The Nature of Polyexistentials Book" :subtitle "" :label "part_polyexistentialsBook" :comment "body=TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_polyexistentialsBook Introducing The Nature of Polyexistentials Book body=TOC
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_polyexistentialsBook]
+    \frameaudio{"audio/part_polyexistentialsBook.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_polyexistentialsBook/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_polyexistentialsBook]
+    \frameaudio{"audio/part_polyexistentialsBook.mp3"}
+    \frametitle{Introducing The Nature of Polyexistentials Book}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_polyexistentialsBook', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_polyexistentialsBook', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  Having accepted the ``prophetic'' criticism as legitimate, I now need to put a book on the table.
+  With that book in place, moving forward, when needing to be cryptic, I shall cite Chapter and Verse.
+
+}
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "The ``Nature of Polyexistentials'' Book and The Full ByStar Story"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /The ``Nature of Polyexistentials'' Book and The Full ByStar Story/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{The ``Nature of Polyexistentials'' Book and The Full ByStar Story}
+%%%#+END:
+
+%%%  :title "``Nature of Polyexistentials'' Book and The Full ByStar Story" :subtitle "" :label "fullBystarStory" :comment "body=text" :reveal "plain" :beamer "plain"
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :label "fullBystarStory" :comment "body=text" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=fullBystarStory  body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=fullBystarStory]
+    \frameaudio{"audio/fullBystarStory.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/fullBystarStory/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=fullBystarStory]
+    \frameaudio{"audio/fullBystarStory.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('fullBystarStory', 'always', 'True')
+%%BxPy: impressiveFrameParSet('fullBystarStory', 'transition', 'UnSpecified')
+%%%#+END:
+
+\begin{center}
+  {\huge \textbf{Nature of Polyexistentials}}
+\end{center}
+
+
+\begin{center}
+  {\Large \colorbox{blue!50}{\color{white} Basis for Abolishment of}}
+\end{center}
+
+\begin{center}
+  {\Large \colorbox{blue!50}{\color{white} the Western Intellectual Property Rights Regime}}
+\end{center}
+
+
+\begin{center}
+  {\Large And Introduction of}
+\end{center}
+
+\begin{center}
+  {\Large {\color{blue} \textbf{the Libre-Halaal ByStar Digital Ecosystem}}}
+\end{center}
+
+
+\begin{center}
+ \href{https://github.com/bxplpc/120033}{https://github.com/bxplpc/120033}
+\end{center}
+
+\begin{center}
+\vspace{0.2in}
+\qrcode[height=0.5in]{https://github.com/bxplpc/120033}
+\end{center}
+
+
+\pnote{
+
+  I am delighted to announce the availability of my recent book, ``Nature of
+  Polyexistentials''.
+
+  The full title of my book is:
+  Nature Of Polyexistentials ---
+  Basis For Abolishment Of The Western Intellectual Property Rights Regime ---
+  And Introduction Of The Libre-Halaal ByStar Digital Ecosystem.
+
+  Knowledge, know-how, uses of know-how, ideas, formulas, software and information are
+  inherently non-scarce. They are \textbf{polyexistentials}. Unlike monoexistentials which
+  exist in singular, polyexistentials naturally exist in multiples.
+
+  What is abundant in nature is being made artificially scarce through man-made
+  ownership rules called copyright and patents.
+
+  These mistaken ownership rules, the so called Western IPR regime, has immense ramifications on
+  the shape the direction of the American Digital Ecosystem.
+  It would be an understatement to say that the American Digital Ecosystem has put humanity in danger.
+}
+\end{frame}
+\end{verblatex}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "A Layered Overview of The Polyexistentials Book"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /A Layered Overview of The Polyexistentials Book/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{A Layered Overview of The Polyexistentials Book}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :reveal "plain" :beamer "blank" :label "polyBookLayers" :comment "body=derivedImage"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=polyBookLayers  body=derivedImage
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=polyBookLayers]
+    \frameaudio{"audio/polyBookLayers.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/polyBookLayers/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=polyBookLayers]
+    \frameaudio{"audio/polyBookLayers.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('polyBookLayers', 'always', 'True')
+%%BxPy: impressiveFrameParSet('polyBookLayers', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/polyBookLayers-9x16.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *polyBookLayers-9x16* -- Nature of Polyexistentials --- Book Outline ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/polyBookLayers-9x16}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/polyBookLayers-9x16.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/polyBookLayers-9x16}
+      \caption{Nature of Polyexistentials --- Book Outline}
+      \label{fig:polyBookLayers-9x16}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/polyBookLayers-9x16}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{Nature of Polyexistentials --- Book Outline}
+      \label{fig:polyBookLayers-9x16}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+
+\pnote{
+
+Two parts of the book, in particular are of immediate relevance.
+
+Part III, the ethics layer, focuses on contours of cures.
+
+Having dismissed the Western intellectual property rights (IPR) regime as an erroneous
+governance model for polyexistentials, I propose the Libre-Halaal model of governance of
+polyexistentials towards facilitating conviviality of tools.
+
+Part IV, the engineering layer, introduces the Libre-Halaal ByStar Digital Ecosystem.
+as an ethical alternative to the prevailing proprietary American digital
+ecosystem.
+
+The book also provides additional details about the content generation and publication
+facilities that I am presenting here. And the book itself, as content, was generated
+and published using the facilities that I am presenting here.
+
+}
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Nature of Polyexistentials Book -- Vol I and II Key Concepts"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Nature of Polyexistentials Book -- Vol I and II Key Concepts/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Nature of Polyexistentials Book -- Vol I and II Key Concepts}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Nature of Polyexistentials Book -- Key Concepts" :subtitle "Volumes I and II" :label "twoVolumesConcepts" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=twoVolumesConcepts Nature of Polyexistentials Book -- Key Concepts body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=twoVolumesConcepts]
+    \frameaudio{"audio/twoVolumesConcepts.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/twoVolumesConcepts/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=twoVolumesConcepts]
+    \frameaudio{"audio/twoVolumesConcepts.mp3"}
+    \frametitle{Nature of Polyexistentials Book -- Key Concepts}
+    \framesubtitle{Volumes I and II}
+%%BxPy: impressiveFrameParSet('twoVolumesConcepts', 'always', 'True')
+%%BxPy: impressiveFrameParSet('twoVolumesConcepts', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{columns}
+
+      \begin{column}{0.45\textwidth}
+
+        \begin{center}
+          \colorbox{blue!30}{\color{black} \textbf{Volume I:}}
+          \colorbox{blue!30}{\color{black} \textbf{Rejection of the IPR Regime}}
+        \end{center}
+      \end{column}
+
+      \begin{column}{0.55\textwidth}
+
+        \begin{center}
+          \colorbox{blue!60}{\color{white} \textbf{Volume II:}}
+          \colorbox{blue!60}{\color{white} \textbf{Libre-Halaal ByStar Digital Ecosystem}}
+        \end{center}
+      \end{column}
+
+    \end{columns}
+
+    \bigskip
+
+    \begin{columns}
+
+      \begin{column}{0.5\textwidth}
+
+        \begin{itemize}
+          \item Polyexistentials
+          \item Western IPR and Americanism
+          \item Abolishment of IPR Regime
+          \item Libre-Halaal Governance of Polyexistentials
+          % \item Polyexistential Capitalism
+          \item Inside of IPR: Unique Software Public License: Affero GPL
+          \item Outside of IPR: Eastern Strategies
+        \end{itemize}
+      \end{column}
+
+      \begin{column}{0.5\textwidth}
+
+        \begin{itemize}
+          \item Libre-Halaal ByStar DE
+                \begin{itemize}
+                  \item Service Portability, Service Possession Assertion, Autonomy, Privacy
+                \end{itemize}
+          \item BISOS - By* Internet Services OS
+                \begin{itemize}
+                  \item PyCS, By* Portable Objects (BPOs), PALS
+                \end{itemize}
+          \item Blee - By* Libre Emacs Env
+                \begin{itemize}
+                  \item COMEEGA, Blee Panels, PyCS Player
+                \end{itemize}
+        \end{itemize}
+      \end{column}
+
+    \end{columns}
+
+
+
+\pnote{
+
+  You can think of this book as being in two volumes.
+
+  Our focus are Blee and BISOS in Volume II.
+
+  Volume I deals with the general concept of polyexistence and invalidity of IPR
+  and our terminoloy of Libre-Halaal --- instead of the common but ill directed
+  vocabulary of Free Software and Open-Source and FOSS.
+
+  In Chapter 11, I introduce the very sensitive and potent vocabulary of Halaal and
+  Libre-Halaal.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Obtaining the Nature of Polyexistentials Book"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Obtaining the Nature of Polyexistentials Book/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Obtaining the Nature of Polyexistentials Book}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/insertDerivedVideo :title "" :subtitle "" :label "obtainingPolyBookInsert" :comment "body=derivedInsert"  :derivedLabel "obtainingPolyBook"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  insertDerivedVideo [[elisp:(outline-show-subtree+toggle)][||]] Label=obtainingPolyBookInsert  body=derivedInsert
+\end{whenOrg}
+
+\begin{frame}[fragile,plain,label=obtainingPolyBookInsert]
+    \frametitle{}
+    \framesubtitle{}
+
+
+\begin{htmlonly} %% Must be at begining of line
+   \begin{presentationMode}
+    \begin{rawhtml}
+<video preload="auto" data-audio-controls src="./video/derived-obtainingPolyBook.mp4"></video>
+    \end{rawhtml}
+    \end{presentationMode}
+
+    \begin{articleMode}
+    \begin{rawhtml}
+    <!-- data-autoplay  controls -->
+    <p>
+    <video controls  preload="auto" src="./video/derived-obtainingPolyBook.mp4" height="50%%" width="50%%">
+    </video>
+    </p>
+     \end{rawhtml}
+    \end{articleMode}
+\end{htmlonly}
+
+\begin{latexonly}
+
+Reveal Video Insertion Of src="./video/derived-obtainingPolyBook.mp4"
+
+\end{latexonly}
+
+%%%#+END:
+
+\pnote{
+
+  The contents of this book belong to all of humanity and verbatim copying of it is
+  unrestricted. If you want to read it, this book is yours.
+
+  The ``Nature of Polyexistentials'' book is available both online and in print.
+
+  This book is available as two editions. The US Edition and the International edition. The
+  US Edition is written with a slightly milder Western unfriendly tone, while the International Edition
+  includes additional original content in Farsi. I consider the International Edition to
+  be the authoritative version. However, many readers in the US and Western countries may
+  prefer the US Edition.
+
+  I maintain separate Git repositories for each edition on GitHub:
+  US Edition is at bxplpc/120033 and International Edition: bxplpc/120074
+
+  Cloning these repositories will give you access to the book in PDF format (suitable for
+  both A4 and US Letter printing) and in EPUB format. Alternatively, the content can be
+  downloaded directly from your browser without needing to clone the repositories.
+
+  To ensure broader online availability and stability, I have also published the book on
+  Zenodo, complete with a DOI (Digital Object Identifier). You can download both the A4 and
+  8.5 x 11 PDFs from there as well.
+
+  The book is also available in print on Amazon and at most major bookstores in the US and
+  Western regions. The ISBNs for both editions are included in this slide.
+  Additionally, I have published this book in Iran through Jangal Publishers.
+
+  I did not write this book for profit. My aim is to share my thoughts and encourage
+  readers to engage with my views and ideas. Your feedback is welcome, and I am genuinely
+  interested in hearing your perspectives.
+
+  In Western markets, I have priced the print edition somewhat above production costs. If
+  you find value in the book and the ByStar project, purchasing a copy will help support
+  my work. Thanks in advance for your support.
+
+}
+\end{frame}
+
+
+
+%%%#+BEGIN: b:lcnt:pres:frame:begin/plain :title "Obtaining the Nature of Polyexistentials Book" :subtitle "" :label "obtainingPolyBook" :comment "body=itemize"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /Frame:begin-plain/ [[elisp:(outline-show-subtree+toggle)][||]] *Label=obtainingPolyBook* Obtaining the Nature of Polyexistentials Book -- body=itemize
+\end{whenOrg}
+
+\begin{frame}[fragile,plain,label=obtainingPolyBook]
+    \frameaudio{"audio/obtainingPolyBook.mp3"}
+    \frametitle{Obtaining the Nature of Polyexistentials Book}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('obtainingPolyBook', 'always', 'True')
+%%BxPy: impressiveFrameParSet('obtainingPolyBook', 'transition', 'UnSpecified')
+%%%#+END:
+
+\begin{htmlonly} %% Must be at begining of line
+    \begin{center}
+          \textbf{Online:}
+    \end{center}
+\end{htmlonly}
+
+\begin{latexonly}
+    \begin{center}
+          \colorbox{blue!30}{\color{black} \textbf{Online:}}
+    \end{center}
+\end{latexonly}
+
+    \settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
+    \addtolength{\leftmargini}{\labelsep}
+
+    \begin{itemize}
+      \item At Github: (Pdf, EPUB, Html) \\
+      US Edition:   \url{https://github.com/bxplpc/120033} - \href{https://github.com/bxplpc/120033/blob/main/pdf/c-120033-1_05-book-a4-col-emb-pub.pdf}{pdf-A4} -
+      \href{https://github.com/bxplpc/120033/blob/main/pdf/c-120033-1_05-book-8.5x11-col-emb-pub.pdf}{pdf-US}\\
+      International: \url{https://github.com/bxplpc/120074} - \href{https://github.com/bxplpc/120074/blob/main/pdf/c-120074-1_05-book-a4-col-emb-pub.pdf}{pdf-A4} -   \href{https://github.com/bxplpc/120074/blob/main/pdf/c-120074-1_05-book-8.5x11-col-emb-pub.pdf}{pdf-US}\\
+      \item DOI at Zenodo: (Pdf)\\
+      US Edition:   \href{https://zenodo.org/records/11100505}{zenodo.org/records/11100505}  -   \href{https://zenodo.org/records/11100527}{pdf-A4}\\
+      International: \href{https://zenodo.org/records/11100543}{zenodo.org/records/11100543}  -   \href{https://zenodo.org/records/11100551}{pdf-8.5x11}\\
+    \end{itemize}
+
+    \begin{center}
+      \colorbox{blue!60}{\color{white} \textbf{In Print:}}
+    \end{center}
+
+    \begin{itemize}
+      \item At Amazon, Wallmart, etc: (ISBNs 978-1-960957-01-6  978-1-960957-11-5)\\
+      US Edition:   \url{https://www.amazon.com/dp/1960957015}\\
+      International Edition: \url{https://www.amazon.com/dp/1960957112}\\
+      \item In Iran at Jangal Publishers (International) -- ISBN 978-622-238-588-0:\\
+      \href{https://jangal.com/fa/product/252689/nature-of-polyexistentials}{jangal.com/fa/product/252689/nature-of-polyexistentials}
+    \end{itemize}
+
+\pnote{
+  And here are the same links as a native Reveal slide.
+
+  If instead of a video,  you are viewing this presentation as a Reveal web page,
+  you can just click on the pointers and URLs.
+}
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Content Processing -- A ByStar/BISOS/Blee Capability Bundle"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Content Processing -- A ByStar/BISOS/Blee Capability Bundle_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Content Processing -- A ByStar/BISOS/Blee Capability Bundle}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Content Processing --\\\\ A ByStar/BISOS/Blee Capability Bundle (BCB)" :subtitle "" :label "part_bystarCapability" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_bystarCapability Content Processing --\\ A ByStar/BISOS/Blee Capability Bundle (BCB) body=text -- Part TOC
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_bystarCapability]
+    \frameaudio{"audio/part_bystarCapability.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_bystarCapability/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_bystarCapability]
+    \frameaudio{"audio/part_bystarCapability.mp3"}
+    \frametitle{Content Processing --\\ A ByStar/BISOS/Blee Capability Bundle (BCB)}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_bystarCapability', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_bystarCapability', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  Instead of the traditional model of giving you recipes in a DIY context towards the goal of creating
+  content processing capabilities on top of what you may already have, I am doing the opposite.
+
+  I am saying: take this whole BISOS and Blee thing, and in there you will also have the content processing capabilities that I am speaking of here.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "ByStar/BISOS/Blee Capability: Content Production and Publication"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /ByStar/BISOS/Blee Capability: Content Production and Publication/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{ByStar/BISOS/Blee Capability: Content Production and Publication}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Content Processing as a ByStar/BISOS/Blee Capability:" :subtitle "" :label "lcntCapability" :beamer "plain" :comment "body=itemize"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=lcntCapability Content Processing as a ByStar/BISOS/Blee Capability: body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=lcntCapability]
+    \frameaudio{"audio/lcntCapability.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/lcntCapability/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=lcntCapability]
+    \frameaudio{"audio/lcntCapability.mp3"}
+    \frametitle{Content Processing as a ByStar/BISOS/Blee Capability:}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('lcntCapability', 'always', 'True')
+%%BxPy: impressiveFrameParSet('lcntCapability', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{block}{The Libre-Halaal ByStar Digital Ecosystem:}
+           ByStar is about redecentralization of internet application services and autonomous \& private usage of these services in a virtual-edge oriented model.
+    \end{block}
+
+    \begin{block}{BISOS (ByStar Internet Services OS):}
+           A layer on top of Debian which provides for creation of self-hosted edge environments and software-service continumms.
+    \end{block}
+
+    \begin{block}{Blee (ByStar Libre-Halaal Emacs Enviornment):}
+           A layer on top of Emacs which creates a BISOS integrated usage environment.
+    \end{block}
+
+    \begin{exampleblock}{ByStar/BISOS/Blee Capability Bundle (BCB):}
+          Content Generation and Publication Framework
+    \end{exampleblock}
+
+
+\pnote{
+
+  So, at the top level we have our own autonomy and privacy directed digital ecosystem,
+  which in contrast to the center oriented American digital ecosystem, is edge oriented.
+  We call it: ``The Libre-Halaal ByStar Digital Ecosystem''.
+
+  All the systems in ByStar, run BISOS (By* Internet Services OS), which is a layer on top of Debian.
+
+  The usage environment of ByStar and BISOS is Blee which is a layer on top of Emacs.
+
+  With those in place, we then create a capability bundle called Blee-LCNT.
+
+  So, when you buy into Blee and BISOS, you will naturally also get these content processing
+  capabilities --- without a need for any recipies or DIY effort.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "ByStar Containment Hierarchy and ByStar Capability Bundles"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /ByStar Containment Hierarchy and ByStar Capability Bundles/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{ByStar Containment Hierarchy and ByStar Capability Bundles}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "ByStar Containment Hierarchy and ByStar Capability Bundles" :subtitle "" :label "bxContainmentHierarchy" :comment "body=itemize" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=bxContainmentHierarchy ByStar Containment Hierarchy and ByStar Capability Bundles body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=bxContainmentHierarchy]
+    \frameaudio{"audio/bxContainmentHierarchy.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/bxContainmentHierarchy/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=bxContainmentHierarchy]
+    \frameaudio{"audio/bxContainmentHierarchy.mp3"}
+    \frametitle{ByStar Containment Hierarchy and ByStar Capability Bundles}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('bxContainmentHierarchy', 'always', 'True')
+%%BxPy: impressiveFrameParSet('bxContainmentHierarchy', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/bx-containment.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *bx-containment* -- ByStar Containment Hierarchy ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/bx-containment}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/bx-containment.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/bx-containment}
+      \caption{ByStar Containment Hierarchy}
+      \label{fig:bx-containment}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/bx-containment}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{ByStar Containment Hierarchy}
+      \label{fig:bx-containment}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  If you were to look at the model that I introduced as containment hierarchies,
+  it would look like this.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Aggregate Conviviality of ByStar Capabilities"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Aggregate Conviviality of ByStar Capabilities/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Aggregate Conviviality of ByStar Capabilities}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :label "aggregateConviviality" :comment "body=itemize" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=aggregateConviviality  body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=aggregateConviviality]
+    \frameaudio{"audio/aggregateConviviality.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/aggregateConviviality/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=aggregateConviviality]
+    \frameaudio{"audio/aggregateConviviality.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('aggregateConviviality', 'always', 'True')
+%%BxPy: impressiveFrameParSet('aggregateConviviality', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/bisosAndBlee.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *bisosAndBlee* -- BISOS and Blee are Intertwined ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/bisosAndBlee}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/bisosAndBlee.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/bisosAndBlee}
+      \caption{BISOS and Blee are Intertwined}
+      \label{fig:bisosAndBlee}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/bisosAndBlee}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{BISOS and Blee are Intertwined}
+      \label{fig:bisosAndBlee}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  We love Emacs and we love Unix because their design is convivial.
+  By convivial, I am referring to Ivan Illich's  concept and terminology of ``Tools for Conviviality''.
+  It was first published in 1973. It's a must read.
+
+  A goal of the design of the ByStar Digital Ecosystem is to enlarge the aggregated conviviality of its
+  capabilities.
+
+  What distinguishes Blee-Lcnt from other content processing tools and frameworks, is our emphasis on
+  enhancing the aggregated conviviality. These tools let you express yourself. They let you be in charge.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "" :seg-title "Parts List: Integrated Components" :label ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Parts List: Integrated Components/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Parts List: Integrated Components}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :mode "auto" :title "Parts List: Integrated Components" :subtitle "" :reveal "plain" :beamer "plain" :label "partsList" :transition "default"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=partsList Parts List: Integrated Components
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=partsList]
+    \transition{default}
+    \frameaudio{"audio/partsList.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/partsList/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=partsList]
+    \transition{default}
+    \frameaudio{"audio/partsList.mp3"}
+    \frametitle{Parts List: Integrated Components}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('partsList', 'always', 'True')
+%%BxPy: impressiveFrameParSet('partsList', 'transition', 'default')
+%%%#+END:
+
+\begin{description}
+\item[TeX:] XeLaTeX, HaVeA, Beamer, bidi, {\color{violet}bxlcnt/whenenv}, {\color{violet}bxlcnt/bxtex}
+\item[elisp:] AucTeX, RefTeX, yasnippet, {\color{violet}blee-dblock}, {\color{violet}blee.COMEEGA}
+\item[Java-Script:] node-modules, reveal.js, audio-reveal, video.js
+\item[Python-Integration:] {\color{violet}bisos.lcnt},
+\item[Bash-Inetgration:] {\color{violet}bisos/lcnt/bin}, {\color{violet}seedLcntProc.sh}, {\color{violet}lcntProc.sh}
+\item[Images:] LibreOffice Draw, Gimp
+\item[Audio:] Audacity, {\color{violet}lcaAudioManage.sh}
+\item[Video:] obs, ffmpeg, pdfpc (annotations)
+\item [Internationalization:]  {\color{violet}perso-arabic input methods}, {\color{violet}HaVeA-Bidi}
+\item[Teleprompter:] QPrompt, pdfpc (notes)
+\item[Captions:] subed, OpenAI Whisper, aeneas
+\item[Documentation:] {\color{violet}Blee Panels}
+\end{description}
+
+\pnote{
+
+  Here is our parts list. These are the components that we have chosen to bring together
+  towards our goal of creating convivial tools. In this slide we are using black ink to
+  denote exisiting tools and we use violet ink to denote pieces that we have developed
+  towards cohesive integration.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+% %%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Models Tussle: Org as Primary vs LaTeX as Primary"
+% %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+% \begin{whenOrg}
+% *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Models Tussle: Org as Primary vs LaTeX as Primary/ ::  [[elisp:(org-cycle)][| ]]
+% \end{whenOrg}
+
+% \section{Models Tussle: Org as Primary vs LaTeX as Primary}
+% %%%#+END:
+
+
+
+% %%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Models Tussle: Org as Primary vs LaTeX as Primary" :subtitle "A Bigger and Different Vision for Emacs" :label "modelsTussle" :reveal "plain" :beamer "plain" :comment "body=table"
+% \begin{whenOrg}
+% *****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=modelsTussle Models Tussle: Org as Primary vs LaTeX as Primary body=table
+% \end{whenOrg}
+
+% \begin{htmlonly}
+
+% \begin{frame}[fragile,plain,label=modelsTussle]
+%     \frameaudio{"audio/modelsTussle.mp3"}
+%     \frametitle{}
+%     \framesubtitle{}
+%     \begin{rawhtml}
+% <div class="center">
+% <img src="./disposition.gened/modelsTussle/slide-1.png" height="500">
+% </div>
+%     \end{rawhtml}
+% \end{frame}
+% \end{htmlonly}
+
+% \begin{verblatex}
+
+% \begin{frame}[fragile,plain,label=modelsTussle]
+%     \frameaudio{"audio/modelsTussle.mp3"}
+%     \frametitle{Models Tussle: Org as Primary vs LaTeX as Primary}
+%     \framesubtitle{A Bigger and Different Vision for Emacs}
+% %%BxPy: impressiveFrameParSet('modelsTussle', 'always', 'True')
+% %%BxPy: impressiveFrameParSet('modelsTussle', 'transition', 'UnSpecified')
+% %%%#+END:
+
+
+% \begin{small}
+% %\begin{table}[h]
+% \begin{tabular}{|p{4in}@{}|@{}p{4in}|}
+%  %  BEGIN RECEIVE ORGTBL newTable
+
+% \toprule
+
+%   \multicolumn{1}{|c|}{\color{black} \textbf{Common  Emacs/FOSS Culture}} &
+%   \multicolumn{1}{c|}{\color{blue} \textbf{Libre-Halaal ByStar Digital Ecosystem}} \\
+
+% \midrule[.15em]
+
+%   \multicolumn{1}{|l|}{\color{violet} \textbf{Org-Mode + LaTeX}} &
+%   \multicolumn{1}{l|}{\color{teal} \textbf{LaTeX + Org-Mode}} \\
+
+% % \midrule
+
+%   \multicolumn{1}{|l|}{\color{violet} \textbf{Org-Babel}} &
+%   \multicolumn{1}{l|}{\color{teal} \textbf{LaTeX-COMEEGA}} \\
+
+% % \midrule
+
+%   \multicolumn{1}{|l|} {\color{violet} \textbf{Literate Programming}} &
+%   \multicolumn{1}{l|}{\color{teal} \textbf{Surrounded Programming}} \\
+
+
+% \midrule[.15em]
+
+%   \multicolumn{1}{|l|} {\color{violet} \textbf{DIY Recipes for Content Generation}} &
+%   \multicolumn{1}{l|}{\color{teal} \textbf{Content Generation as a BISOS Capability}} \\
+
+% \midrule[.15em]
+
+%   \multicolumn{1}{|l|} {\color{violet} \textbf{Multi-Platform:}} &
+%   \multicolumn{1}{l|}{\color{teal} \textbf{Universal Debian Only -}} \\
+
+%   \multicolumn{1}{|l|} {\color{violet} \textbf{Linux, Windows, Mac, etc.}} &
+%   \multicolumn{1}{l|}{\color{teal} \textbf{Cohesive Software-Service Continuums}} \\
+
+
+% \midrule[.15em]
+
+%   \multicolumn{1}{|l|} {\color{violet} \textbf{Inside of Emacs Integration}} &
+%   \multicolumn{1}{l|}{\color{teal} \textbf{Around Emacs Integration}} \\
+
+% \midrule[.15em]
+
+%   \multicolumn{1}{|l|} {\color{violet} \textbf{Niche Solutions}} &
+%   \multicolumn{1}{l|}{\color{teal} \textbf{Comprehensive and Complete Solutions}} \\
+
+
+
+% \bottomrule
+
+%    %    END RECEIVE ORGTBL newTable
+% \end{tabular}
+% %\caption{Step 2 -- Activities}
+% \label{tab:stepTwo}
+% %\end{table}
+% \end{small}
+
+
+% \pnote{
+
+%   The choices that we have made and the model that we follow is different from the common Emacs and FOSS culture.
+
+%   For content development many use Org-Mode+LaTeX which leads to the models of  Babel and Literate programming.
+%   With Blee-Lcnt, we have done the opposite, LaTeX+Org-Mode leading to the models of COMEEGA and Surrounded programming.
+%   I'll expand on all of this shortly.
+
+% }
+
+%   % Org-Mode has done an excellent job of integrating with various other modes, including with LaTeX.
+
+
+% \end{frame}
+% \end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Resulting Contents -- Output Forms and Formats"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Resulting Contents -- Output Forms and Formats_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Resulting Contents -- Output Forms and Formats}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Resulting Contents -- Output Forms and Formats" :subtitle "" :label "part_outputFormats" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_outputFormats Resulting Contents -- Output Forms and Formats body=text -- Part TOC
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_outputFormats]
+    \frameaudio{"audio/part_outputFormats.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_outputFormats/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_outputFormats]
+    \frameaudio{"audio/part_outputFormats.mp3"}
+    \frametitle{Resulting Contents -- Output Forms and Formats}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_outputFormats', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_outputFormats', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  To see how all of this comes together let's first consider what gets produced.
+
+  For example, for this video, the video is just one of the outputs. There are other outputs as well.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Content Processing and Output Forms and Formats"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Content Processing and Output Forms and Formats/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Content Processing and Output Forms and Formats}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :reveal "plain" :beamer "plain" :mode "auto" :title "Content Processing and Output Forms and Formats" :subtitle "" :label "figmmDocOutputForms"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=figmmDocOutputForms Content Processing and Output Forms and Formats
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=figmmDocOutputForms]
+    \frameaudio{"audio/figmmDocOutputForms.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/figmmDocOutputForms/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=figmmDocOutputForms]
+    \frameaudio{"audio/figmmDocOutputForms.mp3"}
+    \frametitle{Content Processing and Output Forms and Formats}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('figmmDocOutputForms', 'always', 'True')
+%%BxPy: impressiveFrameParSet('figmmDocOutputForms', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres  :fig-file "./figures/bxMmDocPublish.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *bxMmDocPublish* -- ByStar Multimedia Document Publication And Distribution ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=108mm,keepaspectratio]{./figures/bxMmDocPublish}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="./figures/bxMmDocPublish.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{./figures/bxMmDocPublish}
+      \caption{ByStar Multimedia Document Publication And Distribution}
+      \label{fig:bxMmDocPublish}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{./figures/bxMmDocPublish}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{ByStar Multimedia Document Publication And Distribution}
+      \label{fig:bxMmDocPublish}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+
+\pnote{
+
+  In this figure, the outputs are shown in the top layer.
+
+  Using this video as an example, this presentation's output also include
+  the ``Presentation Form'' and the ``Article-Presentation Form''.
+
+  Let's look at these more closely.
+
+}
+
+
+\end{frame}
+\end{verblatex}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "" :seg-title "Resulting Output Formats" :label ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Resulting Output Formats/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Resulting Output Formats}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :mode "auto" :title "Resulting Output Formats" :subtitle "" :label "resultingOutputs" :transition "default" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=resultingOutputs Resulting Output Formats
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=resultingOutputs]
+    \transition{default}
+    \frameaudio{"audio/resultingOutputs.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/resultingOutputs/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=resultingOutputs]
+    \transition{default}
+    \frameaudio{"audio/resultingOutputs.mp3"}
+    \frametitle{Resulting Output Formats}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('resultingOutputs', 'always', 'True')
+%%BxPy: impressiveFrameParSet('resultingOutputs', 'transition', 'default')
+%%%#+END:
+
+    Primary Output Forms and Formats:
+
+    \bigskip
+
+    \begin{itemize}
+    \item  Video Form
+        \begin{itemize}
+          \item Screen Capture of Reveal.js
+        \end{itemize}
+    \item  Presentation Form
+        \begin{itemize}
+          \item Reveal.js  -- HeVeA html output -- Interactive viewing
+          \item Pdf  -- Beamer-LaTeX output -- pdf viewing and printing
+        \end{itemize}
+    \item  Article-Presentation Form
+        \begin{itemize}
+          \item Html  -- HeVeA html article output -- Includes: images, notes, audio and video
+          \item Pdf  -- Article-LaTeX output -- Include images and notes
+        \end{itemize}
+    \end{itemize}
+
+
+\pnote{
+
+  For Presentations, there are 3 different forms. The Video Form, the Presentation From and the Article-Presentation Form.
+  The Presentation Form produces both a pdf output and Reveal output.
+
+  Next we will walkthrough some of the benefits that availability of these forms and formats provide.
+
+}
+
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "" :seg-title "Output Forms Walkthrough" :label ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Output Forms Walkthrough/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Output Forms Walkthrough}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame:begin/blank  :label "outputFormsWalkthrough" :comment "body=video"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /Frame:begin-blank/ [[elisp:(outline-show-subtree+toggle)][||]] *Label=outputFormsWalkthrough* UnSpecified -- body=video
+\end{whenOrg}
+
+\begin{frame}[fragile,plain,label=outputFormsWalkthrough]
+    \frametitle{}
+%%BxPy: impressiveFrameParSet('outputFormsWalkthrough', 'always', 'True')
+%%BxPy: impressiveFrameParSet('outputFormsWalkthrough', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame:body:mm/video :videoPath "./video/outputWalkthrough.mp4" :comment ""
+\begin{whenOrg}
+******  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  FrmCntnt-Video [[elisp:(outline-show-subtree+toggle)][||]] Label=UnSpecified UnSpecified
+\end{whenOrg}
+\begin{presentationMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+<video preload="auto" data-audio-controls src="./video/outputWalkthrough.mp4"></video>
+  \end{rawhtml}
+\end{htmlonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+      <!-- data-autoplay  controls -->
+    <p>
+    <video  controls   preload="auto"  src="./video/outputWalkthrough.mp4"  height="50%%" width="50%%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{articleMode}
+
+\begin{presentationMode}
+\begin{latexonly}
+    \begin{center}
+      Video File: ./video/outputWalkthrough.mp4
+    \end{center}
+\end{latexonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{latexonly}
+    \begin{center}
+      Video File: ./video/outputWalkthrough.mp4
+    \end{center}
+\end{latexonly}
+\end{articleMode}
+%%%#+END:
+
+\pnote{
+
+The video presentation that you are watching is just one of the outputs of the Blee-LCNT
+machinery. There are two PDF format outputs and two HTML outputs that are also quite useful.
+
+The primary output of Beamer is a set of slides that people use to give their talks with.
+Typically that's done live. In my case I dissect the images of each frame and do a voiceover on it
+and then dispense it through reveal. In a second you will see that as well.
+
+This PDF output is very useful. You get the table of contents of course and in addition to that
+Beamer generates navigations for you where on any part you get a small table of content
+as well.
+
+This is heavily used amongst academics and it's a good output on its own and I'm augmenting
+it in a variety of ways. In addition to the presentation PDF format there is also an
+article-presentation PDF format which gives you the same content but it gives it to you in
+a textual form with the table of content and the rest. This is a good form to use when you are giving
+for example class lectures and the students often prefer this format.
+Now for the HTML format outputs the most relevant of course is the reveal itself. If you have not used reveal
+before. In my view it's a HTML slide dispenser. I don't look at it as a presentation framework.
+I use, as you are seeing, we use Beamer to feed into it and we use it to dispense the information.
+It has all the typical navigation capabilities that you would expect and most of
+what I have as slides are images but occasionally particularly when there is a need to provide
+pointers, HTML pointers. I then also include a textual output. This is also produced from the Beamer
+latex source but it's HTML through textual HTML through HeVeA not the image.
+You can you get a table of contents. You can navigate and there are a whole lot of other features
+that reveal also provides. So to generate the video, what I do is I come to the very beginning of
+the presentation. I turn on the screen capture recorder and then I start playing the voiceover for each
+slide and at the very end you get a video but what you just did is you dispensed every frame
+one at a time through reveal. In addition to this HTML form you also get a article presentation form of it
+with a full table of content and the videos are there and the notes are there and this is also quite useful.
+
+
+}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "A Unified Single Input -- A Sequence of Frames"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _A Unified Single Input -- A Sequence of Frames_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{A Unified Single Input -- A Sequence of Frames}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "A Unified Single Input -- A Sequence of Frames" :subtitle "" :label "part_inputFormats" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_inputFormats A Unified Single Input -- A Sequence of Frames body=text -- Part TOC
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_inputFormats]
+    \frameaudio{"audio/part_inputFormats.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_inputFormats/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_inputFormats]
+    \frameaudio{"audio/part_inputFormats.mp3"}
+    \frametitle{A Unified Single Input -- A Sequence of Frames}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_inputFormats', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_inputFormats', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  Now, let's look at the one single input file that produced all of the outputs that we just saw.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Obtaining Sources Of This Document -- Pointers To Git Repos"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Obtaining Sources Of This Document -- Pointers To Git Repos/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Obtaining Sources Of This Document -- Pointers To Git Repos}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/insertDerivedImage :reveal "plain" :beamer "plain" :mode "auto" :title "Obtaining Sources Of This Document -- Pointers To Git Repos" :subtitle "" :label "obtainingSourcesInsert" :derivedLabel "obtainingSources"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  insertDerivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=obtainingSourcesInsert Obtaining Sources Of This Document -- Pointers To Git Repos
+\end{whenOrg}
+
+\begin{frame}[fragile,plain,label=obtainingSourcesInsert]
+    \frameaudio{"audio/obtainingSourcesInsert.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+
+
+\begin{htmlonly} %% Must be at begining of line
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/obtainingSources/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{htmlonly}
+
+\begin{latexonly}
+
+Reveal Image Insertion Of src="./disposition.gened/obtainingSources/slide-1.png"
+
+\end{latexonly}
+
+%%%#+END:
+
+\pnote{
+
+  I have put both the input file and some of the output files for this presentation on github.
+
+  Here are some links to these repos and files.
+
+}
+
+\end{frame}
+
+
+%%%#+BEGIN: b:lcnt:pres:frame:begin/plain  :reveal "plain" :beamer "plain" :mode "auto" :title "Obtaining Sources Of This Document -- Pointers To Git Repos" :subtitle "" :label "obtainingSources"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /Frame:begin-plain/ [[elisp:(outline-show-subtree+toggle)][||]] *Label=obtainingSources* Obtaining Sources Of This Document -- Pointers To Git Repos --
+\end{whenOrg}
+
+\begin{frame}[fragile,plain,label=obtainingSources]
+    \frameaudio{"audio/obtainingSources.mp3"}
+    \frametitle{Obtaining Sources Of This Document -- Pointers To Git Repos}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('obtainingSources', 'always', 'True')
+%%BxPy: impressiveFrameParSet('obtainingSources', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \url{https://github.com/bxplpc/180068}
+
+    \bigskip
+
+    \url{https://github.com/bxGenesis/start}
+
+    \url{https://github.com/bxlcnt}
+
+    \url{https://github.com/bx-blee}
+
+    \url{https://github.com/bisos-pip}
+
+    \bigskip
+
+    \url{https://github.com/mohsenBanan}
+
+    \url{http://www.by-star.net}
+
+\pnote{
+
+    And here are the same links as a native Reveal slide.
+
+}
+
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Overview Of ByStar Multi-Media Document Authorship and Generation"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Overview Of ByStar Multi-Media Document Authorship and Generation/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Overview Of ByStar Multi-Media Document Authorship and Generation}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :reveal "plain" :beamer "plain" :mode "auto" :title "By* Multi-Media Document Authorship and Generation" :subtitle "" :label "figmmDocProduction"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=figmmDocProduction By* Multi-Media Document Authorship and Generation
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=figmmDocProduction]
+    \frameaudio{"audio/figmmDocProduction.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/figmmDocProduction/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=figmmDocProduction]
+    \frameaudio{"audio/figmmDocProduction.mp3"}
+    \frametitle{By* Multi-Media Document Authorship and Generation}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('figmmDocProduction', 'always', 'True')
+%%BxPy: impressiveFrameParSet('figmmDocProduction', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres  :fig-file "./figures/bxMmDocProc.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *bxMmDocProc* -- ByStar Multimedia Document Authorship And Generation ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=108mm,keepaspectratio]{./figures/bxMmDocProc}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="./figures/bxMmDocProc.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{./figures/bxMmDocProc}
+      \caption{ByStar Multimedia Document Authorship And Generation}
+      \label{fig:bxMmDocProc}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{./figures/bxMmDocProc}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{ByStar Multimedia Document Authorship And Generation}
+      \label{fig:bxMmDocProc}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+    This figure gives us an overview of how one set of inputs encapsulted in a single file
+    can produce all of the outputs that we saw. The main TeX file shown at the bottom is
+    processed by both XeLaTeX and by HeVeA. That main TeX file, in addition to LaTeX
+    syntax also include org-mode constructs that facilitate addition of audio and video
+    files. Later, I'll walkthrough the bodyPresArtEnFa.tex file that
+    generated this very presentation with you.
+
+}
+
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "" :seg-title "Unified Source -- Combinations Of Abstract Forms And Concrete Outputs" :label ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Unified Source -- Combinations Of Abstract Forms And Concrete Outputs/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Unified Source -- Combinations Of Abstract Forms And Concrete Outputs}
+ %%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :reveal "plain" :beamer "plain" :mode "auto" :title "Unified Source Controlling All Results" :subtitle "Combinations Of Abstract Formats And Concrete OutputsPaginated: Text+Images" :label "auto" :transition "default"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=auto Unified Source Controlling All Results
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=UnifiedSourceControllingAllResults]
+    \transition{default}
+    \frameaudio{"audio/UnifiedSourceControllingAllResults.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/UnifiedSourceControllingAllResults/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=UnifiedSourceControllingAllResults]
+    \transition{default}
+    \frameaudio{"audio/UnifiedSourceControllingAllResults.mp3"}
+    \frametitle{Unified Source Controlling All Results}
+    \framesubtitle{Combinations Of Abstract Formats And Concrete OutputsPaginated: Text+Images}
+%%BxPy: impressiveFrameParSet('UnifiedSourceControllingAllResults', 'always', 'True')
+%%BxPy: impressiveFrameParSet('UnifiedSourceControllingAllResults', 'transition', 'default')
+%%%#+END:
+
+    % Combinations, Selections And Control Of Language, Abstract Form And Concrete Output Formats
+
+    \begin{itemize}
+    \item Abstract Multilingualization Selections
+      \begin{description}
+      \item[Lr+Bidi:] Left-To-Right -- Globish/English+bidi -- article\&,presentation
+      \item[Rl+Bidi:] Right-To-Left -- Farsi+bidi  -- article\&presentation
+      \end{description}
+    \end{itemize}
+
+    \begin{itemize}
+    \item Abstract Form Selections (Left-To-Right (EnFa))
+      \begin{description}
+      \item[presentation:] presentationEnfa.ttytex + bodyPresentationEnFa.tex
+      \item[presentation + article:]  bodyPresArtEnFa.ttytex + bodyArticleEnFa.ttytex
+      \end{description}
+    \end{itemize}
+
+    \begin{itemize}
+    \item Single Source Abstract Form And Concrete Output Formats Control
+      \begin{description}
+      \item[Abstract Form Controls:] article-mode presentation-mode
+      \item[Concrete Formats Only:] latex-only html-only raw-html
+      \end{description}
+    \end{itemize}
+
+
+\pnote{
+
+  When you construct that primary TeX file, there are several abstractions that you need
+  to keep in mind. Is my presentation going to go from Left-To-Right or from Right-To-Left?
+  Perso-Arabic presentations go from Right-To-Left. Another consideration is the types of
+  forms of results that you want. Just the presentation or Article-Presentation as well?
+  With those choices in place you can produce condition based text for each of your desired outputs.
+
+}
+
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "" :seg-title "Frame Control Types" :label ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Frame Control Types/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Frame Control Types}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :mode "auto" :title "Frame Control Types" :subtitle "" :label "frameControlTypes"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=frameControlTypes Frame Control Types
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=frameControlTypes]
+    \frameaudio{"audio/frameControlTypes.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/frameControlTypes/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=frameControlTypes]
+    \frameaudio{"audio/frameControlTypes.mp3"}
+    \frametitle{Frame Control Types}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('frameControlTypes', 'always', 'True')
+%%BxPy: impressiveFrameParSet('frameControlTypes', 'transition', 'UnSpecified')
+%%%#+END:
+
+\small
+\begin{tabular}{|p{1.5in}|p{2.08in}|p{1.75in}|}
+  \hline
+  \textbf{Dblock} & \textbf{LaTeX} & \textbf{Reveal.js} \\
+  \hline
+  TitlePage & In presentationEnFa.ttytex & \\
+  \hline
+  frame:begin/blank & no title (text) & no title  HaVeA -> html \\
+  \hline
+  frame:begin/plain & title+subTitle & HaVeA -> html \\
+  \hline
+  frame:begin/regular & title+subTitle+Guide & HaVeA -> html \\
+  \hline
+  frame/derivedImage & frame head & brings beamer image \\
+  \hline
+  frame/derivedVideo & frame head & brings video of beamer image \\
+  \hline
+  frame/insertDerivedImage & text saying: image derivedLabel & rawhtml: image derivedLabel \\
+                  & label: here, derivedLabel: inserted & derivedLabel HaVeA -> html \\
+  \hline
+  frame/insertDerivedVideo & text saying: video derivedLabel & rawhtml: video derivedLabel \\
+                  & label: here, derivedLabel: inserted & derivedLabel HaVeA -> html \\
+  \hline
+\end{tabular}
+\normalsize
+
+
+\pnote{
+
+  Think of this video presentation as a sequence of frames.
+  Each frame is controlled by an org-mode dynamic block.
+  This table lists available dblocks from which you can choose.
+  For example, this particular frame that we are watching is controlled by b:lcnt:pres:frame/derivedImage.
+  Beamer creates a pdf file that includes the image of this slide.
+  That image is then injected into Reveal.
+  And in the end a video of that image is produced with the narrations that I am uttering right now.
+  All of this has similarly been applied to each and every frame that you have been watching.
+
+}
+
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "" :seg-title "Frame Body Types" :label ""
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Frame Body Types/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Frame Body Types}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :mode "auto" :title "Frame Body Types" :subtitle "" :label "frameBodyTypes"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=frameBodyTypes Frame Body Types
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=frameBodyTypes]
+    \frameaudio{"audio/frameBodyTypes.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/frameBodyTypes/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=frameBodyTypes]
+    \frameaudio{"audio/frameBodyTypes.mp3"}
+    \frametitle{Frame Body Types}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('frameBodyTypes', 'always', 'True')
+%%BxPy: impressiveFrameParSet('frameBodyTypes', 'transition', 'UnSpecified')
+%%%#+END:
+
+\small
+\begin{tabular}{|p{1.2in}|p{1.75in}|p{1.75in}|}
+  \hline
+  \textbf{Dblock} & \textbf{LaTeX} & \textbf{HTML} \\
+  \hline
+  body:odg-artpres & BeamerSize - ArtSize & RevealSize - ArtSize \\
+  \hline
+  body:mm/video & Textual Video File Path & Sized for Reveal or Article \\
+  \hline
+  None & Condition Based LaTeX & Condition Based Html \\
+  \hline
+\end{tabular}
+\normalsize
+
+
+\pnote{
+
+  Similar to Frame Controls, there are org-mode dynamic blocks for ``Frame Body Types''.
+  You can easily insert an image which is typically created by OpenOffice Draw into a frame.
+  Same with say a screen capture video.
+
+}
+
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Generating and Processing the Content"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Generating and Processing the Content_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Generating and Processing the Content}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Generating and Processing the Content" :subtitle "" :label "part_processingContent" :comment "body=text" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_processingContent Generating and Processing the Content body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_processingContent]
+    \frameaudio{"audio/part_processingContent.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_processingContent/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_processingContent]
+    \frameaudio{"audio/part_processingContent.mp3"}
+    \frametitle{Generating and Processing the Content}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_processingContent', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_processingContent', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  Now that we have looked at the ``Outputs'' and the ``Inputs'', let's look at how the
+  Outputs are generated from the Inputs.
+
+  }
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "From Fresh Debian to Raw-BISOS and Raw-Blee"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /From Fresh Debian to Raw-BISOS and Raw-Blee/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{From Fresh Debian to Raw-BISOS and Raw-Blee}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedVideo :title "Bootstrapping:\\\\ From Fresh Debian to Raw-BISOS and Raw-Blee" :subtitle "" :label "rawBleeBootstrap" :beamer "plain" :comment "body=derivedInsert"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedVideo [[elisp:(outline-show-subtree+toggle)][||]] Label=rawBleeBootstrap Bootstrapping:\\ From Fresh Debian to Raw-BISOS and Raw-Blee body=derivedInsert
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=rawBleeBootstrap]
+    \frametitle{}
+    \framesubtitle{}
+    \begin{presentationMode}
+    \begin{rawhtml}
+<video preload="auto" data-audio-controls src="./video/derived-rawBleeBootstrap.mp4"></video>
+    \end{rawhtml}
+    \end{presentationMode}
+
+    \begin{articleMode}
+    \begin{rawhtml}
+    <!-- data-autoplay  controls -->
+    <p>
+    <video controls  preload="auto" src="./video/derived-rawBleeBootstrap.mp4" height="50%%" width="50%%">
+    </video>
+    </p>
+     \end{rawhtml}
+    \end{articleMode}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=rawBleeBootstrap]
+    \frameaudio{"audio/rawBleeBootstrap.mp3"}
+    \frametitle{Bootstrapping:\\ From Fresh Debian to Raw-BISOS and Raw-Blee}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('rawBleeBootstrap', 'always', 'True')
+%%BxPy: impressiveFrameParSet('rawBleeBootstrap', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{center}
+      \begin{large}
+        \textbf{Bootstrapping BISOS and Blee}
+      \end{large}
+  \end{center}
+
+  \begin{center}
+    \url{https://github.com/bxGenesis/start}
+  \end{center}
+
+\begin{center}
+\vspace{0.2in}
+\qrcode[height=0.5in]{https://github.com/bxGenesis/start}
+\end{center}
+
+\begin{latexonly}
+  \begin{alertblock}{Work In Progress! --- Pardon Our Mess}
+    Not Ready For General Release/Use. Don't Expect Stability/Support.
+  \end{alertblock}
+\end{latexonly}
+
+\pnote{
+
+  Let's bootstrap Raw-BISOS and Raw-Blee.
+
+  Starting from scratch, get yourself a fresh copy of Debian 12.
+
+  Then go to https://github.com/bxGenesis/start
+
+  The README.org file of that github repo is same as Chapter 18,
+  ``Engineering Adoption of BISOS and ByStar'' of the book.
+
+  We will next run ``raw-bisos.sh'', but prior to that let's take a quick look.
+  This bootstrap scripts will do a lot as root on your Fresh-Debian. It is best to
+  first try it on a disposable VM.
+  raw-bisos.sh adds the current debian user to sudoers.
+  Then it installs pipx. And then with pipx it installs from PyPI bisos.provision.
+  bisos.provision includes additional bash scripts that are then executed.
+  Full installation involves setting up various accounts, groups, various directory hierarchies,
+  lots of apt packages and lots of python packages from the bisos namespace.
+
+  If you are ready, copy and paste this line and run it.
+  You will be prompted for the root password.
+  Then be patient. Full installation can take 15 minutes or so.
+  The logs of this script are also captured in ~/raw-bisos-${dateTag}-log.org
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Context for Unified Source Walkthrough"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Context for Unified Source Walkthrough/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Context for Unified Source Walkthrough}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :reveal "plain" :beamer "plain" :mode "auto" :title "Context for Unified Source Walkthrough" :subtitle "" :label "figmmDocProductionContext"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=figmmDocProductionContext Context for Unified Source Walkthrough
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=figmmDocProductionContext]
+    \frameaudio{"audio/figmmDocProductionContext.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/figmmDocProductionContext/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=figmmDocProductionContext]
+    \frameaudio{"audio/figmmDocProductionContext.mp3"}
+    \frametitle{Context for Unified Source Walkthrough}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('figmmDocProductionContext', 'always', 'True')
+%%BxPy: impressiveFrameParSet('figmmDocProductionContext', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres  :fig-file "./figures/bxMmDocProc.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *bxMmDocProc* -- ByStar Multimedia Document Authorship And Generation ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=108mm,keepaspectratio]{./figures/bxMmDocProc}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="./figures/bxMmDocProc.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{./figures/bxMmDocProc}
+      \caption{ByStar Multimedia Document Authorship And Generation}
+      \label{fig:bxMmDocProc}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{./figures/bxMmDocProc}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{ByStar Multimedia Document Authorship And Generation}
+      \label{fig:bxMmDocProc}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  Now that we have Raw-BISOS and Raw-Blee installed, we are ready to walkthrough
+  the unified source of the very presentation that you are watching.
+
+  The ``bodyPresArtEnFa.tex'' file that we will visit is in COMEEGA-LaTeX syntax with lots of
+  org-mode dblocks which generate Beamer-LaTeX frames and conditioned LaTeX bodies.
+
+  After the walkthrough I'll describe dblocks and COMEEGA in more detail.
+
+  At the tail end of the walkthrough, we will also go through the generation process
+  which runs XeLaTeX and HeVeA and a lot more.
+
+}
+
+
+\end{frame}
+\end{verblatex}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Unified Source Walkthrough Screen Capture"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Unified Source Walkthrough Screen Capture/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Unified Source Walkthrough Screen Capture}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedVideo :title "" :subtitle "" :reveal "plain" :beamer "plain" :label "unifiedSourceScreenCapture" :comment "body=derivedInsert"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedVideo [[elisp:(outline-show-subtree+toggle)][||]] Label=unifiedSourceScreenCapture  body=derivedInsert
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=unifiedSourceScreenCapture]
+    \frametitle{}
+    \framesubtitle{}
+    \begin{presentationMode}
+    \begin{rawhtml}
+<video preload="auto" data-audio-controls src="./video/derived-unifiedSourceScreenCapture.mp4"></video>
+    \end{rawhtml}
+    \end{presentationMode}
+
+    \begin{articleMode}
+    \begin{rawhtml}
+    <!-- data-autoplay  controls -->
+    <p>
+    <video controls  preload="auto" src="./video/derived-unifiedSourceScreenCapture.mp4" height="50%%" width="50%%">
+    </video>
+    </p>
+     \end{rawhtml}
+    \end{articleMode}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=unifiedSourceScreenCapture]
+    \frameaudio{"audio/unifiedSourceScreenCapture.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('unifiedSourceScreenCapture', 'always', 'True')
+%%BxPy: impressiveFrameParSet('unifiedSourceScreenCapture', 'transition', 'UnSpecified')
+%%%#+END:
+
+    Video File: ./video/derived-unifiedSourceScreenCapture.mp4
+
+    Video of the Unified Source Walkthrough
+
+
+
+\pnote{
+
+Let's look at our input file. It's a LaTeX file in LaTeX mode and it has org syntax org-mode
+included in it and I can toggle between LaTeX and org-mode so, now I'm gonna be in org-mode
+and org-mode gives me everything that org has to offer including a very convenient navigation
+framework. So let's take one slide and take a look at how it was done. So I would come to this
+scope slide and while I am there I'm gonna click on N. N takes me to the native LaTeX form
+back so that I'll be looking at it not in org but in LaTeX. So we're back in LaTeX and as
+you can see it uses a dynamic block starting with the comments and the BEGIN and it uses
+the dynamic a dynamic block named a framedDrive image which means the content of this frame
+will be dispensed as an image not as text and it also automatically creates for me a name,
+a label, that can be used for voiceover augmentation. So a file in the audio directory called
+ScopeOfBleeLcnt.mp3 is this audio that will come on top of this slide and then the rest is the LaTeX itself.
+
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Blee Org Dynamic Blocks --- Everywhere"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Blee Org Dynamic Blocks --- Everywhere/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Blee Org Dynamic Blocks --- Everywhere}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Blee Org Dynamic Blocks --- Everywhere" :subtitle "" :label "dblocksEverywhere" :comment "body=itemize" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=dblocksEverywhere Blee Org Dynamic Blocks --- Everywhere body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=dblocksEverywhere]
+    \frameaudio{"audio/dblocksEverywhere.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/dblocksEverywhere/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=dblocksEverywhere]
+    \frameaudio{"audio/dblocksEverywhere.mp3"}
+    \frametitle{Blee Org Dynamic Blocks --- Everywhere}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('dblocksEverywhere', 'always', 'True')
+%%BxPy: impressiveFrameParSet('dblocksEverywhere', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    From \url{https://orgmode.org/manual/Dynamic-Blocks.html}:
+
+    \begin{exampleblock}{A.6 Dynamic Blocks}
+      Org supports dynamic blocks in Org documents. They are ...  like any other code block, but the contents are updated automatically by a
+      user function.
+    \end{exampleblock}
+
+    The concept of updating a block of text in any mode  is very powerful.
+    This  should not be limited to just Org documents.
+
+    Blee supports Dynamic Blocks in emacs-lisp-mode, latex-mode, sh-script-mode,
+    python-mode, etc.
+
+    \bigskip
+
+    Dynamic Blocks are more useful when they are considered universal to all of emacs
+    modes. In Emacs they should be. In Blee, they are. In raw-BISOS, see:  \url{file:/bisos/blee/env3/dblocks},
+    \url{https://github.com/bx-blee/poly-dblock} -- \url{https://github.com/bx-blee/blee-dblocks}
+
+%     Like so, for latex-mode
+%     \begin{verbatim}
+%   (add-hook 'latex-mode-hook
+% 	    '(lambda ()
+% 	       (setq org-dblock-start-re
+% 		     "^[ 	]*%%%#\\+BEGIN:[ 	]+\\(\\S-+\\)\\([ 	]+\\(.*\\)\\)?")
+% 	       (setq org-dblock-end-re
+% 		     "^[ 	]*%%%#\\+END\\([:
+% \n]\\|$\\)")
+
+%     \end{verbatim}
+
+\pnote{
+
+  The concept of ``Org Dynamic Blocks'' is very powerful.
+  I think of them as universal visible macros.
+  But, why should they be primarily used in just Org-Mode.
+  I say let's generalize them to ``Emacs Dynamic Blocks''. Have defaults
+  for org-dblock-start-re in every relevant mode and use them everywhere.
+
+  Blee does that. In COMEEGA-LaTeX, Dynamic Blocks create Frame Controls and insert Image and Video contents.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "COMEEGA"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /COMEEGA/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{COMEEGA}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "COMEEGA" :subtitle "Collaborative Org-Mode Enhanced Emacs Generalized Authorship" :label "comeega" :comment "body=itemize" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=comeega COMEEGA body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=comeega]
+    \frameaudio{"audio/comeega.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/comeega/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=comeega]
+    \frameaudio{"audio/comeega.mp3"}
+    \frametitle{COMEEGA}
+    \framesubtitle{Collaborative Org-Mode Enhanced Emacs Generalized Authorship}
+%%BxPy: impressiveFrameParSet('comeega', 'always', 'True')
+%%BxPy: impressiveFrameParSet('comeega', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{itemize}
+
+      \item Consider\\ \colorbox{blue!30}{\textit{Surrounded Programming}} as \textbf{inverse of} \colorbox{blue!60}{\color{white}\textit{Literate Programming}}.
+
+
+      \item Consider \colorbox{blue!30}{\textit{COMEEGA}} as \textbf{inverse of} org-mode based \colorbox{blue!60}{\color{white}\textit{org-babel}}.
+
+      \item In \colorbox{blue!60}{\color{white}\textit{org-babel}} (org-mode based literate programming), we include various programming
+   fragments inside of an org-file. In bable, org recognizes authorship-major-modes and
+   supports them.
+
+      \item In \colorbox{blue!30}{\textit{COMEEGA}}, we include various org-mode fragments
+            inside of a programming language’s major mode as comments or as doc-strings in
+            org format. The combination is then supported through polymode.
+
+    \end{itemize}
+
+    See: \url{https://github.com/bx-blee/comeega}
+    
+
+\pnote{
+
+  Much of Blee and BISOS are implemented in COMEEGA. Almost all of our Elisp, Python, Bash
+  and LaTeX work uses COMEEGA.
+
+  COMEEGA stands for Collaborative Org-Mode Enhanced Emacs Generalized Authorship. It
+  is the inverse of org-babel. COMEEGA adds org-mode to your programming mode.
+
+  Full and proper use of COMEEGA, requires Polymode. Let's call that Poly-COMEEGA.
+
+  %  The concept of Polymode is that of a framework for multiple major modes (MMM) inside a
+  % single Emacs buffer.
+
+  But Emacs's Polymode is work-in-progress, particularly now with the
+  new tree-sitter. So, in the interim, my usage of COMEEGA has been in the form of
+  Toggle-COMEEGA. Where I manually switch between the programming-mode and org-mode. For
+  me this has proved to be a fine interim solution.
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Internationalization --- A Non-Americanist Perspective"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Internationalization --- A Non-Americanist Perspective_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Internationalization --- A Non-Americanist Perspective}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Internationalization --- A Non-Americanist Perspective" :subtitle "" :label "part_internationalization" :comment "body=text" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_internationalization Internationalization --- A Non-Americanist Perspective body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_internationalization]
+    \frameaudio{"audio/part_internationalization.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_internationalization/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_internationalization]
+    \frameaudio{"audio/part_internationalization.mp3"}
+    \frametitle{Internationalization --- A Non-Americanist Perspective}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_internationalization', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_internationalization', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  Naturally, content processing should be multi-lingual and internationalized.
+
+  Let's look at that dimension.
+
+  }
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Perso-Arabic Input Methods, bidi and shaping --- Fully Integrated"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Perso-Arabic Input Methods, bidi and shaping --- Fully Integrated/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Perso-Arabic Input Methods, bidi and shaping --- Fully Integrated}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Perso-Arabic Input Methods, bidi, shaping - Fully Integrated" :subtitle "In Emacs, In XeLaTeX, In HaVeA and In Blee" :label "persoArabic" :beamer "plain" :comment "body=text"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=persoArabic Perso-Arabic Input Methods, bidi, shaping - Fully Integrated body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=persoArabic]
+    \frameaudio{"audio/persoArabic.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/persoArabic/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=persoArabic]
+    \frameaudio{"audio/persoArabic.mp3"}
+    \frametitle{Perso-Arabic Input Methods, bidi, shaping - Fully Integrated}
+    \framesubtitle{In Emacs, In XeLaTeX, In HaVeA and In Blee}
+%%BxPy: impressiveFrameParSet('persoArabic', 'always', 'True')
+%%BxPy: impressiveFrameParSet('persoArabic', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{description}
+      \item[Emacs:]   \hfill \\
+        Very multilingual, good bidi support\\
+        EmacsConf 2021 -- Perso-Arabic Input Methods And Making More Emacs Apps BIDI Aware -- \url{https://emacsconf.org/2021/talks/perso-arabic}
+      \item[XeLaTeX:]   \hfill \\
+        Multilingual, good bidi support\\
+        usepackage{bystarpersian}  -- Defines: newfontfamily{persian}, newcommand{farsi}, newenvironment{faPar},{fa}
+      \item[HeVeA]   \hfill \\
+        Needs usepackage{bystarpersian}
+      \item[Reveal.js]   \hfill \\
+        Multilingual with bidi support\\
+    \end{description}
+
+
+\pnote{
+
+  I am Iranian and much of what I write is in Farsi. Getting Perso-Arabic text right is
+  often a challenge, as it involves Bi-Directional text (BIDI) and shaping of characters.
+
+  In the context of our content generation these need to span all relevant tools, not just emacs.
+  For emacs, I have created my own input method called farsi-transliterate-banan. My EmacsConf 2021 talk was about that.
+
+  Now let's look at some examples and spice it up a bit with semantics.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Ayatollah Khomeini: The so-called Western Intelectual Property is Utterly Invalid"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Ayatollah Khomeini: The so-called Western Intelectual Property is Utterly Invalid/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Ayatollah Khomeini: The so-called Western Intelectual Property is Utterly Invalid}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Ayatollah Khomeini:\\\\ The so-called Western Intelectual Property is Utterly Invalid" :subtitle "" :label "ayatollahKhomeini" :beamer "plain" :comment "body=text"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=ayatollahKhomeini Ayatollah Khomeini:\\ The so-called Western Intelectual Property is Utterly Invalid body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=ayatollahKhomeini]
+    \frameaudio{"audio/ayatollahKhomeini.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/ayatollahKhomeini/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=ayatollahKhomeini]
+    \frameaudio{"audio/ayatollahKhomeini.mp3"}
+    \frametitle{Ayatollah Khomeini:\\ The so-called Western Intelectual Property is Utterly Invalid}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('ayatollahKhomeini', 'always', 'True')
+%%BxPy: impressiveFrameParSet('ayatollahKhomeini', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+% \begin{adjustwidth}{+0.15in}{+0.15in}
+% \columnratio{0.6}
+% \begin{paracol}{2}
+
+\RTL
+  \begin{faPar}
+
+
+آنچه كه معروف به حق طبع نزد افراد است حق شرعی به شمار نمی‌آید و زایل نمودن سلطه مردم بر
+اموالشان بدون اینكه شرط و عقدی در بین باشد جایز نیست و مجرد نوشتن جمله «حق چاپ و تقلید
+محفوظ است» حقی به وجود نمی‌آورد و التزام دیگران را به دنبال ندارد.
+
+  \end{faPar}
+\LTR
+
+  \bigskip
+
+  % \switchcolumn
+
+  That which has become famous among people as the
+  right of authorship (copyright) is not a theological or an
+  ethical right.
+  And to take away the control of people on their
+  belongings without explicit condition and contract is not
+  permitted. And just by writing a sentence saying ``Copyright: Print and Copying Rights are Reserved''
+  creates no right and does not require conformance of others.
+
+%\end{paracol}
+% \end{quote}
+%\end{adjustwidth}
+% \columnratio{0.5}
+
+
+\pnote{
+
+  As and example of proper BIDI text, here is the orignal Farsi text along with English translation of
+  Imam Khomeini's text with respect to invalidity of Western Inteletual Proprty Rights
+  regime.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Ayatollah Motahari: Intellectual Property Is Public Property"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Ayatollah Motahari: Intellectual Property Is Public Property/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Ayatollah Motahari: Intellectual Property Is Public Property}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Ayatollah Motahari: Intellectual Property Is Public Property" :subtitle "" :label "ayatollahMotahari" :beamer "plain" :comment "body=text"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=ayatollahMotahari Ayatollah Motahari: Intellectual Property Is Public Property body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=ayatollahMotahari]
+    \frameaudio{"audio/ayatollahMotahari.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/ayatollahMotahari/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=ayatollahMotahari]
+    \frameaudio{"audio/ayatollahMotahari.mp3"}
+    \frametitle{Ayatollah Motahari: Intellectual Property Is Public Property}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('ayatollahMotahari', 'always', 'True')
+%%BxPy: impressiveFrameParSet('ayatollahMotahari', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+% \begin{adjustwidth}{+0.15in}{+0.15in}
+% \begin{quote}
+%   \begin{paracol}{2}
+
+\RTL
+  \begin{faPar}
+
+    اختراعْ محصول مستقیم نبوغ فکری فرد نیست تا او مالک اثر یا
+    اختراع خویش باشد بلکه طبیعت یا اجتماع به دلیل شرایط و
+    زمینه‌های خاص در پیدایش چنین اختراعی مؤثر بوده‌اند. ازاین‌رو،
+    اموال فکری مانند اختراع و تألیف سرمایه‌ای عمومی و مملوکی
+    اشتراکی است نه ملک خصوصی.
+
+
+  \end{faPar}
+\LTR
+
+\bigskip
+
+    Invention is not solely the direct product of an individual's
+    intellectual genius, for nature and society, due to specific
+    conditions and circumstances, have played a significant role
+    in the emergence of such inventions. Therefore, intellectual
+    properties such as inventions and creations are considered a
+    common and collective asset rather than private ownership.
+
+  % \switchcolumn
+
+% \end{paracol}
+% \end{quote}
+% \columnratio{0.5}
+% \end{adjustwidth}
+
+
+\pnote{
+
+  And as another example of proper BIDI text, here is Ayatollah Mothari's take on Western
+  IPR not being private property.
+
+  Note that these predate by more than half a century Jack Dorsey and Elon Musk's tweets
+  of April 11, 2025 saying ``Delete all IP law''.
+
+  This topic is too important and too sensitive to be left to American Billionaires and their tweets.
+
+  Let me again refer you to the logic of polyexistentials in my book.
+
+}
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Nature of Polyexistentials Citations: Ethical and Religious Cures"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Nature of Polyexistentials Citations: Ethical and Religious Cures/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Nature of Polyexistentials Citations: Ethical and Religious Cures}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Nature of Polyexistentials Citations:\\\\ Ethical and Religious Cures" :subtitle "" :label "citation_ethicalCures" :beamer "plain" :comment "body=text"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=citation_ethicalCures Nature of Polyexistentials Citations:\\ Ethical and Religious Cures body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=citation_ethicalCures]
+    \frameaudio{"audio/citation_ethicalCures.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/citation_ethicalCures/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=citation_ethicalCures]
+    \frameaudio{"audio/citation_ethicalCures.mp3"}
+    \frametitle{Nature of Polyexistentials Citations:\\ Ethical and Religious Cures}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('citation_ethicalCures', 'always', 'True')
+%%BxPy: impressiveFrameParSet('citation_ethicalCures', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{center}
+      \begin{large}
+        \textbf{Chapter 14: Ethical and Religious Cures}
+      \end{large}
+  \end{center}
+
+    \bigskip
+
+  \begin{large}
+Section 14.2.1.3.1:\\[10pt] Imam Khomeini's Decree Invalidates So-Called Intellectual Property Rights
+  \end{large}
+
+    \bigskip
+
+  \begin{large}
+Section 14.2.1.3.2:\\[10pt] Ayatollah Motahari Views Intellectual Property as Public Property
+  \end{large}
+
+
+
+\pnote{
+
+  Chapter 14 of the book is dedicated to Ethics and ownership in Religions.
+
+}
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Nature of Polyexistentials Citations: Non Americanist Perspectives"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Nature of Polyexistentials Citations: Non Americanist Perspectives/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Nature of Polyexistentials Citations: Non Americanist Perspectives}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Nature of Polyexistentials Citations:\\\\ Non Americanist Perspectives" :subtitle "" :label "citation_nonAmericanist" :beamer "plain" :comment "body=text"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=citation_nonAmericanist Nature of Polyexistentials Citations:\\ Non Americanist Perspectives body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=citation_nonAmericanist]
+    \frameaudio{"audio/citation_nonAmericanist.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/citation_nonAmericanist/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=citation_nonAmericanist]
+    \frameaudio{"audio/citation_nonAmericanist.mp3"}
+    \frametitle{Nature of Polyexistentials Citations:\\ Non Americanist Perspectives}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('citation_nonAmericanist', 'always', 'True')
+%%BxPy: impressiveFrameParSet('citation_nonAmericanist', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{center}
+      \begin{large}
+        \textbf{Chapter 6: Debunking the Myth of Western IPR Regim}
+      \end{large}
+  \end{center}
+
+    \bigskip
+
+  \begin{large}
+Section 6.3:\\[10pt] Promoting Creativity and Innovation: IP is a Failed Experiment
+  \end{large}
+
+    \bigskip
+
+   \begin{center}
+      \begin{large}
+        \textbf{Chapter 12: Digital Non-Proprietary Movements}
+      \end{large}
+  \end{center}
+
+  \begin{large}
+Section 12.4:\\[10pt] A Cynical Perspective on Freedom Orientation of Americans
+  \end{large}
+
+    \bigskip
+
+    \begin{center}
+      \begin{large}
+        \textbf{Chapter 9: Americanism: Root of the IPR Mistake}
+      \end{large}
+  \end{center}
+
+
+
+\pnote{
+
+  With respect to my preference for Ethics over Freedom, let me refer you to Section 12.4
+  ``A Cynical Perspective on Freedom Orientation of Americans'' in which I describe
+  where the FOSS labels and the likes of Stallman, Raymond, Moglen and Lessig have gone wrong.
+
+  If you are one of their followers, perhaps Chapter 12 is for you.
+
+}
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Autonomous Self-Publication and Federated Re-Publications"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Autonomous Self-Publication and Federated Re-Publications_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Autonomous Self-Publication and Federated Re-Publications}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Autonomous Self-Publication and Federated Re-Publications" :subtitle "" :label "part_publications" :comment "body=text" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_publications Autonomous Self-Publication and Federated Re-Publications body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_publications]
+    \frameaudio{"audio/part_publications.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_publications/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_publications]
+    \frameaudio{"audio/part_publications.mp3"}
+    \frametitle{Autonomous Self-Publication and Federated Re-Publications}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_publications', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_publications', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  My emphasis thus far has been on content generation. Let's very briefly also look at
+  Autonomous Self-Publication and Federated Re-Publications of our content.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Just The Universal Debian Everywhere"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Just The Universal Debian Everywhere/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Just The Universal Debian Everywhere}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Just The Universal Debian Everywhere" :subtitle "" :reveal "plain" :beamer "plain" :label "JustDebian" :comment "body=derivedInsert" :derivedLabel "justDebian"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=JustDebian Just The Universal Debian Everywhere body=derivedInsert
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=JustDebian]
+    \frameaudio{"audio/JustDebian.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/JustDebian/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=JustDebian]
+    \frameaudio{"audio/JustDebian.mp3"}
+    \frametitle{Just The Universal Debian Everywhere}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('JustDebian', 'always', 'True')
+%%BxPy: impressiveFrameParSet('JustDebian', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres  :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-layerings.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *bxp-layerings* -- ByStar Platform Layerings and Software-Service Continuums ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=108mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-layerings}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-layerings.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-layerings}
+      \caption{ByStar Platform Layerings and Software-Service Continuums}
+      \label{fig:bxp-layerings}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-layerings}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{ByStar Platform Layerings and Software-Service Continuums}
+      \label{fig:bxp-layerings}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+
+\pnote{
+
+  From the very beginning the Debian folks understood the importance of ``Universality'' and
+  coined the ``Universal Debian'' label. This means that we can base our entire digital ecosystem
+  on just the Libre-Halaal Debian distro. And that is what we have done with ByStar.
+  In ByStar everything is based on just the Universal Debian everywhere.
+  This has made our Usage Environment totally harmonious with our Service Environment
+  allowing for very powerful software-service continuums.
+  Of course, All of this is immediatly applicable to our ByStar Content Bundle as well.
+
+  Some have asked, why don't you also include Ubuntu?
+
+}
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Nature of Polyexistentials Citations: Convergence of Debian and Ubuntu"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Nature of Polyexistentials Citations: Convergence of Debian and Ubuntu/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Nature of Polyexistentials Citations: Convergence of Debian and Ubuntu}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Nature of Polyexistentials Citations:\\\\ Convergence of Debian and Ubuntu" :subtitle "" :label "citation_debuntu" :beamer "plain" :comment "body=text"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=citation_debuntu Nature of Polyexistentials Citations:\\ Convergence of Debian and Ubuntu body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=citation_debuntu]
+    \frameaudio{"audio/citation_debuntu.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/citation_debuntu/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=citation_debuntu]
+    \frameaudio{"audio/citation_debuntu.mp3"}
+    \frametitle{Nature of Polyexistentials Citations:\\ Convergence of Debian and Ubuntu}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('citation_debuntu', 'always', 'True')
+%%BxPy: impressiveFrameParSet('citation_debuntu', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{center}
+      \begin{large}
+        \textbf{Chapter 12: Digital Non-Proprietary Movements}
+      \end{large}
+  \end{center}
+
+    \bigskip
+
+  \begin{large}
+Section 12.1.5:\\[10pt] Business and Economics of FOSS
+  \end{large}
+
+    \bigskip
+
+[Includes my 2021 email to Mark Shuttleworth towards persuading him to accept Debian as base and to build on Debian --- and not to compete with Debian.]
+
+\pnote{
+
+  I think the opposite makes more sense. Ubuntu should converge with Debian. I tried to explain this to Mark Shuttleworth in an email a while back.
+  I have included that email in Section 12.1.5.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "From Raw-BISOS To Your Own Site and Your Own PALS"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /From Raw-BISOS To Your Own Site and Your Own PALS/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{From Raw-BISOS To Your Own Site and Your Own PALS}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :label "bisosPlatformProgression" :beamer "plain" :comment "body=derivedInsert"  :derivedLabel "bisosPlatformProgression"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=bisosPlatformProgression  body=derivedInsert
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=bisosPlatformProgression]
+    \frameaudio{"audio/bisosPlatformProgression.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/bisosPlatformProgression/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=bisosPlatformProgression]
+    \frameaudio{"audio/bisosPlatformProgression.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('bisosPlatformProgression', 'always', 'True')
+%%BxPy: impressiveFrameParSet('bisosPlatformProgression', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres  :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-evolution.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *bxp-evolution* -- Ingidients of BISOS Platforms and Their Progression ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-evolution}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-evolution.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-evolution}
+      \caption{Ingidients of BISOS Platforms and Their Progression}
+      \label{fig:bxp-evolution}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/bxp-evolution}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{Ingidients of BISOS Platforms and Their Progression}
+      \label{fig:bxp-evolution}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  In this presentation, we have stopped at the ``Raw-BISOS'' stage. We can further evolve
+  Raw-BISOS and make it be ``Sited'' and provide autonomous publication services.
+
+  But here by going through EmacsConf and youtube we are using the
+  ``Federated Re-Publications'' model.
+
+}
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Blee-Panels --- BISOS and Blee's Self-Documentation Facilities"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Blee-Panels --- BISOS and Blee's Self-Documentation Facilities_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Blee-Panels --- BISOS and Blee's Self-Documentation Facilities}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Blee-Panels --- BISOS and Blee's Self-Documentation Facilities" :subtitle "" :label "part_bleePanels" :comment "body=text" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_bleePanels Blee-Panels --- BISOS and Blee's Self-Documentation Facilities body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_bleePanels]
+    \frameaudio{"audio/part_bleePanels.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_bleePanels/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_bleePanels]
+    \frameaudio{"audio/part_bleePanels.mp3"}
+    \frametitle{Blee-Panels --- BISOS and Blee's Self-Documentation Facilities}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_bleePanels', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_bleePanels', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  Something this large, should be well documented.
+
+  }
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Content Processing Blee Panels --- Screen Captures"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Content Processing Blee Panels --- Screen Captures/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Content Processing Blee Panels --- Screen Captures}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedVideo :title "Content Processing Blee Panels" :subtitle "" :label "lcntBleePanelsVideo" :comment "body=itemize" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedVideo [[elisp:(outline-show-subtree+toggle)][||]] Label=lcntBleePanelsVideo Content Processing Blee Panels body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=lcntBleePanelsVideo]
+    \frametitle{}
+    \framesubtitle{}
+    \begin{presentationMode}
+    \begin{rawhtml}
+<video preload="auto" data-audio-controls src="./video/derived-lcntBleePanelsVideo.mp4"></video>
+    \end{rawhtml}
+    \end{presentationMode}
+
+    \begin{articleMode}
+    \begin{rawhtml}
+    <!-- data-autoplay  controls -->
+    <p>
+    <video controls  preload="auto" src="./video/derived-lcntBleePanelsVideo.mp4" height="50%%" width="50%%">
+    </video>
+    </p>
+     \end{rawhtml}
+    \end{articleMode}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=lcntBleePanelsVideo]
+    \frameaudio{"audio/lcntBleePanelsVideo.mp3"}
+    \frametitle{Content Processing Blee Panels}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('lcntBleePanelsVideo', 'always', 'True')
+%%BxPy: impressiveFrameParSet('lcntBleePanelsVideo', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{center}
+    Video of tour of Blee-Lcnt Panels comes here.
+    \end{center}
+
+  %%% Let's walk through Blee-Lcnt panels, with two goals in mind. First to show what documentation is available for Blee-Lcnt
+  %%% and second what capabilities the Panels provide.
+
+
+\pnote{
+
+  In Emacs, the way that we have been dealing with documentation and information retrieval
+  is archaic. Man-pages, TeXInfo, Helpful-Mode and convention based Doc-Strings are old
+  and limited.
+
+  In BISOS and Blee, we use Blee-Panels for all kinds of documentation.
+
+  Let me show you some examples.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Moving Forward"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Moving Forward_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Moving Forward}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Moving Forward" :subtitle "" :label "part_movingForward" :comment "body=text" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=part_movingForward Moving Forward body=text
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_movingForward]
+    \frameaudio{"audio/part_movingForward.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_movingForward/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_movingForward]
+    \frameaudio{"audio/part_movingForward.mp3"}
+    \frametitle{Moving Forward}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_movingForward', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_movingForward', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  So, what next?
+
+}
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Your Participation"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Your Participation/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Your Participation}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Your Participation" :subtitle "" :label "yourParticipation" :comment "body=itemize" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=yourParticipation Your Participation body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=yourParticipation]
+    \frameaudio{"audio/yourParticipation.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/yourParticipation/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=yourParticipation]
+    \frameaudio{"audio/yourParticipation.mp3"}
+    \frametitle{Your Participation}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('yourParticipation', 'always', 'True')
+%%BxPy: impressiveFrameParSet('yourParticipation', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{columns}
+
+      \begin{column}{0.5\textwidth}
+
+        \begin{center}
+          \colorbox{blue!30}{\color{black} \textbf{General Audience - Emacs Users}}
+        \end{center}
+      \end{column}
+
+      \begin{column}{0.5\textwidth}
+
+        \begin{center}
+          \colorbox{blue!60}{\color{white} \textbf{Emacs Developers}}
+        \end{center}
+      \end{column}
+
+    \end{columns}
+
+    \bigskip
+
+    \begin{columns}
+
+      \begin{column}{0.5\textwidth}
+
+        \begin{itemize}
+          \item Read ``Nature of Polyexistentials''
+          \item Evaluate Invalidity of IPR Regime
+          \item Evaluate Merits of\\ Libre-Halaal Label vs FOSS
+          \item Always Apply Affero GPL to\\ Your Own Software
+          \item Eastern Societies: Engage Policy Makers for Abolishment of IPR
+          \item Appraise the ByStar Blueprint
+        \end{itemize}
+      \end{column}
+
+      \begin{column}{0.5\textwidth}
+
+        \begin{itemize}
+          \item Expand Scope of Org Dynamic Blocks to the Entirety of Emacs
+          \item Create a tree-sitter Polymode with good org-mode support
+          \item Make Something Like Poly-COMEEGA Emacs Native
+          \item Make Something Like Blee-Panels Org or Emacs Native
+        \end{itemize}
+      \end{column}
+
+    \end{columns}
+
+
+
+\pnote{
+
+  If Blee, BISOS, ByStar, Libre-Halaal, Polyexistentials and these
+  Content Processing capabilities have piqued your interest,
+  please feel welcome to contact me.
+
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Emacs Conf is Great"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Emacs Conf is Great/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Emacs Conf is Great}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Thanks" :subtitle "" :label "emacsConfIsGreat" :comment "body=itemize" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=emacsConfIsGreat Thanks body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=emacsConfIsGreat]
+    \frameaudio{"audio/emacsConfIsGreat.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/emacsConfIsGreat/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=emacsConfIsGreat]
+    \frameaudio{"audio/emacsConfIsGreat.mp3"}
+    \frametitle{Thanks}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('emacsConfIsGreat', 'always', 'True')
+%%BxPy: impressiveFrameParSet('emacsConfIsGreat', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{exampleblock}{With Big Thanks To All EmacsConf Organizers}
+        And Sacha In Particular
+    \end{exampleblock}
+
+
+\pnote{
+
+These Emacs Conferences have proven to be very useful and productive.
+I look forward to your thoughts, feedback and questions.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Thanks"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Thanks/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Thanks}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame:begin/blank  :label "endVideo" :comment "body=video"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /Frame:begin-blank/ [[elisp:(outline-show-subtree+toggle)][||]] *Label=endVideo* UnSpecified -- body=video
+\end{whenOrg}
+
+\begin{frame}[fragile,plain,label=endVideo]
+    \frametitle{}
+%%BxPy: impressiveFrameParSet('endVideo', 'always', 'True')
+%%BxPy: impressiveFrameParSet('endVideo', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame:body:mm/video :videoPath "./video/endVideo.mp4" :comment ""
+\begin{whenOrg}
+******  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  FrmCntnt-Video [[elisp:(outline-show-subtree+toggle)][||]] Label=UnSpecified UnSpecified
+\end{whenOrg}
+\begin{presentationMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+<video preload="auto" data-audio-controls src="./video/endVideo.mp4"></video>
+  \end{rawhtml}
+\end{htmlonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+      <!-- data-autoplay  controls -->
+    <p>
+    <video  controls   preload="auto"  src="./video/endVideo.mp4"  height="50%%" width="50%%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{articleMode}
+
+\begin{presentationMode}
+\begin{latexonly}
+    \begin{center}
+      Video File: ./video/endVideo.mp4
+    \end{center}
+\end{latexonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{latexonly}
+    \begin{center}
+      Video File: ./video/endVideo.mp4
+    \end{center}
+\end{latexonly}
+\end{articleMode}
+%%%#+END:
+
+\pnote{
+
+  I want to thank all the  EmacsConf 2025 Organizers
+  for their great work.
+And Sacha in particular.
+
+}
+
+\end{frame}
+
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]]  Local Vars  ::                  *Org-Mode And Emacs Specific Configurations*   [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+%% Local Variables:
+%% major-mode: latex-mode
+%% fill-column: 90
+%% End:

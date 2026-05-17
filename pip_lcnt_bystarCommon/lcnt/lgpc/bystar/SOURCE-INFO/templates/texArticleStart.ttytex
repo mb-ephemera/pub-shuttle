@@ -1,0 +1,125 @@
+\documentclass[txt-old,rcs,html]{article}\usepackage{%ttyStyleFile%epsf,pslatex,pdfstyle,rcs,html,graphicx,makeidx,supertabular,lscape}
+
+%       RCS: $Id: texArticleStart.ttytex,v 1.1 2010-09-29 23:25:59 lsipusr Exp $
+
+\begin{latexonly}
+\def\RcsEmptyValue{$\rm \langle Unknown \rangle$}
+\RCSdef $Revision: 1.1 $
+\RCSdef $Date: 2010-09-29 23:25:59 $
+\RCSdef $Source: /cvsd/rep1/lcnt/lgpc/bystar/SOURCE-INFO/templates/texArticleStart.ttytex,v $
+\RCSdef $Name:  $
+\RCSdef $Author: lsipusr $
+
+% ===== STYLE PARAMETERS =====
+
+%\setlength{\textwidth}{7.0in}
+%\addtolength{\oddsidemargin}{-1.25in}
+%\addtolength{\evensidemargin}{-1.25in}
+
+\setlength{\textwidth}{6.0in}
+\addtolength{\oddsidemargin}{-0.75in}
+\addtolength{\evensidemargin}{-0.75in}
+
+\topmargin      0.00 in
+\textheight     8.50 in
+\end{latexonly}
+
+\setlength{\textwidth}{16.5cm}
+\setlength{\topmargin}{-0.3in}
+\setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{0.0cm}
+\setlength{\evensidemargin}{0.0cm}
+
+\parindent 0 true pc
+
+\raggedright
+
+\begin{document}\ifpdf\DeclareGraphicsExtensions{.pdf,.jpg,.png}\else\DeclareGraphicsExtensions{.eps,.epsi,.ps,.pdf}\fi
+
+\thispagestyle{empty}
+
+\title{@lcnt_shortTitle@}
+
+\vspace{0.1in}
+
+\begin{center}
+  {\huge {\bf @lcnt_mainTitle@\\
+\vspace{0.1in} 
+@lcnt_subTitle@}}
+\end{center}
+
+\vspace{0.3in}
+
+%\begin{center}
+%{\Large {\bf \htmladdnormallink{@lcnt_url@}{@lcnt_url@} }}
+%\end{center}
+
+\vspace{0.7in}
+
+\begin{center}
+{\large Document \# @lcnt_pubCategory@-@lcnt_lcntNu@\\
+Version @lcnt_version@\\
+@lcnt_date@}
+\end{center}
+
+%  REVISION HISTORY
+%
+%  Version  Date      Description
+
+\vspace{0.05in}
+
+\begin{center}
+{\large Available on-line at:\\
+\htmladdnormallink{@lcnt_url@}{@lcnt_url@}}
+\end{center}
+
+\vspace{1.5in}
+
+\begin{center}
+{\large {\bf Mohsen BANAN}}\\
+  E-mail: http://mohsen.banan.1.byname.net/ContactMe\\
+  Web: http://mohsen.banan.1.byname.net\\
+\end{center}
+
+\vspace{1.0in}
+
+\bibliographystyle{plain}
+
+%\maketitle
+
+{\bf Copyright} \copyright \space  {\bf  2007, Mohsen BANAN}
+
+\vspace{0.1in}
+
+Permission is granted to make and distribute complete (not partial)\\
+verbatim copies of this document provided that the copyright notice\\
+and this permission notice are preserved on all copies.
+
+\clearpage
+
+\parskip 5pt
+
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+
+\bigskip
+%\clearpage
+
+\tableofcontents
+\listoftables
+%\listoffigures
+
+\parskip 5pt
+
+\clearpage
+
+\pagenumbering{arabic}
+
+\section{@FirstSection@}
+
+@StartHere@
+
+\bibliography{/usr/local/lib/bib/gnu,/usr/local/lib/bib/networking,/usr/local/lib/bib/nedadoc,/usr/local/lib/bib/rfcs}
+
+\end{document}

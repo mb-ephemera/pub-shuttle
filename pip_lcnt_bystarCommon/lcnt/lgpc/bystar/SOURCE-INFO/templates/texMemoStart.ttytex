@@ -1,0 +1,54 @@
+\documentstyle [contract,11pt]{article}
+%\documentstyle [contract,txt-old,11pt]{article}
+
+\begin{document}    
+         
+\vspace*{-1.0in}
+
+\begin{flushleft}
+%{\huge {\bf {\em Tele-Voice\/}}}
+{\Huge {\bf Neda Communications, Inc.}} 
+\end{flushleft}
+
+%\linebreak
+\vspace*{-.35in} 
+
+\makebox[6.5in]{\hrulefill}
+
+\vspace*{-.35in} 
+
+\begin{flushright}
+  {\small 17005 SE 31st Place}\\
+  {\small Bellevue, WA 98008 USA}\\
+  {\small Tel: +1 206 644-8026}\\
+  {\small Fax: +1 206 562-9591}
+\end{flushright}
+
+\noindent\begin{tabular}{ll}
+Date:    & January 22, 1990\\
+\\
+To:      & Recepient\\
+\\
+cc:      & CcRecepient\\
+\\
+From:    & Mohsen Banan\\
+\\
+Subject: & First Line\\
+         & Second Line\\
+\\
+\end{tabular}
+\bigskip
+
+@START HERE@
+
+Sincerely,
+
+Mohsen Banan
+
+President.
+
+\end{document}
+
+
+
+

@@ -1,0 +1,96 @@
+%% (setq bidi-display-reordering t)
+%% (setq bidi-display-reordering nil)
+\documentclass{bidibeamer}
+\usetheme{Warsaw}
+\usepackage{fontspec}
+\setmainfont[Script=Arabic,Mapping=farsidigits]{XB Zar}
+\def\familydefault{\rmdefault}
+\newfontfamily\rmfamily[Mapping=tex-text]{Times New Roman}
+\usepackage{bidi}
+\newenvironment{latin}{\begin{LTR}\rmfamily}{\end{LTR}}
+\def\biditheoremname{قضیه}
+\def\bidicorollaryname{نتیجه}
+\def\bidifactname{حقیقت}
+\def\bidilemmaname{لم}
+\def\bidiproblemname{مسئله}
+\def\bidisolutionname{پاسخ}
+\def\bididefinitionname{تعریف}
+\def\bididefinitionsname{تعریف‌ها}
+\def\bidiexamplename{مثال}
+\def\bidiexamplesname{مثال‌ها}
+\def\bidiproofname{اثبات}
+\title{عنوان اسلاید}
+\subtitle{این یک زیرعنوان است}
+\author{وفا خلیقی}
+\institute{دانشگاه تهران}
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}{این یک عنوان است}
+\framesubtitle{این زیرعنوان است}
+\begin{bidiexample}
+در این مثال به برسی توابعی خواهیم پرداخت که برای ما قابل استفاده هستند:
+\begin{equation}
+(x-y)^2=x^2-2xy+y^2
+\end{equation}
+\end{bidiexample}
+\begin{bidisolution}
+این یک پاسخ است
+\end{bidisolution}
+\begin{bidiproblem}
+این یک مسئله است.
+\end{bidiproblem}
+\end{frame}
+\begin{frame}{ادامهٔ عنوان قبلی}
+\framesubtitle{ادامهٔ زیرعنوان قبلی}
+\begin{biditheorem}
+این یک قضیه است.
+\end{biditheorem}
+\begin{bidiproof}
+این یک اثبات است
+\end{bidiproof}
+\begin{bidicorollary}
+این یک نتیجه است
+\end{bidicorollary}
+\begin{bidifact}
+این یک حقیقت است
+\end{bidifact}
+\end{frame}
+\begin{frame}{ادامهّ عنوان قبلی}
+\framesubtitle{ادامهٔ زیرعنوان قبلی}
+\begin{bidilemma}
+این یک لم است
+\end{bidilemma}
+\begin{bididefinition}
+این یک تعریف است
+\end{bididefinition}
+\begin{bididefinitions}c
+این محیط مخصوص بیشتر از یک تعریف است
+\end{bididefinitions}
+\begin{bidiexamples}
+این محیط مخصوص بیشتر از یک مثال است.
+\end{bidiexamples}
+\end{frame}
+\begin{frame}{ادامهّ عنوان قبلی}
+\framesubtitle{ادامهٔ زیرعنوان قبلی}
+\begin{bidiblock}{محیط بلوک}
+این محیط بلوک است
+\end{bidiblock}
+\begin{bidiexampleblock}{محیط بلوک مثال}
+این محیط بلوک مثال است
+\end{bidiexampleblock}
+\begin{bidialertblock}{محیط بلوک هشدار}
+این محیط بلوک هشدار است.
+\end{bidialertblock}
+\end{frame}
+\begin{frame}{ادامهّ عنوان قبلی}
+\framesubtitle{ادامهٔ زیرعنوان قبلی}
+این هم مقداری متن معمولی می‌نویسم تا بتوانم به خط بعدی بروم و ببینم که آیا واقعاً \lr{beamer} دست از لجاجت برمی‌دارد یا نه
+\begin{latin}
+This is an English paragraph that I am writing here to see what happens after this, will I get a new bug or I am lucky enough?
+\end{latin}
+این دوباره متنی است فارسی که من آن را می‌نویسم و هنوز در حال آزمایش هستم تا بتوانم به خط بعدی بروم و نتیجه را مشاهده کنم.
+\end{frame}
+\end{document}

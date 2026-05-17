@@ -1,0 +1,390 @@
+%%% -*- Mode: LaTeX; -*-
+
+%%%#+BEGIN: b:lcnt:matex/documentClass :bxClass "pres+art" :bxLangs "en+fa"
+\documentclass[ignorenonframetext]{beamer}
+\usepackage{comment}
+\excludecomment{whenOrg}
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  _DocClass_  [[elisp:(outline-show-subtree+toggle)][||]] ~bxClass=pres+art~ --   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+
+%%%#+BEGIN: b:prog:file/thisFile  :comment "This File"
+\begin{whenOrg}
+*    #This File: /lcnt/lgpc/bystar/permanent/engineering/matoof-son/matoof-son-26-full/presentationEnFa.ttytex
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: b:prog:file/orgTopControls :outLevel 1
+\begin{whenOrg}
+* [[elisp:(org-cycle)][| Controls |]] :: [[elisp:(delete-other-windows)][(1)]] | [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][Overview]]  [[elisp:(progn (org-shifttab) (org-content))][Content]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] | [[elisp:(bx:org:run-me)][Run]] | [[elisp:(bx:org:run-me-eml)][RunEml]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
+** /Version Control/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]]  [[elisp:(vc-update)][vc-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-List]]  [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-List]]
+\end{whenOrg}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:matex:felem/lcntInfoMarker :comment ""
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntInfo _{_ [[elisp:(outline-show-subtree+toggle)][||]] Basic Params Of LCNT-INFO
+*     LcntNu+ShortTitle     :: /PLPC-180071/  *soncli.mcs and the MaTOOF Web-UI csPlayer*
+*     URL                   :: http://www.by-star.net/PLPC/180071
+*     MasterFiles           :: [[elisp:(find-file "presentationEnFa.ttytex")][Visit ./presentationEnFa.ttytex]] || [[elisp:(find-file "articleEnFa.ttytex")][Visit ./articleEnFa.ttytex]] || [[elisp:(find-file "presArtEnFa.ttytex")][Visit ./presArtEnFa.ttytex]] ||
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntInfo _}_ [[elisp:(outline-show-subtree+toggle)][||]]  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN:  b:lcnt:matex:felem/lcntProcMarker :comment ""
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntProc _{_ [[elisp:(outline-show-subtree+toggle)][||]] Process this presentationEnFa.ttytex as a master
+*      IIM Parameters       ::  [[elisp:(bx:iimBash:resultsShow:cmndLineElems)][Show Cmnd Line Elems]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build+view")][-p extent=build+view]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build")][-p extent=build]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=view")][-p extent=view]]
+*      Related              ::  [[elisp:(find-file "./Panel.org")][Visit ./Panel.org]] | [[elisp:(find-file "./mailing/content.mail")][Visit ./mailing/content.mail]]| [[elisp:(find-file "./mailing/Panel.org")][Visit ./mailing/Panel.org]]
+*      Build+Release        ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildResultsRelease" :iifArgs "")][lcntProc.sh -i buildResultsRelease]] || [[elisp:(lsip-local-run-command-here "lcntProc.sh -i fullClean")][lcntProc.sh -i fullClean]] || [[elisp:(cvs-update "." t)][Version Control]]
+*      Build & Preview      ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildPdfPreview" :iifArgs "presentationEnFa.ttytex")][lcntProc.sh -i buildPdfPreview presentationEnFa.ttytex]] || [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildHtmlPreview" :iifArgs "presentationEnFa.ttytex")][lcntProc.sh -i buildHtmlPreview presentationEnFa.ttytex]]
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntProc _}_ [[elisp:(outline-show-subtree+toggle)][||]]  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:latex:felem/docOverview :comment ""
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Overview   [[elisp:(outline-show-subtree+toggle)][||]] Overview:  [[elisp:(reftex-toc)][(RefTOC)]] Document Status, TODOs and Notes For presentationEnFa.ttytex --   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+
+\begin{whenOrg}
+** TODO Make Conditionals: inc and excludes a dblock with curBuild -- has been done. Absorbe. Include in templates.
+   SCHEDULED: <2019-07-29 Mon>
+** LAST TODO ITEM -- Add new Items before this
+\end{whenOrg}
+
+
+%%%#+BEGIN: b:lcnt:latex:preamble/beginMarker  :comment "~~~~~~~~~~~"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  _Preamble{_ [[elisp:(outline-show-subtree+toggle)][||]] ~Begin Preamble Marker~ usepackage and pkgConfigs Before beginDocument -- ~~~~~~~~~~~  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGINNOT: bx:lcnt:latex:when-conditionals :toggle "enabled"  :class "art+pres" :langs "en+fa" :curBuild t :when "main" :comment "missing lcnt:bibProvider"
+%%% Args: :class "pres+art" :langs "en+fa" :toggle "enabled|disabled|hide" :curBuild nil|t :paperSize "8.5x11|6x9" :spacing nil|t :curBuild nil|t :paperSize "8.5x11|6x9" :when "main|mailing"
+
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  DBLOCK:    [[elisp:(outline-show-subtree+toggle)][||]]  When Conditionals (Includes and Excludes) --- when=main curBuild=t paperSize=nil ---   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\usepackage{whenenv}
+
+\includecomment{PLPC-180070}
+
+\includecomment{whenDocIsComplete}
+\excludecomment{whenMailing}
+\excludecomment{whenDocIsPartial}
+
+\excludecomment{ignore}
+
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:latex:preamble/buildEnvs :comment "From ./LCNT-INFO/Builds/buildEnvs.tex"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  whenBldEnv [[elisp:(outline-show-subtree+toggle)][||]] From ./LCNT-Info/Builds/buildEnvs.tex~  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\excludecomment{whenBuildIncludeExample}
+
+\whenEnv{whenBuildArticle}
+%HEVEA\excludecomment{whenBuildArticle}
+
+\whenEnv{whenBuildPresentation}
+%HEVEA\excludecomment{whenBuildPresentation}
+
+\whenEnv{whenBuildSummary}
+%HEVEA\excludecomment{whenBuildSummary}
+
+\whenEnv{whenBuildFull}
+%HEVEA\excludecomment{whenBuildFull}
+
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:latex:preamble/whenCurBuild :curBuild t :when "main"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  whenCurBld [[elisp:(outline-show-subtree+toggle)][||]] From build.tex - whencurBuild ~curBuild=matoof-son-26-pres~  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+% \includecomment{whenBuildIncludeExample}
+
+\whenEnable{whenBuildFull}
+%HEVEA\includecomment{whenBuildFull}
+
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex:early-common-packages :class "pres+art" :langs "en+fa"
+%%% Args: :class "pres+art" :langs "en+fa" :toggle "enabled|disabled|hide" :curBuild nil|t :paperSize "8.5x11|6x9" :spacing nil|t :curBuild nil|t :paperSize "8.5x11|6x9" :when "main|mailing"
+
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PkgsEarly  [[elisp:(outline-show-subtree+toggle)][||]]  early-common-packages ---   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%\nonstopmode
+
+%%%\documentclass[ignorenonframetext]{beamer}
+
+%%%\documentclass[notes=only]{beamer}
+%%%\setbeameroption{show notes}
+%%%\documentclass[aspectratio=169,ignorenonframetext]{beamer}
+
+\usepackage{hevea}
+%HEVEA\usepackage[utf8]{inputenc}
+
+\htmlhead{
+\vspace{0.4in}
+}
+
+\htmlfoot{
+\bigskip
+}
+
+\usepackage{pdfpcnotes}
+
+\usepackage{beamerthemesplit}
+\usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5,debug]{beamerposter}
+
+%%%#+END:
+
+%%%#+BEGIN: b:prog:felem/genericMarker :frontMarker "LatePkgs" :mainMarker "Un Absorbed Packages" :comment "color hyperref"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LatePkgs   [[elisp:(outline-show-subtree+toggle)][||]]  /Marker:/ Un Absorbed Packages -- color hyperref  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGINNOT : bx:dblock:lcnt:latex:late-common-packages :class "pres+art" :langs "en+fa" :comment "INACTIVATED DBLOCK Customized for presentation"
+%%%#+END:
+
+\usepackage{color}
+
+\usepackage{hyperref}
+\usepackage{url}
+
+\usepackage{multicol}
+
+\usepackage{fontspec}
+% \usepackage{xltxtra}  % OBSOLETED In Ubuntu 16.04 and 18.04
+\usepackage{xunicode}
+
+
+%%%#+BEGINNOT : b:lcnt:latex:preamble/pkgBystarBidi :comment "INACTIVATED DBLOCK Customized for presentation"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  pkgBxBidi  [[elisp:(outline-show-subtree+toggle)][||]] Bystar Bidi Pkgs With HeVeA Support --   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\newenvironment{bidiSepBeforeHevea}{}{}
+\usepackage{bidi}
+\newenvironment{bidiSepAfterHevea}{}{}
+
+\usepackage{bystarpersian}   % Defines: \newfontfamily{\persian}, \newcommand{\farsi}, \newenvironment{faPar},{fa}
+\usepackage{bystarpresentation}   % Defines: \excludecomment{presentationMode} \newcommand{\pnote}
+
+%%%#+END:
+
+
+%%%#+BEGIN: b:prog:felem/genericMarker :frontMarker "Late Packages" :mainMarker "Un Absorbed Packages" :comment "qrcode booktabs paracol changepage"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Late Packages [[elisp:(outline-show-subtree+toggle)][||]]  /Marker:/ Un Absorbed Packages -- qrcode booktabs paracol changepage  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+
+% NOTYET
+\usepackage{qrcode}  %%% Must come after beamerarticleEnveloping our own Autonomy Directed Digital Ecosystem With Emacs
+
+\usepackage{booktabs}
+
+\usepackage{paracol}
+\usepackage{changepage}
+
+%%%#+BEGIN: b:lcnt:latex:bib/packagesControls :bibProvider "biblatex"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  pkgBib     [[elisp:(outline-show-subtree+toggle)][||]] bibPackage=biblatex and Controls --   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\usepackage[backend=biber,style=numeric]{biblatex}
+
+%HEVEA\bibliographystyle{plain}
+\excludecomment{whenBibProviderIsBibtex}
+\includecomment{whenBibProviderIsBiblatex}
+
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:latex:bib/addResourcesMarker :examples nil
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  addBibFile [[elisp:(outline-show-subtree+toggle)][||]] ~Marker~ Add Resources examples=nil --   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+\addbibresource{/lcnt/BIB/plpcUrl.bib}
+\addbibresource{/lcnt/BIB/rfcs.bib}
+\addbibresource{/lcnt/BIB/bxsup.bib}
+
+
+
+%%%#+BEGINNOT: bx:dblock:lcnt:latex:common-packages-style-settings :class "pres+art" :langs "en+fa"
+%%% Args: :class "pres+art" :langs "en+fa" :pageNu nil|t :style "bystar"
+
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  pkgsStyles [[elisp:(outline-show-subtree+toggle)][||]]  common-packages-style-settings ---   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\mode<presentation>  % IMPORTANT -- KEEP IT. Without it, you get less features from theme
+{
+  \usetheme{Warsaw}
+
+  \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+}
+
+
+\defbeamertemplate*{footline}{shadow theme}
+{%
+  \leavevmode%
+  \hbox{\begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm plus1fil,rightskip=.3cm]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertframenumber\,/\,\inserttotalframenumber\hfill\insertshortauthor
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle%
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+
+% ===== STYLE PARAMETERS =====
+
+\definecolor{darkred}{rgb}{0.5,0,0}
+\definecolor{darkgreen}{rgb}{0,0.5,0}
+\definecolor{darkblue}{rgb}{0,0,0.5}
+
+\hypersetup{
+    colorlinks=true        % false: boxed links; true: colored links
+}
+
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:latex/input :inputFile "./titlePresLtr.tex"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUTED    [[elisp:(outline-show-subtree+toggle)][||]]   ~Input File~  file:./titlePresLtr.tex  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\input{./titlePresLtr.tex}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:latex/documentBegin  :comment "~~~~~~~~~~~"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  _DocBegin_  [[elisp:(outline-show-subtree+toggle)][||]] ~Begin Document~ -- ~~~~~~~~~~~  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\begin{document}
+
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:latex/frontmatter  :bxClass "pres+art" :comment ""
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /FrontMatr/  [[elisp:(outline-show-subtree+toggle)][||]] ~frontmatter~ TitlePage/AccessInfo/TOCs/Preface/etc --   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+
+
+%%%#+BEGINNOT: b:lcnt:pres:frame/derivedImage :orgDepth 1 :title "" :subtitle "" :label "titlePage" :comment "~NOTE~: INACTIVE CUSTOMIZED TITLE DBLOCK" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImg  [[elisp:(outline-show-subtree+toggle)][||]] outLevel=1 Label=titlePage  ~NOTE~: INACTIVE CUSTOMIZED TITLE DBLOCK
+\end{whenOrg}
+
+\mode<all>  % IMPORTANT -- Must Be Here since we use latexonly and htmlonly
+
+\begin{latexonly}
+
+% No Blank Cover Page -- Select dblock :coverPage blank if desired
+
+
+  \begin{frame}[fragile,plain,label=titlePage]
+    \titlepage
+    \frameaudio{"audio/titlePage.mp3"}
+%BxPy: impressiveFrameParSet('titlePage', 'always', 'True')
+%BxPy: impressiveFrameParSet('titlePage', 'transition', 'UnSpecified')
+%BxPy: impressiveFrameParSet('titlePage', 'onLeave', 'UnSpecified')
+  \end{frame}
+\end{latexonly}
+
+\begin{htmlonly}
+
+  \begin{frame}[fragile,plain,label=titlePage]
+  \frameaudio{"audio/titlePage.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/titlePage/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+%%%#+END:
+
+\pnote{
+}
+
+
+%%%#+BEGIN: b:lcnt:latex/input :inputFile "./common/bodyPresArtEnFa.tex"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUTED    [[elisp:(outline-show-subtree+toggle)][||]]   ~Input File~  file:./common/bodyPresArtEnFa.tex  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\input{./common/bodyPresArtEnFa.tex}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:latex:bib/printBibsMarker :examples nil :bibProvider "biblatex"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Bib        [[elisp:(outline-show-subtree+toggle)][||]] ~Marker~ Print Bibs examples=nil --   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+\begin{latexonly}
+  % \phantomsection
+  % \addcontentsline{toc}{chapter}{Bibliography}
+  % \printbibliography[notkeyword={online},notkeyword={paper}]
+  % \printbibliography[keyword={online},title={Online Readings}]
+  % \printbibliography[keyword={paper},title={Paper Readings}]
+\end{latexonly}
+
+\begin{htmlonly}
+% \bibliography{/lcnt/BIB/plpcUrl,/lcnt/BIB/rfcs,/lcnt/BIB/bxsup}
+\end{htmlonly}
+
+
+
+%%%#+BEGIN: b:lcnt:latex/documentEnd  :comment "~~~~~~~~~~~"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  _DocEnd_    [[elisp:(outline-show-subtree+toggle)][||]] ~End Document~ -- ~~~~~~~~~~~  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\end{document}
+
+%%%#+END:
+
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]]  Local Vars  ::                  *Org-Mode And Emacs Specific Configurations*   [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+%% Local Variables:
+%% major-mode: latex-mode
+%% fill-column: 90
+%% eval: (setq bx:iimp:iimModeArgs "")
+%% eval: (bx:iimp:cmndLineSpecs :name "bxpManage.py")
+%% eval: (bx:iimBash:cmndLineSpecs :name "lcntProc.sh")
+%% eval: (setq bx:curUnit "lcntProc")
+%% eval: (defun org-dblock-write:bx:dblock:org:doc-title (params)  
+%%   (let ((bx:types (or (plist-get params :types) "")))
+%%     (bx:lcnt:info:base-read)
+%%     (insert (format "*  [[elisp:(beginning-of-buffer)][Top]] #####################  [[elisp:(delete-other-windows)][(1)]]                /*%s-%s -- LCNT Panel -- lcntProc.sh, presProc.sh and Mailings*/
+%% *  [[elisp:(beginning-of-buffer)][Top]] #####################  [[elisp:(delete-other-windows)][(1)]]                 *%s*
+%% *  [[elisp:(beginning-of-buffer)][Top]] #####################  [[elisp:(delete-other-windows)][(1)]]                 %s" 
+%%                     (get 'bx:lcnt:info:base  'type)
+%%                     (get 'bx:lcnt:info:base  'lcntNu)
+%%                     (get 'bx:lcnt:info:base  'shortTitle)
+%%                     (get 'bx:lcnt:info:base  'url)
+%% 		    ))))
+%% End:

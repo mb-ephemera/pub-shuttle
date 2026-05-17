@@ -1,0 +1,2325 @@
+%%% -*- Mode: LaTeX; -*-
+
+%%%#+BEGIN: bx:dblock:global:this-file :disabledP "false" :mode "auto"
+\begin{whenOrg}
+*  #This File: /lcnt/lgpc/bystar/permanent/engineering/matoof-son/matoof-son-26/common/bodyPresArtEnFa.tex
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:global:org-controls :disabledP "false" :mode "auto"
+\begin{whenOrg}
+* [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:bx:dblock:global:org-controls)][dbf]]
+*  /Controls/ ::  [[elisp:(org-cycle)][| ]]  [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][|O]]  [[elisp:(progn (org-shifttab) (org-content))][|C]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][|N]] | [[elisp:(delete-other-windows)][|1]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
+*  /Maintain/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-This]] [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-This]] | [[elisp:(bx:org:agenda:these-files-otherWin)][Agenda-These]] [[elisp:(bx:org:todo:these-files-otherWin)][ToDo-These]]
+
+* [[elisp:(org-shifttab)][<)]] [[elisp:(describe-function 'org-dblock-write:bx:dblock:global:org-controls)][dbFunc)]]  E|
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: b:prog:file/orgTopControls :outLevel 1
+\begin{whenOrg}
+* [[elisp:(org-cycle)][| Controls |]] :: [[elisp:(delete-other-windows)][(1)]] | [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][Overview]]  [[elisp:(progn (org-shifttab) (org-content))][Content]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] | [[elisp:(bx:org:run-me)][Run]] | [[elisp:(bx:org:run-me-eml)][RunEml]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
+** /Version Control/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]]  [[elisp:(vc-update)][vc-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-List]]  [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-List]]
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:matex:felem/lcntInfoMarker :comment ""
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntInfo _{_ [[elisp:(outline-show-subtree+toggle)][||]] Basic Params Of LCNT-INFO
+*     LcntNu+ShortTitle     :: /PLPC-180070/  *The After-Market soncli.mcs With BISOS-MaTOOF*
+*     URL                   :: http://www.by-star.net/PLPC/180070
+*     MasterFiles           :: [[elisp:(find-file "presentationEnFa.ttytex")][Visit ./presentationEnFa.ttytex]] || [[elisp:(find-file "articleEnFa.ttytex")][Visit ./articleEnFa.ttytex]] || [[elisp:(find-file "presArtEnFa.ttytex")][Visit ./presArtEnFa.ttytex]] ||
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntInfo _}_ [[elisp:(outline-show-subtree+toggle)][||]]  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN:  b:lcnt:matex:felem/lcntProcMarker :comment ""
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntProc _{_ [[elisp:(outline-show-subtree+toggle)][||]] Process this bodyPresArtEnFa.tex as a master
+*      IIM Parameters       ::  [[elisp:(bx:iimBash:resultsShow:cmndLineElems)][Show Cmnd Line Elems]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build+view")][-p extent=build+view]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=build")][-p extent=build]] || [[elisp:(setq bx:iimBash:iimParamsArgs "-p extent=view")][-p extent=view]]
+*      Related              ::  [[elisp:(find-file "./Panel.org")][Visit ./Panel.org]] | [[elisp:(find-file "./mailing/content.mail")][Visit ./mailing/content.mail]]| [[elisp:(find-file "./mailing/Panel.org")][Visit ./mailing/Panel.org]]
+*      Build+Release        ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildResultsRelease" :iifArgs "")][lcntProc.sh -i buildResultsRelease]] || [[elisp:(lsip-local-run-command-here "lcntProc.sh -i fullClean")][lcntProc.sh -i fullClean]] || [[elisp:(cvs-update "." t)][Version Control]]
+*      Build & Preview      ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildPdfPreview" :iifArgs "bodyPresArtEnFa.tex")][lcntProc.sh -i buildPdfPreview bodyPresArtEnFa.tex]] || [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildHtmlPreview" :iifArgs "bodyPresArtEnFa.tex")][lcntProc.sh -i buildHtmlPreview bodyPresArtEnFa.tex]]
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntProc _}_ [[elisp:(outline-show-subtree+toggle)][||]]  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:latex:felem/docOverview :comment ""
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Overview   [[elisp:(outline-show-subtree+toggle)][||]] Overview:  [[elisp:(reftex-toc)][(RefTOC)]] Document Status, TODOs and Notes For bodyPresArtEnFa.tex --   [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+%%%#+END:
+
+\begin{whenOrg}
+** TODO Make Conditionals: inc and excludes a dblock with curBuild -- has been done. Absorbe. Include in templates.
+   SCHEDULED: <2019-07-29 Mon>
+** LAST TODO ITEM -- Add new Items before this
+\end{whenOrg}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :disabledP "false" :seg-title "Introduction"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Introduction/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Introduction}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame:begin/blank  :label "thisIsMohsen" :comment "body=video"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /Frame:begin-blank/ [[elisp:(outline-show-subtree+toggle)][||]] *Label=thisIsMohsen* UnSpecified -- body=video
+\end{whenOrg}
+
+\begin{frame}[fragile,plain,label=thisIsMohsen]
+    \frametitle{}
+%%BxPy: impressiveFrameParSet('thisIsMohsen', 'always', 'True')
+%%BxPy: impressiveFrameParSet('thisIsMohsen', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame:body:mm/video :videoPath "./video/mbIntro.mp4" :comment "thisIsMohsen"
+\begin{whenOrg}
+******  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  FrmCntnt-Video [[elisp:(outline-show-subtree+toggle)][||]] Label=UnSpecified UnSpecified
+\end{whenOrg}
+\begin{presentationMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+<video preload="auto" data-audio-controls src="./video/mbIntro.mp4"></video>
+  \end{rawhtml}
+\end{htmlonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{htmlonly}
+  \begin{rawhtml}
+      <!-- data-autoplay  controls -->
+    <p>
+    <video  controls   preload="auto"  src="./video/mbIntro.mp4"  height="50%%" width="50%%">
+    </video>
+    </p>
+  \end{rawhtml}
+\end{htmlonly}
+\end{articleMode}
+
+\begin{presentationMode}
+\begin{latexonly}
+    \begin{center}
+      Video File: ./video/mbIntro.mp4
+    \end{center}
+\end{latexonly}
+\end{presentationMode}
+
+\begin{articleMode}
+\begin{latexonly}
+    \begin{center}
+      Video File: ./video/mbIntro.mp4
+    \end{center}
+\end{latexonly}
+\end{articleMode}
+%%%#+END:
+
+\pnote{
+  
+Greetings.
+
+This is Mohsen Banan.
+
+I am a software and internet engineer.
+
+The title of this presentation is
+``Blee-LCNT: An Emacs Centered Content Production
+and Self-Publication Framework''.
+
+}
+
+\end{frame}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "The Nokia EdenNet SON Product and Ecosystem -- The Public Perspective"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _The Nokia EdenNet SON Product and Ecosystem -- The Public Perspective_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{The Nokia EdenNet SON Product and Ecosystem -- The Public Perspective}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :disabled? t :title "Introducing The Nature of Polyexistentials Book" :subtitle "" :label "part_polyexistentialsBook" :comment "body=TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /DISABLED/   [[elisp:(outline-show-subtree+toggle)][||]] *b:lcnt:pres:frame/derivedImage*  [[elisp:(org-cycle)][| ]]\end{whenOrg}
+%%%#+END:
+
+    %%% \tableofcontents
+
+%% \pnote{
+
+%% }
+%% \end{frame}
+%% \end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "Summary"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Summary/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Summary}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Summary" :subtitle "" :reveal "plain" :beamer "blank" :label "summary" :comment "body=derivedImage"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=summary Summary body=derivedImage
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=summary]
+    \frameaudio{"audio/summary.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/summary/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=summary]
+    \frameaudio{"audio/summary.mp3"}
+    \frametitle{Summary}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('summary', 'always', 'True')
+%%BxPy: impressiveFrameParSet('summary', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{exampleblock}{Act I: An After Market Story.}
+    \end{exampleblock}
+
+    \begin{columns}[T]
+\column{0.33\textwidth}
+
+\textbf{Vendor \& Product}
+\begin{itemize}
+  \item Nokia EdenNet SON
+\end{itemize}
+
+\column{0.33\textwidth}
+
+\textbf{Customers \& Users}
+\begin{itemize}
+  \item T-Mobile, BT, Orange, Telstra, NTT DOCOMO, ...
+\end{itemize}
+
+\column{0.33\textwidth}
+
+\textbf{Gap \& Our Offerings}
+\begin{itemize}
+  \item soncli.mcs -- A CLI Interface for Running SON Modules
+\end{itemize}
+
+\end{columns}
+
+      \begin{block}{Act II: With BISOS-MaTOOF}
+          Extend EdenNet SON Into the Broader Systems Management Domain
+    \end{block}
+
+\begin{itemize}
+  \item Provide a Web UI for Parallel Execution of  Modules with soncli.mcs
+  \item Using a General Purpose Internet Services OS (BISOS) make the
+    concept of Modules and Targets Oriented Open Framework (MaTOOF) Universal -- Targets need not
+    be limited to what Nokia supports.
+\end{itemize}
+
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Abstract Nokia EdenNet SON Parts List"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Abstract Nokia EdenNet SON Parts List/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Abstract Nokia EdenNet SON Parts List}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Abstract Nokia EdenNet SON Parts List" :subtitle "" :label "nokiaSonPartsList" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=nokiaSonPartsList Abstract Nokia EdenNet SON Parts List body=enumerate
+
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=nokiaSonPartsList]
+    \frameaudio{"audio/nokiaSonPartsList.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/nokiaSonPartsList/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=nokiaSonPartsList]
+    \frameaudio{"audio/nokiaSonPartsList.mp3"}
+    \frametitle{Abstract Nokia EdenNet SON Parts List}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('nokiaSonPartsList', 'always', 'True')
+%%BxPy: impressiveFrameParSet('nokiaSonPartsList', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+\textbf{Nokia EdenNet SON Parts List}
+
+\begin{itemize}
+  \item \textbf{SON Python Modules}
+    \begin{itemize}
+      \item SON Python \textbf{Custom} Modules
+      \item SON Python \textbf{Nokia} Modules
+    \end{itemize}
+  \item \textbf{SON Python API}
+  \item \textbf{SON Python Software Development Kit (SDK)}
+  \item SON Web User Interface
+  \item SON Execution Engine
+  \item SON OSS Interface Adapters
+\end{itemize}
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "The Nokia EdeNet SON Ecosystem"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /The Nokia EdeNet SON Ecosystem/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{The Nokia EdeNet SON Ecosystem}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :reveal "plain" :beamer "blank" :label "nokiSonEcosystemFig" :comment "body=derivedImage"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=nokiSonEcosystemFig  body=derivedImage
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=nokiSonEcosystemFig]
+    \frameaudio{"audio/nokiSonEcosystemFig.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/nokiSonEcosystemFig/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=nokiSonEcosystemFig]
+    \frameaudio{"audio/nokiSonEcosystemFig.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('nokiSonEcosystemFig', 'always', 'True')
+%%BxPy: impressiveFrameParSet('nokiSonEcosystemFig', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/NokiaSonEcosystem.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *NokiaSonEcosystem* -- Nokia EdenNet SON Ecosystem ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/NokiaSonEcosystem}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/NokiaSonEcosystem.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/NokiaSonEcosystem}
+      \caption{Nokia EdenNet SON Ecosystem}
+      \label{fig:NokiaSonEcosystem}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/NokiaSonEcosystem}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{Nokia EdenNet SON Ecosystem}
+      \label{fig:NokiaSonEcosystem}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Abstract Nokia EdenNet SON Parts List -- soncli.mcs"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Abstract Nokia EdenNet SON Parts List -- soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Abstract Nokia EdenNet SON Parts List -- soncli.mcs}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Abstract Nokia EdenNet SON Parts List -- soncli.mcs" :subtitle "" :label "nokiaSonPartsListSoncli" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=nokiaSonPartsListSoncli Abstract Nokia EdenNet SON Parts List -- soncli.mcs body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=nokiaSonPartsListSoncli]
+    \frameaudio{"audio/nokiaSonPartsListSoncli.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/nokiaSonPartsListSoncli/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=nokiaSonPartsListSoncli]
+    \frameaudio{"audio/nokiaSonPartsListSoncli.mp3"}
+    \frametitle{Abstract Nokia EdenNet SON Parts List -- soncli.mcs}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('nokiaSonPartsListSoncli', 'always', 'True')
+%%BxPy: impressiveFrameParSet('nokiaSonPartsListSoncli', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+
+\begin{columns}[T]
+\column{0.5\textwidth}
+
+\textbf{Nokia EdenNet SON Parts List}
+\begin{itemize}
+  \item {\color{blue} \textbf{SON Modules}}
+  \item {\color{blue} \textbf{SON Python API}}
+  \item {\color{blue} \textbf{SON Software Development Kit (SDK)}}
+  \item SON Web User Interface
+  \item SON Execution Engine
+  \item SON OSS Interface Adapters
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\textbf{soncli.mcs Relevant Parts}
+\begin{itemize}
+  \item {\color{darkgreen} \textbf{SON Modules}}
+  \item {\color{darkgreen} \textbf{SON Python API}}
+  \item {\color{darkgreen} \textbf{SON Software Development Kit (SDK)}}
+\end{itemize}
+
+\end{columns}
+
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Breaking the Walled Garden Model"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Breaking the Walled Garden Model/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Breaking the Walled Garden Model}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Breaking the Telecoms Walled Garden Model" :subtitle "With Open Python" :label "breakingWalledGarden" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=breakingWalledGarden Breaking the Telecoms Walled Garden Model body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=breakingWalledGarden]
+    \frameaudio{"audio/breakingWalledGarden.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/breakingWalledGarden/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=breakingWalledGarden]
+    \frameaudio{"audio/breakingWalledGarden.mp3"}
+    \frametitle{Breaking the Telecoms Walled Garden Model}
+    \framesubtitle{With Open Python}
+%%BxPy: impressiveFrameParSet('breakingWalledGarden', 'always', 'True')
+%%BxPy: impressiveFrameParSet('breakingWalledGarden', 'transition', 'UnSpecified')
+%%%#+END:
+
+Traditional Telecom Model is the Walled Garden.
+
+The Telecom Walled Garden Model is rooted in:
+
+\bigskip
+
+\begin{small}
+\begin{columns}[T]
+\column{0.5\textwidth}
+
+\begin{itemize}
+  \item Secrecy -- NDAs
+  \item Telecom Companies are accustomed to the Proprietary Model of Being Exclusively Milked
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\begin{itemize}
+  \item Intellectual Property Rights Regime
+  \item Proprietary  Nokia, Ericson, Cisco, etc Milk it
+\end{itemize}
+
+\end{columns}
+\end{small}
+
+\bigskip
+
+
+\begin{exampleblock}{What we are Doing Here is Completely Open.}
+  Genuinly Open. Based on:
+    \end{exampleblock}
+
+\bigskip
+
+\begin{columns}[T]
+\column{0.5\textwidth}
+
+\begin{itemize}
+  \item Real Open Nature of Python
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\begin{itemize}
+  \item Rejection of IPR with Affero GPL
+\end{itemize}
+
+\end{columns}
+
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/summary_ipr.tex" :when "whenBuildSummary"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/summary_ipr.tex")][Goto ./common/summary_ipr.tex]] When=whenBuildSummary ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildSummary}
+\input{./common/summary_ipr.tex}
+\end{whenBuildSummary}
+%%%#+END:
+
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/full_ipr.tex" :when "whenBuildFull"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/full_ipr.tex")][Goto ./common/full_ipr.tex]] When=whenBuildFull ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildFull}
+\input{./common/full_ipr.tex}
+\end{whenBuildFull}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "This is All Open Source -- Affero GPL"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /This is All Open Source -- Affero GPL/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{This is All Open Source -- Affero GPL}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "This is All Open Source -- Affero GPL" :subtitle "" :label "afferoGpl" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=afferoGpl This is All Open Source -- Affero GPL body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=afferoGpl]
+    \frameaudio{"audio/afferoGpl.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/afferoGpl/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=afferoGpl]
+    \frameaudio{"audio/afferoGpl.mp3"}
+    \frametitle{This is All Open Source -- Affero GPL}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('afferoGpl', 'always', 'True')
+%%BxPy: impressiveFrameParSet('afferoGpl', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{alertblock}{Software}
+      All software presented here is licensed under
+      \begin{itemize}
+        \item Affero GPL and
+        \item Neda Commercial License
+      \end{itemize}
+
+
+    \end{alertblock}
+
+    \bigskip
+
+    \begin{exampleblock}{Content (Documents, Presentations, Videos):}
+      All content presented here is licensed under
+      \begin{itemize}
+        \item Creative Commons Attribution-ShareAlike (CC-BY-SA)
+      \end{itemize}
+    \end{exampleblock}
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Publicly Known List of Nokia SON Clients"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Publicly Known List of Nokia SON Clients/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Publicly Known List of Nokia SON Clients}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Publicly Known List of Nokia SON Clients" :subtitle "" :label "nokiaClientsList" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=nokiaClientsList Publicly Known List of Nokia SON Clients body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=nokiaClientsList]
+    \frameaudio{"audio/nokiaClientsList.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/nokiaClientsList/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=nokiaClientsList]
+    \frameaudio{"audio/nokiaClientsList.mp3"}
+    \frametitle{Publicly Known List of Nokia SON Clients}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('nokiaClientsList', 'always', 'True')
+%%BxPy: impressiveFrameParSet('nokiaClientsList', 'transition', 'UnSpecified')
+%%%#+END:
+
+ AI and Google Say: ``Based on public announcements and reports, the following telecom companies use or have used Nokia EdenNet SON:''
+
+\begin{itemize}
+  \item \textbf{Telstra} (Australia)
+  \item \textbf{Orange} (Global/Europe/MEA)
+  \item \textbf{Vodafone Idea} (India)
+  \item \textbf{Telecom Argentina}
+  \item \textbf{T-Mobile USA}
+  \item \textbf{BT (EE)} (UK)
+  \item \textbf{NTT DOCOMO} (Japan)
+\end{itemize}
+
+And probably many other telecom companies that have not been publicly disclosed.
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Applicability of soncli.mcs to You"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Applicability of soncli.mcs to You/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Applicability of soncli.mcs to You}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Applicability of soncli.mcs to You" :subtitle "Intended Audiance for This Presentation" :label "intendedAudiance" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=intendedAudiance Applicability of soncli.mcs to You body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=intendedAudiance]
+    \frameaudio{"audio/intendedAudiance.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/intendedAudiance/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=intendedAudiance]
+    \frameaudio{"audio/intendedAudiance.mp3"}
+    \frametitle{Applicability of soncli.mcs to You}
+    \framesubtitle{Intended Audiance for This Presentation}
+%%BxPy: impressiveFrameParSet('intendedAudiance', 'always', 'True')
+%%BxPy: impressiveFrameParSet('intendedAudiance', 'transition', 'UnSpecified')
+%%%#+END:
+
+\begin{small}
+%\begin{table}[h]
+\begin{tabular}{|p{1in}|p{2in}|p{1.5in}|p{2in}|p{1.5in}|}
+%\begin{tabular}{p{1in}p{3in}p{3in}}
+% BEGIN RECEIVE ORGTBL newTable
+\hline
+    \multicolumn{1}{|c|}{{\color{darkblue} \textbf{}}} &
+    \multicolumn{1}{c|}{{\color{magenta} \textbf{Nokia SON}}} &
+    \multicolumn{1}{c|}{{\color{purple} \textbf{}}} &
+    \multicolumn{1}{c|}{{\color{teal} \textbf{Telecom}}} &
+    \multicolumn{1}{c|}{{\color{darkred} \textbf{{Internet}}}} \\
+    \multicolumn{1}{|c|}{{\color{blue} \textbf{Audiance}}} &
+    \multicolumn{1}{c|}{{\color{magenta} \textbf{Customers}}} &
+    \multicolumn{1}{c|}{{\color{blue} \textbf{NOKIA}}} &
+    \multicolumn{1}{c|}{{\color{teal} \textbf{Operators}}} &
+    \multicolumn{1}{c|}{{\color{darkred} \textbf{{Providers}}}} \\
+      \multicolumn{1}{|c|}{{\color{blue} \textbf{}}} &
+    \multicolumn{1}{c|}{{\color{magenta} (T-Mobile, ...)}} &
+    \multicolumn{1}{c|}{{\color{purple} \textbf{}}} &
+    \multicolumn{1}{c|}{{\color{teal} (AT\&T, ...)}} &
+    \multicolumn{1}{c|}{{\color{darkred} {(Google, ...)}}} \\
+
+    \hline
+\multicolumn{1}{|l|}{{\color{orange} \textbf{SON Modules Developer:}}}  &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{--- --- ---}}} \\
+\hline
+\multicolumn{1}{|l|}{{\color{orange} \textbf{SON Modules User:}}}  &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{--- --- ---}}} \\
+\hline
+\multicolumn{1}{|l|}{{\color{orange} \textbf{O-RAN Management:}}}  &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X}}} \\
+\hline
+\multicolumn{1}{|l|}{{\color{orange} \textbf{Common Sys Management:}}}  &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X}}} &
+\multicolumn{1}{c|}{{\color{darkblue} \textbf{X X X}}} \\
+\hline
+% END RECEIVE ORGTBL newTable
+\end{tabular}
+%\caption{Step 2 -- Activities}
+\label{tab:stepTwo}
+%\end{table}
+\end{small}
+
+  \pnote{
+    So, first let's make sure that what I am presenting is of interest to you.
+
+    If you are a perso-arabic writer and if you use emacs, you are definitely my intended audiance.
+
+    If you are an emacs developer who wishes to make her emacs apps multilinugual and bidi aware,
+    you are also my intended audiance.
+  }
+
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/edenNetHistory.tex" :when "whenBuildFull"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/edenNetHistory.tex")][Goto ./common/edenNetHistory.tex]] When=whenBuildFull ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildFull}
+\input{./common/edenNetHistory.tex}
+\end{whenBuildFull}
+%%%#+END:
+
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/nokiaSonModules.tex" :when "whenBuildFull"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/nokiaSonModules.tex")][Goto ./common/nokiaSonModules.tex]] When=whenBuildFull ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildFull}
+\input{./common/nokiaSonModules.tex}
+\end{whenBuildFull}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Strength and Weaknesses of the Nokia EdenNet SON Architecture"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Strength and Weaknesses of the Nokia EdenNet SON Architecture/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Strength and Weaknesses of the Nokia EdenNet SON Architecture}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Strength and Weaknesses of the Nokia SON Architecture" :subtitle "" :label "edenNetSonStrength" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=edenNetSonStrength Strength and Weaknesses of the Nokia SON Architecture body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=edenNetSonStrength]
+    \frameaudio{"audio/edenNetSonStrength.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/edenNetSonStrength/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=edenNetSonStrength]
+    \frameaudio{"audio/edenNetSonStrength.mp3"}
+    \frametitle{Strength and Weaknesses of the Nokia SON Architecture}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('edenNetSonStrength', 'always', 'True')
+%%BxPy: impressiveFrameParSet('edenNetSonStrength', 'transition', 'UnSpecified')
+%%%#+END:
+
+\begin{small}
+\begin{columns}[T]
+\column{0.5\textwidth}
+
+\begin{center}
+        \colorbox{blue!30}{\color{black} \textbf{Strength:}}
+\end{center}
+
+\begin{itemize}
+  \item Choice of Python (12 years ago)
+  \item Modules Architecture for RAN Systems Management
+  \item Targets Architecture for Cells
+  \item Python API for Sys Mgmt Abstractions
+\end{itemize}
+
+\column{0.5\textwidth}
+
+   \begin{center}
+      \colorbox{blue!60}{\color{white} \textbf{Weaknesses:}}
+    \end{center}
+
+    \begin{itemize}
+      \item Jailed in the Telecom Walled Garden
+      \item Abstraction of Targets is Limited to Cells
+      \item Limited in Scope to RAN and Telecom
+      \item Limited to a a single Modules Player (Web-UI)
+      \item No CLI for Modules Execution
+
+    \end{itemize}
+
+\end{columns}
+\end{small}
+
+\begin{exampleblock}{With soncli.mcs We Can Liberate Modules and Targets}
+  \begin{itemize}
+    \item Inside of the Telecom Walled Garden Open Up and Extend EdenNet SON
+    \item Profit from the Nokia SON Experience of ``Modules and Target Oriented Open Framework''
+          (MaTOOF) for Systems Management Outside of the  Telecom Walled Garden
+  \end{itemize}
+\end{exampleblock}
+
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "soncli.mcs -- The Enabler and the Bridge"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _soncli.mcs -- The Enabler and the Bridge_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{soncli.mcs -- The Enabler and the Bridge}
+%%%#+END:
+
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "soncli.mcs -- The Enabler and the Bridge" :subtitle "" :label "part_soncli.mcs" :comment "body=TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_soncli.mcs soncli.mcs -- The Enabler and the Bridge body=TOC
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_soncli.mcs]
+    \frameaudio{"audio/part_soncli.mcs.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_soncli.mcs/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_soncli.mcs]
+    \frameaudio{"audio/part_soncli.mcs.mp3"}
+    \frametitle{soncli.mcs -- The Enabler and the Bridge}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_soncli.mcs', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_soncli.mcs', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  Having accepted the ``prophetic'' criticism as legitimate, I now need to put a book on the table.
+  With that book in place, moving forward, when needing to be cryptic, I shall cite Chapter and Verse.
+
+}
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "soncli.mcs -- An After-Market Enabler and the Bridge"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /soncli.mcs -- An After-Market Enabler and the Bridge/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{soncli.mcs -- An After-Market Enabler and the Bridge}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :reveal "plain" :beamer "blank" :label "soncliAfterMarketFig" :comment "body=derivedImage"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=soncliAfterMarketFig  body=derivedImage
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=soncliAfterMarketFig]
+    \frameaudio{"audio/soncliAfterMarketFig.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/soncliAfterMarketFig/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=soncliAfterMarketFig]
+    \frameaudio{"audio/soncliAfterMarketFig.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('soncliAfterMarketFig', 'always', 'True')
+%%BxPy: impressiveFrameParSet('soncliAfterMarketFig', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAfterMarket.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *soncliAfterMarket* -- soncli.mcs: An After-Market Strategy ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAfterMarket}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAfterMarket.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAfterMarket}
+      \caption{soncli.mcs: An After-Market Strategy}
+      \label{fig:soncliAfterMarket}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAfterMarket}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{soncli.mcs: An After-Market Strategy}
+      \label{fig:soncliAfterMarket}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Implementation of soncli.mcs is based on bisos.tocsModules"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Implementation of soncli.mcs based on bisos.tocsModule/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Implementation of soncli.mcs based on bisos.tocsModule}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Implementation of soncli.mcs is based on bisos.tocsModules" :subtitle "" :label "tocsModules" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=tocsModules Implementation of soncli.mcs is based on bisos.tocsModules body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=tocsModules]
+    \frameaudio{"audio/tocsModules.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/tocsModules/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=tocsModules]
+    \frameaudio{"audio/tocsModules.mp3"}
+    \frametitle{Implementation of soncli.mcs is based on bisos.tocsModules}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('tocsModules', 'always', 'True')
+%%BxPy: impressiveFrameParSet('tocsModules', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{exampleblock}{BISOS: ByStar Internet Services Operating System - \small{\url{https://github.com/bisos}}}
+      \small{A Debian based framework for creation of Open Source software-service continuums}
+    \end{exampleblock}
+
+    \begin{block}{PyCS: Python Command Services -- \small{\url{https://github.com/bisos}}}
+    \small{A Python framework for creatin of Unified Commands (CLIs) \& Services (APIs)}
+    \end{block}
+
+    \begin{block}{tocsModules: Target Oriented Modules -- \tiny{\url{https://github.com/bisos-pip/tocsModules}}}
+    \small{General facilities for creation of Modules that can be uploaded into CSXUs}
+    \end{block}
+
+    \begin{block}{CSXUs: Command Services eXecution Units}
+    \small{Commands or Services of PyCS Which Can Be Executed on Command-Line or csPlayers}
+    \end{block}
+
+    \begin{alertblock}{soncli.mcs: Moduled Command-Service  (Proprietary: Not Open Source)}
+    \small{Integration of Nokia SON SDK with bisos.tocsModules.}
+    \end{alertblock}
+
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Proprietary Implementation of soncli.mcs"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Proprietary Implementation of soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Proprietary Implementation of soncli.mcs}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Proprietary Implementation of soncli.mcs" :subtitle "" :label "soncliImplementation" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=soncliImplementation Proprietary Implementation of soncli.mcs body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=soncliImplementation]
+    \frameaudio{"audio/soncliImplementation.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/soncliImplementation/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=soncliImplementation]
+    \frameaudio{"audio/soncliImplementation.mp3"}
+    \frametitle{Proprietary Implementation of soncli.mcs}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('soncliImplementation', 'always', 'True')
+%%BxPy: impressiveFrameParSet('soncliImplementation', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+    \begin{exampleblock}{\small{tocsModules: Target Oriented Modules -- \url{https://github.com/bisos-pip/tocsModules}}}
+    \small{General facilities for creation of Modules that can be uploaded into CSXUs}
+    \end{exampleblock}
+
+    \bigskip
+
+    \begin{alertblock}{soncli.mcs: Moduled Command-Service  (Proprietary: Not Open Source)}
+    \small{Integration of Nokia SON SDK with bisos.tocsModules.}
+    \end{alertblock}
+
+      \begin{center}
+        \colorbox{blue!30}{\color{black}
+          \textbf{The Open Source bisos.tocsModules is designed}}
+        \colorbox{blue!30}{\color{black}
+          \textbf{for Aborbtion of Proprietary SDKs}}
+      \end{center}
+
+      Based on bisos.tocsModules Implementation of Proprietary soncli.mcs only involves
+      a very small amount of Python code and effort.
+
+
+   \begin{center}
+      \colorbox{blue!60}{\color{white} \textbf{The Bridge: And Then, soncli.mcs Becomes An Integral Part of BISOS.}}
+    \end{center}
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "The Enablings of soncli.mcs"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /The Enablings of soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{The Enablings of soncli.mcs}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "The Enablings of soncli.mcs" :subtitle "" :label "soncliEnabler" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=soncliEnabler The Enablings of soncli.mcs body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=soncliEnabler]
+    \frameaudio{"audio/soncliEnabler.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/soncliEnabler/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=soncliEnabler]
+    \frameaudio{"audio/soncliEnabler.mp3"}
+    \frametitle{The Enablings of soncli.mcs}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('soncliEnabler', 'always', 'True')
+%%BxPy: impressiveFrameParSet('soncliEnabler', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{exampleblock}{Since SON Modules are Python Modules,}
+  %% We can arrange them so that:
+    \end{exampleblock}
+
+  \begin{itemize}
+    \item Modules are loaded through the command line (CLI) and then executed through the SDK
+    \item Loading and execution of Modules through CLI permits convenient parallel execution at SON Engines
+    \item Modules are surrounded by additional frameworks that enhance usage of modules
+    \item Scope of capabilities of Modules is enhanced
+  \end{itemize}
+
+    \begin{block}{Modules and Target Model of EdentNet SON is then Extended With}
+      The Universal Model of BISOS-MaTOOF (Modules and Target Oriented Open Framework)
+      for Systems Management
+    \end{block}
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Immediate and Tangible Benefits of soncli.mcs"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Immediate and Tangible Benefits of soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Immediate and Tangible Benefits of soncli.mcs}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Immediate and Tangible Benefits of soncli.mcs" :subtitle "" :label "soncliBenefits" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=soncliBenefits Immediate and Tangible Benefits of soncli.mcs body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=soncliBenefits]
+    \frameaudio{"audio/soncliBenefits.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/soncliBenefits/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=soncliBenefits]
+    \frameaudio{"audio/soncliBenefits.mp3"}
+    \frametitle{Immediate and Tangible Benefits of soncli.mcs}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('soncliBenefits', 'always', 'True')
+%%BxPy: impressiveFrameParSet('soncliBenefits', 'transition', 'UnSpecified')
+%%%#+END:
+
+  \begin{itemize}
+    \item SON Modules Developers Using the SDK Can Load and Run Them Through CLI
+      \begin{itemize}
+        \item Subject Under Developement Modules To Regression Testing
+        \item Build CI/CD Pipelines for Custom SON Development
+      \end{itemize}
+    \item soncli.mcs is an Agentic-AI Facilitator -- Agentic AI Needs CLI
+    \item SON Modules Nationwide (cross OSS) Execution and Reporting
+    \item Broader Systems Management Scope -- SON Beyond Cells
+    \item Towards Poly-SON Modules Players
+  \end{itemize}
+
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "soncli.mcs As An Agentic AI Enabler"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /soncli.mcs As An Agentic AI Enabler/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{soncli.mcs As An Agentic AI Enabler}
+%%%#+END:
+
+
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] Label=soncliAgenticAiEnabler  body=itemize
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=soncliAgenticAiEnabler]
+    \frameaudio{"audio/soncliAgenticAiEnabler.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/soncliAgenticAiEnabler/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=soncliAgenticAiEnabler]
+    \frameaudio{"audio/soncliAgenticAiEnabler.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('soncliAgenticAiEnabler', 'always', 'True')
+%%BxPy: impressiveFrameParSet('soncliAgenticAiEnabler', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAgenticAI.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *soncliAgenticAI* -- soncli.mcs An AgenticAI Enabler ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAgenticAI}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAgenticAI.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAgenticAI}
+      \caption{soncli.mcs An AgenticAI Enabler}
+      \label{fig:soncliAgenticAI}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/soncliAgenticAI}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{soncli.mcs An AgenticAI Enabler}
+      \label{fig:soncliAgenticAI}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  We love Emacs and we love Unix because their design is convivial.
+  By convivial, I am referring to Ivan Illich's  concept and terminology of ``Tools for Conviviality''.
+  It was first published in 1973. It's a must read.
+
+  A goal of the design of the ByStar Digital Ecosystem is to enlarge the aggregated conviviality of its
+  capabilities.
+
+  What distinguishes Blee-Lcnt from other content processing tools and frameworks, is our emphasis on
+  enhancing the aggregated conviviality. These tools let you express yourself. They let you be in charge.
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "BISOS Web-UI csPlayer on Top of soncli.mcs"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _BISOS Web-UI csPlayer on Top of soncli.mcs_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{BISOS Web-UI csPlayer on Top of soncli.mcs}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Using the BISOS Web-UI csPlayer with soncli.mcs" :subtitle "" :label "part_webUiCsPlayerSoncli" :comment "body=TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_webUiCsPlayerSoncli Using the BISOS Web-UI csPlayer with soncli.mcs body=TOC
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_webUiCsPlayerSoncli]
+    \frameaudio{"audio/part_webUiCsPlayerSoncli.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_webUiCsPlayerSoncli/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_webUiCsPlayerSoncli]
+    \frameaudio{"audio/part_webUiCsPlayerSoncli.mp3"}
+    \frametitle{Using the BISOS Web-UI csPlayer with soncli.mcs}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_webUiCsPlayerSoncli', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_webUiCsPlayerSoncli', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  Having accepted the ``prophetic'' criticism as legitimate, I now need to put a book on the table.
+  With that book in place, moving forward, when needing to be cryptic, I shall cite Chapter and Verse.
+
+}
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Abstract Nokia EdenNet SON Parts List -- Web-UI-csPlayer"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Abstract Nokia EdenNet SON Parts List -- Web-UI-csPlayer/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Abstract Nokia EdenNet SON Parts List -- Web-UI-csPlayer}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Abstract Nokia EdenNet SON Parts List -- Web-UI-csPlayer" :subtitle "" :label "nokiaSonPartsListcsPlayer" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=nokiaSonPartsListcsPlayer Abstract Nokia EdenNet SON Parts List -- Web-UI-csPlayer body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=nokiaSonPartsListcsPlayer]
+    \frameaudio{"audio/nokiaSonPartsListcsPlayer.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/nokiaSonPartsListcsPlayer/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=nokiaSonPartsListcsPlayer]
+    \frameaudio{"audio/nokiaSonPartsListcsPlayer.mp3"}
+    \frametitle{Abstract Nokia EdenNet SON Parts List -- Web-UI-csPlayer}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('nokiaSonPartsListcsPlayer', 'always', 'True')
+%%BxPy: impressiveFrameParSet('nokiaSonPartsListcsPlayer', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+
+\begin{columns}[T]
+\column{0.5\textwidth}
+
+\textbf{Nokia EdenNet SON Parts List}
+\begin{itemize}
+  \item {\color{blue} SON Modules}
+  \item {\color{blue} SON Python API}
+  \item {\color{blue} SON Software Development Kit (SDK)}
+\end{itemize}
+\textbf{Nokia EdenNet SON Parts List}
+\begin{itemize}
+  \item {\color{blue} \textbf{SON Web User Interface}}
+  \item SON Execution Engine
+  \item SON OSS Interface Adapters
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\textbf{soncli.mcs Relevant Parts}
+\begin{itemize}
+  \item {\color{darkgreen} SON Modules}
+  \item {\color{darkgreen} SON Python API}
+  \item {\color{darkgreen} SON Software Development Kit (SDK)}
+\end{itemize}
+\textbf{Web-UI-csPlayer}
+\begin{itemize}
+  \item {\color{darkgreen} \textbf{Web-UI for ``Playing'' Modules With soncli.mcs}}
+\end{itemize}
+
+
+\end{columns}
+
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "The BISOS Web-UI-csPlayer soncli.mcs Functional Specification"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /The BISOS Web-UI-csPlayer soncli.mcs Functional Specification/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{The BISOS Web-UI-csPlayer soncli.mcs Functional Specification}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "The BISOS Web-UI-csPlayer soncli.mcs Functional Spec" :subtitle "" :label "webUiCsPlayer" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=webUiCsPlayer The BISOS Web-UI-csPlayer soncli.mcs Functional Spec body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=webUiCsPlayer]
+    \frameaudio{"audio/webUiCsPlayer.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/webUiCsPlayer/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=webUiCsPlayer]
+    \frameaudio{"audio/webUiCsPlayer.mp3"}
+    \frametitle{The BISOS Web-UI-csPlayer soncli.mcs Functional Spec}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('webUiCsPlayer', 'always', 'True')
+%%BxPy: impressiveFrameParSet('webUiCsPlayer', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+\begin{small}
+\begin{columns}[T]
+\column{0.85\textwidth}
+
+\begin{itemize}
+  \item {\color{darkblue} \underline{Both:} Arrange for Uploading of SON Modules}
+  \item {\color{darkblue} \underline{Both:} Arrange for Execution/Scheduling of SON Modules}
+  \item {\color{darkgreen} \underline{CsPlayer:} Arrange for Execution/Scheduling of CSXUs -- other than SON Modules Execution}
+  \item {\color{darkgreen} \underline{CsPlayer:} Arrange for Parallel Execution of Modules at Multiple Destinations (with airflow)}
+  \item {\color{darkgreen} \underline{CsPlayer:} Central Cross OSS Exection of Modules -- Nationwide}
+  \item {\color{darkgreen} \underline{CsPlayer:} Central (Nationwide) Collection of Execution Results}
+  \item {\color{darkblue} \underline{Both:} Arrange for Textual Selection of Targets}
+  \item {\color{blue} \underline{Nokia:} Arrange for Graphical Selection of Targets}
+  \item {\color{darkblue} \underline{Both:} Arrange for Access to Past Results}
+  \item {\color{darkgreen} \underline{CsPlayer:} Only Open-Loop, Read-Only Executions (SDK Limitation)}
+  \item {\color{blue} \underline{Nokia:} Both Open-Loop and Closed-Loop (Read-Write) Executions}
+  \item {\color{darkgreen} \underline{CsPlayer:} Native Open Telemetery (with Grafana Visualization)}
+\end{itemize}
+
+\column{0.15\textwidth}
+
+   \begin{center}
+      Legend:
+    \end{center}
+
+
+    \begin{itemize}
+      \item {\color{darkblue} \textbf{\underline{Both} Nokia \& CsPlayer}}
+      \item {\color{blue} \textbf{\underline{Nokia} UI Only}}
+      \item {\color{darkgreen} \textbf{\underline{CsPlayer} UI Only}}
+
+    \end{itemize}
+
+\end{columns}
+\end{small}
+
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "Web-UI csPlayer soncli.mcs"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Web-UI csPlayer soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Web-UI csPlayer soncli.mcs}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :reveal "plain" :beamer "blank" :label "csPlayerSoncliFig" :comment "body=derivedImage"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=csPlayerSoncliFig  body=derivedImage
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=csPlayerSoncliFig]
+    \frameaudio{"audio/csPlayerSoncliFig.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/csPlayerSoncliFig/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=csPlayerSoncliFig]
+    \frameaudio{"audio/csPlayerSoncliFig.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('csPlayerSoncliFig', 'always', 'True')
+%%BxPy: impressiveFrameParSet('csPlayerSoncliFig', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersSoncli.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *csPlayersSoncli* -- csPlayer for soncli.mcs ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersSoncli}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersSoncli.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersSoncli}
+      \caption{csPlayer for soncli.mcs}
+      \label{fig:csPlayersSoncli}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersSoncli}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{csPlayer for soncli.mcs}
+      \label{fig:csPlayersSoncli}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework" :subtitle "" :label "part_matoof" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_matoof Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework body=text -- Part TOC
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_matoof]
+    \frameaudio{"audio/part_matoof.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_matoof/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_matoof]
+    \frameaudio{"audio/part_matoof.mp3"}
+    \frametitle{Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_matoof', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_matoof', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  To see how all of this comes together let's first consider what gets produced.
+
+  For example, for this video, the video is just one of the outputs. There are other outputs as well.
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "soncli.cs: A Bridge Into the BISOS/ByStar Environment"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /soncli.cs: A Bridge Into the BISOS/ByStar Environment/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{soncli.cs: A Bridge Into the BISOS/ByStar Environment}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "soncli.cs: A Bridge Into the BISOS/ByStar Environment" :subtitle "" :label "soncliBenefits" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=soncliBenefits soncli.cs: A Bridge Into the BISOS/ByStar Environment body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=soncliBenefits]
+    \frameaudio{"audio/soncliBenefits.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/soncliBenefits/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=soncliBenefits]
+    \frameaudio{"audio/soncliBenefits.mp3"}
+    \frametitle{soncli.cs: A Bridge Into the BISOS/ByStar Environment}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('soncliBenefits', 'always', 'True')
+%%BxPy: impressiveFrameParSet('soncliBenefits', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{itemize}
+
+      \item The BISOS-MaTOOF for Systems Management is a very rich framework for managing Networks and Data Centers
+
+      \item Use of PyCS for implementation of soncli.mcs Allows for SON Modules Developers and Users to profit from
+    the facilities and commonalities of  BISOS-MaTOOF for Systems Management.
+
+      \item This unified architecture that spans Telecom and Datacom is very powerful.
+
+    \end{itemize}
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "soncli.mcs in the Broader BISOS Systems Management Framework"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /soncli.mcs in the Broader BISOS Systems Management Framework/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{soncli.mcs in the Broader BISOS Systems Management Framework}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "soncli.mcs in the Broader BISOS Sys Management Framework" :subtitle "" :reveal "plain" :beamer "blank" :label "csPlayerHourGlassFig" :comment "body=derivedImage"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=csPlayerHourGlassFig soncli.mcs in the Broader BISOS Sys Management Framework body=derivedImage
+
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=csPlayerHourGlassFig]
+    \frameaudio{"audio/csPlayerHourGlassFig.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/csPlayerHourGlassFig/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=csPlayerHourGlassFig]
+    \frameaudio{"audio/csPlayerHourGlassFig.mp3"}
+    \frametitle{soncli.mcs in the Broader BISOS Sys Management Framework}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('csPlayerHourGlassFig', 'always', 'True')
+%%BxPy: impressiveFrameParSet('csPlayerHourGlassFig', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersHourGlass.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *csPlayersHourGlass* -- Modules and csPlayers Hour-Glass Architecture ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=145mm,keepaspectratio]{/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersHourGlass}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersHourGlass.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersHourGlass}
+      \caption{Modules and csPlayers Hour-Glass Architecture}
+      \label{fig:csPlayersHourGlass}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/csPlayersHourGlass}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{Modules and csPlayers Hour-Glass Architecture}
+      \label{fig:csPlayersHourGlass}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/destinationsHierarchyFig.tex" :when "whenBuildFull"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/destinationsHierarchyFig.tex")][Goto ./common/destinationsHierarchyFig.tex]] When=whenBuildFull ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildFull}
+\input{./common/destinationsHierarchyFig.tex}
+\end{whenBuildFull}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "MaTOOF's Containment Hierarchy of Modules and Targets"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /MaTOOF's Containment Hierarchy of Modules and Targets/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{MaTOOF's Containment Hierarchy of Modules and Targets}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :reveal "plain" :beamer "plain" :mode "auto" :title "MaTOOF's Containment Hierarchy of Modules and Targets" :subtitle "" :label "matoofHierarchyFig"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=matoofHierarchyFig MaTOOF's Containment Hierarchy of Modules and Targets
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=matoofHierarchyFig]
+    \frameaudio{"audio/matoofHierarchyFig.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/matoofHierarchyFig/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=matoofHierarchyFig]
+    \frameaudio{"audio/matoofHierarchyFig.mp3"}
+    \frametitle{MaTOOF's Containment Hierarchy of Modules and Targets}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('matoofHierarchyFig', 'always', 'True')
+%%BxPy: impressiveFrameParSet('matoofHierarchyFig', 'transition', 'UnSpecified')
+%%%#+END:
+
+%%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres  :fig-file "/lcnt/lgpc/bystar/permanent/common/figures/matoofHierarchy.odg"
+\begin{comment}
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *matoofHierarchy* -- MaTOOF Modules and Destinations, Targets, MOs Containment Hierarchy ::  [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+\begin{presentationMode}
+
+\begin{latexonly}
+  \begin{figure}
+    \begin{center}
+       \includegraphics[width=108mm,keepaspectratio]{/lcnt/lgpc/bystar/permanent/common/figures/matoofHierarchy}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  \begin{rawhtml}
+<div class="center">
+<img src="/lcnt/lgpc/bystar/permanent/common/figures/matoofHierarchy.png" height="450">
+</div>
+  \end{rawhtml}
+\end{htmlonly}
+
+\end{presentationMode}
+
+
+\begin{articleMode}
+
+\begin{latexonly}
+  \begin{figure}[H]
+    \begin{center}
+      \includegraphics[width=\textwidth]{/lcnt/lgpc/bystar/permanent/common/figures/matoofHierarchy}
+      \caption{MaTOOF Modules and Destinations, Targets, MOs Containment Hierarchy}
+      \label{fig:matoofHierarchy}
+    \end{center}
+  \end{figure}
+\end{latexonly}
+
+\begin{htmlonly}
+  %BEGIN IMAGE
+  \begin{center}
+      \includegraphics[width=\textwidth]{/lcnt/lgpc/bystar/permanent/common/figures/matoofHierarchy}
+  \end{center}
+  %END IMAGE
+  %HEVEA\imageflush
+
+  \begin{figure}
+      \caption{MaTOOF Modules and Destinations, Targets, MOs Containment Hierarchy}
+      \label{fig:matoofHierarchy}
+  \end{figure}
+\end{htmlonly}
+
+\end{articleMode}
+
+%%%#+END:
+
+\pnote{
+
+    This figure gives us an overview of how one set of inputs encapsulted in a single file
+    can produce all of the outputs that we saw. The main TeX file shown at the bottom is
+    processed by both XeLaTeX and by HeVeA. That main TeX file, in addition to LaTeX
+    syntax also include org-mode constructs that facilitate addition of audio and video
+    files. Later, I'll walkthrough the bodyPresArtEnFa.tex file that
+    generated this very presentation with you.
+
+}
+
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/part_matoof.tex" :when "whenBuildFull"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/part_matoof.tex")][Goto ./common/part_matoof.tex]] When=whenBuildFull ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildFull}
+\input{./common/part_matoof.tex}
+\end{whenBuildFull}
+%%%#+END:
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Our Sales Pitch"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
+\begin{whenOrg}
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Our Sales Pitch_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Our Sales Pitch}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Our Sales Pitch" :subtitle "" :label "part_salesPitch" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_salesPitch Our Sales Pitch body=text -- Part TOC
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=part_salesPitch]
+    \frameaudio{"audio/part_salesPitch.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/part_salesPitch/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,label=part_salesPitch]
+    \frameaudio{"audio/part_salesPitch.mp3"}
+    \frametitle{Our Sales Pitch}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('part_salesPitch', 'always', 'True')
+%%BxPy: impressiveFrameParSet('part_salesPitch', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \tableofcontents
+
+\pnote{
+
+  To see how all of this comes together let's first consider what gets produced.
+
+  For example, for this video, the video is just one of the outputs. There are other outputs as well.
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Requested From You"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Requested From You/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Requested From You}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :label "Expected From You" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=Expected From You  body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=Expected From You]
+    \frameaudio{"audio/Expected_20From_20You.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/Expected_20From_20You/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=Expected From You]
+    \frameaudio{"audio/Expected_20From_20You.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('Expected_20From_20You', 'always', 'True')
+%%BxPy: impressiveFrameParSet('Expected_20From_20You', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{exampleblock}{Our Sales Pitch:}
+      \begin{itemize}
+        \item Adding soncli.mcs to Your Exisiting Nokia SON EdenNet SON\\ is Big Bang for the Buck
+        \item It is all Open Source (Affero GPL)
+        \item It is all Real
+        \item After Having Adopted soncli.mcs, the Rest of the Benefits Will Become Obvious
+      \end{itemize}
+    \end{exampleblock}
+
+    \begin{block}{Our Requests From You:}
+      \begin{itemize}
+        \item Devote the Time and Energy Needed to Understand What we are Saying.
+        \item Pass It Along. This is All Public. Create Consensus.
+        \item Do Your Due Deligence. Try out the Mentioned Offerings.
+        \item Reachout to Us.
+      \end{itemize}
+    \end{block}
+
+\pnote{
+
+  NOTYET
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+\begin{comment}
+*  [[elisp:(org-cycle)][| ]]  Local Vars  ::                  *Org-Mode And Emacs Specific Configurations*   [[elisp:(org-cycle)][| ]]
+\end{comment}
+
+%% Local Variables:
+%% major-mode: latex-mode
+%% fill-column: 90
+%% End:

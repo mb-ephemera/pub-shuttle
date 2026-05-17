@@ -1,0 +1,15 @@
+AI Prompt: list of telecom companies that use nokia's edennet son network
+
+Based on recent reports, the following telecommunications companies have utilized or deployed Nokia’s EdenNet Self-Organizing Network (SON) software to automate their 3G, 4G, and 5G radio access networks (RAN):
+
+Telstra: Deployed EdenNet to automate and centralize its nationwide, multi-vendor 3G, 4G, and 5G RAN.
+
+Orange: Deployed EdenNet across 20+ affiliate networks in Europe, the Middle East, and Africa.
+
+Telecom Argentina: Utilized EdenNet to boost service quality and automate RAN configuration.
+
+T-Mobile USA: Leveraged EdenNet to improve network capacity and reduce dropped calls.
+
+stc Group (Saudi Telecom Company): Deployed Nokia's cognitive SON (EdenNet/MantaRay) for AI-powered optimization and energy savings.
+
+Vodafone Idea: Implemented AI-powered SON (MantaRay, which evolved from EdenNet) to optimize over 1 million cells.
