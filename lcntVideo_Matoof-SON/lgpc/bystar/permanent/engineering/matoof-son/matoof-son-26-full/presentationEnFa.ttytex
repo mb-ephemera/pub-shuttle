@@ -6,6 +6,7 @@
 \excludecomment{whenOrg}
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  _DocClass_  [[elisp:(outline-show-subtree+toggle)][||]] ~bxClass=pres+art~ --   [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -13,6 +14,7 @@
 %%%#+BEGIN: b:prog:file/thisFile  :comment "This File"
 \begin{whenOrg}
 *    #This File: /lcnt/lgpc/bystar/permanent/engineering/matoof-son/matoof-son-26-full/presentationEnFa.ttytex
+
 \end{whenOrg}
 %%%#+END:
 
@@ -20,6 +22,7 @@
 \begin{whenOrg}
 * [[elisp:(org-cycle)][| Controls |]] :: [[elisp:(delete-other-windows)][(1)]] | [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][Overview]]  [[elisp:(progn (org-shifttab) (org-content))][Content]] | [[file:Panel.org][Panel]] | [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] | [[elisp:(bx:org:run-me)][Run]] | [[elisp:(bx:org:run-me-eml)][RunEml]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]]  [[elisp:(save-buffer)][Save]]  [[elisp:(kill-buffer)][Quit]] [[elisp:(org-cycle)][| ]]
 ** /Version Control/ ::  [[elisp:(call-interactively (quote cvs-update))][cvs-update]]  [[elisp:(vc-update)][vc-update]] | [[elisp:(bx:org:agenda:this-file-otherWin)][Agenda-List]]  [[elisp:(bx:org:todo:this-file-otherWin)][ToDo-List]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -31,6 +34,7 @@
 *     URL                   :: http://www.by-star.net/PLPC/180071
 *     MasterFiles           :: [[elisp:(find-file "presentationEnFa.ttytex")][Visit ./presentationEnFa.ttytex]] || [[elisp:(find-file "articleEnFa.ttytex")][Visit ./articleEnFa.ttytex]] || [[elisp:(find-file "presArtEnFa.ttytex")][Visit ./presArtEnFa.ttytex]] ||
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntInfo _}_ [[elisp:(outline-show-subtree+toggle)][||]]  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -42,12 +46,14 @@
 *      Build+Release        ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildResultsRelease" :iifArgs "")][lcntProc.sh -i buildResultsRelease]] || [[elisp:(lsip-local-run-command-here "lcntProc.sh -i fullClean")][lcntProc.sh -i fullClean]] || [[elisp:(cvs-update "." t)][Version Control]]
 *      Build & Preview      ::  [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildPdfPreview" :iifArgs "presentationEnFa.ttytex")][lcntProc.sh -i buildPdfPreview presentationEnFa.ttytex]] || [[elisp:(bx:iimBash:cmndLineExec :wrapper "" :name "lcntProc.sh" :iif "buildHtmlPreview" :iifArgs "presentationEnFa.ttytex")][lcntProc.sh -i buildHtmlPreview presentationEnFa.ttytex]]
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LcntProc _}_ [[elisp:(outline-show-subtree+toggle)][||]]  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
 %%%#+BEGIN: b:lcnt:latex:felem/docOverview :comment ""
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Overview   [[elisp:(outline-show-subtree+toggle)][||]] Overview:  [[elisp:(reftex-toc)][(RefTOC)]] Document Status, TODOs and Notes For presentationEnFa.ttytex --   [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -62,6 +68,7 @@
 %%%#+BEGIN: b:lcnt:latex:preamble/beginMarker  :comment "~~~~~~~~~~~"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  _Preamble{_ [[elisp:(outline-show-subtree+toggle)][||]] ~Begin Preamble Marker~ usepackage and pkgConfigs Before beginDocument -- ~~~~~~~~~~~  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -87,6 +94,7 @@
 %%%#+BEGIN: b:lcnt:latex:preamble/buildEnvs :comment "From ./LCNT-INFO/Builds/buildEnvs.tex"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  whenBldEnv [[elisp:(outline-show-subtree+toggle)][||]] From ./LCNT-Info/Builds/buildEnvs.tex~  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 \excludecomment{whenBuildIncludeExample}
 
@@ -108,6 +116,7 @@
 %%%#+BEGIN: b:lcnt:latex:preamble/whenCurBuild :curBuild t :when "main"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  whenCurBld [[elisp:(outline-show-subtree+toggle)][||]] From build.tex - whencurBuild ~curBuild=matoof-son-26-pres~  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 % \includecomment{whenBuildIncludeExample}
 
@@ -152,6 +161,7 @@
 %%%#+BEGIN: b:prog:felem/genericMarker :frontMarker "LatePkgs" :mainMarker "Un Absorbed Packages" :comment "color hyperref"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  LatePkgs   [[elisp:(outline-show-subtree+toggle)][||]]  /Marker:/ Un Absorbed Packages -- color hyperref  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -187,6 +197,7 @@
 %%%#+BEGIN: b:prog:felem/genericMarker :frontMarker "Late Packages" :mainMarker "Un Absorbed Packages" :comment "qrcode booktabs paracol changepage"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Late Packages [[elisp:(outline-show-subtree+toggle)][||]]  /Marker:/ Un Absorbed Packages -- qrcode booktabs paracol changepage  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -202,6 +213,7 @@
 %%%#+BEGIN: b:lcnt:latex:bib/packagesControls :bibProvider "biblatex"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  pkgBib     [[elisp:(outline-show-subtree+toggle)][||]] bibPackage=biblatex and Controls --   [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 \usepackage[backend=biber,style=numeric]{biblatex}
 
@@ -214,6 +226,7 @@
 %%%#+BEGIN: b:lcnt:latex:bib/addResourcesMarker :examples nil
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  addBibFile [[elisp:(outline-show-subtree+toggle)][||]] ~Marker~ Add Resources examples=nil --   [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -266,6 +279,7 @@
 %%%#+BEGIN: b:lcnt:latex/input :inputFile "./titlePresLtr.tex"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUTED    [[elisp:(outline-show-subtree+toggle)][||]]   ~Input File~  file:./titlePresLtr.tex  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 \input{./titlePresLtr.tex}
 %%%#+END:
@@ -274,6 +288,7 @@
 %%%#+BEGIN: b:lcnt:latex/documentBegin  :comment "~~~~~~~~~~~"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  _DocBegin_  [[elisp:(outline-show-subtree+toggle)][||]] ~Begin Document~ -- ~~~~~~~~~~~  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 
 \begin{document}
@@ -283,6 +298,7 @@
 %%%#+BEGIN: b:lcnt:latex/frontmatter  :bxClass "pres+art" :comment ""
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  /FrontMatr/  [[elisp:(outline-show-subtree+toggle)][||]] ~frontmatter~ TitlePage/AccessInfo/TOCs/Preface/etc --   [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -332,6 +348,7 @@
 %%%#+BEGIN: b:lcnt:latex/input :inputFile "./common/bodyPresArtEnFa.tex"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUTED    [[elisp:(outline-show-subtree+toggle)][||]]   ~Input File~  file:./common/bodyPresArtEnFa.tex  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 \input{./common/bodyPresArtEnFa.tex}
 %%%#+END:
@@ -339,6 +356,7 @@
 %%%#+BEGIN: b:lcnt:latex:bib/printBibsMarker :examples nil :bibProvider "biblatex"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Bib        [[elisp:(outline-show-subtree+toggle)][||]] ~Marker~ Print Bibs examples=nil --   [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 %%%#+END:
 
@@ -359,6 +377,7 @@
 %%%#+BEGIN: b:lcnt:latex/documentEnd  :comment "~~~~~~~~~~~"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  _DocEnd_    [[elisp:(outline-show-subtree+toggle)][||]] ~End Document~ -- ~~~~~~~~~~~  [[elisp:(org-cycle)][| ]]
+
 \end{whenOrg}
 
 \end{document}
