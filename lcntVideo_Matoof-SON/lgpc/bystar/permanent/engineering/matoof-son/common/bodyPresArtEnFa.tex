@@ -131,14 +131,17 @@ The title of this presentation is:
 ``An Evolutionary Bridge From Nokia EdenNet SON to More Than SON''
 
 Over the past two decades or so, we have developed the PyCS (Python Command Services)
-Framework. Part of the PyCS Framework is MaTOOF (Modules and Targets Oriented Open
+Framework. A component of the PyCS Framework is MaTOOF (Modules and Targets Oriented Open
 Fabric). MaTOOF's abstractions and model are very similar to Nokia's EdenNet SON
 abstractions and model. It turns out that it is actually quite easy to ``absorb'' EdenNet
-SON into the PyCS Framework. The strategy for such an absorbtion revolved around
+SON into the PyCS Framework. The strategy mapping EdenNet SON onto MaToof revolves around
 ``soncli.mcs''. Soncli.mcs is an external execution environment for ``playing'' SON
-modules. EdenNet SON includes a python framework that they call the ``EdenNet SON SDK''
-which is really more than just a Software Development Kit. In fact the SDK is external
-execution facility. soncli.mcs maps the SDK model onto CLI. We can then build on it on our
+modules. Think on SON modules as CDs and think of a EdenNet SON Web UI as a CD-Player.
+In that context Our soncli.mcs is another CD-Player which is capable of ``Playing'' all of
+your exisiting SON modules.
+EdenNet SON includes a python framework that they call the ``EdenNet SON SDK''
+which is really more than just a Software Development Kit. In fact the SDK is External
+Execution Facility (EEF). soncli.mcs maps the SDK model onto CLI. We can then build on it on our
 own. Nokia need not be involved. All of this can be done as an aftermarket capability.
 The benefits are enourmous.
 
@@ -181,7 +184,7 @@ The benefits are enourmous.
 \section{Summary}
 %%%#+END:
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Summary --- Acts I and II" :subtitle "" :reveal "plain" :beamer "blank" :label "summary-1" :comment "body=derivedImage"
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Summary (as 4 Acts) --- Acts I and II" :subtitle "" :reveal "plain" :beamer "blank" :label "summary-1" :comment "body=derivedImage"
 \begin{whenOrg}
 *****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=summary-1 Summary --- Acts I and II body=derivedImage
 
@@ -239,6 +242,7 @@ The benefits are enourmous.
 \end{columns}
 
       \begin{block}{Act II: Absorb EdenNet SON Into the Much Richer BISOS-PyCS Framework}
+        Providing: Web-UI for soncli.mcs, Observability, Parallel Execution
       \end{block}
 
 Once Absorbed, the soncli.mcs derivative inherits:
@@ -372,7 +376,8 @@ Once Absorbed, the soncli.mcs derivative inherits:
       \item SON Python \textbf{Nokia} Modules
     \end{itemize}
   \item \textbf{SON Python API}
-  \item \textbf{SON Python Software Development Kit (SDK)}
+  \item \textbf{SON Python Software Development Kit (SDK)}\\
+    {\color{darkred}  \textit{(The SDK is also an External Execution Facility --- EEF)}}
   \item SON Web User Interface
   \item SON Execution Engine
   \item SON OSS Interface Adapters
@@ -760,7 +765,7 @@ NOTYET
   \item Choice of Python (12 years ago)
   \item Modules Architecture for RAN Systems Management
   \item Targets Architecture for Cells
-  \item Python API for Sys Mgmt Abstractions
+  \item Python API for RAN and Telecom  Sys Mgmt Abstractions
 \end{itemize}
 
 \column{0.5\textwidth}
@@ -855,18 +860,19 @@ NOTYET
 \end{verblatex}
 
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "This is All Open Source -- Affero GPL"
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "PyCS is Open Source -- Affero GPL"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /This is All Open Source -- Affero GPL/ ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
 
-\section{This is All Open Source -- Affero GPL}
+\section{PyCS is Open Source -- Affero GPL}
 %%%#+END:
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "This is All Open Source -- Affero GPL" :subtitle "" :label "afferoGpl" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "PyCS is Open Source -- Affero GPL" :subtitle "" :label "afferoGpl" :comment "body=enumerate" :reveal "plain" :beamer "plain"
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=afferoGpl This is All Open Source -- Affero GPL body=enumerate
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=afferoGpl PyCS is Open Source -- Affero GPL body=enumerate
+
 \end{whenOrg}
 
 \begin{htmlonly}
@@ -887,7 +893,7 @@ NOTYET
 
 \begin{frame}[fragile,plain,label=afferoGpl]
     \frameaudio{"audio/afferoGpl.mp3"}
-    \frametitle{This is All Open Source -- Affero GPL}
+    \frametitle{PyCS is Open Source -- Affero GPL}
     \framesubtitle{}
 %%BxPy: impressiveFrameParSet('afferoGpl', 'always', 'True')
 %%BxPy: impressiveFrameParSet('afferoGpl', 'transition', 'UnSpecified')
@@ -912,6 +918,11 @@ NOTYET
         \item Creative Commons Attribution-ShareAlike (CC-BY-SA)
       \end{itemize}
     \end{exampleblock}
+
+
+    \begin{alertblock}{soncli.mcs: Moduled Command-Service  (Proprietary: Not Open Source)}
+    \small{Integration of Nokia SON SDK with PyCS and  bisos.tocsModules.}
+    \end{alertblock}
 
 \pnote{
 
@@ -964,8 +975,7 @@ NOTYET
 
 %%%#+BEGIN: bx:dblock:lcnt:body:odg-artpres :beamerSize "max" :fig-file "/de/lcnt/lgpc/bystar/permanent/common/figures/pycsFramework.odg"
 \begin{comment}
-******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *pycsFramework* -- cat: /de/lcnt/lgpc/bystar/permanent/common/figures/pycsFramework.title: No such file or directory
- ::  [[elisp:(org-cycle)][| ]]
+******  [[elisp:(org-cycle)][| ]]  [[elisp:(blee:ppmm:org-mode-toggle)][Nat]] [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]] || /Figure/ =ODG-ArtPres=  *pycsFramework* -- PyCS Framework Layerings ::  [[elisp:(org-cycle)][| ]]
 \end{comment}
 
 \begin{presentationMode}
@@ -995,8 +1005,7 @@ NOTYET
   \begin{figure}[H]
     \begin{center}
       \includegraphics[width=\textwidth]{/de/lcnt/lgpc/bystar/permanent/common/figures/pycsFramework}
-      \caption{cat: /de/lcnt/lgpc/bystar/permanent/common/figures/pycsFramework.title: No such file or directory
-}
+      \caption{PyCS Framework Layerings}
       \label{fig:pycsFramework}
     \end{center}
   \end{figure}
@@ -1011,8 +1020,7 @@ NOTYET
   %HEVEA\imageflush
 
   \begin{figure}
-      \caption{cat: /de/lcnt/lgpc/bystar/permanent/common/figures/pycsFramework.title: No such file or directory
-}
+      \caption{PyCS Framework Layerings}
       \label{fig:pycsFramework}
   \end{figure}
 \end{htmlonly}
@@ -1303,7 +1311,9 @@ NOTYET
 \begin{itemize}
   \item {\color{darkgreen} \textbf{SON Modules}}
   \item {\color{darkgreen} \textbf{SON Python API}}
-  \item {\color{darkgreen} \textbf{SON Software Development Kit (SDK)}}
+  \item {\color{darkgreen} \textbf{SON Software Development Kit (SDK)}}\\
+        {\color{darkred}  \textit{(SDK is used as an External Execution Facility --- EEF)}}
+
 \end{itemize}
 
 \end{columns}
@@ -1377,7 +1387,7 @@ NOTYET
     \end{block}
 
     \begin{alertblock}{soncli.mcs: Moduled Command-Service  (Proprietary: Not Open Source)}
-    \small{Integration of Nokia SON SDK with bisos.tocsModules.}
+    \small{Integration of Nokia SON SDK with PyCS and  bisos.tocsModules.}
     \end{alertblock}
 
 
@@ -1566,7 +1576,7 @@ NOTYET
     \end{exampleblock}
 
   \begin{itemize}
-    \item Modules are loaded through the command line (CLI) and then executed through the SDK
+    \item Modules are loaded through the command line (CLI) and then executed through the SDK (used as an External Execution Facility (EEF))
     \item Loading and execution of Modules through CLI permits convenient parallel execution at SON Engines
     \item Modules are surrounded by additional frameworks that enhance usage of modules
     \item Scope of capabilities of Modules is enhanced
@@ -1648,8 +1658,6 @@ NOTYET
 
 \end{frame}
 \end{verblatex}
-
-
 
 
 %%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "soncli.mcs As An Agentic AI Enabler"
@@ -1749,6 +1757,69 @@ NOTYET
 \pnote{
 
   NOTYET
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "The Poly-SON-Players Model --- soncli.mcs is an Additional Modules Player"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /The Poly-SON-Players Model --- soncli.mcs is an Additional Modules Player/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{The Poly-SON-Players Model --- soncli.mcs is an Additional Modules Player}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "The Poly-SON-Players Model" :subtitle "soncli.mcs is an Additional Modules Player" :label "polySonPlayers" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=polySonPlayers The Poly-SON-Players Model body=enumerate
+
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=polySonPlayers]
+    \frameaudio{"audio/polySonPlayers.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/polySonPlayers/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=polySonPlayers]
+    \frameaudio{"audio/polySonPlayers.mp3"}
+    \frametitle{The Poly-SON-Players Model}
+    \framesubtitle{soncli.mcs is an Additional Modules Player}
+%%BxPy: impressiveFrameParSet('polySonPlayers', 'always', 'True')
+%%BxPy: impressiveFrameParSet('polySonPlayers', 'transition', 'UnSpecified')
+%%%#+END:
+
+  \begin{itemize}
+    \item Many SON-Modules have been developed (Think of them as CDs)
+    \item Thus far, there has only been one SON-Modules Player --- The EdenNet SON Web-UI (Think of it as a CD-Player)
+    \item Having multiple players is a good thing
+    \item soncli.mcs is a SON-Modules Player (Think of it as another CD-Player)
+    \item As Players, each of SON Web-UI, soncli.mcs and PyCS-Web-UI have their own strength.
+      The EdenNet SON ecosystem becomes  richer when there are more Modules-Players.
+    \item soncli.mcs can play any SON-Module, developed by anyone.
+    \item Benefits of soncli.mcs acccrue to all Nokia SON Clients.
+  \end{itemize}
+
+
+\pnote{
+
+  NOTYET
+
 }
 
 \end{frame}
