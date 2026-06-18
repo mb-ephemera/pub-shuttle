@@ -1,0 +1,29 @@
+#+title: AI Agents Guidance for lcnt.xxx
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+* Table of Contents     :TOC:
+- [[#general-this-repo-contains-lcnts][General: This Repo contains LCNT's]]
+- [[#general-running-latex-on-inputs][General: Running LaTeX on Inputs]]
+- [[#git-commits-and-git-pushes][Git Commits and Git Pushes]]
+
+* General: This Repo contains LCNT's
+
+The common process for development of LCNT (Libre CoNtenT) is in the form of
+a series of Blee-Panels (org-mode standardized pages).
+
+Read all the Blee-Panels under @/bisos/panels/bisos-apps/lcnt
+
+* General: Running LaTeX on Inputs
+
+Make sure that lcntProc.sh has NOTYET
+
+To build the document, cd into the relevant build directory (e.g. matoof-son-26/) and run:
+lcntProc.sh -h -v -n showRun -p pre="clean" -p extent="build+view" -i lcntBuild cur
+
+* Git Commits and Git Pushes
+
+I don't want Claude to suggest the prompt of "commit this" or "push this".
+I want to do all the commits and pushes myself.
+Instead just suggest that I can commit.
+

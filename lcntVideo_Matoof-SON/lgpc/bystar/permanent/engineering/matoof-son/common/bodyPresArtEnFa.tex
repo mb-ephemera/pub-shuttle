@@ -119,7 +119,7 @@
 %%%#+END:
 
 \pnote{
-  
+
 Greetings.
 
 This is Mohsen Banan.
@@ -130,20 +130,18 @@ The title of this presentation is:
 ``soncli.mcs: An After-Market Open-Source Enabler''
 ``An Evolutionary Bridge From Nokia EdenNet SON to More Than SON''
 
-Over the past two decades or so, we have developed the PyCS (Python Command Services)
-Framework. A component of the PyCS Framework is MaTOOF (Modules and Targets Oriented Open
-Fabric). MaTOOF's abstractions and model are very similar to Nokia's EdenNet SON
-abstractions and model. It turns out that it is actually quite easy to ``absorb'' EdenNet
-SON into the PyCS Framework. The strategy mapping EdenNet SON onto MaToof revolves around
-``soncli.mcs''. Soncli.mcs is an external execution environment for ``playing'' SON
-modules. Think on SON modules as CDs and think of a EdenNet SON Web UI as a CD-Player.
-In that context Our soncli.mcs is another CD-Player which is capable of ``Playing'' all of
-your exisiting SON modules.
-EdenNet SON includes a python framework that they call the ``EdenNet SON SDK''
-which is really more than just a Software Development Kit. In fact the SDK is External
-Execution Facility (EEF). soncli.mcs maps the SDK model onto CLI. We can then build on it on our
-own. Nokia need not be involved. All of this can be done as an aftermarket capability.
-The benefits are enourmous.
+Nokia EdenNet SON is a mature and widely deployed Self-Organizing Network platform.
+It is a powerful system --- but it operates inside the Telecom Walled Garden,
+and its capabilities are locked behind a single Web UI.
+
+This presentation is about breaking that lock.
+
+Think of SON Modules as CDs and the EdenNet SON Web UI as a CD-Player.
+soncli.mcs is a second CD-Player --- one that you control, that runs on the command line,
+and that you can build upon freely.
+
+The rest of this presentation shows how soncli.mcs is implemented, what it enables,
+and where it can take you.
 
 }
 
@@ -259,20 +257,20 @@ Once Absorbed, the soncli.mcs derivative inherits:
   This story has 4 Acts. Act I is about soncli.mcs being an aftermarket solution.
   Aftermarket dynamics involve: 1) a product, in this case EdenNet-SON 2) a vendor, Nokia,
   3) customers, T-Mobile, NTT-DOCOMO, and around 20 others. 4) a gap in the original
-  offerings, in this case the abililty to configure and run modules on command line.
+  offerings, in this case the ability to configure and run modules on command line.
   Filling this gap is what soncli.mcs is about. EdenNet-SON is a mature product (10+
   years), so why does this gap still exist. My conjectures are: first Nokia wrongly
-  perceives that abaility as detremental to its abilities; second, the telecom users of
-  SON are not smart enough on understand that something like soncli.mcs can enable them to
-  do a whole of things on their own; third the Telecom Walled Garden prevents others to
-  provide solutions. In this case with soncli.mcs by wrapping soncli.mcs into a larger
+  perceives that ability as detrimental to its interests; second, the telecom users of
+  SON are not sufficiently aware that something like soncli.mcs can enable them to
+  do a whole range of things on their own; third, the Telecom Walled Garden prevents others
+  from providing solutions. In this case, by wrapping soncli.mcs into a larger
   Open Source context we are bypassing the Telecom Walled Garden. That larger Open Source
   is called BISOS-PyCS.
 
-  The power of soncli.mcs comes from it being and enabler. You can build on it. In Act II,
+  The power of soncli.mcs comes from it being an enabler. You can build on it. In Act II,
   we add to soncli.mcs a general purpose Open Source Web UI called the PyCS-Player and add
-  observability to it through Graphana and parallel executions to it through AirFlow.
-  Now all that sourounds soncli.mcs is Open Source and can be expanded.
+  observability to it through Grafana and parallel executions to it through AirFlow.
+  Now all that surrounds soncli.mcs is Open Source and can be expanded.
 
 }
 
@@ -334,7 +332,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \pnote{
 
-  Act III is about extending the limited abstrations of EdenNet SON's ``Modules'' and ``Targets'' beyond RAN and beyond Telecom.
+  Act III is about extending the limited abstractions of EdenNet SON's ``Modules'' and ``Targets'' beyond RAN and beyond Telecom.
   We accomplish this through MaTOOF which is part of BISOS-PyCS. MaTOOF is an acronym  for ``Modules and Target Oriented Open Fabric''.
   With MaTOOF, the concepts of Modules and Targets are generalized. The EdenNet SON model is the limited  RAN and Telecom specific
   of the broader MaTOOF model.
@@ -408,9 +406,27 @@ Once Absorbed, the soncli.mcs derivative inherits:
 \end{itemize}
 
 \pnote{
+  Nokia EdenNet SON is composed of several distinct parts, and it helps to understand
+  what each one does before we talk about soncli.mcs.
 
-  NOTYET
+  At the core are SON Python Modules. These are pieces of Python code that implement
+  specific network management tasks. Some modules are provided by Nokia; others are
+  written by the operator's own team.
 
+  Modules interact with the network through the SON Python API --- a published interface
+  that abstracts the underlying network details.
+
+  The SON Software Development Kit, or SDK, is the set of Python libraries that
+  implement this API. The SDK communicates with the EdenNet platform over a remote
+  interface. Importantly, the SDK is not just a development tool --- it is also an
+  External Execution Facility. That distinction is key to understanding soncli.mcs.
+
+  On top of all this sits the SON Web User Interface --- the single player that Nokia
+  provides for running modules. Beneath it are the Execution Engine and the OSS
+  Interface Adapters that connect to the radio network.
+
+  soncli.mcs touches only three of these parts: the Modules, the API, and the SDK.
+  It needs nothing else from Nokia.
 }
 
 \end{frame}
@@ -513,9 +529,21 @@ Once Absorbed, the soncli.mcs derivative inherits:
 %%%#+END:
 
 \pnote{
+  This figure shows the Nokia EdenNet SON ecosystem as a whole.
 
-  NOTYET
+  On the left is the Nokia EdenNet SON Platform --- a closed, proprietary system.
+  It includes the Web UI, the execution engine, the OSS adapters, and the platform
+  libraries. Everything runs inside Nokia's controlled environment.
 
+  On the right is what we call the SON External Execution Platform. This is where
+  soncli.mcs lives. The only bridge between the two sides is the SDK Remote API ---
+  the same interface that Nokia's own Web UI uses internally.
+
+  soncli.mcs is an External Modules Player. It sits entirely outside the Nokia platform
+  and communicates with it only through that published SDK interface.
+  Nokia does not need to be involved, approve, or even be aware.
+
+  This is the architectural foundation of the aftermarket story.
 }
 
 \end{frame}
@@ -606,9 +634,21 @@ Once Absorbed, the soncli.mcs derivative inherits:
 And probably many other telecom companies that have not been publicly disclosed.
 
 \pnote{
+  Nokia EdenNet SON is not a niche product. It is deployed at scale across the globe.
 
-  NOTYET
+  Based on public announcements and reports, the known customer list includes
+  T-Mobile in the United States, Telstra in Australia, Orange across Europe and
+  the Middle East, Vodafone Idea in India, Telecom Argentina, BT and EE in the
+  United Kingdom, and NTT DOCOMO in Japan.
 
+  These are among the largest telecom operators in the world. And there are almost
+  certainly many others that have not been publicly disclosed.
+
+  Every one of these operators has SON modules. Every one of them runs those modules
+  through a single player --- the Nokia Web UI. And every one of them would benefit
+  from soncli.mcs.
+
+  The opportunity here is not small.
 }
 
 \end{frame}
@@ -709,10 +749,27 @@ And probably many other telecom companies that have not been publicly disclosed.
 \end{small}
 
   \pnote{
+  Who is this presentation for?
 
-NOTYET
+  The table on this slide maps four types of audience against four areas of relevance.
 
-      }
+  The most directly relevant audience is Nokia SON Customers --- operators like
+  T-Mobile and others on the previous slide. If you develop SON modules, if you run
+  them, or if you are responsible for RAN automation, soncli.mcs is directly
+  applicable to your work.
+
+  Nokia itself is also an audience --- because soncli.mcs changes the competitive
+  dynamics around their platform.
+
+  Telecom operators who do not currently use Nokia SON --- for example those using
+  AT&T's own RAN stack or other vendors --- are a secondary audience. The MaTOOF
+  concepts that underlie soncli.mcs apply broadly to systems management.
+
+  Finally, internet providers and cloud operators are an audience for the broader
+  BISOS-MaTOOF framework, even if Nokia SON is not directly relevant to them.
+
+  If you are watching this, you are likely in one of these groups.
+}
 
 
 \end{frame}
@@ -821,7 +878,24 @@ NOTYET
 
 \pnote{
 
-  NOTYET
+  Let us be honest about both the strengths and the weaknesses of Nokia EdenNet SON.
+
+  On the strength side, Nokia made some excellent architectural choices. Choosing
+  Python over a decade ago was forward-looking. The Modules architecture for RAN
+  systems management is clean and well-conceived. The Targets architecture for cells
+  and the Python API for telecom abstractions are solid foundations.
+
+  On the weakness side, the platform is jailed inside the Telecom Walled Garden.
+  The abstraction of Targets is limited to cells. The scope is confined to RAN and
+  Telecom. There is only one Modules Player --- the Nokia Web UI. And there is no
+  CLI for module execution.
+
+  soncli.mcs directly addresses these weaknesses. It provides the missing CLI.
+  It opens the door to multiple players. And by bringing EdenNet SON into the
+  BISOS-MaTOOF framework, it extends the concepts of Modules and Targets far
+  beyond what Nokia originally envisioned.
+
+  The strengths of the Nokia architecture are preserved. The weaknesses are overcome.
 
 }
 
@@ -949,9 +1023,21 @@ NOTYET
     \end{alertblock}
 
 \pnote{
+  A word on licensing before we go further.
 
-  NOTYET
+  All of the software that underlies soncli.mcs --- BISOS, PyCS, and tocsModules ---
+  is dual licensed. You can use it under the Affero GPL, which is a strong Open Source
+  license, or under a Neda Commercial License if the Affero GPL does not suit your needs.
 
+  All of the content in this presentation --- the documents, the slides, the video ---
+  is licensed under Creative Commons Attribution-ShareAlike. You are free to share and
+  build upon it.
+
+  There is one exception: soncli.mcs itself --- the specific integration of the Nokia
+  SON SDK with PyCS and tocsModules --- is proprietary. It is not open source.
+  This is because it integrates with Nokia's proprietary SDK.
+
+  Everything else that surrounds it, however, is fully open.
 }
 
 \end{frame}
@@ -1054,9 +1140,23 @@ NOTYET
 %%%#+END:
 
 \pnote{
+  This figure shows the layered architecture of the PyCS framework.
 
-  NOTYET
+  PyCS --- Python Command Services --- is the open source foundation on which
+  soncli.mcs is built. It was designed specifically to support unified commands
+  and services that can be executed both on the command line and through web interfaces.
 
+  The framework is layered. At the bottom is BISOS --- the ByStar Internet Services
+  Operating System --- a Debian-based substrate for building open source
+  software-service continuums. PyCS sits on top of BISOS.
+
+  On top of PyCS are domain-specific packages. For soncli.mcs, the relevant one is
+  tocsModules --- Target Oriented Command Services Modules --- which provides the
+  uploadable module and parallel execution capabilities.
+
+  The key insight is that PyCS was designed with exactly the abstractions that
+  Nokia EdenNet SON uses --- modules and targets. This is why absorbing soncli.mcs
+  into PyCS requires so little code.
 }
 
 \end{frame}
@@ -1159,9 +1259,20 @@ NOTYET
 %%%#+END:
 
 \pnote{
+  This figure shows where PyCS fits in the broader ByStar digital ecosystem.
 
-  NOTYET
+  ByStar is a layered hierarchy of open source software and services. PyCS is the
+  substrate --- the foundational layer on which applications and services are built.
 
+  What this means for soncli.mcs is significant. Once soncli.mcs is implemented on
+  top of PyCS, it does not stand alone. It inherits the entire ByStar ecosystem:
+  the web interfaces, the observability tools, the parallel execution framework,
+  and the broader systems management capabilities.
+
+  Nokia SON customers who adopt soncli.mcs are not just getting a CLI tool.
+  They are connecting their SON environment to a rich, open, and extensible platform.
+
+  This is what makes the aftermarket story so compelling.
 }
 
 \end{frame}
@@ -1266,9 +1377,22 @@ NOTYET
 %%%#+END:
 
 \pnote{
+  This figure illustrates the aftermarket strategy at an architectural level.
 
-  NOTYET
+  On the Nokia side, you have the EdenNet SON platform with its modules, SDK,
+  and Web UI. All of this is proprietary and controlled by Nokia.
 
+  On the right side, you have the BISOS external execution platform. soncli.mcs
+  sits here, using the SDK's remote interface as the only connection point to
+  the Nokia platform.
+
+  The key insight shown in this figure is the mapping: Nokia's concept of Modules
+  maps onto bisos.tocsModules. Nokia's concept of Targets maps onto the MaTOOF
+  targets model. The SDK, used as an External Execution Facility, maps onto the
+  PyCS command execution model.
+
+  Once this mapping is established, the entire PyCS ecosystem becomes available
+  to SON module developers and operators.
 }
 
 \end{frame}
@@ -1344,9 +1468,27 @@ NOTYET
 
 
 \pnote{
+  Nokia EdenNet SON is composed of several distinct parts, and it helps to understand
+  what each one does before we talk about soncli.mcs.
 
-  NOTYET
+  At the core are SON Python Modules. These are pieces of Python code that implement
+  specific network management tasks. Some modules are provided by Nokia; others are
+  written by the operator's own team.
 
+  Modules interact with the network through the SON Python API --- a published interface
+  that abstracts the underlying network details.
+
+  The SON Software Development Kit, or SDK, is the set of Python libraries that
+  implement this API. The SDK communicates with the EdenNet platform over a remote
+  interface. Importantly, the SDK is not just a development tool --- it is also an
+  External Execution Facility. That distinction is key to understanding soncli.mcs.
+
+  On top of all this sits the SON Web User Interface --- the single player that Nokia
+  provides for running modules. Beneath it are the Execution Engine and the OSS
+  Interface Adapters that connect to the radio network.
+
+  soncli.mcs touches only three of these parts: the Modules, the API, and the SDK.
+  It needs nothing else from Nokia.
 }
 
 \end{frame}
@@ -1416,9 +1558,24 @@ NOTYET
 
 
 \pnote{
+  Let us now be precise about what soncli.mcs actually uses from the Nokia EdenNet
+  SON platform.
 
-  NOTYET
+  The full Nokia parts list has six components: Modules, the Python API, the SDK,
+  the Web User Interface, the Execution Engine, and the OSS Interface Adapters.
 
+  soncli.mcs uses only three of these: the SON Modules, the SON Python API,
+  and the SON SDK.
+
+  It does not need the Web User Interface. It does not need Nokia's Execution Engine.
+  It does not need the OSS Interface Adapters.
+
+  The SDK, as we noted earlier, is also an External Execution Facility. soncli.mcs
+  uses it in exactly that capacity --- as a remote execution interface to the
+  Nokia platform.
+
+  This minimal dependency is what makes soncli.mcs lightweight to implement
+  and independent of Nokia's continued involvement.
 }
 
 \end{frame}
@@ -1492,14 +1649,113 @@ NOTYET
     \end{center}
 
 \pnote{
+  Let us look at the full software stack that soncli.mcs is built upon.
 
-  NOTYET
+  At the base is BISOS --- the ByStar Internet Services Operating System ---
+  a Debian-based open source framework available at github.com/bisos.
 
+  On top of BISOS sits PyCS --- Python Command Services --- a framework for
+  building unified commands and services in Python.
+
+  On top of PyCS is tocsModules --- Target Oriented Modules --- which provides
+  the general facilities for creating uploadable, executable modules.
+
+  PyCS defines the concept of CSXUs --- Command Services eXecution Units ---
+  which are the runnable units that soncli.mcs operates as.
+
+  And at the top of this stack is soncli.mcs itself --- the proprietary integration
+  layer that connects Nokia's SON SDK to all of this open source infrastructure.
+
+  A thin proprietary layer on top of a rich open source foundation.
+  That is the architecture.
 }
 
 \end{frame}
 \end{verblatex}
 
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "External SON Applications Built on soncli.mcs"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /External SON Applications Built on soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{External SON Applications Built on soncli.mcs}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "External SON Applications Built on soncli.mcs" :subtitle "" :label "externalSonApps" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=externalSonApps External SON Applications Built on soncli.mcs body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=externalSonApps]
+    \frameaudio{"audio/externalSonApps.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/externalSonApps/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=externalSonApps]
+    \frameaudio{"audio/externalSonApps.mp3"}
+    \frametitle{External SON Applications Built on soncli.mcs}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('externalSonApps', 'always', 'True')
+%%BxPy: impressiveFrameParSet('externalSonApps', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{exampleblock}{soncli.mcs Is Not Just a CLI Tool --- It Is a Foundation}
+    \end{exampleblock}
+
+\begin{itemize}
+  \item \textbf{External SON Modules} are Python modules that use the EdenNet SDK
+        but execute \textit{outside} the EdenNet WebUI Platform
+  \item Because soncli.mcs exposes SON capabilities through CLI and BISOS-PyCS,
+        complete standalone \textbf{External SON Applications} can be built on top of it
+  \item External SON Applications can have their own full graphical user interface ---
+        entirely separate from the EdenNet platform
+  \item This enables Nokia SON customers to develop capabilities that
+        Nokia need not be involved in
+\end{itemize}
+
+    \begin{block}{The Progression}
+      \begin{center}
+        Native Modules in EdenNet WebUI
+        $\;\rightarrow\;$ External Modules via soncli.mcs
+        $\;\rightarrow\;$ Full External SON Applications
+      \end{center}
+    \end{block}
+
+\pnote{
+  The implementation of soncli.mcs is remarkably small.
+
+  The open source bisos.tocsModules package was designed specifically to absorb
+  proprietary SDKs. It provides all the scaffolding for uploadable, executable
+  modules. The proprietary part --- soncli.mcs --- only needs to connect Nokia's
+  SDK to that scaffolding.
+
+  In practice, this means a very small amount of Python code. The integration
+  involves three key files: a Command Service Unit that implements target execution,
+  a loader that makes the SON SDK concrete within the tocsModules model, and a
+  seed file that packages it all together.
+
+  Once this thin bridge is in place, soncli.mcs becomes an integral part of BISOS.
+  From that point on, all of the PyCS ecosystem capabilities apply to SON modules.
+
+  Small effort. Large return.
+}
+
+\end{frame}
+\end{verblatex}
 
 
 %%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Business Case and Benefits of Adopting the PyCS Based soncli.mcs"
@@ -1612,9 +1868,25 @@ NOTYET
     \end{block}
 
 \pnote{
+  soncli.mcs is a CLI tool, but it is also a foundation for something larger.
 
-  NOTYET
+  Nokia EdenNet SON distinguishes between Native Modules --- those designed to run
+  inside the EdenNet Web UI platform --- and External Modules --- those that use
+  the SDK but execute outside the platform entirely.
 
+  Because soncli.mcs exposes SON capabilities through the command line and through
+  the full BISOS-PyCS framework, it becomes possible to build complete standalone
+  External SON Applications on top of it.
+
+  These applications can have their own graphical user interfaces, their own data
+  pipelines, their own reporting systems --- entirely separate from the Nokia platform.
+  Nokia does not need to be involved in their development or deployment.
+
+  The progression is: Native Modules running in the Nokia Web UI, then External
+  Modules running through soncli.mcs, and finally full External SON Applications
+  that stand entirely on their own.
+
+  This is the full arc of what the aftermarket strategy enables.
 }
 
 \end{frame}
@@ -1675,9 +1947,26 @@ NOTYET
 
 
 \pnote{
+  What does soncli.mcs actually enable?
 
-  NOTYET
+  Because SON Modules are Python modules, and because the SDK provides a remote
+  execution interface, we can load and execute modules entirely from the command line.
+  The parameters, the target list, the destination servers --- all of these can be
+  specified on the command line rather than hardcoded inside the module.
 
+  This single capability unlocks a chain of consequences.
+
+  First, you can run modules in parallel across multiple servers --- something
+  the Nokia Web UI does not conveniently support.
+
+  Second, you can surround module execution with additional open source tooling ---
+  for observability, for scheduling, for results aggregation.
+
+  Third, the scope of what counts as a Target is no longer limited to what Nokia
+  defines. Through BISOS-MaTOOF, targets can be anything --- RAN nodes, data
+  center servers, cloud resources.
+
+  soncli.mcs is the door. These are the rooms behind it.
 }
 
 \end{frame}
@@ -1779,8 +2068,26 @@ NOTYET
 %%%#+END:
 
 \pnote{
+  Let us be concrete about the immediate and tangible benefits of soncli.mcs.
 
-  NOTYET
+  For SON module developers, the most immediate benefit is the ability to load and
+  run modules from the command line. This means you can subject your modules to
+  regression testing and build CI/CD pipelines for continuous verification ---
+  things that are essentially impossible with the Nokia Web UI alone.
+
+  For AI-assisted development, soncli.mcs is a prerequisite. Agentic AI tools
+  need a CLI interface to iteratively test and refine code. Without soncli.mcs,
+  AI cannot close the loop on SON module development.
+
+  For operations teams, soncli.mcs enables nationwide execution of any SON module
+  across all servers simultaneously, with results collected centrally.
+
+  And because soncli.mcs sits inside the BISOS-MaTOOF framework, the scope of
+  what modules can target extends beyond cells and RAN --- into broader systems
+  management.
+
+  Finally, with soncli.mcs, the path toward multiple SON module players is open.
+  The ecosystem becomes richer for everyone.
 }
 
 \end{frame}
@@ -1841,9 +2148,25 @@ NOTYET
 
 
 \pnote{
+  One of the most timely benefits of soncli.mcs is its role as an enabler for
+  Agentic AI.
 
-  NOTYET
+  Agentic AI systems --- tools that autonomously execute code, test results, and
+  iterate --- fundamentally require a command line interface. They cannot operate
+  through a web UI. They need to invoke a tool, observe the output, and decide
+  what to do next.
 
+  This figure shows how soncli.mcs fits into an agentic AI workflow for SON module
+  development. The AI agent writes or modifies a module, invokes soncli.mcs on the
+  command line, observes the results, and refines its approach --- all in an
+  automated loop.
+
+  Without soncli.mcs, this loop cannot be closed. The Nokia Web UI is not scriptable
+  in the way that agentic AI requires.
+
+  With soncli.mcs, SON module development can be fully integrated into modern
+  AI-assisted software development workflows. This is not a future possibility ---
+  it is available now.
 }
 
 \end{frame}
@@ -1895,8 +2218,17 @@ NOTYET
     \tableofcontents
 
 \pnote{
+  We have established what soncli.mcs is and what it enables at the command line level.
 
+  In this part, we look at the next step: putting a Web UI on top of soncli.mcs.
 
+  The BISOS framework provides a general purpose Web UI called the csPlayer ---
+  Command Services Player. Because soncli.mcs is built on PyCS, the csPlayer
+  can be used with soncli.mcs directly.
+
+  This gives us a second graphical player for Nokia SON modules --- one that is
+  open source, that can operate nationwide across multiple servers, and that
+  inherits all of the observability and parallel execution capabilities of BISOS.
 }
 \end{frame}
 \end{verblatex}
@@ -1977,9 +2309,27 @@ NOTYET
 
 
 \pnote{
+  Nokia EdenNet SON is composed of several distinct parts, and it helps to understand
+  what each one does before we talk about soncli.mcs.
 
-  NOTYET
+  At the core are SON Python Modules. These are pieces of Python code that implement
+  specific network management tasks. Some modules are provided by Nokia; others are
+  written by the operator's own team.
 
+  Modules interact with the network through the SON Python API --- a published interface
+  that abstracts the underlying network details.
+
+  The SON Software Development Kit, or SDK, is the set of Python libraries that
+  implement this API. The SDK communicates with the EdenNet platform over a remote
+  interface. Importantly, the SDK is not just a development tool --- it is also an
+  External Execution Facility. That distinction is key to understanding soncli.mcs.
+
+  On top of all this sits the SON Web User Interface --- the single player that Nokia
+  provides for running modules. Beneath it are the Execution Engine and the OSS
+  Interface Adapters that connect to the radio network.
+
+  soncli.mcs touches only three of these parts: the Modules, the API, and the SDK.
+  It needs nothing else from Nokia.
 }
 
 \end{frame}
@@ -2064,9 +2414,26 @@ NOTYET
 
 
 \pnote{
+  Let us step back and think about the ecosystem model that soncli.mcs creates.
 
-  NOTYET
+  Over the past decade, Nokia SON customers have accumulated a large library of
+  SON Modules. Think of these as CDs. And for that entire decade, there has been
+  only one player for those CDs --- the Nokia EdenNet SON Web UI.
 
+  A single player for an entire library of content is a fragile and limiting
+  situation. The Poly-SON-Players model recognizes that we can and should have
+  multiple players.
+
+  soncli.mcs is a second player. It can play any SON module that was developed
+  for the Nokia platform. It does not require Nokia's involvement or approval.
+
+  Each player has its own strengths. The Nokia Web UI provides a graphical
+  interface and closed-loop execution. soncli.mcs provides CLI access, automation,
+  parallel execution, and AI integration. The PyCS Web UI adds an open source
+  graphical interface on top of soncli.mcs.
+
+  More players means a richer ecosystem. The benefits accrue to all Nokia SON
+  customers, regardless of which player they use.
 }
 
 \end{frame}
@@ -2168,9 +2535,17 @@ NOTYET
 %%%#+END:
 
 \pnote{
+  We have established what soncli.mcs is and what it enables at the command line level.
 
-  NOTYET
+  In this part, we look at the next step: putting a Web UI on top of soncli.mcs.
 
+  The BISOS framework provides a general purpose Web UI called the csPlayer ---
+  Command Services Player. Because soncli.mcs is built on PyCS, the csPlayer
+  can be used with soncli.mcs directly.
+
+  This gives us a second graphical player for Nokia SON modules --- one that is
+  open source, that can operate nationwide across multiple servers, and that
+  inherits all of the observability and parallel execution capabilities of BISOS.
 }
 
 \end{frame}
@@ -2282,9 +2657,26 @@ NOTYET
     \end{itemize}
 
 \pnote{
+  Let us be concrete about the immediate and tangible benefits of soncli.mcs.
 
-  NOTYET
+  For SON module developers, the most immediate benefit is the ability to load and
+  run modules from the command line. This means you can subject your modules to
+  regression testing and build CI/CD pipelines for continuous verification ---
+  things that are essentially impossible with the Nokia Web UI alone.
 
+  For AI-assisted development, soncli.mcs is a prerequisite. Agentic AI tools
+  need a CLI interface to iteratively test and refine code. Without soncli.mcs,
+  AI cannot close the loop on SON module development.
+
+  For operations teams, soncli.mcs enables nationwide execution of any SON module
+  across all servers simultaneously, with results collected centrally.
+
+  And because soncli.mcs sits inside the BISOS-MaTOOF framework, the scope of
+  what modules can target extends beyond cells and RAN --- into broader systems
+  management.
+
+  Finally, with soncli.mcs, the path toward multiple SON module players is open.
+  The ecosystem becomes richer for everyone.
 }
 
 \end{frame}
@@ -2390,9 +2782,20 @@ NOTYET
 %%%#+END:
 
 \pnote{
+  Adding the BISOS Web UI csPlayer to soncli.mcs completes a key part of the picture.
 
-  NOTYET
+  Looking at the Nokia parts list again: the Nokia Web UI is one of the six components.
+  It is the only graphical interface Nokia provides for running modules.
 
+  With soncli.mcs plus the BISOS Web UI csPlayer, we now have an open source
+  alternative for that component.
+
+  The left column shows what Nokia provides. The right column shows what our
+  stack provides in its place. The modules, the API, and the SDK are shared.
+  But instead of Nokia's Web UI, we have the open source csPlayer built on soncli.mcs.
+
+  This is a direct functional replacement for that component of the Nokia platform ---
+  with the added benefits of being open source, extensible, and nationwide in scope.
 }
 
 \end{frame}
@@ -2472,10 +2875,99 @@ NOTYET
     \tableofcontents
 
 \pnote{
+  We have covered the technical picture in some depth.
 
-  NOTYET
+  In this final part, we shift to the business and human dimension.
 
-  }
+  We have built soncli.mcs. It works. The open source foundations are in place.
+  The benefits are real and immediate.
+
+  What remains is for the people in this ecosystem --- Nokia SON customers,
+  operators, developers --- to become aware of what is possible and to act on it.
+
+  This part is our pitch to you.
+}
+
+\end{frame}
+\end{verblatex}
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "There Is No Need For a Business Case"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /There Is No Need For a Business Case/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{There Is No Need For a Business Case}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "There Is No Need For a Business Case" :subtitle "" :label "noBusinessCase" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=noBusinessCase There Is No Need For a Business Case body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=noBusinessCase]
+    \frameaudio{"audio/noBusinessCase.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/noBusinessCase/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=noBusinessCase]
+    \frameaudio{"audio/noBusinessCase.mp3"}
+    \frametitle{There Is No Need For a Business Case}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('noBusinessCase', 'always', 'True')
+%%BxPy: impressiveFrameParSet('noBusinessCase', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{alertblock}{The Real Question Is Not ``What Is the Business Case for soncli.mcs?''}
+      The real question is: \textbf{Why was something like soncli.mcs not built over the past decade?}
+    \end{alertblock}
+
+    \bigskip
+
+\begin{itemize}
+  \item The benefits of soncli.mcs are clear and immediate
+  \item The implementation effort is modest --- soncli.mcs is a thin layer on top of the existing SDK
+  \item The SDK itself already permits external execution --- soncli.mcs simply makes that capability accessible
+  \item Anyone who understands the Nokia SON SDK can verify this independently
+\end{itemize}
+
+    \begin{block}{The Telecom Walled Garden Is the Only Explanation}
+      Nokia has no incentive to build it. Customers have been unaware it was possible.
+      Open Source breaks this dynamic.
+    \end{block}
+
+\pnote{
+  We want to address directly the question that sometimes comes up in large
+  organizations: what is the business case for soncli.mcs?
+
+  Our answer is that there is no need for a business case.
+
+  The benefits are clear and immediate. The implementation effort is modest.
+  The SDK already permits external execution --- soncli.mcs simply makes that
+  capability accessible. Anyone who understands the Nokia SON SDK can verify
+  this independently.
+
+  The real question is the inverse: why was something like soncli.mcs not built
+  over the past decade? The answer lies in the Telecom Walled Garden. Nokia has
+  no incentive to build it. Customers have been unaware it was possible.
+  And the walled garden structure has prevented outside parties from providing it.
+
+  Open source breaks this dynamic. soncli.mcs is here now. The question is
+  simply whether you will adopt it.
+}
 
 \end{frame}
 \end{verblatex}
@@ -2539,9 +3031,26 @@ NOTYET
     \end{block}
 
 \pnote{
+  Let us close with what we are asking of you.
 
-  NOTYET
+  soncli.mcs is real. It works. Adding it to your existing Nokia EdenNet SON
+  environment is a high return, low risk investment. The surrounding infrastructure
+  --- BISOS, PyCS, tocsModules --- is all open source under the Affero GPL.
 
+  Our first request is simply that you invest the time to understand what we are
+  presenting. The concepts are not complicated, but they require attention.
+
+  Our second request is that you share this with others in your organization
+  and in the broader Nokia SON ecosystem. This is a public document. Create
+  consensus around it.
+
+  Our third request is that you do your due diligence. Try out the open source
+  components. Verify the claims we have made.
+
+  And finally --- reach out to us. We are interested in your feedback, your
+  use cases, and the opportunities you see.
+
+  Thank you for your time.
 }
 
 \end{frame}

@@ -1,0 +1,46 @@
+#+title: RepoNameComesHere --- Work Plan
+#+DATE: <2026-06-10 Wed 13:54>
+#+AUTHOR: Mohsen BANAN
+#+OPTIONS: toc:4
+#+TAGS: me(m) ai(a)
+
+This Work Plan file drives the AI collaborative development.
+Interactions are broken down into "Stages". Each Stage has a set
+of TODOs that I work with Claude to accomplish.
+
+Companion docs: [[file:AI-AGENTS.org][AI-AGENTS.org]] (agent guidance / layering), [[file:README.org][README.org]] (overview).
+
+* Stage 1 TODOs --- Shared Understanding
+** +
+** TODO [#A] Based on everything originating from CLAUDE.md confirm your understanding of the project  :ai:
+SCHEDULED: <2026-06-18 Thu>
+Describe what I have understood of the document / screencast that I am building
+----- AI Results: ------
+** DONE [#A] Is there any important topic that I covered in /git/rana/rana-son/soncli.cs/c-220014-0.1-soncli-art-8.5x11.pdf that I have not covered in ./common//bodyPresArtEnFa.tex
+SCHEDULED: <2026-06-18 Thu>
+----- AI Results: ------
+Two public-safe gaps were identified and added to bodyPresArtEnFa.tex:
+- externalSonApps slide (after soncliImplementation, in "Absorbing EdenNet SON" part)
+- noBusinessCase slide (before "Requested From You", in "Our Sales Pitch" part)
+** -B|
+
+* Stage 2 TODOs  --- Narations and Voice Overs.
+** +
+** TODO [#A] Review existing voiceovers (in pnotes). Suggest ways of improving them
+SCHEDULED: <2026-06-09 Tue>
+Don't update the files. Just make suggestions.
+----- AI Results: ------
+** DONE [#A] Add voiceovers for all the slides of ./ (not of the full)
+SCHEDULED: <2026-06-09 Tue>
+The average slide should be about 1 minutes long (ordinary speed of reading)
+----- AI Results: ------
+Narrations written for all 24 NOTYET pnote blocks. Zero NOTYET remaining.
+Document builds cleanly (34 pages, presentationEnFa.pdf).
+
+** -
+
+
+
+# Local Variables:
+# eval: (setq-local toc-org-max-depth 4)
+# End:
