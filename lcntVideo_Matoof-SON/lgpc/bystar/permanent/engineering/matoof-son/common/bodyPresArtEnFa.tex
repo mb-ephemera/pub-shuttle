@@ -175,18 +175,18 @@ The benefits are enourmous.
 %% \end{verblatex}
 
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "Summary"
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "Summary (as 4 Acts)"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Summary/ ::  [[elisp:(org-cycle)][| ]]
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Summary (as 4 Acts)/ ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
 
-\section{Summary}
+\section{Summary (as 4 Acts)}
 %%%#+END:
 
 %%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Summary (as 4 Acts) --- Acts I and II" :subtitle "" :reveal "plain" :beamer "blank" :label "summary-1" :comment "body=derivedImage"
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=summary-1 Summary --- Acts I and II body=derivedImage
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=summary-1 Summary (as 4 Acts) --- Acts I and II body=derivedImage
 
 \end{whenOrg}
 
@@ -208,7 +208,7 @@ The benefits are enourmous.
 
 \begin{frame}[fragile,plain,label=summary-1]
     \frameaudio{"audio/summary-1.mp3"}
-    \frametitle{Summary --- Acts I and II}
+    \frametitle{Summary (as 4 Acts) --- Acts I and II}
     \framesubtitle{}
 %%BxPy: impressiveFrameParSet('summary-1', 'always', 'True')
 %%BxPy: impressiveFrameParSet('summary-1', 'transition', 'UnSpecified')
@@ -256,7 +256,23 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \pnote{
 
-  NOTYET
+  This story has 4 Acts. Act I is about soncli.mcs being an aftermarket solution.
+  Aftermarket dynamics involve: 1) a product, in this case EdenNet-SON 2) a vendor, Nokia,
+  3) customers, T-Mobile, NTT-DOCOMO, and around 20 others. 4) a gap in the original
+  offerings, in this case the abililty to configure and run modules on command line.
+  Filling this gap is what soncli.mcs is about. EdenNet-SON is a mature product (10+
+  years), so why does this gap still exist. My conjectures are: first Nokia wrongly
+  perceives that abaility as detremental to its abilities; second, the telecom users of
+  SON are not smart enough on understand that something like soncli.mcs can enable them to
+  do a whole of things on their own; third the Telecom Walled Garden prevents others to
+  provide solutions. In this case with soncli.mcs by wrapping soncli.mcs into a larger
+  Open Source context we are bypassing the Telecom Walled Garden. That larger Open Source
+  is called BISOS-PyCS.
+
+  The power of soncli.mcs comes from it being and enabler. You can build on it. In Act II,
+  we add to soncli.mcs a general purpose Open Source Web UI called the PyCS-Player and add
+  observability to it through Graphana and parallel executions to it through AirFlow.
+  Now all that sourounds soncli.mcs is Open Source and can be expanded.
 
 }
 
@@ -312,13 +328,21 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{itemize}
   \item Simply Replace OSS Interfaces with Your Own
-  \item soncli.mcs and BISOS-PyCS already provide everything else that is needed.
+  \item soncli.mcsm, BISOS-PyCS and MaTOOF already provide everything else that is needed.
 \end{itemize}
 
 
 \pnote{
 
-  NOTYET
+  Act III is about extending the limited abstrations of EdenNet SON's ``Modules'' and ``Targets'' beyond RAN and beyond Telecom.
+  We accomplish this through MaTOOF which is part of BISOS-PyCS. MaTOOF is an acronym  for ``Modules and Target Oriented Open Fabric''.
+  With MaTOOF, the concepts of Modules and Targets are generalized. The EdenNet SON model is the limited  RAN and Telecom specific
+  of the broader MaTOOF model.
+
+  By the time that Act III is realized, the Telecom operator could see that MaTOOF could
+  be its SON solution. So, Act IV could then simply be about providing direct RAN
+  interfaces to MaTOOF instead of through EdenNet SON. This story could easily end at Act III.
+  Think of Act IV as an appendix.
 
 }
 
