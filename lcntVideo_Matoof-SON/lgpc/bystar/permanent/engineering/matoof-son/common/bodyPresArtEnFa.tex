@@ -134,7 +134,9 @@ Nokia EdenNet SON is a mature and widely deployed Self-Organizing Network platfo
 It is a powerful system --- but it operates inside the Telecom Walled Garden,
 and its capabilities are locked behind a single Web UI.
 
-This presentation is about breaking that lock.
+This presentation is about three thing:
+1) breaking that single Web UI lock
+2) Expanding its reach beyond RAN (Radio Access Networks) by generalizing its concept of Targets
 
 Think of SON Modules as CDs and the EdenNet SON Web UI as a CD-Player.
 soncli.mcs is a second CD-Player --- one that you control, that runs on the command line,
@@ -171,6 +173,137 @@ and where it can take you.
 %% }
 %% \end{frame}
 %% \end{verblatex}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions" :subtitle "" :reveal "plain" :beamer "blank" :label "pubVsProprietary" :comment "body=derivedImage"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=pubVsProprietary The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions body=derivedImage
+
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=pubVsProprietary]
+    \frameaudio{"audio/pubVsProprietary.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/pubVsProprietary/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=pubVsProprietary]
+    \frameaudio{"audio/pubVsProprietary.mp3"}
+    \frametitle{The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('pubVsProprietary', 'always', 'True')
+%%BxPy: impressiveFrameParSet('pubVsProprietary', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+\begin{itemize}
+  \item Nokia EdenNet SON is a very Proprietary Product
+  \item Its implementation comprises many Open Source packages but the full system is Proprietary (Nokia copyrighted and likely patented)
+  \item Its Python API documentation and code is not intended to be publicly available
+  \item Despite being Proprietary and Closed, Nokia is positioning EdenNet SON as an ``Open'' solution
+  \item The ``Open'' aspect simply refers to the fact that its Modules are in Python and therefore their customers can run anything.
+  \item EdenNet SON includes what they call an SDK (Software Developement Kit)
+  \item This SDK is really an External Execution Facility (EEF)
+\end{itemize}
+
+\begin{block}{By Wrapping the External Execution Facility (SDK) onto Command Line}
+  You can provide an additional execution framework for any and all modules
+
+    \end{block}
+
+
+\pnote{
+
+}
+
+\end{frame}
+\end{verblatex}
+
+
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "soncli.mcs Positionings --- Aftermarket Positionings"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /soncli.mcs Positionings/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{soncli.mcs Positionings}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Our soncli.mcs Positionings" :subtitle "" :reveal "plain" :beamer "blank" :label "sonclimcsPositionings" :comment "body=derivedImage"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=sonclimcsPositionings Our soncli.mcs Positionings body=derivedImage
+
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=sonclimcsPositionings]
+    \frameaudio{"audio/sonclimcsPositionings.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/sonclimcsPositionings/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=sonclimcsPositionings]
+    \frameaudio{"audio/sonclimcsPositionings.mp3"}
+    \frametitle{Our soncli.mcs Positionings}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('sonclimcsPositionings', 'always', 'True')
+%%BxPy: impressiveFrameParSet('sonclimcsPositionings', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \begin{block}{soncli.mcs vs soncli.py}
+    \end{block}
+
+
+    \begin{itemize}
+    \item Conventional Approach --- soncli.py: Use something like click or typer for mapping to CLI and add modules loading and execution features
+    \item Our Approach --- soncli.mcs: Use PyCS which already provides CLI mapping, builtin modules execution, WebUI for CLI exection and existing non-telecom modules.
+    \end{itemize}
+
+    \begin{exampleblock}{Aftermarket Positioning Vs Carrier Positioning}
+    \end{exampleblock}
+
+    \begin{itemize}
+    \item Carrier Positioning: Do it for yourself. Modules are SON-Modules. Targets are Cells.
+    \item Aftermarket Positioning: Do it for all. Modules are SON-Modules and Systems Management Modules.
+      Targets are Cells and/or any Systems Elements.
+    \end{itemize}
+
+
+\pnote{
+
+}
+
+\end{frame}
+\end{verblatex}
+
 
 
 %%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "Summary (as 4 Acts)"
@@ -2886,6 +3019,65 @@ And probably many other telecom companies that have not been publicly disclosed.
   operators, developers --- to become aware of what is possible and to act on it.
 
   This part is our pitch to you.
+}
+
+\end{frame}
+\end{verblatex}
+
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "RICE Score is the Maximum"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /RICE Score is the Maximum/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{RICE Score is the Maximum}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "RICE Score is the Maximum" :subtitle "" :label "riceScoreMaximum" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=riceScoreMaximum RICE Score is the Maximum body=enumerate
+
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=riceScoreMaximum]
+    \frameaudio{"audio/riceScoreMaximum.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/riceScoreMaximum/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=riceScoreMaximum]
+    \frameaudio{"audio/riceScoreMaximum.mp3"}
+    \frametitle{RICE Score is the Maximum}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('riceScoreMaximum', 'always', 'True')
+%%BxPy: impressiveFrameParSet('riceScoreMaximum', 'transition', 'UnSpecified')
+%%%#+END:
+
+    \[ \text{RICE} = \frac{\text{Reach} \times \text{Impact} \times \text{Confidence}}{\text{Effort}} \]
+
+
+    \bigskip
+
+\begin{itemize}
+  \item Reach: All SON Modules Developers. All SON Modules Users. All existing modules. All Future Modules.
+  \item Impact: Parallel global execution. Beyond RAN, Generalized Systems Management. AI CLI enablement. Less Nokia Vendor lock.
+  \item Confidence: 100\%  --- Everything is known.
+  \item Effort: Already Mostly Done. The PyCS Framework and bisos.tocsModules are in place. Mapping of SON Modules to PyCS Modules is trivial.
+\end{itemize}
+
+\pnote{
+
 }
 
 \end{frame}
