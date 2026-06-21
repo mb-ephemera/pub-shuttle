@@ -174,18 +174,18 @@ and where it can take you.
 %% \end{frame}
 %% \end{verblatex}
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions"
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "Nokia EdenNet SON Ecosystem --- Public vs Proprietary"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions/ ::  [[elisp:(org-cycle)][| ]]
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Nokia EdenNet SON Ecosystem --- Public vs Proprietary/ ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
 
-\section{The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions}
+\section{Nokia EdenNet SON Ecosystem --- Public vs Proprietary}
 %%%#+END:
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions" :subtitle "" :reveal "plain" :beamer "blank" :label "pubVsProprietary" :comment "body=derivedImage"
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Nokia EdenNet SON Ecosystem --- Public vs Proprietary" :subtitle "" :reveal "plain" :beamer "blank" :label "pubVsProprietary" :comment "body=derivedImage"
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=pubVsProprietary The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions body=derivedImage
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=pubVsProprietary Nokia EdenNet SON Ecosystem --- Public vs Proprietary body=derivedImage
 
 \end{whenOrg}
 
@@ -207,7 +207,7 @@ and where it can take you.
 
 \begin{frame}[fragile,plain,label=pubVsProprietary]
     \frameaudio{"audio/pubVsProprietary.mp3"}
-    \frametitle{The Nokia EdenNet SON Product and Ecosystem --- Public vs Proprietary Dimensions}
+    \frametitle{Nokia EdenNet SON Ecosystem --- Public vs Proprietary}
     \framesubtitle{}
 %%BxPy: impressiveFrameParSet('pubVsProprietary', 'always', 'True')
 %%BxPy: impressiveFrameParSet('pubVsProprietary', 'transition', 'UnSpecified')
@@ -215,23 +215,39 @@ and where it can take you.
 
 
 \begin{itemize}
-  \item Nokia EdenNet SON is a very Proprietary Product
-  \item Its implementation comprises many Open Source packages but the full system is Proprietary (Nokia copyrighted and likely patented)
-  \item Its Python API documentation and code is not intended to be publicly available
-  \item Despite being Proprietary and Closed, Nokia is positioning EdenNet SON as an ``Open'' solution
-  \item The ``Open'' aspect simply refers to the fact that its Modules are in Python and therefore their customers can run anything.
-  \item EdenNet SON includes what they call an SDK (Software Developement Kit)
-  \item This SDK is really an External Execution Facility (EEF)
+  \item Nokia EdenNet SON is proprietary --- Nokia copyrighted, despite use of Open Source packages internally.
+  \item The Python API documentation is confidential --- shared only with paying
+        customers under NDA.
+  \item Nokia markets EdenNet SON as ``Open'' --- but the only thing open is that
+        modules are written in Python. The platform itself is closed.
+  \item EdenNet SON includes a Software Development Kit (SDK) ---
+        but the SDK is more than a development tool:
+        it is an \textbf{External Execution Facility (EEF)} that can run modules
+        from outside the Nokia platform entirely.
 \end{itemize}
 
-\begin{block}{By Wrapping the External Execution Facility (SDK) onto Command Line}
-  You can provide an additional execution framework for any and all modules
-
-    \end{block}
+\begin{block}{The SDK (EEF) Is the Door. soncli.mcs Is the Key.}
+  soncli.mcs exposes the SDK (EEF) on the command line ---
+  making every SON Module executable outside the Nokia platform.
+\end{block}
 
 
 \pnote{
+  Nokia EdenNet SON sits at the intersection of open and closed.
+  The platform itself is proprietary --- Nokia-copyrighted, with confidential
+  Python API documentation shared only with paying customers under NDA.
+  Nokia markets it as open because modules are written in Python. But that
+  is not what open means.
 
+  Here is what actually matters: Nokia ships a Software Development Kit ---
+  the SDK. And that SDK is not merely a development tool. It is an External
+  Execution Facility --- an EEF --- meaning it can run SON modules from
+  completely outside the Nokia platform.
+
+  That is the door Nokia built into its own walled garden. soncli.mcs is the
+  key. It wraps the SDK on the command line, making every SON module
+  executable from outside --- by any operator, on any system, without being
+  locked inside the Nokia platform.
 }
 
 \end{frame}
@@ -278,27 +294,59 @@ and where it can take you.
 %%BxPy: impressiveFrameParSet('sonclimcsPositionings', 'transition', 'UnSpecified')
 %%%#+END:
 
-    \begin{block}{soncli.mcs vs soncli.py}
-    \end{block}
+    \noindent\colorbox{darkgreen}{\makebox[\linewidth][l]{\small\textbf{\color{white}soncli.py vs soncli.mcs}}}
 
+\begin{center}
+\begin{tabular}{|l|p{3cm}|p{4.5cm}|}
+\hline
+ & \centering {\color{magenta} \textbf{soncli.py} \newline \textbf{(Conventional)}} & \centering {\color{darkgreen} \textbf{soncli.mcs} \newline \textbf{(Our Approach)}} \tabularnewline
+\hline
+CLI mapping         & click / typer          & PyCS (built-in) \\
+\hline
+Module execution    & custom-built           & PyCS (built-in) \\
+\hline
+Web UI              & none                   & PyCS csPlayer (built-in) \\
+\hline
+Non-telecom modules & none                   & BISOS ecosystem \\
+\hline
+\end{tabular}
+\end{center}
 
-    \begin{itemize}
-    \item Conventional Approach --- soncli.py: Use something like click or typer for mapping to CLI and add modules loading and execution features
-    \item Our Approach --- soncli.mcs: Use PyCS which already provides CLI mapping, builtin modules execution, WebUI for CLI exection and existing non-telecom modules.
-    \end{itemize}
+    \noindent\colorbox{darkgreen}{\makebox[\linewidth][l]{\small\textbf{\color{white}Carrier vs Aftermarket Positioning}}}
 
-    \begin{exampleblock}{Aftermarket Positioning Vs Carrier Positioning}
-    \end{exampleblock}
-
-    \begin{itemize}
-    \item Carrier Positioning: Do it for yourself. Modules are SON-Modules. Targets are Cells.
-    \item Aftermarket Positioning: Do it for all. Modules are SON-Modules and Systems Management Modules.
-      Targets are Cells and/or any Systems Elements.
-    \end{itemize}
+\begin{center}
+\begin{tabular}{|l|c|c|}
+\hline
+ & {\color{teal} \textbf{Carrier}} & {\color{darkblue} \textbf{Aftermarket}} \\
+\hline
+Scope   & For yourself  & For all \\
+\hline
+Modules & SON only      & SON + Systems Mgmt \\
+\hline
+Targets & Cells         & Cells + Any System \\
+\hline
+\end{tabular}
+\end{center}
 
 
 \pnote{
+  This slide captures two distinct positionings for soncli.mcs.
 
+  The first table compares soncli.mcs to a conventional soncli.py approach.
+  A conventional implementation would use click or typer for CLI mapping,
+  custom-built logic for module execution, no web UI, and no integration
+  beyond SON modules. soncli.mcs replaces all of that with PyCS built-ins ---
+  CLI mapping, module execution, and web UI through csPlayer are all included.
+  And through the BISOS ecosystem, it reaches beyond telecom entirely.
+
+  The second table captures the carrier-versus-aftermarket distinction.
+  A carrier builds soncli for themselves --- their own SON modules, their own
+  cells. An aftermarket tool like soncli.mcs is built for everyone: all
+  operators, all modules, all systems. Scope, modules, and targets all expand.
+
+  Together these two positionings explain why soncli.mcs is not just a
+  better version of the same thing. It is a different kind of tool for a
+  different kind of audience.
 }
 
 \end{frame}
@@ -3072,12 +3120,28 @@ And probably many other telecom companies that have not been publicly disclosed.
 \begin{itemize}
   \item Reach: All SON Modules Developers. All SON Modules Users. All existing modules. All Future Modules.
   \item Impact: Parallel global execution. Beyond RAN, Generalized Systems Management. AI CLI enablement. Less Nokia Vendor lock.
-  \item Confidence: 100\%  --- Everything is known.
-  \item Effort: Already Mostly Done. The PyCS Framework and bisos.tocsModules are in place. Mapping of SON Modules to PyCS Modules is trivial.
+  \item Confidence: 100\% --- The SDK already permits external execution. Everything is known and verifiable.
 \end{itemize}
 
 \pnote{
+  RICE is a prioritization framework: Reach times Impact times Confidence,
+  divided by Effort.
 
+  For soncli.mcs, every factor scores at its maximum.
+
+  Reach is universal: every SON module developer, every SON module user,
+  every existing module, and every module yet to be written.
+
+  Impact is broad: parallel global execution, systems management beyond RAN,
+  AI CLI enablement, and reduced Nokia vendor lock-in.
+
+  Confidence is one hundred percent. The SDK already permits external
+  execution. This is not a hypothesis. Everything is known and verifiable
+  today.
+
+  When Reach, Impact, and Confidence are all at their maximum, the RICE score
+  is as high as it can get. The case for soncli.mcs does not need
+  a business case document. The framework makes it self-evident.
 }
 
 \end{frame}
@@ -3130,9 +3194,7 @@ And probably many other telecom companies that have not been publicly disclosed.
     \bigskip
 
 \begin{itemize}
-  \item The benefits of soncli.mcs are clear and immediate
   \item The implementation effort is modest --- soncli.mcs is a thin layer on top of the existing SDK
-  \item The SDK itself already permits external execution --- soncli.mcs simply makes that capability accessible
   \item Anyone who understands the Nokia SON SDK can verify this independently
 \end{itemize}
 
@@ -3142,23 +3204,24 @@ And probably many other telecom companies that have not been publicly disclosed.
     \end{block}
 
 \pnote{
-  We want to address directly the question that sometimes comes up in large
-  organizations: what is the business case for soncli.mcs?
+  In large organizations, a common reflex is to ask: what is the business case?
+  This slide reframes that question entirely.
 
-  Our answer is that there is no need for a business case.
+  The real question is not what the business case for soncli.mcs is.
+  The real question is: why was something like this not built over the past decade?
 
-  The benefits are clear and immediate. The implementation effort is modest.
-  The SDK already permits external execution --- soncli.mcs simply makes that
-  capability accessible. Anyone who understands the Nokia SON SDK can verify
-  this independently.
+  The answer is structural. soncli.mcs is a thin layer on top of the existing
+  Nokia SON SDK. The implementation effort is modest. Anyone with working
+  knowledge of the SDK can verify this independently.
 
-  The real question is the inverse: why was something like soncli.mcs not built
-  over the past decade? The answer lies in the Telecom Walled Garden. Nokia has
-  no incentive to build it. Customers have been unaware it was possible.
-  And the walled garden structure has prevented outside parties from providing it.
+  So why did it not exist? The Telecom Walled Garden explains it.
+  Nokia has no incentive to build a tool that reduces dependence on its own
+  platform. Customers have been unaware that external execution was even
+  possible. And the closed structure of the ecosystem has kept outside parties
+  from providing it.
 
-  Open source breaks this dynamic. soncli.mcs is here now. The question is
-  simply whether you will adopt it.
+  Open source breaks this dynamic. soncli.mcs exists now. The question
+  is simply whether you will adopt it.
 }
 
 \end{frame}
