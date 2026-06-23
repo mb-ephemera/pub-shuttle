@@ -228,7 +228,7 @@ and where it can take you.
 
 \begin{block}{The SDK (EEF) Is the Door. soncli.mcs Is the Key.}
   soncli.mcs exposes the SDK (EEF) on the command line ---
-  making every SON Module executable outside the Nokia platform.
+  making every SON Module executable outside the Nokia Web-UI but through the platform.
 \end{block}
 
 
@@ -507,7 +507,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{itemize}
   \item Simply Replace OSS Interfaces with Your Own
-  \item soncli.mcsm, BISOS-PyCS and MaTOOF already provide everything else that is needed.
+  \item soncli.mcs, BISOS-PyCS and MaTOOF already provide everything else that is needed.
 \end{itemize}
 
 
@@ -527,6 +527,16 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \end{frame}
 \end{verblatex}
+
+
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/privateAftermarket.tex" :when "whenBuildProprietary"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/privateAftermarket.tex")][Goto ./common/privateAftermarket.tex]] When=whenBuildProprietary ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildProprietary}
+\input{./common/privateAftermarket.tex}
+\end{whenBuildProprietary}
+%%%#+END:
 
 
 
@@ -740,24 +750,46 @@ Once Absorbed, the soncli.mcs derivative inherits:
 \end{whenBuildFull}
 %%%#+END:
 
+%% %%%#+BEGIN: b:lcnt:latex/whenBuildBegin :whenBuild "whenBuildPublic"
+%% \begin{whenOrg}
+%% *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  ~When-Beg~   [[elisp:(outline-show-subtree+toggle)][||]] *WhenBuild-Begin* -- whenBuildPublic ---   [[elisp:(org-cycle)][| ]]
 
-%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/summary_ipr.tex" :when "whenBuildSummary"
+%% \end{whenOrg}
+%% \begin{whenBuildPublic}
+%% %%%#+END:
+
+
+%%%#+BEGINNOT: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/summary_ipr.tex" :when "whenBuildSummary"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/summary_ipr.tex")][Goto ./common/summary_ipr.tex]] When=whenBuildSummary ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
+\begin{whenBuildPublic}
 \begin{whenBuildSummary}
 \input{./common/summary_ipr.tex}
 \end{whenBuildSummary}
+\end{whenBuildPublic}
 %%%#+END:
 
 %%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/full_ipr.tex" :when "whenBuildFull"
 \begin{whenOrg}
 *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/full_ipr.tex")][Goto ./common/full_ipr.tex]] When=whenBuildFull ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
+\begin{whenBuildPublic}
 \begin{whenBuildFull}
 \input{./common/full_ipr.tex}
 \end{whenBuildFull}
+\end{whenBuildPublic}
 %%%#+END:
+
+
+%% %%%#+BEGIN: b:lcnt:latex/whenBuildEnd :whenBuild "whenBuildPublic"
+%% \begin{whenOrg}
+%% *  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  ~When-End~   [[elisp:(outline-show-subtree+toggle)][||]] *WhenBuild-End* -- whenBuildPublic ---   [[elisp:(org-cycle)][| ]]
+
+%% \end{whenOrg}
+%% \end{whenBuildPublic}
+%% %%%#+END:
+
 
 %%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/nokiaClientsList.tex" :when "whenBuildPublic"
 \begin{whenOrg}
@@ -910,9 +942,9 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "Absorbing EdenNet SON Into BISOS-PyCs" :label "part_absorbingIntoPycs" :comment "body=TOC" :reveal "plain" :beamer ""
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Absorbing EdenNet SON Into BISOS-PyCs" :subtitle "" :label "part_absorbingIntoPycs" :comment "body=TOC" :reveal "plain" :beamer ""
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_absorbingIntoPycs  body=TOC
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_absorbingIntoPycs Absorbing EdenNet SON Into BISOS-PyCs body=TOC
 
 \end{whenOrg}
 
@@ -934,8 +966,8 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{frame}[fragile,label=part_absorbingIntoPycs]
     \frameaudio{"audio/part_absorbingIntoPycs.mp3"}
-    \frametitle{}
-    \framesubtitle{Absorbing EdenNet SON Into BISOS-PyCs}
+    \frametitle{Absorbing EdenNet SON Into BISOS-PyCs}
+    \framesubtitle{}
 %%BxPy: impressiveFrameParSet('part_absorbingIntoPycs', 'always', 'True')
 %%BxPy: impressiveFrameParSet('part_absorbingIntoPycs', 'transition', 'UnSpecified')
 %%%#+END:
@@ -1487,6 +1519,14 @@ Once Absorbed, the soncli.mcs derivative inherits:
 \end{frame}
 \end{verblatex}
 
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/soncliAsModulesPlayer.tex" :when "whenBuildProprietary"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/soncliAsModulesPlayer.tex")][Goto ./common/soncliAsModulesPlayer.tex]] When=whenBuildProprietary ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildProprietary}
+\input{./common/soncliAsModulesPlayer.tex}
+\end{whenBuildProprietary}
+%%%#+END:
 
 
 %%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Implementation of soncli.mcs is based on PyCS Framework"
@@ -1764,9 +1804,9 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "Absorbing EdenNet SON Into BISOS-PyCs" :label "part_absorbingIntoPycs" :comment "body=TOC" :reveal "plain" :beamer ""
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Benefits of Adopting the PyCS Based soncli.mcs" :subtitle "" :label "part_absorbingIntoPycs" :comment "body=TOC" :reveal "plain" :beamer ""
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_absorbingIntoPycs  body=TOC
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_absorbingIntoPycs Benefits of Adopting the PyCS Based soncli.mcs body=TOC
 
 \end{whenOrg}
 
@@ -1788,8 +1828,8 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{frame}[fragile,label=part_absorbingIntoPycs]
     \frameaudio{"audio/part_absorbingIntoPycs.mp3"}
-    \frametitle{}
-    \framesubtitle{Absorbing EdenNet SON Into BISOS-PyCs}
+    \frametitle{Benefits of Adopting the PyCS Based soncli.mcs}
+    \framesubtitle{}
 %%BxPy: impressiveFrameParSet('part_absorbingIntoPycs', 'always', 'True')
 %%BxPy: impressiveFrameParSet('part_absorbingIntoPycs', 'transition', 'UnSpecified')
 %%%#+END:
@@ -2179,9 +2219,10 @@ Once Absorbed, the soncli.mcs derivative inherits:
 %%%#+END:
 
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Using the BISOS Web-UI csPlayer with soncli.mcs" :subtitle "" :label "part_webUiCsPlayerSoncli" :comment "body=TOC" :reveal "plain" :beamer ""
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "PyCS Web-UI csPlayer on Top of soncli.mcs" :subtitle "" :label "part_webUiCsPlayerSoncli" :comment "body=TOC" :reveal "plain" :beamer ""
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_webUiCsPlayerSoncli Using the BISOS Web-UI csPlayer with soncli.mcs body=TOC
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_webUiCsPlayerSoncli PyCS Web-UI csPlayer on Top of soncli.mcs body=TOC
+
 \end{whenOrg}
 
 \begin{htmlonly}
@@ -2202,7 +2243,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{frame}[fragile,label=part_webUiCsPlayerSoncli]
     \frameaudio{"audio/part_webUiCsPlayerSoncli.mp3"}
-    \frametitle{Using the BISOS Web-UI csPlayer with soncli.mcs}
+    \frametitle{PyCS Web-UI csPlayer on Top of soncli.mcs}
     \framesubtitle{}
 %%BxPy: impressiveFrameParSet('part_webUiCsPlayerSoncli', 'always', 'True')
 %%BxPy: impressiveFrameParSet('part_webUiCsPlayerSoncli', 'transition', 'UnSpecified')
@@ -2545,21 +2586,33 @@ Once Absorbed, the soncli.mcs derivative inherits:
 \end{verblatex}
 
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework"
-%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
-\begin{whenOrg}
-*      ================
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework_ ::  [[elisp:(org-cycle)][| ]]
-\end{whenOrg}
 
-\newpage
-\part{Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework}
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/soncliWebUi.tex" :when "whenBuildProprietary"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/soncliWebUi.tex")][Goto ./common/soncliWebUi.tex]] When=whenBuildProprietary ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildProprietary}
+\input{./common/soncliWebUi.tex}
+\end{whenBuildProprietary}
 %%%#+END:
 
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework" :subtitle "" :label "part_matoof" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Brining soncli.mcs Into the BISOS-MaTOOF Framework"
+%%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_matoof Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework body=text -- Part TOC
+*      ================
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Brining soncli.mcs Into the BISOS-MaTOOF Framework_ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\newpage
+\part{Brining soncli.mcs Into the BISOS-MaTOOF Framework}
+%%%#+END:
+
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Brining soncli.mcs Into the BISOS-MaTOOF Framework" :subtitle "" :label "part_matoof" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_matoof Brining soncli.mcs Into the BISOS-MaTOOF Framework body=text -- Part TOC
+
 \end{whenOrg}
 
 \begin{htmlonly}
@@ -2580,7 +2633,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{frame}[fragile,label=part_matoof]
     \frameaudio{"audio/part_matoof.mp3"}
-    \frametitle{Brining soncli.mcs Into the BISOS-MaTOOF and csPlayer Framework}
+    \frametitle{Brining soncli.mcs Into the BISOS-MaTOOF Framework}
     \framesubtitle{}
 %%BxPy: impressiveFrameParSet('part_matoof', 'always', 'True')
 %%BxPy: impressiveFrameParSet('part_matoof', 'transition', 'UnSpecified')
@@ -2824,21 +2877,22 @@ Once Absorbed, the soncli.mcs derivative inherits:
 %%%#+END:
 
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Our Sales Pitch"
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "NextSteps"
 %%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
 \begin{whenOrg}
 *      ================
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Our Sales Pitch_ ::  [[elisp:(org-cycle)][| ]]
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _NextSteps_ ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
 
 \newpage
-\part{Our Sales Pitch}
+\part{NextSteps}
 %%%#+END:
 
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Our Sales Pitch" :subtitle "" :label "part_salesPitch" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Next Steps" :subtitle "" :label "part_salesPitch" :comment "body=text -- Part TOC" :reveal "plain" :beamer ""
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_salesPitch Our Sales Pitch body=text -- Part TOC
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=part_salesPitch Next Steps body=text -- Part TOC
+
 \end{whenOrg}
 
 \begin{htmlonly}
@@ -2859,7 +2913,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{frame}[fragile,label=part_salesPitch]
     \frameaudio{"audio/part_salesPitch.mp3"}
-    \frametitle{Our Sales Pitch}
+    \frametitle{Next Steps}
     \framesubtitle{}
 %%BxPy: impressiveFrameParSet('part_salesPitch', 'always', 'True')
 %%BxPy: impressiveFrameParSet('part_salesPitch', 'transition', 'UnSpecified')
@@ -2884,13 +2938,13 @@ Once Absorbed, the soncli.mcs derivative inherits:
 \end{frame}
 \end{verblatex}
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "RICE Score is the Maximum"
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "RICE Score is Very High"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /RICE Score is the Maximum/ ::  [[elisp:(org-cycle)][| ]]
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /RICE Score is Very High/ ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
 
-\section{RICE Score is the Maximum}
+\section{RICE Score is Very High}
 %%%#+END:
 
 
@@ -2933,6 +2987,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
   \item Reach: All SON Modules Developers. All SON Modules Users. All existing modules. All Future Modules.
   \item Impact: Parallel global execution. Beyond RAN, Generalized Systems Management. AI CLI enablement. Less Nokia Vendor lock.
   \item Confidence: 100\% --- The SDK already permits external execution. Everything is known and verifiable.
+  \item Effort: Most of the work has been done on PyCS. Adaptation to SON SDK does not involve much effort.
 \end{itemize}
 
 \pnote{
@@ -3039,89 +3094,40 @@ Once Absorbed, the soncli.mcs derivative inherits:
 \end{frame}
 \end{verblatex}
 
-
-%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Requested From You"
-%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+%%%#+BEGIN: b:lcnt:latex/whenBuildBegin :whenBuild "whenBuildPublic"
 \begin{whenOrg}
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Requested From You/ ::  [[elisp:(org-cycle)][| ]]
-\end{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  ~When-Beg~   [[elisp:(outline-show-subtree+toggle)][||]] *WhenBuild-Begin* -- whenBuildPublic ---   [[elisp:(org-cycle)][| ]]
 
-\section{Requested From You}
+\end{whenOrg}
+\begin{whenBuildPublic}
 %%%#+END:
 
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "" :subtitle "" :label "Expected From You" :comment "body=enumerate" :reveal "plain" :beamer "plain"
-\begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=Expected From You  body=enumerate
-\end{whenOrg}
 
-\begin{htmlonly}
-
-\begin{frame}[fragile,plain,label=Expected From You]
-    \frameaudio{"audio/Expected_20From_20You.mp3"}
-    \frametitle{}
-    \framesubtitle{}
-    \begin{rawhtml}
-<div class="center">
-<img src="./disposition.gened/Expected_20From_20You/slide-1.png" height="500">
-</div>
-    \end{rawhtml}
-\end{frame}
-\end{htmlonly}
-
-\begin{verblatex}
-
-\begin{frame}[fragile,plain,label=Expected From You]
-    \frameaudio{"audio/Expected_20From_20You.mp3"}
-    \frametitle{}
-    \framesubtitle{}
-%%BxPy: impressiveFrameParSet('Expected_20From_20You', 'always', 'True')
-%%BxPy: impressiveFrameParSet('Expected_20From_20You', 'transition', 'UnSpecified')
+%%%#+BEGINNOT: b:lcnt:latex/whenBuildEnd :whenBuild "whenBuildPublic"
+\end{whenBuildPublic}
 %%%#+END:
 
-    \begin{exampleblock}{Our Sales Pitch:}
-      \begin{itemize}
-        \item Adding soncli.mcs to Your Exisiting Nokia SON EdenNet SON\\ is Big Bang for the Buck
-        \item It is all Open Source (Affero GPL)
-        \item It is all Real
-        \item After Having Adopted soncli.mcs, the Rest of the Benefits Will Become Obvious
-      \end{itemize}
-    \end{exampleblock}
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/publicRequests.tex" :when "whenBuildPublic"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/publicRequests.tex")][Goto ./common/publicRequests.tex]] When=whenBuildPublic ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildPublic}
+\input{./common/publicRequests.tex}
+\end{whenBuildPublic}
+%%%#+END:
 
-    \begin{block}{Our Requests From You:}
-      \begin{itemize}
-        \item Devote the Time and Energy Needed to Understand What we are Saying.
-        \item Pass It Along. This is All Public. Create Consensus.
-        \item Do Your Due Deligence. Try out the Mentioned Offerings.
-        \item Reachout to Us.
-      \end{itemize}
-    \end{block}
 
-\pnote{
-  Let us close with what we are asking of you.
 
-  soncli.mcs is real. It works. Adding it to your existing Nokia EdenNet SON
-  environment is a high return, low risk investment. The surrounding infrastructure
-  --- BISOS, PyCS, tocsModules --- is all open source under the Affero GPL.
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/privateNextSteps.tex" :when "whenBuildProprietary"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/privateNextSteps.tex")][Goto ./common/privateNextSteps.tex]] When=whenBuildProprietary ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildProprietary}
+\input{./common/privateNextSteps.tex}
+\end{whenBuildProprietary}
+%%%#+END:
 
-  Our first request is simply that you invest the time to understand what we are
-  presenting. The concepts are not complicated, but they require attention.
-
-  Our second request is that you share this with others in your organization
-  and in the broader Nokia SON ecosystem. This is a public document. Create
-  consensus around it.
-
-  Our third request is that you do your due diligence. Try out the open source
-  components. Verify the claims we have made.
-
-  And finally --- reach out to us. We are interested in your feedback, your
-  use cases, and the opportunities you see.
-
-  Thank you for your time.
-}
-
-\end{frame}
-\end{verblatex}
 
 
 \begin{comment}
