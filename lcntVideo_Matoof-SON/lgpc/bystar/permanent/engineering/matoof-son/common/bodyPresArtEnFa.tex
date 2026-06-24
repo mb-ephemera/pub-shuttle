@@ -216,8 +216,7 @@ and where it can take you.
 
 \begin{itemize}
   \item Nokia EdenNet SON is proprietary --- Nokia copyrighted, despite use of Open Source packages internally.
-  \item The Python API documentation is confidential --- shared only with paying
-        customers under NDA.
+  \item The Python API documentation is confidential.  %  --- shared only with paying customers under NDA.
   \item Nokia markets EdenNet SON as ``Open'' --- but the only thing open is that
         modules are written in Python. The platform itself is closed.
   \item EdenNet SON includes a Software Development Kit (SDK) ---
@@ -247,7 +246,7 @@ and where it can take you.
   That is the door Nokia built into its own walled garden. soncli.mcs is the
   key. It wraps the SDK on the command line, making every SON module
   executable from outside --- by any operator, on any system, without being
-  locked inside the Nokia platform.
+  locked inside the Nokia Web-UI.
 }
 
 \end{frame}
@@ -894,9 +893,9 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{exampleblock}{With soncli.mcs We Can Liberate Modules and Targets}
   \begin{itemize}
-    \item Inside of the Telecom Walled Garden Open Up and Extend EdenNet SON
-    \item Profit from the Nokia SON Experience of ``Modules and Target Oriented Open Fabric''
-          (MaTOOF) for Systems Management Outside of the  Telecom Walled Garden
+    \item Inside of the Telecom Context:  Open Up and Extend EdenNet SON
+    \item Outside of the Telecom Context: Profit from the Nokia SON Experience of ``Modules and Target Oriented Open Fabric''
+          (MaTOOF) for Systems Management
   \end{itemize}
 \end{exampleblock}
 
@@ -1023,8 +1022,8 @@ Once Absorbed, the soncli.mcs derivative inherits:
 %%%#+END:
 
 
-    \begin{block}{Software}
-      All software presented here is dual licensed under:
+    \begin{block}{BISOS-PyCS Software}
+      All of the BISOS-PyCS mentioned here is dual licensed under:
       \begin{itemize}
         \item Affero GPL (Open Source) and
         \item Neda Commercial License
@@ -1035,8 +1034,8 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
     \bigskip
 
-    \begin{exampleblock}{Content (Documents, Presentations, Videos):}
-      All content presented here is licensed under:
+    \begin{exampleblock}{BISOS-PyCS Content (Documents, Presentations, Videos):}
+      All of the BISOS-PyCS content presented here is licensed under:
       \begin{itemize}
         \item Creative Commons Attribution-ShareAlike (CC-BY-SA)
       \end{itemize}
@@ -1044,7 +1043,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 
     \begin{alertblock}{soncli.mcs: Moduled Command-Service  (Proprietary: Not Open Source)}
-    \small{Integration of Nokia SON SDK with PyCS and  bisos.tocsModules.}
+    \small{Integration of Nokia SON SDK (EEF) with PyCS and  bisos.tocsModules.}
     \end{alertblock}
 
 \pnote{
@@ -1845,88 +1844,6 @@ Once Absorbed, the soncli.mcs derivative inherits:
 \end{verblatex}
 
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "The Enablings of soncli.mcs"
-%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
-\begin{whenOrg}
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /The Enablings of soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
-\end{whenOrg}
-
-\section{The Enablings of soncli.mcs}
-%%%#+END:
-
-
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "The Enablings of soncli.mcs" :subtitle "" :label "soncliEnabler" :comment "body=enumerate" :reveal "plain" :beamer "plain"
-\begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=soncliEnabler The Enablings of soncli.mcs body=enumerate
-\end{whenOrg}
-
-\begin{htmlonly}
-
-\begin{frame}[fragile,plain,label=soncliEnabler]
-    \frameaudio{"audio/soncliEnabler.mp3"}
-    \frametitle{}
-    \framesubtitle{}
-    \begin{rawhtml}
-<div class="center">
-<img src="./disposition.gened/soncliEnabler/slide-1.png" height="500">
-</div>
-    \end{rawhtml}
-\end{frame}
-\end{htmlonly}
-
-\begin{verblatex}
-
-\begin{frame}[fragile,plain,label=soncliEnabler]
-    \frameaudio{"audio/soncliEnabler.mp3"}
-    \frametitle{The Enablings of soncli.mcs}
-    \framesubtitle{}
-%%BxPy: impressiveFrameParSet('soncliEnabler', 'always', 'True')
-%%BxPy: impressiveFrameParSet('soncliEnabler', 'transition', 'UnSpecified')
-%%%#+END:
-
-    \begin{exampleblock}{Since SON Modules are Python Modules,}
-  %% We can arrange them so that:
-    \end{exampleblock}
-
-  \begin{itemize}
-    \item Modules are loaded through the command line (CLI) and then executed through the SDK (used as an External Execution Facility (EEF))
-    \item Loading and execution of Modules through CLI permits convenient parallel execution at SON Engines
-    \item Modules are surrounded by additional frameworks that enhance usage of modules
-    \item Scope of capabilities of Modules is enhanced
-  \end{itemize}
-
-    \begin{block}{Modules and Target Model of EdentNet SON is then Extended With}
-      The Universal Model of BISOS-MaTOOF (Modules and Target Oriented Open Fabric)
-      for Systems Management
-    \end{block}
-
-\pnote{
-  soncli.mcs is a CLI tool, but it is also a foundation for something larger.
-
-  Nokia EdenNet SON distinguishes between Native Modules --- those designed to run
-  inside the EdenNet Web UI platform --- and External Modules --- those that use
-  the SDK but execute outside the platform entirely.
-
-  Because soncli.mcs exposes SON capabilities through the command line and through
-  the full BISOS-PyCS framework, it becomes possible to build complete standalone
-  External SON Applications on top of it.
-
-  These applications can have their own graphical user interfaces, their own data
-  pipelines, their own reporting systems --- entirely separate from the Nokia platform.
-  Nokia does not need to be involved in their development or deployment.
-
-  The progression is: Native Modules running in the Nokia Web UI, then External
-  Modules running through soncli.mcs, and finally full External SON Applications
-  that stand entirely on their own.
-
-  This is the full arc of what the aftermarket strategy enables.
-}
-
-\end{frame}
-\end{verblatex}
-
-
-
 %%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Immediate and Tangible Benefits of soncli.mcs"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
@@ -1969,6 +1886,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
   \begin{itemize}
     \item SON Modules Developers Using the SDK Can Load and Run Them Through CLI
       \begin{itemize}
+      \item Avoid Repeated Specification of Targets and Parameters Inside of Modules
         \item Subject Under Developement Modules To Regression Testing
         \item Build CI/CD Pipelines for Custom SON Development
       \end{itemize}
@@ -2138,7 +2056,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 %%%#+END:
 
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "The Poly-SON-Players Model" :subtitle "soncli.mcs is an Additional Modules Player" :label "polySonPlayers" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "soncli.mcs is an Additional Modules Player" :subtitle "The Poly-SON-Players Model" :label "polySonPlayers" :comment "body=enumerate" :reveal "plain" :beamer "plain"
 \begin{whenOrg}
 *****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=polySonPlayers The Poly-SON-Players Model body=enumerate
 
