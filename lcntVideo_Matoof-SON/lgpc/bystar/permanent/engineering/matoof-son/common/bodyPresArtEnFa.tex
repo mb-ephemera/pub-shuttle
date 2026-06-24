@@ -254,13 +254,13 @@ and where it can take you.
 
 
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "soncli.mcs Positionings --- Aftermarket Positionings"
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "soncli.mcs Positionings --- Aftermarket and PyCS Positionings"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /soncli.mcs Positionings/ ::  [[elisp:(org-cycle)][| ]]
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /soncli.mcs Positionings --- Aftermarket and PyCS Positionings/ ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
 
-\section{soncli.mcs Positionings}
+\section{soncli.mcs Positionings --- Aftermarket and PyCS Positionings}
 %%%#+END:
 
 %%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Our soncli.mcs Positionings" :subtitle "" :reveal "plain" :beamer "blank" :label "sonclimcsPositionings" :comment "body=derivedImage"
@@ -1304,6 +1304,101 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 
 
+%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Abstract Nokia EdenNet SON Parts List -- soncli.mcs"
+%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
+\begin{whenOrg}
+EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Abstract Nokia EdenNet SON Parts List -- soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+
+\section{Abstract Nokia EdenNet SON Parts List -- soncli.mcs}
+%%%#+END:
+
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Abstract Nokia EdenNet SON Parts List -- soncli.mcs" :subtitle "" :label "nokiaSonPartsListSoncli" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+\begin{whenOrg}
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=nokiaSonPartsListSoncli Abstract Nokia EdenNet SON Parts List -- soncli.mcs body=enumerate
+\end{whenOrg}
+
+\begin{htmlonly}
+
+\begin{frame}[fragile,plain,label=nokiaSonPartsListSoncli]
+    \frameaudio{"audio/nokiaSonPartsListSoncli.mp3"}
+    \frametitle{}
+    \framesubtitle{}
+    \begin{rawhtml}
+<div class="center">
+<img src="./disposition.gened/nokiaSonPartsListSoncli/slide-1.png" height="500">
+</div>
+    \end{rawhtml}
+\end{frame}
+\end{htmlonly}
+
+\begin{verblatex}
+
+\begin{frame}[fragile,plain,label=nokiaSonPartsListSoncli]
+    \frameaudio{"audio/nokiaSonPartsListSoncli.mp3"}
+    \frametitle{Abstract Nokia EdenNet SON Parts List -- soncli.mcs}
+    \framesubtitle{}
+%%BxPy: impressiveFrameParSet('nokiaSonPartsListSoncli', 'always', 'True')
+%%BxPy: impressiveFrameParSet('nokiaSonPartsListSoncli', 'transition', 'UnSpecified')
+%%%#+END:
+
+
+
+\begin{columns}[T]
+\column{0.5\textwidth}
+
+\textbf{Nokia EdenNet SON Parts List}
+\begin{itemize}
+  \item {\color{blue} \textbf{SON Modules}}
+  \item {\color{blue} \textbf{SON Python API}}
+  \item {\color{blue} \textbf{SON Software Development Kit (SDK)}}
+  \item SON Web User Interface
+  \item SON Execution Engine
+  \item SON OSS Interface Adapters
+\end{itemize}
+
+\column{0.5\textwidth}
+
+\textbf{soncli.mcs Relevant Parts}
+\begin{itemize}
+  \item {\color{darkgreen} \textbf{SON Modules}}
+  \item {\color{darkgreen} \textbf{SON Python API}}
+  \item {\color{darkgreen} \textbf{SON Software Development Kit (SDK)}}\\
+        {\color{darkred}  \textit{(SDK is used as an External Execution Facility --- EEF)}}
+
+\end{itemize}
+
+\end{columns}
+
+
+\pnote{
+  Nokia EdenNet SON is composed of several distinct parts, and it helps to understand
+  what each one does before we talk about soncli.mcs.
+
+  At the core are SON Python Modules. These are pieces of Python code that implement
+  specific network management tasks. Some modules are provided by Nokia; others are
+  written by the operator's own team.
+
+  Modules interact with the network through the SON Python API --- a published interface
+  that abstracts the underlying network details.
+
+  The SON Software Development Kit, or SDK, is the set of Python libraries that
+  implement this API. The SDK communicates with the EdenNet platform over a remote
+  interface. Importantly, the SDK is not just a development tool --- it is also an
+  External Execution Facility. That distinction is key to understanding soncli.mcs.
+
+  On top of all this sits the SON Web User Interface --- the single player that Nokia
+  provides for running modules. Beneath it are the Execution Engine and the OSS
+  Interface Adapters that connect to the radio network.
+
+  soncli.mcs touches only three of these parts: the Modules, the API, and the SDK.
+  It needs nothing else from Nokia.
+}
+
+\end{frame}
+\end{verblatex}
+
+
 %%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "soncli.mcs -- A Mapping of EdenNet SON into BISOS.tocsModules"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
@@ -1424,99 +1519,6 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 
 
-%%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Abstract Nokia EdenNet SON Parts List -- soncli.mcs"
-%%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
-\begin{whenOrg}
-EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Abstract Nokia EdenNet SON Parts List -- soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
-\end{whenOrg}
-
-\section{Abstract Nokia EdenNet SON Parts List -- soncli.mcs}
-%%%#+END:
-
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "Abstract Nokia EdenNet SON Parts List -- soncli.mcs" :subtitle "" :label "nokiaSonPartsListSoncli" :comment "body=enumerate" :reveal "plain" :beamer "plain"
-\begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=nokiaSonPartsListSoncli Abstract Nokia EdenNet SON Parts List -- soncli.mcs body=enumerate
-\end{whenOrg}
-
-\begin{htmlonly}
-
-\begin{frame}[fragile,plain,label=nokiaSonPartsListSoncli]
-    \frameaudio{"audio/nokiaSonPartsListSoncli.mp3"}
-    \frametitle{}
-    \framesubtitle{}
-    \begin{rawhtml}
-<div class="center">
-<img src="./disposition.gened/nokiaSonPartsListSoncli/slide-1.png" height="500">
-</div>
-    \end{rawhtml}
-\end{frame}
-\end{htmlonly}
-
-\begin{verblatex}
-
-\begin{frame}[fragile,plain,label=nokiaSonPartsListSoncli]
-    \frameaudio{"audio/nokiaSonPartsListSoncli.mp3"}
-    \frametitle{Abstract Nokia EdenNet SON Parts List -- soncli.mcs}
-    \framesubtitle{}
-%%BxPy: impressiveFrameParSet('nokiaSonPartsListSoncli', 'always', 'True')
-%%BxPy: impressiveFrameParSet('nokiaSonPartsListSoncli', 'transition', 'UnSpecified')
-%%%#+END:
-
-
-
-\begin{columns}[T]
-\column{0.5\textwidth}
-
-\textbf{Nokia EdenNet SON Parts List}
-\begin{itemize}
-  \item {\color{blue} \textbf{SON Modules}}
-  \item {\color{blue} \textbf{SON Python API}}
-  \item {\color{blue} \textbf{SON Software Development Kit (SDK)}}
-  \item SON Web User Interface
-  \item SON Execution Engine
-  \item SON OSS Interface Adapters
-\end{itemize}
-
-\column{0.5\textwidth}
-
-\textbf{soncli.mcs Relevant Parts}
-\begin{itemize}
-  \item {\color{darkgreen} \textbf{SON Modules}}
-  \item {\color{darkgreen} \textbf{SON Python API}}
-  \item {\color{darkgreen} \textbf{SON Software Development Kit (SDK)}}\\
-        {\color{darkred}  \textit{(SDK is used as an External Execution Facility --- EEF)}}
-
-\end{itemize}
-
-\end{columns}
-
-
-\pnote{
-  Nokia EdenNet SON is composed of several distinct parts, and it helps to understand
-  what each one does before we talk about soncli.mcs.
-
-  At the core are SON Python Modules. These are pieces of Python code that implement
-  specific network management tasks. Some modules are provided by Nokia; others are
-  written by the operator's own team.
-
-  Modules interact with the network through the SON Python API --- a published interface
-  that abstracts the underlying network details.
-
-  The SON Software Development Kit, or SDK, is the set of Python libraries that
-  implement this API. The SDK communicates with the EdenNet platform over a remote
-  interface. Importantly, the SDK is not just a development tool --- it is also an
-  External Execution Facility. That distinction is key to understanding soncli.mcs.
-
-  On top of all this sits the SON Web User Interface --- the single player that Nokia
-  provides for running modules. Beneath it are the Execution Engine and the OSS
-  Interface Adapters that connect to the radio network.
-
-  soncli.mcs touches only three of these parts: the Modules, the API, and the SDK.
-  It needs nothing else from Nokia.
-}
-
-\end{frame}
-\end{verblatex}
 
 %%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/soncliAsModulesPlayer.tex" :when "whenBuildProprietary"
 \begin{whenOrg}
@@ -2240,7 +2242,7 @@ EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee
   \item {\color{blue} SON Python API}
   \item {\color{blue} SON Software Development Kit (SDK)}
 \end{itemize}
-\textbf{Nokia EdenNet SON Parts List}
+\textbf{Nokia EdenNet SON WebUI Parts}
 \begin{itemize}
   \item {\color{blue} \textbf{SON Web User Interface}}
   \item SON Execution Engine
@@ -2396,6 +2398,16 @@ EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee
 \end{verblatex}
 
 
+%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/soncliWebUi.tex" :when "whenBuildProprietary"
+\begin{whenOrg}
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/soncliWebUi.tex")][Goto ./common/soncliWebUi.tex]] When=whenBuildProprietary ::  [[elisp:(org-cycle)][| ]]
+\end{whenOrg}
+\begin{whenBuildProprietary}
+\input{./common/soncliWebUi.tex}
+\end{whenBuildProprietary}
+%%%#+END:
+
+
 %%%#+BEGIN: bx:dblock:lcnt:latex-section :seg-title "Web-UI csPlayer soncli.mcs"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
@@ -2509,25 +2521,16 @@ EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee
 
 
 
-%%%#+BEGIN: bx:lcnt:latex:input-file :disabledP "false" :input-file "./common/soncliWebUi.tex" :when "whenBuildProprietary"
-\begin{whenOrg}
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  INPUT      [[elisp:(outline-show-subtree+toggle)][||]]   [[elisp:(blee:file-goto-contents "./common/soncliWebUi.tex")][Goto ./common/soncliWebUi.tex]] When=whenBuildProprietary ::  [[elisp:(org-cycle)][| ]]
-\end{whenOrg}
-\begin{whenBuildProprietary}
-\input{./common/soncliWebUi.tex}
-\end{whenBuildProprietary}
-%%%#+END:
 
-
-%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Brining soncli.mcs Into the BISOS-MaTOOF Framework"
+%%%#+BEGIN: bx:dblock:lcnt:latex-part :disabledP "false" :seg-title "Bringing soncli.mcs Into the BISOS-MaTOOF Framework"
 %%% Args: :toc "NU" :tocDepth 3 :part "NU" :label "auto|spec" :partpage t
 \begin{whenOrg}
 *      ================
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Brining soncli.mcs Into the BISOS-MaTOOF Framework_ ::  [[elisp:(org-cycle)][| ]]
+*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  PART       [[elisp:(outline-show-subtree+toggle)][||]]   _Bringing soncli.mcs Into the BISOS-MaTOOF Framework_ ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
 
 \newpage
-\part{Brining soncli.mcs Into the BISOS-MaTOOF Framework}
+\part{Bringing soncli.mcs Into the BISOS-MaTOOF Framework}
 %%%#+END:
 
 
@@ -2649,8 +2652,6 @@ EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee
 
 \end{frame}
 \end{verblatex}
-
-
 
 
 %%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "soncli.mcs in the Broader BISOS Systems Management Framework"
@@ -2870,9 +2871,9 @@ EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee
 %%%#+END:
 
 
-%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "RICE Score is the Maximum" :subtitle "" :label "riceScoreMaximum" :comment "body=enumerate" :reveal "plain" :beamer "plain"
+%%%#+BEGIN: b:lcnt:pres:frame/derivedImage :title "RICE Score is Very High" :subtitle "" :label "riceScoreMaximum" :comment "body=enumerate" :reveal "plain" :beamer "plain"
 \begin{whenOrg}
-*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=riceScoreMaximum RICE Score is the Maximum body=enumerate
+*****  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  derivedImage [[elisp:(outline-show-subtree+toggle)][||]] outLevel=5 Label=riceScoreMaximum RICE Score is Very High body=enumerate
 
 \end{whenOrg}
 
@@ -2894,7 +2895,7 @@ EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee
 
 \begin{frame}[fragile,plain,label=riceScoreMaximum]
     \frameaudio{"audio/riceScoreMaximum.mp3"}
-    \frametitle{RICE Score is the Maximum}
+    \frametitle{RICE Score is Very High}
     \framesubtitle{}
 %%BxPy: impressiveFrameParSet('riceScoreMaximum', 'always', 'True')
 %%BxPy: impressiveFrameParSet('riceScoreMaximum', 'transition', 'UnSpecified')
@@ -2977,7 +2978,11 @@ EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee
 %%%#+END:
 
     \begin{alertblock}{The Real Question Is Not ``What Is the Business Case for soncli.mcs?''}
-      The real question is: \textbf{Why was something like soncli.mcs not built over the past decade?}
+      The Real Questions Are:
+      \begin{itemize}
+        \item \textbf{Why has Nokia not Offered Something Like soncli}
+        \item \textbf{Why was something like soncli.mcs not built over the past decade?}
+      \end{itemize}
     \end{alertblock}
 
     \bigskip
@@ -2987,9 +2992,11 @@ EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee
   \item Anyone who understands the Nokia SON SDK can verify this independently
 \end{itemize}
 
-    \begin{block}{The Telecom Walled Garden Is the Only Explanation}
-      Nokia has no incentive to build it. Customers have been unaware it was possible.
-      Open Source breaks this dynamic.
+\begin{block}{The Telecom Walled Garden Is the Only Explanation}
+  \begin{itemize}
+        \item \textbf{Nokia has no incentive to build it}
+        \item \textbf{Customers have been unaware it was possible}
+      \end{itemize}
     \end{block}
 
 \pnote{
