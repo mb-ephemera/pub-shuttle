@@ -1427,7 +1427,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 %%%#+BEGIN: bx:dblock:lcnt:latex-section :mode "auto" :seg-title "Abstract Nokia EdenNet SON Parts List -- soncli.mcs"
 %%% Args: :class "book|pres+art" :langs "en+fa" :disabledP "false" :seg-title "str" :short-title "str" :label "auto"
 \begin{whenOrg}
-*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Abstract Nokia EdenNet SON Parts List -- soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
+EdenNet WebUI*  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_ _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_ [[elisp:(outline-show-branches+toggle)][|=]] [[elisp:(bx:orgm:indirectBufOther)][|>]] *[[elisp:(blee:ppmm:org-mode-toggle)][|N]]*  Section    [[elisp:(outline-show-subtree+toggle)][||]]   /Abstract Nokia EdenNet SON Parts List -- soncli.mcs/ ::  [[elisp:(org-cycle)][| ]]
 \end{whenOrg}
 
 \section{Abstract Nokia EdenNet SON Parts List -- soncli.mcs}
@@ -1750,7 +1750,7 @@ Once Absorbed, the soncli.mcs derivative inherits:
 
 \begin{itemize}
   \item \textbf{External SON Modules} are Python modules that use the EdenNet SDK
-        but execute \textit{outside} the EdenNet WebUI Platform
+        but execute only \textit{outside} the EdenNet WebUI Platform
   \item Because soncli.mcs exposes SON capabilities through CLI and BISOS-PyCS,
         complete standalone \textbf{External SON Applications} can be built on top of it
   \item External SON Applications can have their own full graphical user interface ---
@@ -1774,6 +1774,9 @@ Once Absorbed, the soncli.mcs derivative inherits:
   proprietary SDKs. It provides all the scaffolding for uploadable, executable
   modules. The proprietary part --- soncli.mcs --- only needs to connect Nokia's
   SDK to that scaffolding.
+
+  External SON Modules execute only outside of the EdenNet WebUI and hence may include
+  libraries that are not supported by EdenNet.
 
   In practice, this means a very small amount of Python code. The integration
   involves three key files: a Command Service Unit that implements target execution,
@@ -1886,14 +1889,15 @@ Once Absorbed, the soncli.mcs derivative inherits:
   \begin{itemize}
     \item SON Modules Developers Using the SDK Can Load and Run Them Through CLI
       \begin{itemize}
-      \item Avoid Repeated Specification of Targets and Parameters Inside of Modules
+        \item Avoid Repeated Specification of Targets and Parameters Inside of Modules
         \item Subject Under Developement Modules To Regression Testing
         \item Build CI/CD Pipelines for Custom SON Development
+        \item Include Python Libraries that Nokia SON does not support (External SON Modules)
       \end{itemize}
     \item soncli.mcs is an Agentic-AI Facilitator -- Agentic AI Needs CLI
     \item SON Modules Nationwide (cross OSS) Execution and Reporting
     \item Broader Systems Management Scope -- SON Beyond Cells
-    \item Towards Poly-SON Modules Players
+    \item PyCS-SON is inherently  Loosely Coupled and Evolutionary. In Contrast to the Monolithic and Static EdenNet SON.
   \end{itemize}
 
 
