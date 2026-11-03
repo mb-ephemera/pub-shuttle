@@ -1,0 +1,35 @@
+ vscodeClaude-assemble.cs -i fullUpdate
+
+** cmnd= vscode-sbom.pcs -i extsInstallPinned
+Error while installing extension ms-python.vscode-pylance: Can't install 'ms-python.vscode-pylance' extension because it is not compatible with the current version of Visual Studio Code (version 1.103.2).
+Failed Installing Extensions: ms-python.vscode-pylance
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=None Error=None -- None
+** cmnd= code --install-extension anthropic.claude-code@2.1.311 --force
+io.eh.:  -- /bisos/venv/py3/devbin/vscode-sbom.pcs:86:vscodeExtensionsInstall:
+Installing extensions...
+Extension 'anthropic.claude-code@2.1.311' is already installed.
+** cmnd= code --install-extension tuttieee.emacs-mcx@0.111.6 --force
+Installing extensions...
+Extension 'tuttieee.emacs-mcx@0.111.6' is already installed.
+** cmnd= code --install-extension realDestroyer.org-vscode@2.4.2 --force
+Installing extensions...
+Extension 'realdestroyer.org-vscode@2.4.2' is already installed.
+** cmnd= code --install-extension ms-python.python@2026.10.0 --force
+Installing extensions...
+Extension 'ms-python.python@2026.10.0' is already installed.
+** cmnd= code --install-extension ms-python.vscode-pylance@2026.4.1 --force
+Installing extensions...
+Updating the extension 'ms-python.vscode-pylance' to the version 2026.4.1
+Installing extension 'ms-python.vscode-pylance' v2026.4.1...
+*** exit= 1
+** cmnd= vscode.cs -i vscodeBleeLinkInstall
+* EH_Problem_UsageError: Some pieces were refused: add them by hand (vscodeBleeLinkSnippet)
+2026-11-02 19:53:29,674 - CRITICAL -	/bisos/git/auth/bxRepos/bisos-pip/vscodeClaude/py3/bisos/vscodeClaude/vscodeEmacs_csu.py::[588] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=None Error=None -- None
+present	/bxo/usg/bystar/.config/Code/User/tasks.json	task "Blee: open here"
+io.eh.:  -- /bisos/git/auth/bxRepos/bisos-pip/vscodeClaude/py3/bisos/vscodeClaude/vscodeEmacs_csu.py:589:cmnd:
+present	/bxo/usg/bystar/.config/Code/User/keybindings.json	key ctrl+k ctrl+e
+refused	/bxo/usg/bystar/.config/Code/User/settings.json	task.saveBeforeRun	comments inside the JSON: add it by hand (...Snippet)
+** cmnd= vscodeClaude.cs -i hooksInstall
+present	/bxo/usg/bystar/.claude/settings.json	hooks Stop
+present	/bxo/usg/bystar/.claude/settings.json	hooks Notification
