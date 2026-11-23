@@ -1,0 +1,2804 @@
+36eb23dc7423-bystar# + raw-bisos
+~/raw-bisos ~ /bisos/git/bxRepos/bxObjects/bro_dockerfiles /bisos/git/bxRepos/bxObjects /bisos/git/bxRepos /bisos/git/bxRepos/blee /bisos/git/bxRepos ~
+36eb23dc7423-bystar# lsf
+README.org  installRawBisos.sh*  postRawBisos.sh*  raw-bisos.sh*  sysCbmFullyMaterialize.sh*
+36eb23dc7423-bystar#
+36eb23dc7423-bystar# cat sysCbmFullyMaterialize.sh
+#!/bin/bash
+
+# Fully materialize this system's CBMs (Capability Bundle Materializations):
+#     sysCbmManage.cs -i fullyMaterialize
+#
+# Run as bystar, AFTER installRawBisos.sh and a container down+up (so the groups
+# created by installRawBisos.sh take effect):
+#     cd ~/raw-bisos && bash sysCbmFullyMaterialize.sh
+#
+# bystar's ~/.bashrc returns early for non-interactive shells (the standard
+# Debian 'case $- in *i*)' guard), before it sets PATH (pipx / bisos3 bin) and
+# nvm. Force an interactive shell so sysCbmManage.cs (and node via nvm)
+# resolve. Without a tty, -i prints harmless "no job control" warnings.
+
+exec bash -ic 'sysCbmManage.cs -i fullyMaterialize'
+36eb23dc7423-bystar#
+36eb23dc7423-bystar#
+36eb23dc7423-bystar# sysCbmFullyMaterialize.sh
+** cmnd= pushd /bisos/platform/sys/cbm/collective/hereWeb > /dev/null; echo Capability Materialization Started in $(pwd) at $(date); popd > /dev/null;
+Capability Materialization Started in /bisos/platform/sys/cbm/collective/hereWeb at Mon Nov 23 10:07:52 PST 2026
+** cmnd= pushd /bisos/platform/sys/cbm/collective/hereWeb > /dev/null; ftoBranchProc.spcs -i fto_forwardToLeaves --cmndName='cbm_status'; popd > /dev/null;
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+[nginx] cbmProc.status:
+2026-08-15T17:58:28  skipped: control=available at cbs_materialize
+2026-08-15T17:59:15  ran: cbs_materialize ok
+2026-08-21T09:54:21  ran: cbs_materialize ok
+2026-11-13T00:13:29  ran: cbs_materialize ok
+2026-11-13T00:13:43  ran: cbs_materialize ok
+2026-11-13T00:14:09  ran: cbs_materialize ok
+2026-11-13T00:14:25  ran: cbs_materialize ok
+2026-11-13T00:20:56  ran: cbs_materialize ok
+
+2026-08-15T17:58:28  skipped: control=available at cbs_materialize
+2026-08-15T17:59:15  ran: cbs_materialize ok
+2026-08-21T09:54:21  ran: cbs_materialize ok
+2026-11-13T00:13:29  ran: cbs_materialize ok
+2026-11-13T00:13:43  ran: cbs_materialize ok
+2026-11-13T00:14:09  ran: cbs_materialize ok
+2026-11-13T00:14:25  ran: cbs_materialize ok
+2026-11-13T00:20:56  ran: cbs_materialize ok
+
+[airflow] cbmProc.status:
+2026-09-02T23:02:34  skipped: control=available at cbs_materialize
+2026-09-02T23:08:29  ran: cbs_materialize ok
+2026-09-02T23:27:34  ran: cbs_materialize ok
+2026-09-30T16:55:32  ran: cbs_reMaterialize failed rc=1
+2026-09-30T16:57:59  ran: cbs_materialize ok
+2026-09-30T17:42:00  ran: cbs_materialize ok
+2026-11-13T00:21:38  ran: cbs_materialize ok
+
+2026-09-02T23:02:34  skipped: control=available at cbs_materialize
+2026-09-02T23:08:29  ran: cbs_materialize ok
+2026-09-02T23:27:34  ran: cbs_materialize ok
+2026-09-30T16:55:32  ran: cbs_reMaterialize failed rc=1
+2026-09-30T16:57:59  ran: cbs_materialize ok
+2026-09-30T17:42:00  ran: cbs_materialize ok
+2026-11-13T00:21:38  ran: cbs_materialize ok
+
+[kafka] cbmProc.status:
+2026-11-13T00:16:36  ran: cbs_materialize ok
+2026-11-13T00:22:16  ran: cbs_materialize ok
+
+2026-11-13T00:16:36  ran: cbs_materialize ok
+2026-11-13T00:22:16  ran: cbs_materialize ok
+
+[prometheus] cbmProc.status:
+2026-11-13T00:17:01  ran: cbs_materialize ok
+2026-11-13T00:22:34  ran: cbs_materialize ok
+
+2026-11-13T00:17:01  ran: cbs_materialize ok
+2026-11-13T00:22:34  ran: cbs_materialize ok
+
+[grafana] cbmProc.status:
+2026-11-13T00:17:40  ran: cbs_materialize ok
+2026-11-13T00:22:50  ran: cbs_materialize ok
+
+2026-11-13T00:17:40  ran: cbs_materialize ok
+2026-11-13T00:22:50  ran: cbs_materialize ok
+
+[pypiserver] cbmProc.status:
+2026-11-13T00:18:12  ran: cbs_materialize ok
+2026-11-13T00:23:10  ran: cbs_materialize ok
+
+2026-11-13T00:18:12  ran: cbs_materialize ok
+2026-11-13T00:23:10  ran: cbs_materialize ok
+
+[devpi] cbmProc.status:
+2026-11-13T00:18:52  ran: cbs_materialize ok
+2026-11-13T00:23:26  ran: cbs_materialize ok
+
+2026-11-13T00:18:52  ran: cbs_materialize ok
+2026-11-13T00:23:26  ran: cbs_materialize ok
+
+[geneweb] cbmProc.status:
+2026-10-16T22:30:13  ran: cbs_materialize ok
+2026-11-13T00:19:19  ran: cbs_materialize ok
+2026-11-13T00:23:46  ran: cbs_materialize ok
+
+2026-10-16T22:30:13  ran: cbs_materialize ok
+2026-11-13T00:19:19  ran: cbs_materialize ok
+2026-11-13T00:23:46  ran: cbs_materialize ok
+
+[reactPlus] cbmProc.status:
+2026-08-15T17:58:28  skipped: control=available at cbs_materialize
+2026-08-15T17:59:15  ran: cbs_materialize ok
+2026-08-21T16:28:46  ran: cbs_materialize ok
+2026-08-21T16:30:14  ran: cbs_materialize ok
+2026-08-21T16:43:36  ran: cbs_materialize ok
+2026-10-18T05:40:11  ran: cbs_materialize ok
+2026-11-13T00:24:00  ran: cbs_materialize ok
+2026-11-13T04:17:33  ran: cbs_materialize ok
+
+2026-08-15T17:58:28  skipped: control=available at cbs_materialize
+2026-08-15T17:59:15  ran: cbs_materialize ok
+2026-08-21T16:28:46  ran: cbs_materialize ok
+2026-08-21T16:30:14  ran: cbs_materialize ok
+2026-08-21T16:43:36  ran: cbs_materialize ok
+2026-10-18T05:40:11  ran: cbs_materialize ok
+2026-11-13T00:24:00  ran: cbs_materialize ok
+2026-11-13T04:17:33  ran: cbs_materialize ok
+
+[gatsbyBxSidebar] cbmProc.status:
+2026-08-15T17:58:28  skipped: control=available at cbs_materialize
+2026-08-15T17:59:15  ran: cbs_materialize ok
+2026-08-21T16:28:46  ran: cbs_materialize ok
+2026-08-21T16:30:14  ran: cbs_materialize ok
+2026-08-21T16:43:36  ran: cbs_materialize ok
+2026-11-13T00:26:18  ran: cbs_materialize ok
+2026-11-13T04:19:16  ran: cbs_materialize ok
+
+2026-08-15T17:58:28  skipped: control=available at cbs_materialize
+2026-08-15T17:59:15  ran: cbs_materialize ok
+2026-08-21T16:28:46  ran: cbs_materialize ok
+2026-08-21T16:30:14  ran: cbs_materialize ok
+2026-08-21T16:43:36  ran: cbs_materialize ok
+2026-11-13T00:26:18  ran: cbs_materialize ok
+2026-11-13T04:19:16  ran: cbs_materialize ok
+
+[csPlayerPerf] cbmProc.status:
+2026-10-18T06:00:55  ran: cbs_materialize ok
+2026-10-18T06:01:56  ran: cbs_materialize ok
+2026-10-18T06:04:35  ran: cbs_materialize ok
+2026-11-13T00:26:35  ran: cbs_materialize ok
+
+2026-10-18T06:00:55  ran: cbs_materialize ok
+2026-10-18T06:01:56  ran: cbs_materialize ok
+2026-10-18T06:04:35  ran: cbs_materialize ok
+2026-11-13T00:26:35  ran: cbs_materialize ok
+
+[csPlayerUi] cbmProc.status:
+2026-08-15T17:58:28  skipped: control=available at cbs_materialize
+2026-08-15T17:59:15  ran: cbs_materialize ok
+2026-08-21T16:28:46  ran: cbs_materialize ok
+2026-08-21T16:30:14  ran: cbs_materialize ok
+2026-08-21T16:43:36  ran: cbs_materialize ok
+2026-10-18T02:29:25  ran: cbs_materialize ok
+2026-11-13T00:20:15  ran: cbs_materialize ok
+2026-11-13T00:26:42  ran: cbs_materialize ok
+2026-11-13T04:19:45  ran: cbs_materialize ok
+
+2026-08-15T17:58:28  skipped: control=available at cbs_materialize
+2026-08-15T17:59:15  ran: cbs_materialize ok
+2026-08-21T16:28:46  ran: cbs_materialize ok
+2026-08-21T16:30:14  ran: cbs_materialize ok
+2026-08-21T16:43:36  ran: cbs_materialize ok
+2026-10-18T02:29:25  ran: cbs_materialize ok
+2026-11-13T00:20:15  ran: cbs_materialize ok
+2026-11-13T00:26:42  ran: cbs_materialize ok
+2026-11-13T04:19:45  ran: cbs_materialize ok
+
+[astroStarter] cbmProc.status:
+2026-11-16T00:54:17  ran: cbs_materialize ok
+
+2026-11-16T00:54:17  ran: cbs_materialize ok
+
+[platform] cbmProc.status:
+2026-10-16T22:39:26  ran: cbs_materialize ok
+2026-10-17T18:39:26  ran: cbs_materialize ok
+2026-10-17T22:03:16  ran: cbs_materialize ok
+2026-10-17T23:55:00  ran: cbs_materialize ok
+2026-11-13T00:26:55  ran: cbs_materialize ok
+2026-11-13T04:19:29  ran: cbs_materialize ok
+
+2026-10-16T22:39:26  ran: cbs_materialize ok
+2026-10-17T18:39:26  ran: cbs_materialize ok
+2026-10-17T22:03:16  ran: cbs_materialize ok
+2026-10-17T23:55:00  ran: cbs_materialize ok
+2026-11-13T00:26:55  ran: cbs_materialize ok
+2026-11-13T04:19:29  ran: cbs_materialize ok
+
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+fto_forwardToLeaves --cmndName='cbm_status':  visited=15  failed=0  skipped=0
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/nginx
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/airflow
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/kafka
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/prometheus
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/grafana
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/pypiserver
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/devpi
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/geneweb
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/reactPlus
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/gatsbyBxSidebar
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerPerf
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerUi
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/astroStarter
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/platform
+{'visited': ['/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/nginx', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/airflow', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/kafka', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/prometheus', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/grafana', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/pypiserver', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/devpi', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/geneweb', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/reactPlus', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/gatsbyBxSidebar', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerPerf', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerUi', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/astroStarter', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/platform'], 'failed': [], 'skipped': []}
+** cmnd= pushd /bisos/platform/sys/cbm/collective/hereWeb > /dev/null; ftoBranchProc.spcs -i fto_forwardToLeaves --cmndName='cbm_materialize'; popd > /dev/null;
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+[nginx] running: /bisos/git/bxRepos/bisos-pip/webCap/py3/bin/nginx-cbs.pcs -i cbs_materialize
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Synchronizing state of nginx.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
+Executing: /usr/lib/systemd/systemd-sysv-install enable nginx
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f0c38668180>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/nginx/cbmProc.status'
+** cmnd= nginx-sbom.pcs -i sbom_fullUpdate
+** cmnd= apt list nginx --installed  2> /dev/null
+Listing...
+** cmnd= sudo DEBIAN_FRONTEND=noninteractive apt-get -y install nginx
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  iproute2 nginx-common
+Suggested packages:
+  fcgiwrap nginx-doc
+The following NEW packages will be installed:
+  iproute2 nginx nginx-common
+0 upgraded, 3 newly installed, 0 to remove and 65 not upgraded.
+Need to get 1815 kB of archives.
+After this operation, 5770 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 iproute2 amd64 6.15.0-1 [1089 kB]
+Get:2 http://deb.debian.org/debian-security trixie-security/main amd64 nginx-common all 1.26.3-3+deb13u11 [112 kB]
+Get:3 http://deb.debian.org/debian-security trixie-security/main amd64 nginx amd64 1.26.3-3+deb13u11 [614 kB]
+Preconfiguring packages ...
+Fetched 1815 kB in 0s (10.6 MB/s)
+Selecting previously unselected package iproute2.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 123528 files and directories currently installed.)
+Preparing to unpack .../iproute2_6.15.0-1_amd64.deb ...
+Unpacking iproute2 (6.15.0-1) ...
+Selecting previously unselected package nginx-common.
+Preparing to unpack .../nginx-common_1.26.3-3+deb13u11_all.deb ...
+Unpacking nginx-common (1.26.3-3+deb13u11) ...
+Selecting previously unselected package nginx.
+Preparing to unpack .../nginx_1.26.3-3+deb13u11_amd64.deb ...
+Unpacking nginx (1.26.3-3+deb13u11) ...
+Setting up iproute2 (6.15.0-1) ...
+Setting up nginx-common (1.26.3-3+deb13u11) ...
+Created symlink '/etc/systemd/system/multi-user.target.wants/nginx.service' → '/usr/lib/systemd/system/nginx.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start nginx.service'
+Setting up nginx (1.26.3-3+deb13u11) ...
+invoke-rc.d: policy-rc.d denied execution of start.
+Processing triggers for man-db (2.13.1-1) ...
+Blank assemble
+** cmnd= /bisos/git/bxRepos/bisos-pip/webCap/py3/bin/nginx-cbs.pcs -i sysdUnitsProc ensure all
+** cmnd= nginx-sysd.pcs -i sysdSysUnit ensure
+Action ensure
+** cmnd= /bisos/venv/py3/bisos3/bin/nginx-sysd.pcs  --cls="configFile_sysdUnit" --runAs="root"  -i configFileUpdate
+LOG-INFO: configFileUpdate:: Missing systemd_seedInfo.systemdSeedInfo.sysdUnitFileFunc
+** cmnd= sudo systemctl daemon-reload
+** cmnd= sudo systemctl restart nginx.service
+** cmnd= sudo systemctl enable nginx.service
+1
+Blank materialize
+[airflow] running: /bisos/git/bxRepos/bisos-pip/airflow/py3/bin/airflow-cbs.pcs -i cbs_materialize
+** cmnd= airflow-sbom.pcs -i sbom_fullUpdate
+** cmnd= apt list airflowAcctEnvSetup --installed  2> /dev/null
+Listing...
+** cmnd=
+# 1. Dedicated system user -- only when absent, useradd exits 9 otherwise
+id airflow >/dev/null 2>&1 || sudo useradd -r -m -s /bin/bash airflow
+
+# 2. AIRFLOW_HOME and the dirs airflow must own. No venv here -- see docstring.
+sudo mkdir -p /opt/airflow/dags /opt/airflow/logs
+sudo chown -R airflow:airflow /opt/airflow
+
+# 3. tmpfiles daemon configuration for PID and socket files
+echo "D /run/airflow 0755 airflow airflow -" | sudo tee /etc/tmpfiles.d/airflow.conf >/dev/null
+sudo systemd-tmpfiles --create
+
+# 4. EnvironmentFile for the airflow-*.service units. Written only when absent,
+#    so hand-added overrides survive re-runs. systemd reads it as root before
+#    dropping to User=airflow, so root:airflow 640 suffices: readable by the
+#    service account, not writable by it.
+# The content, and why BASE_URL and EXECUTION_API_SERVER_URL matter, is in
+# airflowInfo.envFileContent().
+if [ ! -f /etc/default/airflow ] ; then
+    sudo tee /etc/default/airflow >/dev/null <<'AIRFLOW_ENV_EOF'
+AIRFLOW_HOME=/opt/airflow
+AIRFLOW__DATABASE__SQL_ALCHEMY_CONN=postgresql+psycopg2://@/airflow?host=/var/run/postgresql
+AIRFLOW__API__BASE_URL=http://airflow.here
+AIRFLOW__CORE__EXECUTION_API_SERVER_URL=http://localhost:24006/execution/
+# Add any overrides or environment variables needed by your DAGs here
+AIRFLOW_ENV_EOF
+fi
+sudo chown root:airflow /etc/default/airflow
+sudo chmod 640 /etc/default/airflow
+
+** cmnd= apt list python3 --installed  2> /dev/null
+Listing...
+python3/stable,now 3.13.5-1 amd64 [installed,automatic]
+python3 is already installed -- skipped
+** cmnd= apt list python3-pip --installed  2> /dev/null
+Listing...
+python3-pip/stable,now 25.1.1+dfsg-1 all [installed]
+python3-pip is already installed -- skipped
+** cmnd= apt list python3-venv --installed  2> /dev/null
+Listing...
+python3-venv/stable,now 3.13.5-1 amd64 [installed]
+python3-venv is already installed -- skipped
+** cmnd= apt list build-essential --installed  2> /dev/null
+Listing...
+build-essential/stable,now 12.12 amd64 [installed]
+build-essential is already installed -- skipped
+** cmnd= apt list libpq-dev --installed  2> /dev/null
+Listing...
+** cmnd= sudo DEBIAN_FRONTEND=noninteractive apt-get -y install libpq-dev
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libpq5
+Suggested packages:
+  postgresql-doc-17
+The following NEW packages will be installed:
+  libpq-dev libpq5
+0 upgraded, 2 newly installed, 0 to remove and 65 not upgraded.
+Need to get 395 kB of archives.
+After this operation, 1752 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 libpq5 amd64 17.12-0+deb13u1 [236 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 libpq-dev amd64 17.12-0+deb13u1 [159 kB]
+Fetched 395 kB in 0s (3345 kB/s)
+Selecting previously unselected package libpq5:amd64.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 123773 files and directories currently installed.)
+Preparing to unpack .../libpq5_17.12-0+deb13u1_amd64.deb ...
+Unpacking libpq5:amd64 (17.12-0+deb13u1) ...
+Selecting previously unselected package libpq-dev.
+Preparing to unpack .../libpq-dev_17.12-0+deb13u1_amd64.deb ...
+Unpacking libpq-dev (17.12-0+deb13u1) ...
+Setting up libpq5:amd64 (17.12-0+deb13u1) ...
+Setting up libpq-dev (17.12-0+deb13u1) ...
+Processing triggers for libc-bin (2.41-12+deb13u5) ...
+Processing triggers for man-db (2.13.1-1) ...
+** cmnd= apt list libssl-dev --installed  2> /dev/null
+Listing...
+libssl-dev/stable,now 3.5.9-1~deb13u1 amd64 [installed,automatic]
+libssl-dev is already installed -- skipped
+** cmnd= apt list libffi-dev --installed  2> /dev/null
+Listing...
+libffi-dev/stable,now 3.4.8-2 amd64 [installed,automatic]
+libffi-dev is already installed -- skipped
+** cmnd= apt list pkg-config --installed  2> /dev/null
+Listing...
+** cmnd= sudo DEBIAN_FRONTEND=noninteractive apt-get -y install pkg-config
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  pkg-config
+0 upgraded, 1 newly installed, 0 to remove and 65 not upgraded.
+Need to get 14.0 kB of archives.
+After this operation, 29.7 kB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 pkg-config amd64 1.8.1-4 [14.0 kB]
+Fetched 14.0 kB in 0s (173 kB/s)
+Selecting previously unselected package pkg-config:amd64.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 123826 files and directories currently installed.)
+Preparing to unpack .../pkg-config_1.8.1-4_amd64.deb ...
+Unpacking pkg-config:amd64 (1.8.1-4) ...
+Setting up pkg-config:amd64 (1.8.1-4) ...
+** cmnd= apt list postgresql --installed  2> /dev/null
+Listing...
+** cmnd= sudo DEBIAN_FRONTEND=noninteractive apt-get -y install postgresql
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  e2fsprogs e2fsprogs-l10n libcommon-sense-perl libext2fs2t64 libio-pty-perl
+  libipc-run-perl libjson-perl libjson-xs-perl libpopt0 libss2
+  libtypes-serialiser-perl libxslt1.1 logrotate postgresql-17
+  postgresql-client-17 postgresql-client-common postgresql-common
+  postgresql-common-dev sysstat
+Suggested packages:
+  gpart parted fuse2fs e2fsck-static bsd-mailx | mailx postgresql-doc
+  postgresql-doc-17 isag
+The following NEW packages will be installed:
+  e2fsprogs e2fsprogs-l10n libcommon-sense-perl libext2fs2t64 libio-pty-perl
+  libipc-run-perl libjson-perl libjson-xs-perl libpopt0 libss2
+  libtypes-serialiser-perl libxslt1.1 logrotate postgresql postgresql-17
+  postgresql-client-17 postgresql-client-common postgresql-common
+  postgresql-common-dev sysstat
+0 upgraded, 20 newly installed, 0 to remove and 65 not upgraded.
+Need to get 21.8 MB of archives.
+After this operation, 81.5 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian trixie/main amd64 libext2fs2t64 amd64 1.47.2-3+b12 [213 kB]
+Get:2 http://deb.debian.org/debian trixie/main amd64 libss2 amd64 1.47.2-3+b12 [29.7 kB]
+Get:3 http://deb.debian.org/debian trixie/main amd64 e2fsprogs amd64 1.47.2-3+b12 [591 kB]
+Get:4 http://deb.debian.org/debian trixie/main amd64 libjson-perl all 4.10000-1 [87.5 kB]
+Get:5 http://deb.debian.org/debian trixie/main amd64 postgresql-client-common all 278+deb13u1 [47.2 kB]
+Get:6 http://deb.debian.org/debian trixie/main amd64 libio-pty-perl amd64 1:1.20-1+b3 [34.3 kB]
+Get:7 http://deb.debian.org/debian trixie/main amd64 libipc-run-perl all 20231003.0-2 [101 kB]
+Get:8 http://deb.debian.org/debian trixie/main amd64 postgresql-common-dev all 278+deb13u1 [72.9 kB]
+Get:9 http://deb.debian.org/debian trixie/main amd64 postgresql-common all 278+deb13u1 [112 kB]
+Get:10 http://deb.debian.org/debian trixie/main amd64 libpopt0 amd64 1.19+dfsg-2 [43.8 kB]
+Get:11 http://deb.debian.org/debian trixie/main amd64 logrotate amd64 3.22.0-1 [62.0 kB]
+Get:12 http://deb.debian.org/debian trixie/main amd64 e2fsprogs-l10n all 1.47.2-3 [551 kB]
+Get:13 http://deb.debian.org/debian trixie/main amd64 libcommon-sense-perl amd64 3.75-3+b5 [22.9 kB]
+Get:14 http://deb.debian.org/debian trixie/main amd64 libtypes-serialiser-perl all 1.01-1 [12.2 kB]
+Get:15 http://deb.debian.org/debian trixie/main amd64 libjson-xs-perl amd64 4.040-1~deb13u1 [91.0 kB]
+Get:16 http://deb.debian.org/debian trixie/main amd64 libxslt1.1 amd64 1.1.35-1.2+deb13u3 [233 kB]
+Get:17 http://deb.debian.org/debian trixie/main amd64 postgresql-client-17 amd64 17.12-0+deb13u1 [2067 kB]
+Get:18 http://deb.debian.org/debian trixie/main amd64 postgresql-17 amd64 17.12-0+deb13u1 [16.8 MB]
+Get:19 http://deb.debian.org/debian trixie/main amd64 postgresql all 17+278+deb13u1 [16.8 kB]
+Get:20 http://deb.debian.org/debian trixie/main amd64 sysstat amd64 12.7.5-2 [623 kB]
+Preconfiguring packages ...
+Fetched 21.8 MB in 1s (32.9 MB/s)
+Selecting previously unselected package libext2fs2t64:amd64.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 123831 files and directories currently installed.)
+Preparing to unpack .../libext2fs2t64_1.47.2-3+b12_amd64.deb ...
+Adding 'diversion of /lib/x86_64-linux-gnu/libe2p.so.2 to /lib/x86_64-linux-gnu/libe2p.so.2.usr-is-merged by libext2fs2t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libe2p.so.2.3 to /lib/x86_64-linux-gnu/libe2p.so.2.3.usr-is-merged by libext2fs2t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libext2fs.so.2 to /lib/x86_64-linux-gnu/libext2fs.so.2.usr-is-merged by libext2fs2t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libext2fs.so.2.4 to /lib/x86_64-linux-gnu/libext2fs.so.2.4.usr-is-merged by libext2fs2t64'
+Unpacking libext2fs2t64:amd64 (1.47.2-3+b12) ...
+Selecting previously unselected package libss2:amd64.
+Preparing to unpack .../libss2_1.47.2-3+b12_amd64.deb ...
+Unpacking libss2:amd64 (1.47.2-3+b12) ...
+Setting up libext2fs2t64:amd64 (1.47.2-3+b12) ...
+Setting up libss2:amd64 (1.47.2-3+b12) ...
+Selecting previously unselected package e2fsprogs.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 123854 files and directories currently installed.)
+Preparing to unpack .../00-e2fsprogs_1.47.2-3+b12_amd64.deb ...
+Unpacking e2fsprogs (1.47.2-3+b12) ...
+Selecting previously unselected package libjson-perl.
+Preparing to unpack .../01-libjson-perl_4.10000-1_all.deb ...
+Unpacking libjson-perl (4.10000-1) ...
+Selecting previously unselected package postgresql-client-common.
+Preparing to unpack .../02-postgresql-client-common_278+deb13u1_all.deb ...
+Unpacking postgresql-client-common (278+deb13u1) ...
+Selecting previously unselected package libio-pty-perl.
+Preparing to unpack .../03-libio-pty-perl_1%3a1.20-1+b3_amd64.deb ...
+Unpacking libio-pty-perl (1:1.20-1+b3) ...
+Selecting previously unselected package libipc-run-perl.
+Preparing to unpack .../04-libipc-run-perl_20231003.0-2_all.deb ...
+Unpacking libipc-run-perl (20231003.0-2) ...
+Selecting previously unselected package postgresql-common-dev.
+Preparing to unpack .../05-postgresql-common-dev_278+deb13u1_all.deb ...
+Unpacking postgresql-common-dev (278+deb13u1) ...
+Selecting previously unselected package postgresql-common.
+Preparing to unpack .../06-postgresql-common_278+deb13u1_all.deb ...
+Adding 'diversion of /usr/bin/pg_config to /usr/bin/pg_config.libpq-dev by postgresql-common'
+Unpacking postgresql-common (278+deb13u1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../07-libpopt0_1.19+dfsg-2_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-2) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../08-logrotate_3.22.0-1_amd64.deb ...
+Unpacking logrotate (3.22.0-1) ...
+Selecting previously unselected package e2fsprogs-l10n.
+Preparing to unpack .../09-e2fsprogs-l10n_1.47.2-3_all.deb ...
+Unpacking e2fsprogs-l10n (1.47.2-3) ...
+Selecting previously unselected package libcommon-sense-perl:amd64.
+Preparing to unpack .../10-libcommon-sense-perl_3.75-3+b5_amd64.deb ...
+Unpacking libcommon-sense-perl:amd64 (3.75-3+b5) ...
+Selecting previously unselected package libtypes-serialiser-perl.
+Preparing to unpack .../11-libtypes-serialiser-perl_1.01-1_all.deb ...
+Unpacking libtypes-serialiser-perl (1.01-1) ...
+Selecting previously unselected package libjson-xs-perl.
+Preparing to unpack .../12-libjson-xs-perl_4.040-1~deb13u1_amd64.deb ...
+Unpacking libjson-xs-perl (4.040-1~deb13u1) ...
+Selecting previously unselected package libxslt1.1:amd64.
+Preparing to unpack .../13-libxslt1.1_1.1.35-1.2+deb13u3_amd64.deb ...
+Unpacking libxslt1.1:amd64 (1.1.35-1.2+deb13u3) ...
+Selecting previously unselected package postgresql-client-17.
+Preparing to unpack .../14-postgresql-client-17_17.12-0+deb13u1_amd64.deb ...
+Unpacking postgresql-client-17 (17.12-0+deb13u1) ...
+Selecting previously unselected package postgresql-17.
+Preparing to unpack .../15-postgresql-17_17.12-0+deb13u1_amd64.deb ...
+Unpacking postgresql-17 (17.12-0+deb13u1) ...
+Selecting previously unselected package postgresql.
+Preparing to unpack .../16-postgresql_17+278+deb13u1_all.deb ...
+Unpacking postgresql (17+278+deb13u1) ...
+Selecting previously unselected package sysstat.
+Preparing to unpack .../17-sysstat_12.7.5-2_amd64.deb ...
+Unpacking sysstat (12.7.5-2) ...
+Setting up postgresql-client-common (278+deb13u1) ...
+Setting up libio-pty-perl (1:1.20-1+b3) ...
+Setting up postgresql-client-17 (17.12-0+deb13u1) ...
+update-alternatives: using /usr/share/postgresql/17/man/man1/psql.1.gz to provide /usr/share/man/man1/psql.1.gz (psql.1.gz) in auto mode
+Setting up libcommon-sense-perl:amd64 (3.75-3+b5) ...
+Setting up e2fsprogs (1.47.2-3+b12) ...
+update-initramfs: deferring update (trigger activated)
+Created symlink '/etc/systemd/system/timers.target.wants/e2scrub_all.timer' → '/usr/lib/systemd/system/e2scrub_all.timer'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/e2scrub_reap.service' → '/usr/lib/systemd/system/e2scrub_reap.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start e2scrub_all.timer e2scrub_reap.service'
+Setting up libipc-run-perl (20231003.0-2) ...
+Setting up libtypes-serialiser-perl (1.01-1) ...
+Setting up libjson-perl (4.10000-1) ...
+Setting up libxslt1.1:amd64 (1.1.35-1.2+deb13u3) ...
+Setting up sysstat (12.7.5-2) ...
+Creating config file /etc/default/sysstat with new version
+update-alternatives: using /usr/bin/sar.sysstat to provide /usr/bin/sar (sar) in auto mode
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-collect.timer' → '/usr/lib/systemd/system/sysstat-collect.timer'.
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-rotate.timer' → '/usr/lib/systemd/system/sysstat-rotate.timer'.
+Created symlink '/etc/systemd/system/sysstat.service.wants/sysstat-summary.timer' → '/usr/lib/systemd/system/sysstat-summary.timer'.
+Created symlink '/etc/systemd/system/multi-user.target.wants/sysstat.service' → '/usr/lib/systemd/system/sysstat.service'.
+Setting up libpopt0:amd64 (1.19+dfsg-2) ...
+Setting up postgresql-common-dev (278+deb13u1) ...
+Setting up logrotate (3.22.0-1) ...
+Created symlink '/etc/systemd/system/timers.target.wants/logrotate.timer' → '/usr/lib/systemd/system/logrotate.timer'.
+/usr/sbin/policy-rc.d returned 101, not running 'start logrotate.service logrotate.timer'
+Setting up libjson-xs-perl (4.040-1~deb13u1) ...
+Setting up e2fsprogs-l10n (1.47.2-3) ...
+Setting up postgresql-common (278+deb13u1) ...
+Creating config file /etc/postgresql-common/createcluster.conf with new version
+Building PostgreSQL dictionaries from installed myspell/hunspell packages...
+  en_us
+Removing obsolete dictionary files:
+invoke-rc.d: policy-rc.d denied execution of start.
+Created symlink '/etc/systemd/system/multi-user.target.wants/postgresql.service' → '/usr/lib/systemd/system/postgresql.service'.
+/usr/sbin/policy-rc.d returned 101, not running 'start postgresql.service'
+Setting up postgresql-17 (17.12-0+deb13u1) ...
+Creating new PostgreSQL cluster 17/main ...
+/usr/lib/postgresql/17/bin/initdb -D /var/lib/postgresql/17/main --auth-local peer --auth-host scram-sha-256 --no-instructions
+The files belonging to this database system will be owned by user "postgres".
+This user must also own the server process.
+
+The database cluster will be initialized with locale "C.UTF-8".
+The default database encoding has accordingly been set to "UTF8".
+The default text search configuration will be set to "english".
+
+Data page checksums are disabled.
+
+fixing permissions on existing directory /var/lib/postgresql/17/main ... ok
+creating subdirectories ... ok
+selecting dynamic shared memory implementation ... posix
+selecting default "max_connections" ... 100
+selecting default "shared_buffers" ... 128MB
+selecting default time zone ... America/Los_Angeles
+creating configuration files ... ok
+running bootstrap script ... ok
+performing post-bootstrap initialization ... ok
+syncing data to disk ... ok
+invoke-rc.d: policy-rc.d denied execution of start.
+Setting up postgresql (17+278+deb13u1) ...
+Processing triggers for man-db (2.13.1-1) ...
+Processing triggers for libc-bin (2.41-12+deb13u5) ...
+Processing triggers for initramfs-tools (0.148.4) ...
+update-initramfs: Generating /boot/initrd.img-6.12.118+deb13-amd64
+I: The initramfs will attempt to resume from /dev/nvme0n1p8
+I: (UUID=342daab4-24b5-43d2-b4f7-8318de2dfafe)
+I: Set the RESUME variable to override this.
+** cmnd= apt list airflowPostgresSetup --installed  2> /dev/null
+Listing...
+** cmnd=
+# 1. Cluster must be running. Debian's postgresql-common starts it at install
+#    time --- except under policy-rc.d (containers), where it silently does not.
+#    Version/cluster are discovered, not hardcoded, so a major-version bump of
+#    the postgresql metapackage does not strand this.
+sudo systemctl enable postgresql >/dev/null 2>&1 || true
+read PGVER PGCLUSTER <<< "$(pg_lsclusters -h | awk 'NR==1 {print $1, $2}')"
+sudo pg_ctlcluster "$PGVER" "$PGCLUSTER" start 2>/dev/null || true
+
+# 2. LOGIN role named for the OS account -- peer auth maps one to the other.
+sudo -u postgres psql -tAc "SELECT 1 FROM pg_roles WHERE rolname='airflow'" \
+    | grep -q 1 || sudo -u postgres psql -c "CREATE ROLE airflow LOGIN"
+
+# 3. Database owned by that role, so airflow db migrate can create its schema.
+sudo -u postgres psql -tAc "SELECT 1 FROM pg_database WHERE datname='airflow'" \
+    | grep -q 1 || sudo -u postgres createdb -O airflow airflow
+
+# 4. Five airflow units each hold a SQLAlchemy pool; stock max_connections=100
+#    is tight. ALTER SYSTEM needs a restart to take effect, so only do both
+#    when the value is actually low --- otherwise every sbom run bounces the DB.
+PGMAXCONN=$(sudo -u postgres psql -tAc "show max_connections")
+if [ "$PGMAXCONN" -lt 200 ] ; then
+    sudo -u postgres psql -c "ALTER SYSTEM SET max_connections = 200" >/dev/null
+    sudo pg_ctlcluster "$PGVER" "$PGCLUSTER" restart
+fi
+
+CREATE ROLE
+** cmnd= /bisos/venv/py3/asc/bin/pip install apache-airflow
+Collecting apache-airflow
+  Downloading apache_airflow-3.4.0-py3-none-any.whl.metadata (38 kB)
+Collecting apache-airflow-core==3.4.0 (from apache-airflow)
+  Downloading apache_airflow_core-3.4.0-py3-none-any.whl.metadata (6.7 kB)
+Collecting apache-airflow-task-sdk==1.4.0 (from apache-airflow)
+  Downloading apache_airflow_task_sdk-1.4.0-py3-none-any.whl.metadata (5.1 kB)
+Collecting a2wsgi>=1.10.8 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading a2wsgi-1.10.10-py3-none-any.whl.metadata (4.0 kB)
+Collecting aiosqlite!=0.22.0,>=0.20.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading aiosqlite-0.22.1-py3-none-any.whl.metadata (4.3 kB)
+Collecting alembic<2.0,>=1.13.1 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading alembic-1.20.1-py3-none-any.whl.metadata (7.3 kB)
+Collecting apache-airflow-providers-common-compat>=1.7.4 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading apache_airflow_providers_common_compat-1.23.1-py3-none-any.whl.metadata (6.0 kB)
+Collecting apache-airflow-providers-common-io>=1.6.3 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading apache_airflow_providers_common_io-1.11.1-py3-none-any.whl.metadata (5.7 kB)
+Collecting apache-airflow-providers-common-sql>=1.28.1 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading apache_airflow_providers_common_sql-3.0.0-py3-none-any.whl.metadata (8.0 kB)
+Collecting apache-airflow-providers-smtp>=3.2.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading apache_airflow_providers_smtp-3.2.1-py3-none-any.whl.metadata (4.2 kB)
+Collecting apache-airflow-providers-standard>=1.9.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading apache_airflow_providers_standard-1.21.0-py3-none-any.whl.metadata (5.6 kB)
+Collecting argcomplete>=1.10 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading argcomplete-3.8.0-py3-none-any.whl.metadata (16 kB)
+Collecting asgiref>=2.3.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting attrs!=25.2.0,>=22.1.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting cachetools>=6.0.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading cachetools-8.0.2-py3-none-any.whl.metadata (5.6 kB)
+Collecting cadwyn>=8.1.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading cadwyn-9.1.0-py3-none-any.whl.metadata (4.3 kB)
+Collecting colorlog>=6.8.2 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading colorlog-6.12.0-py3-none-any.whl.metadata (11 kB)
+Collecting cron-descriptor>=1.2.24 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading cron_descriptor-2.3.5-py3-none-any.whl.metadata (10 kB)
+Collecting croniter>=6.2.2 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading croniter-7.0.0-py3-none-any.whl.metadata (26 kB)
+Collecting cryptography>=44.0.3 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.4 kB)
+Collecting deprecated>=1.2.13 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading deprecated-3.0.1-py3-none-any.whl.metadata (6.5 kB)
+Collecting dill>=0.2.2 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+Collecting fastapi>=0.142.0 (from fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading fastapi-0.165.0-py3-none-any.whl.metadata (27 kB)
+Collecting httpx2>=2.0.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading httpx2-2.16.2-py3-none-any.whl.metadata (10.0 kB)
+Collecting importlib-metadata>=7.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading importlib_metadata-10.2.0-py3-none-any.whl.metadata (4.6 kB)
+Collecting isoduration>=20.11.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+Collecting itsdangerous>=2.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting jinja2>=3.1.5 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting jsonschema>=4.19.1 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting lazy-object-proxy>=1.2.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading lazy_object_proxy-1.13.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (5.1 kB)
+Collecting libcst>=1.8.2 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading libcst-1.9.0-cp313-cp313-manylinux_2_28_x86_64.whl.metadata (15 kB)
+Collecting linkify-it-py>=2.0.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading linkify_it_py-2.2.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting lockfile>=0.12.2 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting methodtools>=0.4.7 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading methodtools-0.4.7-py2.py3-none-any.whl.metadata (3.0 kB)
+Collecting msgspec>=0.19.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading msgspec-0.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (6.0 kB)
+Collecting natsort>=8.4.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading natsort-8.4.0-py3-none-any.whl.metadata (21 kB)
+Collecting opentelemetry-api>=1.27.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_api-1.45.2-py3-none-any.whl.metadata (1.4 kB)
+Collecting opentelemetry-exporter-otlp>=1.27.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_exporter_otlp-1.45.2-py3-none-any.whl.metadata (2.4 kB)
+Collecting opentelemetry-proto<9999,>=1.27.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_proto-1.45.2-py3-none-any.whl.metadata (2.3 kB)
+Requirement already satisfied: packaging>=25.0 in /bisos/venv/py3/asc/lib/python3.13/site-packages (from apache-airflow-core==3.4.0->apache-airflow) (26.3)
+Collecting pathspec>=0.9.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Using cached pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+Collecting pendulum>=3.1.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pendulum-3.3.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+Collecting pluggy>=1.5.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pluggy-1.7.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting psutil>=5.8.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+Collecting pydantic>=2.12.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pydantic-2.14.4-py3-none-any.whl.metadata (143 kB)
+Collecting pygments!=2.19.0,>=2.0.1 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting pygtrie>=2.5.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pygtrie-2.6.2-py3-none-any.whl.metadata (12 kB)
+Collecting pyjwt>=2.11.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting python-daemon>=3.0.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading python_daemon-3.1.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting python-dateutil>=2.7.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading python_dateutil-4.0.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting python-slugify>=5.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading python_slugify-9.2.0-py3-none-any.whl.metadata (13 kB)
+Collecting pyyaml>=6.0.3 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pyyaml-6.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Collecting requests<3,>=2.32.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+Collecting rich-argparse>=1.0.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading rich_argparse-1.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting rich>=13.6.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting setproctitle>=1.3.3 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading setproctitle-1.3.8-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (10 kB)
+Collecting sqlalchemy!=2.1.0,>=2.0.50 (from sqlalchemy[asyncio]!=2.1.0,>=2.0.50->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading sqlalchemy-2.1.9-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.7 kB)
+Collecting starlette>=1.3.1 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading starlette-1.10.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting structlog>=26.1.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading structlog-26.1.0-py3-none-any.whl.metadata (9.7 kB)
+Collecting svcs>=25.1.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading svcs-26.2.0-py3-none-any.whl.metadata (6.9 kB)
+Collecting tabulate>=0.9.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+Collecting tenacity>=8.3.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading tenacity-9.2.1-py3-none-any.whl.metadata (1.4 kB)
+Collecting termcolor>=3.0.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+Collecting typing-extensions>=4.14.1 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting universal-pathlib>=0.3.8 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading universal_pathlib-0.3.10-py3-none-any.whl.metadata (39 kB)
+Collecting uuid6>=2024.7.10 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading uuid6-2025.0.1-py3-none-any.whl.metadata (10 kB)
+Collecting uvicorn>=0.37.0 (from apache-airflow-core==3.4.0->apache-airflow)
+  Downloading uvicorn-0.54.0-py3-none-any.whl.metadata (6.6 kB)
+Collecting babel>=2.17.0 (from apache-airflow-task-sdk==1.4.0->apache-airflow)
+  Downloading babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+Collecting fsspec>=2023.10.0 (from apache-airflow-task-sdk==1.4.0->apache-airflow)
+  Downloading fsspec-2026.9.0-py3-none-any.whl.metadata (10 kB)
+Collecting greenback>=1.2.1 (from apache-airflow-task-sdk==1.4.0->apache-airflow)
+  Downloading greenback-1.3.0-py3-none-any.whl.metadata (9.8 kB)
+Collecting truststore>=0.10.0 (from apache-airflow-task-sdk==1.4.0->apache-airflow)
+  Downloading truststore-0.10.5-py3-none-any.whl.metadata (4.5 kB)
+Collecting Mako (from alembic<2.0,>=1.13.1->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading mako-1.4.3-py3-none-any.whl.metadata (2.9 kB)
+Collecting protobuf<8.0,>=5.0 (from opentelemetry-proto<9999,>=1.27.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Collecting charset_normalizer<4,>=2 (from requests<3,>=2.32.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading charset_normalizer-3.5.3-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (43 kB)
+Collecting idna<4,>=2.5 (from requests<3,>=2.32.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+Collecting urllib3<3,>=1.26 (from requests<3,>=2.32.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting certifi>=2023.5.7 (from requests<3,>=2.32.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading certifi-2026.11.20-py3-none-any.whl.metadata (2.5 kB)
+Collecting sqlparse>=0.5.1 (from apache-airflow-providers-common-sql>=1.28.1->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+Collecting more-itertools>=9.0.0 (from apache-airflow-providers-common-sql>=1.28.1->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading more_itertools-11.2.1-py3-none-any.whl.metadata (42 kB)
+Collecting aiosmtplib>=5.1.0 (from apache-airflow-providers-smtp>=3.2.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading aiosmtplib-5.1.3-py3-none-any.whl.metadata (3.6 kB)
+Collecting cadwyn-core==9.1.0 (from cadwyn>=8.1.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading cadwyn_core-9.1.0-py3-none-any.whl.metadata (1.6 kB)
+Collecting typing-inspection>=0.4.0 (from cadwyn>=8.1.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading typing_inspection-0.4.5-py3-none-any.whl.metadata (2.6 kB)
+Collecting cffi>=2.0.0 (from cryptography>=44.0.3->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+Collecting pycparser (from cffi>=2.0.0->cryptography>=44.0.3->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pycparser-3.12-py3-none-any.whl.metadata (9.7 kB)
+Collecting wrapt<3,>=1.16 (from deprecated>=1.2.13->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading wrapt-2.5.2-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (7.6 kB)
+Collecting anyio>=4.1.0 (from fastapi>=0.142.0->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading anyio-4.16.0-py3-none-any.whl.metadata (4.7 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi>=0.142.0->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading annotated_doc-0.0.7-py3-none-any.whl.metadata (6.4 kB)
+Collecting opentelemetry-sdk>=1.44.0 (from fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting opentelemetry-exporter-otlp-proto-http>=1.44.0 (from fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_exporter_otlp_proto_http-1.45.2-py3-none-any.whl.metadata (3.0 kB)
+Collecting fastapi-cli>=0.0.32 (from fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.32; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading fastapi_cli-0.0.34-py3-none-any.whl.metadata (6.6 kB)
+Collecting httpx<1.0.0,>=0.23.0 (from fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting python-multipart>=0.0.18 (from fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading python_multipart-0.0.34-py3-none-any.whl.metadata (6.3 kB)
+Collecting email-validator>=2.0.0 (from fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading email_validator-2.4.0-py3-none-any.whl.metadata (26 kB)
+Collecting pydantic-settings>=2.0.0 (from fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pydantic_settings-2.16.3-py3-none-any.whl.metadata (4.0 kB)
+Collecting pydantic-extra-types>=2.0.0 (from fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pydantic_extra_types-2.11.1-py3-none-any.whl.metadata (4.2 kB)
+Collecting httpcore==1.* (from httpx<1.0.0,>=0.23.0->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0,>=0.23.0->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting dnspython>=2.0.0 (from email-validator>=2.0.0->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading dnspython-2.9.2-py3-none-any.whl.metadata (5.8 kB)
+Collecting typer>=0.26.1 (from fastapi-cli>=0.0.32->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.32; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading typer-0.29.2-py3-none-any.whl.metadata (16 kB)
+Collecting rich-toolkit>=0.14.8 (from fastapi-cli>=0.0.32->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.32; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading rich_toolkit-0.20.6-py3-none-any.whl.metadata (3.0 kB)
+Collecting greenlet!=0.4.17 (from greenback>=1.2.1->apache-airflow-task-sdk==1.4.0->apache-airflow)
+  Downloading greenlet-3.5.6-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Collecting sniffio (from greenback>=1.2.1->apache-airflow-task-sdk==1.4.0->apache-airflow)
+  Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+Collecting outcome (from greenback>=1.2.1->apache-airflow-task-sdk==1.4.0->apache-airflow)
+  Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+Collecting httpcore2==2.16.2 (from httpx2>=2.0.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading httpcore2-2.16.2-py3-none-any.whl.metadata (28 kB)
+Collecting zipp>=3.20 (from importlib-metadata>=7.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading zipp-4.1.2-py3-none-any.whl.metadata (3.6 kB)
+Collecting lazy-importer>=0.1 (from importlib-metadata>=7.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading lazy_importer-0.1.0-py3-none-any.whl.metadata (7.3 kB)
+Collecting arrow>=0.15.0 (from isoduration>=20.11.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading arrow-1.4.0-py3-none-any.whl.metadata (7.7 kB)
+Collecting tzdata (from arrow>=0.15.0->isoduration>=20.11.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+Collecting MarkupSafe>=2.0 (from jinja2>=3.1.5->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading markupsafe-3.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=4.19.1->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=4.19.1->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=4.19.1->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Collecting pyyaml-ft>=8.0.0 (from libcst>=1.8.2->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pyyaml_ft-8.0.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (8.4 kB)
+Collecting wirerope>=0.4.7 (from methodtools>=0.4.7->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading wirerope-1.0.0-py2.py3-none-any.whl.metadata (3.3 kB)
+Collecting opentelemetry-exporter-otlp-proto-grpc==1.45.2 (from opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl.metadata (2.6 kB)
+Collecting googleapis-common-protos~=1.57 (from opentelemetry-exporter-otlp-proto-grpc==1.45.2->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading googleapis_common_protos-1.76.0-py3-none-any.whl.metadata (8.5 kB)
+Collecting grpcio<2.0.0,>=1.66.2 (from opentelemetry-exporter-otlp-proto-grpc==1.45.2->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading grpcio-1.85.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.8 kB)
+Collecting opentelemetry-exporter-otlp-common==0.66b2 (from opentelemetry-exporter-otlp-proto-grpc==1.45.2->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl.metadata (1.9 kB)
+Collecting opentelemetry-exporter-otlp-proto-common==1.45.2 (from opentelemetry-exporter-otlp-proto-grpc==1.45.2->opentelemetry-exporter-otlp>=1.27.0->apache-airflow-core==3.4.0->apache-airflow)
+/usr/lib/tmpfiles.d/legacy.conf:14: Duplicate line for path "/run/lock", ignoring.
+/var/cache/debconf/tmp.ci/postgresql.config.6fdPHd: 12: pg_lsclusters: not found
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/text_unidecode'
+Check the permissions.
+
+* EH_Problem_UsageError: apache-airflow
+2026-11-23 10:09:12,955 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install apache-airflow Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:488:cmnd:
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/psycopg2'
+Check the permissions.
+
+* EH_Problem_UsageError: psycopg2
+2026-11-23 10:09:17,809 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install psycopg2 Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:488:cmnd:
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/asyncpg'
+Check the permissions.
+
+* EH_Problem_UsageError: asyncpg
+2026-11-23 10:09:18,513 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+  Downloading opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl.metadata (1.8 kB)
+Collecting opentelemetry-exporter-http-transport==0.66b2 (from opentelemetry-exporter-http-transport[requests]==0.66b2->opentelemetry-exporter-otlp-proto-http>=1.44.0->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_exporter_http_transport-0.66b2-py3-none-any.whl.metadata (2.3 kB)
+Collecting opentelemetry-semantic-conventions==0.66b2 (from opentelemetry-sdk>=1.44.0->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl.metadata (2.4 kB)
+Collecting annotated-types>=0.6.0 (from pydantic>=2.12.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+Collecting pydantic-core==2.50.5 (from pydantic>=2.12.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pydantic_core-2.50.5-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (6.6 kB)
+Collecting python-dotenv>=1.2.2 (from pydantic-settings>=2.0.0->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Collecting text-unidecode>=1.3 (from python-slugify>=5.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.6.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading markdown_it_py-4.3.0-py3-none-any.whl.metadata (7.9 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.6.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Collecting click>=8.1.7 (from rich-toolkit>=0.14.8->fastapi-cli>=0.0.32->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.32; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Using cached click-8.5.1-py3-none-any.whl.metadata (2.6 kB)
+Collecting shellingham>=1.3.0 (from typer>=0.26.1->fastapi-cli>=0.0.32->fastapi-cli[standard-no-fastapi-cloud-cli]>=0.0.32; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting pathlib-abc<0.6.0,>=0.5.1 (from universal-pathlib>=0.3.8->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading pathlib_abc-0.5.2-py3-none-any.whl.metadata (4.6 kB)
+Collecting httptools>=0.8.0 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading httptools-0.9.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+Collecting uvloop>=0.15.1 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading uvloop-0.23.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.1 kB)
+Collecting watchfiles>=0.20 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+Collecting websockets>=13.0 (from uvicorn[standard]>=0.12.0; extra == "standard-no-fastapi-cloud-cli"->fastapi[standard-no-fastapi-cloud-cli]>=0.142.0->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading websockets-17.4-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.3 kB)
+Collecting six>=1.11.0 (from wirerope>=0.4.7->methodtools>=0.4.7->apache-airflow-core==3.4.0->apache-airflow)
+  Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Downloading apache_airflow-3.4.0-py3-none-any.whl (13 kB)
+Downloading apache_airflow_core-3.4.0-py3-none-any.whl (9.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.8/9.8 MB 38.8 MB/s  0:00:00
+Downloading apache_airflow_task_sdk-1.4.0-py3-none-any.whl (737 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 737.4/737.4 kB 10.6 MB/s  0:00:00
+Downloading alembic-1.20.1-py3-none-any.whl (270 kB)
+Downloading opentelemetry_proto-1.45.2-py3-none-any.whl (72 kB)
+Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Downloading charset_normalizer-3.5.3-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (256 kB)
+Downloading idna-3.20-py3-none-any.whl (69 kB)
+Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Downloading a2wsgi-1.10.10-py3-none-any.whl (17 kB)
+Downloading aiosqlite-0.22.1-py3-none-any.whl (17 kB)
+Downloading apache_airflow_providers_common_compat-1.23.1-py3-none-any.whl (52 kB)
+Downloading apache_airflow_providers_common_io-1.11.1-py3-none-any.whl (24 kB)
+Downloading apache_airflow_providers_common_sql-3.0.0-py3-none-any.whl (105 kB)
+Downloading apache_airflow_providers_smtp-3.2.1-py3-none-any.whl (30 kB)
+Downloading aiosmtplib-5.1.3-py3-none-any.whl (30 kB)
+Downloading apache_airflow_providers_standard-1.21.0-py3-none-any.whl (164 kB)
+Downloading argcomplete-3.8.0-py3-none-any.whl (45 kB)
+Downloading asgiref-3.13.0-py3-none-any.whl (27 kB)
+Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Downloading babel-2.18.0-py3-none-any.whl (10.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 40.1 MB/s  0:00:00
+Downloading cachetools-8.0.2-py3-none-any.whl (19 kB)
+Downloading cadwyn-9.1.0-py3-none-any.whl (94 kB)
+Downloading cadwyn_core-9.1.0-py3-none-any.whl (159 kB)
+Downloading certifi-2026.11.20-py3-none-any.whl (127 kB)
+Downloading colorlog-6.12.0-py3-none-any.whl (12 kB)
+Downloading cron_descriptor-2.3.5-py3-none-any.whl (80 kB)
+Downloading croniter-7.0.0-py3-none-any.whl (63 kB)
+Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 34.4 MB/s  0:00:00
+Downloading cffi-2.1.1-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+Downloading deprecated-3.0.1-py3-none-any.whl (22 kB)
+Downloading wrapt-2.5.2-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (248 kB)
+Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+Downloading fastapi-0.165.0-py3-none-any.whl (159 kB)
+Downloading annotated_doc-0.0.7-py3-none-any.whl (5.3 kB)
+Downloading anyio-4.16.0-py3-none-any.whl (134 kB)
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading email_validator-2.4.0-py3-none-any.whl (36 kB)
+Downloading dnspython-2.9.2-py3-none-any.whl (360 kB)
+Downloading fastapi_cli-0.0.34-py3-none-any.whl (14 kB)
+Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Downloading greenback-1.3.0-py3-none-any.whl (29 kB)
+Downloading greenlet-3.5.6-cp313-cp313-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (623 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 623.8/623.8 kB 2.8 MB/s  0:00:00
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Downloading httpx2-2.16.2-py3-none-any.whl (97 kB)
+Downloading httpcore2-2.16.2-py3-none-any.whl (85 kB)
+Downloading importlib_metadata-10.2.0-py3-none-any.whl (34 kB)
+Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+Downloading arrow-1.4.0-py3-none-any.whl (68 kB)
+Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install asyncpg Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:224:cmnd:
+airflow-sbom.pcs.sbom_fullUpdate Failed: Error=1 -- None
+Backed up /etc/hosts to /etc/hosts.20261123100918.preEnsure
+dnsCap_ensureHostsDblock: added to /etc/hosts the dblock skeletons of: bannaInfo.cs -i bannaForEtcHosts
+Backed up /etc/hosts to /etc/hosts.20261123100918
+Updated /etc/hosts for airflow.here
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+webVd_enable: created symlink /etc/nginx/sites-enabled/airflow.here -> /etc/nginx/sites-available/airflow.here
+webVd_enable: nginx reloaded (systemctl) for airflow.here
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f6843ad7ec0>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/systemd_seed.py", line 103, in atexit_plantWithWhich
+    cmndsSeed.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cmndsSeed.py", line 238, in plantWithWhich
+    b.importFile.plantWithWhich(seededCsmu)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 221, in plantWithWhich
+    execWithWhich(inExecName,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/seedSystemd.cs", line 179, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/configFile.py", line 482, in cmnd
+    thisCls.configFileUpdate()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/bifSystemd_csu.py", line 194, in configFileUpdate
+    pyRunAs.as_root_writeToFile(destPath, contentStr)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/basics/pyRunAs.py", line 240, in as_root_writeToFile
+    raise ValueError('inBytes arg of as_root_writeToFile is None.')
+ValueError: inBytes arg of as_root_writeToFile is None.
+Failed to restart airflow-db.service: Unit airflow-db.service not found.
+Failed to enable unit: Unit airflow-db.service does not exist
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fa6b96040e0>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/systemd_seed.py", line 103, in atexit_plantWithWhich
+    cmndsSeed.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cmndsSeed.py", line 238, in plantWithWhich
+    b.importFile.plantWithWhich(seededCsmu)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 221, in plantWithWhich
+    execWithWhich(inExecName,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/seedSystemd.cs", line 179, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/configFile.py", line 482, in cmnd
+    thisCls.configFileUpdate()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/bifSystemd_csu.py", line 194, in configFileUpdate
+    pyRunAs.as_root_writeToFile(destPath, contentStr)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/basics/pyRunAs.py", line 240, in as_root_writeToFile
+    raise ValueError('inBytes arg of as_root_writeToFile is None.')
+ValueError: inBytes arg of as_root_writeToFile is None.
+Failed to restart airflow-webserver.service: Unit airflow-webserver.service not found.
+Failed to enable unit: Unit airflow-webserver.service does not exist
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fcc995800e0>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/systemd_seed.py", line 103, in atexit_plantWithWhich
+    cmndsSeed.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cmndsSeed.py", line 238, in plantWithWhich
+    b.importFile.plantWithWhich(seededCsmu)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 221, in plantWithWhich
+    execWithWhich(inExecName,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/seedSystemd.cs", line 179, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/configFile.py", line 482, in cmnd
+    thisCls.configFileUpdate()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/bifSystemd_csu.py", line 194, in configFileUpdate
+    pyRunAs.as_root_writeToFile(destPath, contentStr)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/basics/pyRunAs.py", line 240, in as_root_writeToFile
+    raise ValueError('inBytes arg of as_root_writeToFile is None.')
+ValueError: inBytes arg of as_root_writeToFile is None.
+Failed to restart airflow-scheduler.service: Unit airflow-scheduler.service not found.
+Failed to enable unit: Unit airflow-scheduler.service does not exist
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f1c46f300e0>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/systemd_seed.py", line 103, in atexit_plantWithWhich
+    cmndsSeed.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cmndsSeed.py", line 238, in plantWithWhich
+    b.importFile.plantWithWhich(seededCsmu)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 221, in plantWithWhich
+    execWithWhich(inExecName,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/seedSystemd.cs", line 179, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/configFile.py", line 482, in cmnd
+    thisCls.configFileUpdate()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/bifSystemd_csu.py", line 194, in configFileUpdate
+    pyRunAs.as_root_writeToFile(destPath, contentStr)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/basics/pyRunAs.py", line 240, in as_root_writeToFile
+    raise ValueError('inBytes arg of as_root_writeToFile is None.')
+ValueError: inBytes arg of as_root_writeToFile is None.
+Failed to restart airflow-triggerer.service: Unit airflow-triggerer.service not found.
+Failed to enable unit: Unit airflow-triggerer.service does not exist
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fb87cb77f60>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/systemd_seed.py", line 103, in atexit_plantWithWhich
+    cmndsSeed.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cmndsSeed.py", line 238, in plantWithWhich
+    b.importFile.plantWithWhich(seededCsmu)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 221, in plantWithWhich
+    execWithWhich(inExecName,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/seedSystemd.cs", line 179, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/configFile.py", line 482, in cmnd
+    thisCls.configFileUpdate()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/bifSystemd_csu.py", line 194, in configFileUpdate
+    pyRunAs.as_root_writeToFile(destPath, contentStr)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/basics/pyRunAs.py", line 240, in as_root_writeToFile
+    raise ValueError('inBytes arg of as_root_writeToFile is None.')
+ValueError: inBytes arg of as_root_writeToFile is None.
+Failed to restart airflow-dag-processor.service: Unit airflow-dag-processor.service not found.
+Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Downloading lazy_importer-0.1.0-py3-none-any.whl (12 kB)
+Downloading lazy_object_proxy-1.13.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (71 kB)
+Downloading libcst-1.9.0-cp313-cp313-manylinux_2_28_x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 13.4 MB/s  0:00:00
+Downloading linkify_it_py-2.2.0-py3-none-any.whl (21 kB)
+Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+Downloading markupsafe-3.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (23 kB)
+Downloading methodtools-0.4.7-py2.py3-none-any.whl (4.0 kB)
+Downloading more_itertools-11.2.1-py3-none-any.whl (74 kB)
+Downloading msgspec-0.22.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (230 kB)
+Downloading natsort-8.4.0-py3-none-any.whl (38 kB)
+Downloading opentelemetry_api-1.45.2-py3-none-any.whl (60 kB)
+Downloading opentelemetry_exporter_otlp-1.45.2-py3-none-any.whl (6.7 kB)
+Downloading opentelemetry_exporter_otlp_proto_grpc-1.45.2-py3-none-any.whl (19 kB)
+Downloading opentelemetry_exporter_otlp_common-0.66b2-py3-none-any.whl (12 kB)
+Downloading opentelemetry_exporter_otlp_proto_common-1.45.2-py3-none-any.whl (15 kB)
+Downloading opentelemetry_exporter_otlp_proto_http-1.45.2-py3-none-any.whl (22 kB)
+Downloading opentelemetry_exporter_http_transport-0.66b2-py3-none-any.whl (12 kB)
+Downloading googleapis_common_protos-1.76.0-py3-none-any.whl (307 kB)
+Downloading grpcio-1.85.3-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.4/7.4 MB 34.3 MB/s  0:00:00
+Downloading opentelemetry_sdk-1.45.2-py3-none-any.whl (141 kB)
+Downloading opentelemetry_semantic_conventions-0.66b2-py3-none-any.whl (206 kB)
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Using cached pathspec-1.1.1-py3-none-any.whl (57 kB)
+Downloading pendulum-3.3.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (341 kB)
+Downloading pluggy-1.7.0-py3-none-any.whl (27 kB)
+Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Downloading pydantic-2.14.4-py3-none-any.whl (494 kB)
+Downloading pydantic_core-2.50.5-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 35.8 MB/s  0:00:00
+Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Downloading pydantic_extra_types-2.11.1-py3-none-any.whl (79 kB)
+Downloading pydantic_settings-2.16.3-py3-none-any.whl (82 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 13.5 MB/s  0:00:00
+Downloading pygtrie-2.6.2-py3-none-any.whl (33 kB)
+Downloading pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Downloading python_daemon-3.1.2-py3-none-any.whl (30 kB)
+Downloading python_dateutil-4.0.0-py3-none-any.whl (92 kB)
+Downloading python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Downloading python_multipart-0.0.34-py3-none-any.whl (32 kB)
+Downloading python_slugify-9.2.0-py3-none-any.whl (17 kB)
+Downloading pyyaml-6.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (838 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 838.5/838.5 kB 3.9 MB/s  0:00:00
+Downloading pyyaml_ft-8.0.0-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (778 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 778.7/778.7 kB 6.8 MB/s  0:00:00
+Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading markdown_it_py-4.3.0-py3-none-any.whl (96 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading rich_argparse-1.8.0-py3-none-any.whl (25 kB)
+Downloading rich_toolkit-0.20.6-py3-none-any.whl (39 kB)
+Using cached click-8.5.1-py3-none-any.whl (126 kB)
+Downloading rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (370 kB)
+Downloading setproctitle-1.3.8-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (33 kB)
+Downloading sqlalchemy-2.1.9-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 35.0 MB/s  0:00:00
+Downloading sqlparse-0.6.1-py3-none-any.whl (51 kB)
+Downloading starlette-1.10.0-py3-none-any.whl (80 kB)
+Downloading structlog-26.1.0-py3-none-any.whl (73 kB)
+Downloading svcs-26.2.0-py3-none-any.whl (22 kB)
+Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+Downloading tenacity-9.2.1-py3-none-any.whl (32 kB)
+Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+Downloading typer-0.29.2-py3-none-any.whl (121 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Downloading typing_inspection-0.4.5-py3-none-any.whl (14 kB)
+Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+Downloading universal_pathlib-0.3.10-py3-none-any.whl (83 kB)
+Downloading pathlib_abc-0.5.2-py3-none-any.whl (19 kB)
+Downloading uuid6-2025.0.1-py3-none-any.whl (7.0 kB)
+Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Downloading httptools-0.9.0-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (520 kB)
+Downloading uvloop-0.23.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 19.8 MB/s  0:00:00
+Downloading watchfiles-1.3.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (458 kB)
+Downloading websockets-17.4-cp313-cp313-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (226 kB)
+Downloading wirerope-1.0.0-py2.py3-none-any.whl (9.2 kB)
+Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Downloading zipp-4.1.2-py3-none-any.whl (10 kB)
+Downloading mako-1.4.3-py3-none-any.whl (80 kB)
+Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+Downloading pycparser-3.12-py3-none-any.whl (62 kB)
+Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Failed to enable unit: Unit airflow-dag-processor.service does not exist
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fa88c2dc180>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/airflow/cbmProc.status'
+[kafka] running: /bisos/git/bxRepos/bisos-pip/kafka/py3/bin/kafka-cbs.pcs -i cbs_materialize
+/bin/bash: line 1: kafkaCbs-sbom.pcs: command not found
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=kafkaCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:215:cmnd:
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=kafkaCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+Installing collected packages: text-unidecode, lockfile, zipp, wrapt, websockets, uvloop, uuid6, urllib3, tzdata, typing-extensions, truststore, termcolor, tenacity, tabulate, structlog, sqlparse, sniffio, six, shellingham, setproctitle, rpds-py, pyyaml-ft, pyyaml, python-slugify, python-multipart, python-dotenv, python-daemon, pyjwt, pygtrie, pygments, pycparser, psutil, protobuf, pluggy, pathspec, pathlib-abc, natsort, msgspec, more-itertools, mdurl, MarkupSafe, linkify-it-py, lazy-object-proxy, lazy-importer, itsdangerous, idna, httptools, h11, greenlet, fsspec, dnspython, dill, colorlog, click, charset_normalizer, certifi, cachetools, babel, attrs, asgiref, argcomplete, annotated-types, annotated-doc, aiosqlite, aiosmtplib, a2wsgi, wirerope, uvicorn, universal-pathlib, typing-inspection, svcs, sqlalchemy, requests, referencing, python-dateutil, pydantic-core, outcome, opentelemetry-proto, opentelemetry-api, markdown-it-py, Mako, libcst, jinja2, importlib-metadata, httpcore2, httpcore, grpcio, googleapis-common-protos, email-validator, deprecated, cron-descriptor, cffi, anyio, watchfiles, starlette, rich, pydantic, pendulum, opentelemetry-semantic-conventions, opentelemetry-exporter-otlp-proto-common, opentelemetry-exporter-http-transport, methodtools, jsonschema-specifications, httpx2, httpx, greenback, cryptography, croniter, arrow, alembic, typer, rich-toolkit, rich-argparse, pydantic-settings, pydantic-extra-types, opentelemetry-sdk, jsonschema, isoduration, fastapi, cadwyn-core, opentelemetry-exporter-otlp-common, fastapi-cli, cadwyn, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, opentelemetry-exporter-otlp, apache-airflow-providers-common-compat, apache-airflow-providers-standard, apache-airflow-providers-smtp, apache-airflow-providers-common-sql, apache-airflow-providers-common-io, apache-airflow-task-sdk, apache-airflow-core, apache-airflow
+
+*** exit= 1
+** cmnd= /bisos/venv/py3/asc/bin/pip install psycopg2
+Collecting psycopg2
+  Downloading psycopg2-2.9.13.tar.gz (378 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: psycopg2
+  Building wheel for psycopg2 (pyproject.toml): started
+  Building wheel for psycopg2 (pyproject.toml): finished with status 'done'
+  Created wheel for psycopg2: filename=psycopg2-2.9.13-cp313-cp313-linux_x86_64.whl size=509281 sha256=11bfa711f92997d007870ac948d8a3af77c1975bac48cf6e6a3ce42638a5370d
+  Stored in directory: /home/bystar/.cache/pip/wheels/9d/33/ce/77d097a21f53b802160e74c70078feb10698c7bf0f25eb64f3
+Successfully built psycopg2
+Installing collected packages: psycopg2
+*** exit= 1
+** cmnd= /bisos/venv/py3/asc/bin/pip install asyncpg
+Collecting asyncpg
+  Downloading asyncpg-0.32.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.4 kB)
+Downloading asyncpg-0.32.0-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 18.1 MB/s  0:00:00
+Installing collected packages: asyncpg
+*** exit= 1
+** cmnd= airflow-assemble.cs -i fullUpdate
+** cmnd= airflow-here-dns.pcs -i dnsCap_update
+** cmnd= airflow-wvd.pcs -i configFileUpdate --cls="configFile_nginxVd" --runAs=root
+** cmnd= airflow-wvd.pcs -i webVd_enable
+** cmnd= /bisos/git/bxRepos/bisos-pip/airflow/py3/bin/airflow-cbs.pcs -i sysdUnitsProc ensure all
+** cmnd= airflow-db-sysd.pcs -i sysdSysUnit ensure
+Action ensure
+** cmnd= /bisos/venv/py3/bisos3/bin/airflow-db-sysd.pcs  --cls="configFile_sysdUnit" --runAs="root"  -i configFileUpdate
+asRootWrite: destPath=/etc/systemd/system/airflow-db.service -- contentStr=None seedtype=sysdSysUnit
+** cmnd= sudo systemctl daemon-reload
+** cmnd= sudo systemctl restart airflow-db.service
+*** exit= 5
+** cmnd= sudo systemctl enable airflow-db.service
+*** exit= 1
+** cmnd= airflow-webserver-sysd.pcs -i sysdSysUnit ensure
+Action ensure
+** cmnd= /bisos/venv/py3/bisos3/bin/airflow-webserver-sysd.pcs  --cls="configFile_sysdUnit" --runAs="root"  -i configFileUpdate
+asRootWrite: destPath=/etc/systemd/system/airflow-webserver.service -- contentStr=None seedtype=sysdSysUnit
+** cmnd= sudo systemctl daemon-reload
+** cmnd= sudo systemctl restart airflow-webserver.service
+*** exit= 5
+** cmnd= sudo systemctl enable airflow-webserver.service
+*** exit= 1
+** cmnd= airflow-scheduler-sysd.pcs -i sysdSysUnit ensure
+Action ensure
+** cmnd= /bisos/venv/py3/bisos3/bin/airflow-scheduler-sysd.pcs  --cls="configFile_sysdUnit" --runAs="root"  -i configFileUpdate
+asRootWrite: destPath=/etc/systemd/system/airflow-scheduler.service -- contentStr=None seedtype=sysdSysUnit
+** cmnd= sudo systemctl daemon-reload
+** cmnd= sudo systemctl restart airflow-scheduler.service
+*** exit= 5
+** cmnd= sudo systemctl enable airflow-scheduler.service
+*** exit= 1
+** cmnd= airflow-triggerer-sysd.pcs -i sysdSysUnit ensure
+Action ensure
+** cmnd= /bisos/venv/py3/bisos3/bin/airflow-triggerer-sysd.pcs  --cls="configFile_sysdUnit" --runAs="root"  -i configFileUpdate
+asRootWrite: destPath=/etc/systemd/system/airflow-triggerer.service -- contentStr=None seedtype=sysdSysUnit
+** cmnd= sudo systemctl daemon-reload
+** cmnd= sudo systemctl restart airflow-triggerer.service
+*** exit= 5
+** cmnd= sudo systemctl enable airflow-triggerer.service
+*** exit= 1
+** cmnd= airflow-dag-processor-sysd.pcs -i sysdSysUnit ensure
+Action ensure
+** cmnd= /bisos/venv/py3/bisos3/bin/airflow-dag-processor-sysd.pcs  --cls="configFile_sysdUnit" --runAs="root"  -i configFileUpdate
+asRootWrite: destPath=/etc/systemd/system/airflow-dag-processor.service -- contentStr=None seedtype=sysdSysUnit
+** cmnd= sudo systemctl daemon-reload
+** cmnd= sudo systemctl restart airflow-dag-processor.service
+*** exit= 5
+** cmnd= sudo systemctl enable airflow-dag-processor.service
+*** exit= 1
+5
+Blank materialize
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:356:cmnd:
+kafka-cbs.pcs.cbs_materialize Failed: Error=127 -- None
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f6b48e90180>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/kafka/cbmProc.status'
+[prometheus] running: /bisos/git/bxRepos/bisos-pip/prometheus/py3/bin/prometheus-cbs.pcs -i cbs_materialize
+/bin/bash: line 1: prometheusCbs-sbom.pcs: command not found
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=prometheusCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+** cmnd= kafkaCbs-sbom.pcs -i sbom_fullUpdate
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:215:cmnd:
+*** exit= 127
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=prometheusCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:356:cmnd:
+prometheus-cbs.pcs.cbs_materialize Failed: Error=127 -- None
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f6224128220>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/prometheus/cbmProc.status'
+[grafana] running: /bisos/git/bxRepos/bisos-pip/grafana/py3/bin/grafana-cbs.pcs -i cbs_materialize
+/bin/bash: line 1: grafanaCbs-sbom.pcs: command not found
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=grafanaCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+** cmnd= prometheusCbs-sbom.pcs -i sbom_fullUpdate
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:215:cmnd:
+*** exit= 127
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=grafanaCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:356:cmnd:
+grafana-cbs.pcs.cbs_materialize Failed: Error=127 -- None
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fb4efbb8180>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/grafana/cbmProc.status'
+[pypiserver] running: /bisos/git/bxRepos/bisos-pip/pypiserver/py3/bin/pypiserver-cbs.pcs -i cbs_materialize
+/bin/bash: line 1: pypiserverCbs-sbom.pcs: command not found
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=pypiserverCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+** cmnd= grafanaCbs-sbom.pcs -i sbom_fullUpdate
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:215:cmnd:
+*** exit= 127
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=pypiserverCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:356:cmnd:
+pypiserver-cbs.pcs.cbs_materialize Failed: Error=127 -- None
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7ff51bb1c220>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/pypiserver/cbmProc.status'
+[devpi] running: /bisos/git/bxRepos/bisos-pip/devpi/py3/bin/devpi-cbs.pcs -i cbs_materialize
+/bin/bash: line 1: devpiCbs-sbom.pcs: command not found
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=devpiCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+** cmnd= pypiserverCbs-sbom.pcs -i sbom_fullUpdate
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:215:cmnd:
+*** exit= 127
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=devpiCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:356:cmnd:
+devpi-cbs.pcs.cbs_materialize Failed: Error=127 -- None
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f5994c00180>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/devpi/cbmProc.status'
+[geneweb] running: /bisos/git/bxRepos/bisos-pip/geneweb/py3/bin/geneweb-cbs.pcs -i cbs_materialize
+/bin/bash: line 1: genewebCbs-sbom.pcs: command not found
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=genewebCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+** cmnd= devpiCbs-sbom.pcs -i sbom_fullUpdate
+*** exit= 127
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:215:cmnd:
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=genewebCbs-sbom.pcs -i sbom_fullUpdate Error=127 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:356:cmnd:
+geneweb-cbs.pcs.cbs_materialize Failed: Error=127 -- None
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fc1fde94180>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/geneweb/cbmProc.status'
+[reactPlus] running: /bisos/git/bxRepos/bisos-pip/webCap/py3/bin/reactPlus-cbs.pcs -i cbs_materialize
+npm warn deprecated yurnalist@2.1.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn install-scripts 3 packages have install scripts not yet covered by allowScripts:
+npm warn install-scripts   gatsby-cli@5.15.0 (postinstall: node scripts/postinstall.js)
+npm warn install-scripts   lmdb@2.5.3 (install: node-gyp-build-optional-packages)
+npm warn install-scripts   msgpackr-extract@3.0.7 (install: node-gyp-build-optional-packages)
+npm warn install-scripts
+npm warn install-scripts Run `npm install -g --allow-scripts=gatsby-cli,lmdb,msgpackr-extract` to allow these scripts once, or `npm config set allow-scripts=gatsby-cli,lmdb,msgpackr-extract --location=user` to allow them for all global installs.
+npm warn deprecated uid-number@0.0.6: This package is no longer supported.
+npm warn deprecated rimraf@2.7.1: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated fstream-ignore@1.0.5: This package is no longer supported.
+npm warn deprecated fstream@1.0.12: This package is no longer supported.
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+** cmnd= genewebCbs-sbom.pcs -i sbom_fullUpdate
+*** exit= 127
+npm warn deprecated tar@2.2.2: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f9a43738220>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/reactPlus/cbmProc.status'
+[gatsbyBxSidebar] running: /bisos/git/bxRepos/bisos-web/gatsby-starter-bystar-nestedSidebar/gatsbyBxSidebar-cbs.pcs -i cbs_materialize
+Traceback (most recent call last):
+  File "/bisos/git/bxRepos/bisos-web/gatsby-starter-bystar-nestedSidebar/gatsbyBxSidebar-assemble.cs", line 117, in <module>
+    from bisos.webCap import nodeEnv
+ImportError: cannot import name 'nodeEnv' from 'bisos.webCap' (/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/__init__.py)
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/git/bxRepos/bisos-web/gatsby-starter-bystar-nestedSidebar/gatsbyBxSidebar-assemble.cs -i fullUpdate Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:252:cmnd:
+** cmnd= reactPlus-sbom.pcs -i sbom_fullUpdate
+No AptPkgs -- Installation skipped
+** cmnd= npm install --global gatsby-cli
+
+added 294 packages in 4s
+** cmnd= npm install --global create-react-app
+
+added 64 packages in 1s
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/git/bxRepos/bisos-web/gatsby-starter-bystar-nestedSidebar/gatsbyBxSidebar-assemble.cs -i fullUpdate Error=1 -- None
+** cmnd= npm install --global typescript
+
+added 2 packages in 1s
+** cmnd= npm install --global eslint
+
+added 78 packages in 1s
+** cmnd= npm install --global prettier
+
+added 1 package in 361ms
+Processing SBOM Spec: /bisos/core/bsip/bin/nvm-sbom.pcs
+** cmnd= /bisos/core/bsip/bin/nvm-sbom.pcs -i sbom_fullUpdate
+** cmnd= apt list curl --installed  2> /dev/null
+Listing...
+curl/stable,stable-security,now 8.14.1-2+deb13u7 amd64 [installed]
+curl is already installed -- skipped
+** cmnd= apt list nvmInstall --installed  2> /dev/null
+Listing...
+** cmnd=
+if [ -z "${NVM_DIR}" ]; then
+    if [ -n "${XDG_CONFIG_HOME}" ]; then NVM_DIR="${XDG_CONFIG_HOME}/nvm"; else NVM_DIR="${HOME}/.nvm"; fi
+fi
+export NVM_DIR
+
+if [ -s "$NVM_DIR/nvm.sh" ]; then
+    echo "nvm already installed at $NVM_DIR -- skipping install."
+    exit 0
+fi
+NVM_VERSION="v0.40.3"
+curl -fsSL "https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh" | bash
+
+nvm already installed at /home/bystar/.nvm -- skipping install.
+** cmnd= apt list nvmInstallLts --installed  2> /dev/null
+Listing...
+** cmnd=
+if [ -z "${NVM_DIR}" ]; then
+    if [ -n "${XDG_CONFIG_HOME}" ]; then NVM_DIR="${XDG_CONFIG_HOME}/nvm"; else NVM_DIR="${HOME}/.nvm"; fi
+fi
+export NVM_DIR
+
+if [ ! -s "$NVM_DIR/nvm.sh" ]; then
+    echo "ERROR: no nvm.sh at $NVM_DIR -- nvmInstall did not run or failed." >&2
+    exit 1
+fi
+. "$NVM_DIR/nvm.sh"
+if nvm ls --no-colors 'lts/*' 2>/dev/null | grep -q 'v[0-9]'; then
+    echo "An LTS Node.js version is already installed -- skipping install."
+else
+    nvm install --lts || exit 1
+fi
+nvm alias default 'lts/*'
+nvm use default >/dev/null
+echo "node: $(command -v node) $(node --version)"
+
+An LTS Node.js version is already installed -- skipping install.
+default -> lts/* (-> v26.13.1 *)
+node: /home/bystar/.nvm/versions/node/v26.13.1/bin/node v26.13.1
+Blank assemble
+** cmnd= /bisos/git/bxRepos/bisos-pip/webCap/py3/bin/reactPlus-cbs.pcs -i sysdUnitsProc ensure all
+Empty List of Subjects -- Processing Skipped
+Blank materialize
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cba_csu.py:359:cmnd:
+gatsbyBxSidebar-cbs.pcs.cbs_materialize Failed: Error=1 -- None
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fce5246ff60>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/gatsbyBxSidebar/cbmProc.status'
+[csPlayerPerf] running: /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-cbs.pcs -i cbs_materialize
+  error: subprocess-exited-with-error
+
+  × Getting requirements to build editable did not run successfully.
+  │ exit code: 1
+  ╰─> [3 lines of output]
+      running egg_info
+      creating src/webcligui_api.egg-info
+      error: could not create 'src/webcligui_api.egg-info': Permission denied
+      [end of output]
+
+  note: This error originates from a subprocess, and is likely not a problem with pip.
+ERROR: Failed to build 'file:///bisos/git/bxRepos/cliGui/webCliGui/webcligui_api' when getting requirements to build editable
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=
+set -e
+/bisos/venv/py3/asc/bin/pip show webcligui_api 2>/dev/null | grep -qx "Editable project location: /bisos/git/bxRepos/cliGui/webCliGui/webcligui_api" \
+    || /bisos/venv/py3/asc/bin/pip install -e /bisos/git/bxRepos/cliGui/webCliGui/webcligui_api
+/bisos/venv/py3/asc/bin/pip show csLib 2>/dev/null | grep -qx "Editable project location: /bisos/git/bxRepos/cliGui/csLib" \
+    || /bisos/venv/py3/asc/bin/pip install -e /bisos/git/bxRepos/cliGui/csLib
+ Error=1 -- None
+io.eh.:  -- /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-sbom.pcs:37:_bash:
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/sqlparse'
+Check the permissions.
+
+* EH_Problem_UsageError: django
+2026-11-23 10:09:39,533 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install django Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:488:cmnd:
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/sqlparse'
+Check the permissions.
+
+* EH_Problem_UsageError: djangorestframework
+2026-11-23 10:09:40,190 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install djangorestframework Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:488:cmnd:
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/sqlparse'
+Check the permissions.
+
+* EH_Problem_UsageError: djangorestframework-simplejwt
+2026-11-23 10:09:40,865 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install djangorestframework-simplejwt Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:488:cmnd:
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/dotenv'
+Check the permissions.
+
+* EH_Problem_UsageError: python-dotenv
+2026-11-23 10:09:41,069 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install python-dotenv Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:488:cmnd:
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/uritemplate'
+Check the permissions.
+
+* EH_Problem_UsageError: drf_spectacular
+2026-11-23 10:09:42,597 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install drf_spectacular Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:488:cmnd:
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/sqlparse'
+Check the permissions.
+
+* EH_Problem_UsageError: drf_spectacular_sidecar
+2026-11-23 10:09:43,240 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install drf_spectacular_sidecar Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:224:cmnd:
+django-sbom.pcs.sbom_fullUpdate Failed: Error=1 -- None
+ERROR: Could not install packages due to an OSError: [Errno 13] Permission denied: '/bisos/venv/py3/asc/lib/python3.13/site-packages/gunicorn'
+Check the permissions.
+
+* EH_Problem_UsageError: gunicorn
+2026-11-23 10:09:44,014 - CRITICAL -	/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py::[584] cmnd():
+Blank sbom
+** cmnd= /bisos/git/bxRepos/bisos-web/gatsby-starter-bystar-nestedSidebar/gatsbyBxSidebar-assemble.cs -i fullUpdate
+*** exit= 1
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/venv/py3/asc/bin/pip install gunicorn Error=1 -- None
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/sbom/sbom_csu.py:224:cmnd:
+gunicorn-sbom.pcs.sbom_fullUpdate Failed: Error=1 -- None
+Traceback (most recent call last):
+  File "/bisos/git/anon/bxRepos/bisos-web/csPlayerPerf-drf/server/manage.py", line 11, in main
+    from django.core.management import execute_from_command_line
+ModuleNotFoundError: No module named 'django'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/bisos/git/anon/bxRepos/bisos-web/csPlayerPerf-drf/server/manage.py", line 22, in <module>
+    main()
+    ~~~~^^
+  File "/bisos/git/anon/bxRepos/bisos-web/csPlayerPerf-drf/server/manage.py", line 13, in main
+    raise ImportError(
+    ...<3 lines>...
+    ) from exc
+ImportError: Couldn't import Django. Are you sure it's installed and available on your PYTHONPATH environment variable? Did you forget to activate a virtual environment?
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=/bisos/git/anon/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-manage.sh migrate --noinput && /bisos/git/anon/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-manage.sh collectstatic --noinput Error=1 -- None
+io.eh.:  -- /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-assemble.cs:254:cmnd:
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=None Error=None -- None
+io.eh.:  -- /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-assemble.cs:221:cmnd:
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f8acf494180>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/systemd_seed.py", line 103, in atexit_plantWithWhich
+    cmndsSeed.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cmndsSeed.py", line 238, in plantWithWhich
+    b.importFile.plantWithWhich(seededCsmu)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 221, in plantWithWhich
+    execWithWhich(inExecName,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/seedSystemd.cs", line 179, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/configFile.py", line 482, in cmnd
+    thisCls.configFileUpdate()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/bifSystemd_csu.py", line 194, in configFileUpdate
+    pyRunAs.as_root_writeToFile(destPath, contentStr)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/basics/pyRunAs.py", line 240, in as_root_writeToFile
+    raise ValueError('inBytes arg of as_root_writeToFile is None.')
+ValueError: inBytes arg of as_root_writeToFile is None.
+Failed to restart csPlayerPerf.service: Unit csPlayerPerf.service not found.
+** cmnd= /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-sbom.pcs -i sbom_fullUpdate
+** cmnd= apt list csPlayerPerfAcctSetup --installed  2> /dev/null
+Listing...
+** cmnd=
+set -e
+
+# banna sysAccts: csplayer uid=509, group csplayer gid=509
+if getent group csplayer >/dev/null ; then
+    liveGid=$(getent group csplayer | cut -d: -f3)
+    [ "$liveGid" = "509" ] || \
+        echo "banna: WARNING: group csplayer has gid $liveGid, banna assigns 509 -- see bannaInfo.cs -i bannaSysAcctsVerify" >&2
+else
+    holder=$(getent group 509 | cut -d: -f1)
+    if [ -n "$holder" ] ; then
+        echo "banna: ERROR: gid 509 (registered for group csplayer) is held by group $holder" >&2
+        exit 1
+    fi
+    sudo groupadd -r -g 509 csplayer
+fi
+if getent passwd csplayer >/dev/null ; then
+    liveUid=$(id -u csplayer)
+    [ "$liveUid" = "509" ] || \
+        echo "banna: WARNING: account csplayer has uid $liveUid, banna assigns 509 -- see bannaInfo.cs -i bannaSysAcctsVerify" >&2
+else
+    holder=$(getent passwd 509 | cut -d: -f1)
+    if [ -n "$holder" ] ; then
+        echo "banna: ERROR: uid 509 (registered for csplayer) is held by account $holder" >&2
+        exit 1
+    fi
+    sudo useradd -r -u 509 -g csplayer -M -d /bisos/var/csPlayerPerf \
+        -s /usr/sbin/nologin -c 'csPlayer performer, its Django REST API and operations (csPlayerPerf-drf)' csplayer
+fi
+
+sudo mkdir -p /bisos/var/csPlayerPerf /bisos/var/csPlayerPerf/static /bisos/var/csPlayerPerf/data /bisos/var/csPlayerPerf/operationTasks
+sudo chown csplayer:csplayer /bisos/var/csPlayerPerf /bisos/var/csPlayerPerf/static /bisos/var/csPlayerPerf/data /bisos/var/csPlayerPerf/operationTasks
+sudo chmod 755 /bisos/var/csPlayerPerf /bisos/var/csPlayerPerf/static
+sudo chmod 750 /bisos/var/csPlayerPerf/data /bisos/var/csPlayerPerf/operationTasks
+
+** cmnd= apt list csPlayerPerfEnvSetup --installed  2> /dev/null
+Listing...
+** cmnd=
+set -e
+if [ ! -f /etc/default/csPlayerPerf ] ; then
+    sudo tee /etc/default/csPlayerPerf >/dev/null <<'CSPLAYERPERF_ENV_EOF'
+# csPlayerPerf (bisos-web/csPlayerPerf-drf): read by its unit and by cbm/csPlayerPerf-manage.sh.
+# Written once by cbm/csPlayerPerf-sbom.pcs; edits survive re-runs.
+DJANGO_SECRET_KEY=J9-xTQKkTr0O8SjRvJXuLVFsVf__OZ7TckW6QVDIrBd8YDjjKm20E5vywZ-oRvRDAyI
+DEBUG_FLAG=False
+CSPLAYER_ALLOWED_HOSTS=csPlayerUi.here,127.0.0.1,localhost
+CSPLAYER_CSRF_TRUSTED_ORIGINS=http://csPlayerUi.here
+CSPLAYER_DB_PATH=/bisos/var/csPlayerPerf/data/db.sqlite3
+CSPLAYER_STATIC_ROOT=/bisos/var/csPlayerPerf/static
+CSPLAYER_OPERATIONS_DIR=/bisos/var/csPlayerPerf/operationTasks
+CSPLAYERPERF_ENV_EOF
+fi
+sudo chown root:csplayer /etc/default/csPlayerPerf
+sudo chmod 640 /etc/default/csPlayerPerf
+
+** cmnd= apt list csPlayerPerfLibsSetup --installed  2> /dev/null
+Listing...
+** cmnd=
+set -e
+/bisos/venv/py3/asc/bin/pip show webcligui_api 2>/dev/null | grep -qx "Editable project location: /bisos/git/bxRepos/cliGui/webCliGui/webcligui_api" \
+    || /bisos/venv/py3/asc/bin/pip install -e /bisos/git/bxRepos/cliGui/webCliGui/webcligui_api
+/bisos/venv/py3/asc/bin/pip show csLib 2>/dev/null | grep -qx "Editable project location: /bisos/git/bxRepos/cliGui/csLib" \
+    || /bisos/venv/py3/asc/bin/pip install -e /bisos/git/bxRepos/cliGui/csLib
+
+Obtaining file:///bisos/git/bxRepos/cliGui/webCliGui/webcligui_api
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Checking if build backend supports build_editable: started
+  Checking if build backend supports build_editable: finished with status 'done'
+  Getting requirements to build editable: started
+  Getting requirements to build editable: finished with status 'error'
+*** exit= 1
+Processing SBOM Spec: django-sbom.pcs
+** cmnd= django-sbom.pcs -i sbom_fullUpdate
+No AptPkgs -- Installation skipped
+** cmnd= /bisos/venv/py3/asc/bin/pip install django
+Collecting django
+  Downloading django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting asgiref>=3.9.1 (from django)
+  Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting sqlparse>=0.5.0 (from django)
+  Using cached sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+Downloading django-6.1.3-py3-none-any.whl (8.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 30.4 MB/s  0:00:00
+Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+Using cached sqlparse-0.6.1-py3-none-any.whl (51 kB)
+Installing collected packages: sqlparse, asgiref, django
+
+*** exit= 1
+** cmnd= /bisos/venv/py3/asc/bin/pip install djangorestframework
+Collecting djangorestframework
+  Downloading djangorestframework-3.18.3-py3-none-any.whl.metadata (7.8 kB)
+Collecting django>=5.2 (from djangorestframework)
+  Using cached django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting asgiref>=3.9.1 (from django>=5.2->djangorestframework)
+  Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting sqlparse>=0.5.0 (from django>=5.2->djangorestframework)
+  Using cached sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+Downloading djangorestframework-3.18.3-py3-none-any.whl (903 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 904.0/904.0 kB 11.8 MB/s  0:00:00
+Using cached django-6.1.3-py3-none-any.whl (8.4 MB)
+Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+Using cached sqlparse-0.6.1-py3-none-any.whl (51 kB)
+Installing collected packages: sqlparse, asgiref, django, djangorestframework
+
+*** exit= 1
+** cmnd= /bisos/venv/py3/asc/bin/pip install djangorestframework-simplejwt
+Collecting djangorestframework-simplejwt
+  Downloading djangorestframework_simplejwt-5.5.1-py3-none-any.whl.metadata (4.6 kB)
+Collecting django>=4.2 (from djangorestframework-simplejwt)
+  Using cached django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting djangorestframework>=3.14 (from djangorestframework-simplejwt)
+  Using cached djangorestframework-3.18.3-py3-none-any.whl.metadata (7.8 kB)
+Collecting pyjwt>=1.7.1 (from djangorestframework-simplejwt)
+  Using cached pyjwt-2.15.1-py3-none-any.whl.metadata (3.5 kB)
+Collecting asgiref>=3.9.1 (from django>=4.2->djangorestframework-simplejwt)
+  Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting sqlparse>=0.5.0 (from django>=4.2->djangorestframework-simplejwt)
+  Using cached sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+Downloading djangorestframework_simplejwt-5.5.1-py3-none-any.whl (107 kB)
+Using cached django-6.1.3-py3-none-any.whl (8.4 MB)
+Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+Using cached djangorestframework-3.18.3-py3-none-any.whl (903 kB)
+Using cached pyjwt-2.15.1-py3-none-any.whl (33 kB)
+Using cached sqlparse-0.6.1-py3-none-any.whl (51 kB)
+Installing collected packages: sqlparse, pyjwt, asgiref, django, djangorestframework, djangorestframework-simplejwt
+
+*** exit= 1
+** cmnd= /bisos/venv/py3/asc/bin/pip install python-dotenv
+Collecting python-dotenv
+  Using cached python_dotenv-1.2.4-py3-none-any.whl.metadata (29 kB)
+Using cached python_dotenv-1.2.4-py3-none-any.whl (23 kB)
+Installing collected packages: python-dotenv
+*** exit= 1
+** cmnd= /bisos/venv/py3/asc/bin/pip install drf_spectacular
+Collecting drf_spectacular
+  Downloading drf_spectacular-0.30.0-py3-none-any.whl.metadata (14 kB)
+Collecting Django>=2.2 (from drf_spectacular)
+  Using cached django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting djangorestframework>=3.10.3 (from drf_spectacular)
+  Using cached djangorestframework-3.18.3-py3-none-any.whl.metadata (7.8 kB)
+Collecting uritemplate>=2.0.0 (from drf_spectacular)
+  Downloading uritemplate-4.2.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting PyYAML>=5.1 (from drf_spectacular)
+  Using cached pyyaml-6.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.3 kB)
+Collecting jsonschema>=2.6.0 (from drf_spectacular)
+  Using cached jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+Collecting inflection>=0.3.1 (from drf_spectacular)
+  Downloading inflection-0.5.1-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting asgiref>=3.9.1 (from Django>=2.2->drf_spectacular)
+Failed to enable unit: Unit csPlayerPerf.service does not exist
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f4c2c12ff60>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerPerf/cbmProc.status'
+[csPlayerUi] running: /bisos/git/bxRepos/bisos-web/csPlayer-webUi/cbm/csPlayerUi-cbs.pcs -i cbs_materialize
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fdcb9db7560>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_seed.py", line 103, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/astroProc-seed.cs", line 225, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 491, in cmnd
+    problems = siteBuild_()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 247, in siteBuild_
+    problems = contentBuild_(base)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 227, in contentBuild_
+    d["data"].mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.13/pathlib/_local.py", line 724, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bisos-web/csPlayer-webUi/content/data'
+dnsCap_ensureHostsDblock: /etc/hosts already has its dblocks -- no change
+Backed up /etc/hosts to /etc/hosts.20261123100945
+Updated /etc/hosts for csPlayerUi.here
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+webVd_enable: created symlink /etc/nginx/sites-enabled/csPlayerUi.here -> /etc/nginx/sites-available/csPlayerUi.here
+  Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting sqlparse>=0.5.0 (from Django>=2.2->drf_spectacular)
+  Using cached sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+Collecting attrs>=22.2.0 (from jsonschema>=2.6.0->drf_spectacular)
+  Using cached attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+Collecting jsonschema-specifications>=2023.03.6 (from jsonschema>=2.6.0->drf_spectacular)
+  Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+Collecting referencing>=0.28.4 (from jsonschema>=2.6.0->drf_spectacular)
+  Using cached referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+Collecting rpds-py>=0.25.0 (from jsonschema>=2.6.0->drf_spectacular)
+  Using cached rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+Downloading drf_spectacular-0.30.0-py3-none-any.whl (111 kB)
+Using cached django-6.1.3-py3-none-any.whl (8.4 MB)
+Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+Using cached djangorestframework-3.18.3-py3-none-any.whl (903 kB)
+Downloading inflection-0.5.1-py2.py3-none-any.whl (9.5 kB)
+Using cached jsonschema-4.26.0-py3-none-any.whl (90 kB)
+Using cached attrs-26.1.0-py3-none-any.whl (67 kB)
+Using cached jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+Using cached pyyaml-6.0.4-cp313-cp313-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (838 kB)
+Using cached referencing-0.37.0-py3-none-any.whl (26 kB)
+Using cached rpds_py-2026.9.1-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (370 kB)
+Using cached sqlparse-0.6.1-py3-none-any.whl (51 kB)
+Downloading uritemplate-4.2.0-py3-none-any.whl (11 kB)
+Installing collected packages: uritemplate, sqlparse, rpds-py, PyYAML, inflection, attrs, asgiref, referencing, Django, jsonschema-specifications, djangorestframework, jsonschema, drf_spectacular
+
+*** exit= 1
+** cmnd= /bisos/venv/py3/asc/bin/pip install drf_spectacular_sidecar
+Collecting drf_spectacular_sidecar
+  Downloading drf_spectacular_sidecar-2026.10.1-py3-none-any.whl.metadata (3.6 kB)
+Collecting Django>=2.2 (from drf_spectacular_sidecar)
+  Using cached django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting asgiref>=3.9.1 (from Django>=2.2->drf_spectacular_sidecar)
+  Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+Collecting sqlparse>=0.5.0 (from Django>=2.2->drf_spectacular_sidecar)
+  Using cached sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+Downloading drf_spectacular_sidecar-2026.10.1-py3-none-any.whl (2.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 33.0 MB/s  0:00:00
+Using cached django-6.1.3-py3-none-any.whl (8.4 MB)
+Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+Using cached sqlparse-0.6.1-py3-none-any.whl (51 kB)
+Installing collected packages: sqlparse, asgiref, Django, drf_spectacular_sidecar
+
+*** exit= 1
+Processing SBOM Spec: gunicorn-sbom.pcs
+** cmnd= gunicorn-sbom.pcs -i sbom_fullUpdate
+No AptPkgs -- Installation skipped
+** cmnd= /bisos/venv/py3/asc/bin/pip install gunicorn
+Collecting gunicorn
+  Downloading gunicorn-27.0.1-py3-none-any.whl.metadata (5.6 kB)
+Downloading gunicorn-27.0.1-py3-none-any.whl (263 kB)
+Installing collected packages: gunicorn
+*** exit= 1
+** cmnd= /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-assemble.cs -i fullUpdate
+** cmnd= /bisos/git/anon/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-manage.sh migrate --noinput && /bisos/git/anon/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-manage.sh collectstatic --noinput
+*** exit= 1
+** cmnd= /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-cbs.pcs -i sysdUnitsProc ensure all
+** cmnd= /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-sysd.pcs -i sysdSysUnit ensure
+Action ensure
+** cmnd= /bisos/git/bxRepos/bisos-web/csPlayerPerf-drf/cbm/csPlayerPerf-sysd.pcs  --cls="configFile_sysdUnit" --runAs="root"  -i configFileUpdate
+asRootWrite: destPath=/etc/systemd/system/csPlayerPerf.service -- contentStr=None seedtype=sysdSysUnit
+** cmnd= sudo systemctl daemon-reload
+** cmnd= sudo systemctl restart csPlayerPerf.service
+*** exit= 5
+** cmnd= sudo systemctl enable csPlayerPerf.service
+*** exit= 1
+1
+Blank materialize
+webVd_enable: nginx reloaded (systemctl) for csPlayerUi.here
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f7425320220>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerUi/cbmProc.status'
+[astroStarter] running: /bisos/git/bxRepos/bisos-web/astro-starter-bystar/cbm/astroStarter-cbs.pcs -i cbs_materialize
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7efcc95cb560>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_seed.py", line 103, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/astroProc-seed.cs", line 225, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 491, in cmnd
+    problems = siteBuild_()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 247, in siteBuild_
+    problems = contentBuild_(base)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 224, in contentBuild_
+    for each in contentTree_csu.filesPlace(d["tree"], d["public"]):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/contentTree_csu.py", line 430, in filesPlace
+    dest.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.13/pathlib/_local.py", line 728, in mkdir
+    self.parent.mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.13/pathlib/_local.py", line 724, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/site/public'
+dnsCap_ensureHostsDblock: /etc/hosts already has its dblocks -- no change
+Backed up /etc/hosts to /etc/hosts.20261123100947
+Updated /etc/hosts for astroStarter.here
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f2babd9c540>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/capWebVd_seed.py", line 103, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/capWebVd-seed.cs", line 99, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/debian/configFile.py", line 482, in cmnd
+    thisCls.configFileUpdate()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/capWebVd_csu.py", line 99, in configFileUpdate
+    contentStr = self.configFileStr()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/capWebVd_csu.py", line 85, in configFileStr
+    return ci.wvdConfigFunc()
+  File "/bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/cbm/astroStarter-wvd.pcs", line 36, in wvdConfigFunc
+    {webVd_nginxSites.lcntVarLocations(rootBaseDir)}
+AttributeError: module 'bisos.webCap.webVd_nginxSites' has no attribute 'lcntVarLocations'
+ERROR: /etc/nginx/sites-available/astroStarter.here does not exist — run configFileUpdate first
+io.eh.badOutcome:  -- InvokedBy NOTYET, Operation Failed: Stdcmnd=None Error=None -- None
+Blank sbom
+** cmnd= /bisos/git/bxRepos/bisos-web/csPlayer-webUi/cbm/csPlayerUi-assemble.cs -i fullUpdate
+** cmnd= pushd /bisos/git/anon/bxRepos/bisos-web/csPlayer-webUi > /dev/null; ./astroProc.spcs -i siteBuild; popd > /dev/null;
+** cmnd= pushd /bisos/git/anon/bxRepos/bisos-web/csPlayer-webUi/cbm > /dev/null; ./csPlayerUi-here-dns.pcs -i dnsCap_update; popd > /dev/null;
+** cmnd= pushd /bisos/git/anon/bxRepos/bisos-web/csPlayer-webUi/cbm > /dev/null; ./csPlayerUi-wvd.pcs -i configFileUpdate --cls="configFile_nginxVd" --runAs=root; popd > /dev/null;
+** cmnd= pushd /bisos/git/anon/bxRepos/bisos-web/csPlayer-webUi/cbm > /dev/null; ./csPlayerUi-wvd.pcs -i webVd_enable; popd > /dev/null;
+** cmnd= /bisos/git/bxRepos/bisos-web/csPlayer-webUi/cbm/csPlayerUi-cbs.pcs -i sysdUnitsProc ensure all
+Empty List of Subjects -- Processing Skipped
+Blank materialize
+io.eh.:  -- /bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/capWebVd_csu.py:176:cmnd:
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f7da1533f60>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/astroStarter/cbmProc.status'
+[platform] running: /bisos/platform/web/astro/cbm/platform-cbs.pcs -i cbs_materialize
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f41b100b560>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_seed.py", line 103, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(asExpected)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/astroProc-seed.cs", line 225, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 491, in cmnd
+    problems = siteBuild_()
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 247, in siteBuild_
+    problems = contentBuild_(base)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/webCap/astroProc_csu.py", line 227, in contentBuild_
+    d["data"].mkdir(parents=True, exist_ok=True)
+  File "/usr/lib/python3.13/pathlib/_local.py", line 724, in mkdir
+    os.mkdir(self, mode)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/web/astro/content/data'
+dnsCap_ensureHostsDblock: /etc/hosts already has its dblocks -- no change
+Backed up /etc/hosts to /etc/hosts.20261123100948
+Updated /etc/hosts for platform.here
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+webVd_enable: created symlink /etc/nginx/sites-enabled/platform.here -> /etc/nginx/sites-available/platform.here
+Blank sbom
+** cmnd= /bisos/git/bxRepos/bisos-web/astro-starter-bystar/cbm/astroStarter-assemble.cs -i fullUpdate
+** cmnd= pushd /bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar > /dev/null; ./astroProc.spcs -i siteBuild; popd > /dev/null;
+/bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/content/tree/model/index_html: hevea is not installed; the existing contentBody.html is kept
+/bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/content/tree/persian/index_html: hevea is not installed; the existing contentBody.html is kept
+built: /bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/content/tree/model/index_html/contentBody.html
+built: /bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/content/tree/persian/index_html/contentBody.html
+** cmnd= pushd /bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/cbm > /dev/null; ./astroStarter-here-dns.pcs -i dnsCap_update; popd > /dev/null;
+** cmnd= pushd /bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/cbm > /dev/null; ./astroStarter-wvd.pcs -i configFileUpdate --cls="configFile_nginxVd" --runAs=root; popd > /dev/null;
+** cmnd= pushd /bisos/git/anon/bxRepos/bisos-web/astro-starter-bystar/cbm > /dev/null; ./astroStarter-wvd.pcs -i webVd_enable; popd > /dev/null;
+** cmnd= /bisos/git/bxRepos/bisos-web/astro-starter-bystar/cbm/astroStarter-cbs.pcs -i sysdUnitsProc ensure all
+Empty List of Subjects -- Processing Skipped
+Blank materialize
+webVd_enable: nginx reloaded (systemctl) for platform.here
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7fa3ff760180>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+Blank sbom
+** cmnd= /bisos/platform/web/astro/cbm/platform-assemble.cs -i fullUpdate
+** cmnd= pushd /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/web/astro > /dev/null; ./astroProc.spcs -i siteBuild; popd > /dev/null;
+** cmnd= pushd /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/web/astro/cbm > /dev/null; ./platform-here-dns.pcs -i dnsCap_update; popd > /dev/null;
+** cmnd= pushd /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/web/astro/cbm > /dev/null; ./platform-wvd.pcs -i configFileUpdate --cls="configFile_nginxVd" --runAs=root; popd > /dev/null;
+** cmnd= pushd /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/web/astro/cbm > /dev/null; ./platform-wvd.pcs -i webVd_enable; popd > /dev/null;
+** cmnd= /bisos/platform/web/astro/cbm/platform-cbs.pcs -i sysdUnitsProc ensure all
+Empty List of Subjects -- Processing Skipped
+Blank materialize
+    outcome = applyMethodBasedOnContext(classedCmnd)
+fto_forwardToLeaves --cmndName='cbm_materialize':  visited=15  failed=0  skipped=0
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/nginx
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/airflow
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/kafka
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 300, in _dispatchCbs
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/prometheus
+    cbmProc_seedInfo.statusWrite(plantDir, f"ran: {verb} ok")
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/grafana
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/pypiserver
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/devpi
+    return io.open(self, mode, buffering, encoding, errors, newline)
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/geneweb
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/platform/cbmProc.status'
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/reactPlus
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/gatsbyBxSidebar
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerPerf
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerUi
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/astroStarter
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/platform
+{'visited': ['/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/nginx', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/airflow', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/kafka', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/prometheus', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/grafana', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/pypiserver', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/devpi', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/geneweb', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/reactPlus', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/gatsbyBxSidebar', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerPerf', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/csPlayerUi', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/astroStarter', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/collective/hereWeb/platform'], 'failed': [], 'skipped': []}
+** cmnd= pushd /bisos/platform/sys/cbm/pals > /dev/null; ./ftoBranchProc.spcs -i fto_forwardToLeaves --cmndName='cbm_status'; popd > /dev/null;
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+[example] cbmProc.status:
+2026-11-13T00:26:59  skipped: control=available at cbs_materialize
+2026-11-16T00:55:01  ran: cbs_materialize ok
+
+2026-11-13T00:26:59  skipped: control=available at cbs_materialize
+2026-11-16T00:55:01  ran: cbs_materialize ok
+
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+fto_forwardToLeaves --cmndName='cbm_status':  visited=3  failed=0  skipped=0
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals/example
+{'visited': ['/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals/example'], 'failed': [], 'skipped': []}
+** cmnd= pushd /bisos/platform/sys/cbm/pals > /dev/null; ./ftoBranchProc.spcs -i fto_forwardToLeaves --cmndName='cbm_materialize'; popd > /dev/null;
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+ALERT: Missing /home/bystar/bpos/usageEnvs/bisosDev/control/currents/fp
+Exception ignored in atexit callback <function atexit_plantWithWhich at 0x7f83f2754220>:
+Traceback (most recent call last):
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seed.py", line 22, in atexit_plantWithWhich
+    seedsLib.plantWithWhich(seedName)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/csSeed/seedsLib.py", line 203, in plantWithWhich
+    b.importFile.execWithWhich(seededCsxu,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 195, in execWithWhich
+    execFileAsMain(execFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/utils.py", line 119, in wrapper
+    retVal = f(*args, **kwargs)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 171, in execFileAsMain
+    importFileAs('__main__', importedFilePath,)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/importFile.py", line 143, in importFileAs
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 1026, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/bisos/venv/py3/bisos3/bin/cbmProc-seed.cs", line 138, in <module>
+    cs.main.g_csMain(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/main.py", line 199, in g_csMain
+    exitCode = cs.G_mainWithClass(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1494, in G_mainWithClass
+    outcome = invokesProcAllClassed(
+fto_forwardToLeaves --cmndName='cbm_materialize':  visited=3  failed=0  skipped=0
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1911, in invokesProcAllClassed
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals
+    outcome = applyMethodBasedOnContext(classedCmnd)
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/cs.py", line 1866, in applyMethodBasedOnContext
+    outcome = classedCmnd().cmnd(**cmndKwArgs)
+  visited: /bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals/example
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/b/cs/track.py", line 156, in wrapped
+    return fn(*v, **k)
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 336, in cmnd
+    return _dispatchCbs('cbs_materialize', rtInv, cmndOutcome)
+{'visited': ['/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals', '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals/example'], 'failed': [], 'skipped': []}
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_csu.py", line 285, in _dispatchCbs
+    cbmProc_seedInfo.statusWrite(
+  File "/bisos/venv/py3/bisos3/lib/python3.13/site-packages/bisos/capability/cbmProc_seedInfo.py", line 253, in statusWrite
+    with statusPath(plantDir).open('a') as fh:
+  File "/usr/lib/python3.13/pathlib/_local.py", line 539, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+PermissionError: [Errno 13] Permission denied: '/bisos/git/anon/bxRepos/bxObjects/bro_rawBisos/bro_rawBisosPlatform/sys/cbm/pals/bro_rawBisosPals/example/cbmProc.status'
+36eb23dc7423-bystar#
